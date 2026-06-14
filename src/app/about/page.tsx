@@ -6,6 +6,7 @@ import {
   buildAboutPageSchema,
   buildBreadcrumbSchema,
   personFounder,
+  webPage,
 } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
@@ -30,6 +31,7 @@ export default function AboutPage() {
       <JsonLd schema={buildAboutPageSchema()} />
       <JsonLd schema={personFounder()} />
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
+      <JsonLd schema={webPage({ path: "/about", name: `About Travis — Web Design, Gulf Coast | ${site.name}`, speakableSelectors: ["h1", "#about-entity"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-4xl">
@@ -72,12 +74,20 @@ export default function AboutPage() {
                   </p>
                   {/* First-person why — verbatim from CONTENT.md */}
                   <p>
-                    I started Saltwater Studio because I kept seeing good local
-                    businesses paying for websites that were never going to get them
-                    found — template sites with no schema, no tracking, no plan. I
-                    build the other kind: the version you don&apos;t have to redo. Fast
-                    where it counts, distinctive where it matters, and engineered so
-                    Google and the AI tools people now ask can actually recommend you.
+                    I started Saltwater Studio because I kept watching good local
+                    businesses pay for websites that were never going to get them found
+                    — template sites with no schema, no tracking, no plan. I build the
+                    other kind, and I run my own sites on the same method before a
+                    client ever pays for it. BashSnippets is mine — a library I
+                    structured so AI tools can quote it, not just so Google ranks it. I
+                    built Beach House Moving a service-area page for every county it
+                    actually works, written from real job knowledge instead of a
+                    find-and-replace on the city name. Kai&apos;s Run launched into a
+                    category search had never seen, so I built the entity from zero and
+                    let the structure do the ranking. Schema and entity work go in from
+                    the first commit, every time — built right so you never have to redo
+                    it, because that&apos;s how I run my own businesses, not a line I put
+                    on a slide.
                   </p>
                 </div>
               </Reveal>
@@ -87,7 +97,7 @@ export default function AboutPage() {
                   <ButtonLink href="/work" variant="primary">
                     See the work
                   </ButtonLink>
-                  <ButtonLink href={site.calcom} variant="ghost">
+                  <ButtonLink href={`https://cal.com/${site.calcom}`} variant="ghost">
                     Book a call
                   </ButtonLink>
                 </div>

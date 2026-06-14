@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
-import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import { getLiveProjects } from "@/data/projects";
 
 const now = new Date().toISOString();
 
@@ -17,15 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // /thanks is noIndex — excluded from sitemap
   ];
 
-  const projectRoutes: MetadataRoute.Sitemap = projects
-    .filter((p) => p.permission === "live")
-    .map((p) => ({
-      url: `${site.url}/work/${p.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    }));
-
   const serviceRoutes: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${site.url}/services/${s.slug}`,
     lastModified: now,
@@ -33,5 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...projectRoutes, ...serviceRoutes];
+  // Live case studies only — the permission gate keeps preview projects out.
+  const workRoutes: MetadataRoute.Sitemap = getLiveProjects().map((p) => ({
+    url: `${site.url}/work/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...workRoutes];
 }

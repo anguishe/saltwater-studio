@@ -30,7 +30,11 @@
       "Bash(curl -s http://localhost:3000/contact)",
       "Bash(curl -s -X POST http://localhost:3000/api/contact -H 'Content-Type: application/json' -d '{\"name\":\"Bot\",\"email\":\"bot@spam.com\",\"message\":\"spam\",\"company\":\"IAmABot\",\"t\":0}')",
       "Bash(curl -s -X POST http://localhost:3000/api/contact -H 'Content-Type: application/json' -d '{\"name\":\"Human\",\"email\":\"real@test.com\",\"message\":\"need a site\",\"company\":\"\",\"t\":__CMDSUB_OUTPUT__}')",
-      "Bash(curl -s http://localhost:3000/thanks)"
+      "Bash(curl -s http://localhost:3000/thanks)",
+      "Bash(grep -rnE \"\\\\{\\\\{[A-Z_]{3,}\\\\}\\\\}\" src/)",
+      "Bash(node -e ' *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(openssl rand *)"
     ],
     "additionalDirectories": [
       "/home/angsec/Projects/saltwater-studio/src/app/work"

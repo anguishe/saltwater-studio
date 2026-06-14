@@ -164,7 +164,7 @@ export default function QuoteForm() {
           <p className="mt-3 text-center text-xs text-foam/40">
             Prefer to talk it through?{" "}
             <a
-              href={site.calcom}
+              href={`https://cal.com/${site.calcom}`}
               className="underline underline-offset-2 hover:text-shoal transition-colors"
               onClick={() => track.bookingClick()}
             >

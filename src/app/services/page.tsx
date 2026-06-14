@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema, buildFaqSchema } from "@/lib/schema";
+import { buildBreadcrumbSchema, buildFaqSchema, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
@@ -10,9 +10,9 @@ import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services",
+  title: "Services — Web Design, SEO & AI Search",
   description:
-    "Web design, SEO, AEO, GEO, Google Business Profile, and social content for service businesses. Saltwater Studio builds what ranks and lasts.",
+    "Saltwater Studio builds custom websites plus the SEO, AI-search, Google, and social presence that makes service businesses found. Tell us about the business.",
   path: "/services",
 });
 
@@ -28,6 +28,7 @@ export default function ServicesPage() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       {serviceFaqs.length > 0 && <JsonLd schema={buildFaqSchema(serviceFaqs)} />}
+      <JsonLd schema={webPage({ path: "/services", name: `Services — Web Design, SEO & AI Search | ${site.name}`, speakableSelectors: ["h1", ".faq-answer"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-7xl">
@@ -38,8 +39,18 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="font-display text-4xl text-foam md:text-5xl max-w-2xl">
-              {site.taglineSecondary}
+              What Saltwater Studio does
             </h1>
+            <p className="mt-4 font-display text-xl text-shoal max-w-2xl">
+              {site.taglineSecondary}
+            </p>
+            <p className="mt-6 text-lg text-foam/70 max-w-2xl">
+              Saltwater Studio builds custom websites for service businesses and the search
+              presence that makes them found — web design, SEO, answer-engine and
+              generative-engine optimization, Google Business Profile, and social content.
+              Everything is quote-based; tell us about the business and we&apos;ll scope it
+              honestly.
+            </p>
           </Reveal>
 
           <div className="mt-20 grid gap-0 divide-y divide-marine/30">
@@ -74,7 +85,21 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <Reveal delay={0.2}>
+          {serviceFaqs.length > 0 && (
+            <Reveal delay={0.2}>
+              <h2 className="mt-20 font-display text-2xl text-foam">Common questions</h2>
+              <div className="mt-8 space-y-6 divide-y divide-marine/20">
+                {serviceFaqs.map((faq) => (
+                  <div key={faq.question} className="pt-6">
+                    <h3 className="font-semibold text-foam">{faq.question}</h3>
+                    <p className="faq-answer mt-3 text-foam/60">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
+
+          <Reveal delay={0.25}>
             <div className="mt-20 flex flex-col items-center gap-4 sm:flex-row">
               <ButtonLink href="/book" variant="primary">
                 Book a strategy call

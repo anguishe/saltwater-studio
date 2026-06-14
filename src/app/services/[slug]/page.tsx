@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { services, getServiceBySlug } from "@/data/services";
-import { getFaqsByPage } from "@/data/faqs";
+import { getFaqsByPage, type FAQ } from "@/data/faqs";
 import { site } from "@/config/site";
 
 interface Props {
@@ -42,7 +42,7 @@ export default async function ServiceSlugPage({ params }: Props) {
     { name: service.title, url: `${site.url}/services/${slug}` },
   ];
 
-  const pageFaqs = slug === "seo-aeo-geo" ? getFaqsByPage("seo-aeo-geo") : [];
+  const pageFaqs = getFaqsByPage(slug as FAQ["page"]);
 
   return (
     <>

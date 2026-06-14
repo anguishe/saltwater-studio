@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { buildFaqSchema } from "@/lib/schema";
+import { buildFaqSchema, webPage } from "@/lib/schema";
+import { site } from "@/config/site";
 import JsonLd from "@/components/JsonLd";
 import Hero from "@/components/sections/Hero";
 import Trust from "@/components/sections/Trust";
@@ -27,6 +28,7 @@ export default function HomePage() {
     <>
       {/* FAQ AEO — org+website schema emitted globally from layout.tsx */}
       <JsonLd schema={buildFaqSchema(homeFaqs)} />
+      <JsonLd schema={webPage({ path: "/", name: `${site.name} | Web Design for Service Businesses`, speakableSelectors: ["h1", "#about"] })} />
 
       <Hero />
       <Trust />

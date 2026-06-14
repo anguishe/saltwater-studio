@@ -1,9 +1,0 @@
-TODO: Replace this filename with your actual IndexNow key (e.g. a8b3c4d5e6f7a8b9.txt)
-and put the key value as the sole content of that file.
-
-Generate your key at: https://www.indexnow.org/indexnow
-Or via Bing Webmaster Tools > IndexNow.
-
-Once the file is in place, ping on every production deploy:
-  POST https://api.indexnow.org/indexnow
-  Body: { "host": "saltwaterstudio.xyz", "key": "<your-key>", "urlList": ["<url>"] }

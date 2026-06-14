@@ -156,6 +156,23 @@ export function speakable(cssSelectors: string[]) {
   };
 }
 
+export function webPage(opts: {
+  path: string;
+  name: string;
+  type?: string;
+  speakableSelectors: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": opts.type ?? "WebPage",
+    "@id": `${site.url}${opts.path}#webpage`,
+    url: `${site.url}${opts.path}`,
+    name: opts.name,
+    isPartOf: { "@id": WEBSITE_ID },
+    speakable: speakable(opts.speakableSelectors),
+  };
+}
+
 export function creativeWork(opts: {
   name: string;
   url: string;

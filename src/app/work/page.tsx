@@ -9,9 +9,9 @@ import { projects } from "@/data/projects";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Work",
+  title: "Our Work — Custom Web Design Projects",
   description:
-    "Case studies and portfolio from Saltwater Studio — web design and SEO for service businesses across the United States.",
+    "See the custom websites Saltwater Studio builds for service businesses — Next.js for moving, mobile, and content brands, built to be found. Browse the work.",
   path: "/work",
 });
 

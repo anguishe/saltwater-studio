@@ -1,6 +1,6 @@
 # Saltwater Studio
 
-Saltwater Studio is a web design studio founded in 2025 by Travis on the Gulf Coast of Florida, building websites and search presence for service businesses across the United States.
+Saltwater Studio is a remote web-design studio founded in 2025 by Travis Abadie on Florida's Gulf Coast, building premium, search-optimized websites for service businesses nationwide.
 
 ## Services
 
@@ -15,6 +15,12 @@ Saltwater Studio is a web design studio founded in 2025 by Travis on the Gulf Co
 - Kai's Run: https://kaisrun.com
 - BashSnippets: https://bashsnippets.xyz
 
+## Case Studies
+
+- Beach House Moving (county-level local SEO build): https://saltwaterstudio.xyz/work/beach-house-moving
+- Kai's Run (entity + AEO for a new service category): https://saltwaterstudio.xyz/work/kais-run
+- BashSnippets (AI-citation-optimized content site): https://saltwaterstudio.xyz/work/bash-snippets
+
 ## Contact & Booking
 
 - Contact / Quote: https://saltwaterstudio.xyz/contact
@@ -28,6 +34,6 @@ United States (nationwide). Heartland: Gulf Coast, Florida — Gulf Shores, AL t
 
 - Studio name: Saltwater Studio
 - Founded: 2025
-- Founder: Travis
+- Founder: Travis Abadie
 - Location: Gulf Coast, FL (remote studio — no street address)
 - Tagline: "Depth, by design."

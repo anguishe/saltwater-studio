@@ -68,14 +68,22 @@ Each card CTA: `Talk it through →` (→ strategy call).
      you'd rather run it yourself.
 
 ### Why us
-- *Schema and entity strategy built in, not bolted on.* The difference between a
-  site that ranks and a brochure that sits there.
-- *You own everything.* Domain, analytics, Google accounts, the code. No hostage
-  situations, no "agency login."
-- *One set of facts, everywhere.* Your name, your story, your service area — the
-  same on the site, on Google, in every directory. That consistency is what AI
-  search rewards.
-- *No template you'll outgrow.* Built custom for how your business actually works.
+- *Schema & entity, from the first commit.* Structured data goes in on day one
+  and is validated before launch — never bolted on after. The same build behind
+  BashSnippets, a property the studio owns and runs, engineered so AI tools can
+  quote it instead of skipping it. Your site tells Google and the assistants
+  exactly what you do, for whom, and where.
+- *You own everything.* Domain, hosting, analytics, every account — in your name,
+  under your email, with your billing. The studio does the work and hands you the
+  keys: no agency login, no hostage situation.
+- *One canonical fact set.* Your name, location, services, and entity facts read
+  the same on the site, in schema, in llms.txt, and on every profile — the
+  consistency AI search rewards. It's the entity work that let Kai's Run claim a
+  service category that didn't exist in search yet.
+- *No template you'll outgrow.* Custom Next.js, not a page-builder you'll fight
+  in eighteen months. It's how Beach House Moving got a service-area page for
+  every county it works — depth a template can't fake, because the template never
+  adds the schema or the local pages in the first place.
 
 ### CTA close
 - **Headline:** *Depth, by design.*
@@ -92,12 +100,18 @@ Each card CTA: `Talk it through →` (→ strategy call).
   premium, search-optimized websites for service businesses across the United
   States, with a heartland on the Gulf Coast from Gulf Shores, Alabama to Miami,
   Florida.*
-- **The why (first person):** *I started Saltwater Studio because I kept seeing
-  good local businesses paying for websites that were never going to get them
-  found — template sites with no schema, no tracking, no plan. I build the other
-  kind: the version you don't have to redo. Fast where it counts, distinctive
-  where it matters, and engineered so Google and the AI tools people now ask can
-  actually recommend you.*
+- **The why (first person):** *I started Saltwater Studio because I kept watching
+  good local businesses pay for websites that were never going to get them found —
+  template sites with no schema, no tracking, no plan. I build the other kind, and
+  I run my own sites on the same method before a client ever pays for it.
+  BashSnippets is mine — a library I structured so AI tools can quote it, not just
+  so Google ranks it. I built Beach House Moving a service-area page for every
+  county it actually works, written from real job knowledge instead of a
+  find-and-replace on the city name. Kai's Run launched into a category search had
+  never seen, so I built the entity from zero and let the structure do the
+  ranking. Schema and entity work go in from the first commit, every time — built
+  right so you never have to redo it, because that's how I run my own businesses,
+  not a line I put on a slide.*
 - **CTA:** `See the work` / `Book a call`
 
 ---

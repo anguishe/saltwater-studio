@@ -32,10 +32,9 @@ export default function About() {
           </h2>
           <div className="mt-6 space-y-4 text-foam/70">
             <p>
-              Saltwater Studio is a web design studio founded in 2025 by Travis on the Gulf
-              Coast of Florida. The studio builds websites and search presence for service
-              businesses across the United States — the kind of foundation that doesn&apos;t
-              need to be rebuilt in two years.
+              Saltwater Studio is a remote web-design studio founded in 2025 by Travis Abadie
+              on Florida&apos;s Gulf Coast, building premium, search-optimized websites for
+              service businesses nationwide.
             </p>
             <p>
               The work is schema-first, tracking-first, and specific: structured data validated

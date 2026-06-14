@@ -52,14 +52,13 @@ export default function CtaClose() {
             id="cta-heading"
             className="font-display text-4xl text-foam md:text-5xl lg:text-6xl"
           >
-            Ready to build something that lasts?
+            Depth, by design.
           </h2>
         </Reveal>
 
         <Reveal delay={0.14}>
           <p className="mt-6 text-lg text-foam/60">
-            One strategy call. No pressure. You leave with a clear picture of what the
-            site needs — and what it&apos;ll take to rank.
+            Let&apos;s build the site you stop apologizing for.
           </p>
         </Reveal>
 
