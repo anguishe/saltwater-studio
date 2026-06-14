@@ -1,0 +1,33 @@
+# Saltwater Studio
+
+Saltwater Studio is a web design studio founded in 2025 by Travis on the Gulf Coast of Florida, building websites and search presence for service businesses across the United States.
+
+## Services
+
+- Web Design (Next.js, schema-first, performance-optimized): https://saltwaterstudio.xyz/services/web-design
+- SEO / AEO / GEO (Google ranking, AI search visibility, entity strategy): https://saltwaterstudio.xyz/services/seo-aeo-geo
+- Google Presence (Google Business Profile setup and optimization): https://saltwaterstudio.xyz/services/google-presence
+- Social & Content (weekly content engine, brand-consistent, AEO-aligned): https://saltwaterstudio.xyz/services/social-content
+
+## Portfolio
+
+- Beach House Moving: https://beachhousemoving.com
+- Kai's Run: https://kaisrun.com
+- BashSnippets: https://bashsnippets.xyz
+
+## Contact & Booking
+
+- Contact / Quote: https://saltwaterstudio.xyz/contact
+- Book a strategy call: https://saltwaterstudio.xyz/book
+
+## Area Served
+
+United States (nationwide). Heartland: Gulf Coast, Florida — Gulf Shores, AL to Miami, FL.
+
+## Entity Facts
+
+- Studio name: Saltwater Studio
+- Founded: 2025
+- Founder: Travis
+- Location: Gulf Coast, FL (remote studio — no street address)
+- Tagline: "Depth, by design."

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --src-dir --eslint --no-git --import-alias \"@/*\" --no-turbopack)",
+      "Bash(npx --yes create-next-app@latest /tmp/sw-scaffold --typescript --tailwind --app --src-dir --eslint --no-git --import-alias \"@/*\" --no-turbopack)",
+      "Bash(ls /tmp/sw-scaffold/)",
+      "Read(//tmp/sw-scaffold/**)",
+      "Bash(cp /tmp/sw-scaffold/package.json /tmp/sw-scaffold/package-lock.json /tmp/sw-scaffold/tsconfig.json /tmp/sw-scaffold/next.config.ts /tmp/sw-scaffold/postcss.config.mjs /tmp/sw-scaffold/eslint.config.mjs /tmp/sw-scaffold/next-env.d.ts /home/angsec/Projects/saltwater-studio/)",
+      "Bash(cp -r /tmp/sw-scaffold/node_modules /home/angsec/Projects/saltwater-studio/)",
+      "Bash(cp -r /tmp/sw-scaffold/src /home/angsec/Projects/saltwater-studio/)",
+      "Bash(cp -r /tmp/sw-scaffold/public /home/angsec/Projects/saltwater-studio/)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p /home/angsec/Projects/saltwater-studio/src/app/work/\\\\[slug\\\\] /home/angsec/Projects/saltwater-studio/src/app/services/\\\\[slug\\\\] /home/angsec/Projects/saltwater-studio/src/app/about /home/angsec/Projects/saltwater-studio/src/app/contact /home/angsec/Projects/saltwater-studio/src/app/book /home/angsec/Projects/saltwater-studio/src/app/thanks /home/angsec/Projects/saltwater-studio/src/app/privacy /home/angsec/Projects/saltwater-studio/src/app/api/contact)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "/home/angsec/Projects/saltwater-studio/src/app/work"
+    ]
+  }
+}

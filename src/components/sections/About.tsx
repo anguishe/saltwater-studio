@@ -1,0 +1,52 @@
+import Reveal from "@/components/ui/Reveal";
+import { ButtonLink } from "@/components/ui/Button";
+
+export default function About() {
+  return (
+    <section id="about" className="py-24 px-6 bg-ink" aria-labelledby="about-heading">
+      <div className="mx-auto max-w-4xl grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">
+        <Reveal>
+          <div>
+            <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
+              06 / The Studio
+            </p>
+            {/* placeholder for photo */}
+            <div
+              className="aspect-[4/5] rounded-lg bg-marine/30 border border-marine/40"
+              aria-label="Travis — founder of Saltwater Studio (photo coming soon)"
+            />
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <h2
+            id="about-heading"
+            className="font-display text-3xl text-foam md:text-4xl"
+          >
+            Travis, founder.
+          </h2>
+          <div className="mt-6 space-y-4 text-foam/70">
+            <p>
+              Saltwater Studio is a web design studio founded in 2025 by Travis on the Gulf
+              Coast of Florida. The studio builds websites and search presence for service
+              businesses across the United States — the kind of foundation that doesn&apos;t
+              need to be rebuilt in two years.
+            </p>
+            <p>
+              The work is schema-first, tracking-first, and specific: structured data validated
+              before launch, analytics live from day one, and one canonical fact set that Google
+              and AI search can quote. Most competitors skip those steps. Saltwater doesn&apos;t.
+            </p>
+            <p>
+              Remote, nationwide, out of the Florida Panhandle. Every engagement is personal —
+              no account managers, no handoffs.
+            </p>
+          </div>
+          <ButtonLink href="/about" variant="ghost" className="mt-8">
+            Full story
+          </ButtonLink>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

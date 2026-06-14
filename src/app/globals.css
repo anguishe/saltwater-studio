@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  /* Deep (base) */
+  --color-ink: #05161B;
+  --color-marine: #0C3B45;
+  --color-abyss: #02090C;
+
+  /* Surface (coastal) */
+  --color-foam: #F4F1EA;
+  --color-sand: #E9E0CE;
+  --color-shoal: #2FC6B6;
+  --color-sun: #E8B04B;
+
+  /* Bioluminescence */
+  --color-glow: #5FF2E0;
+
+  /* Molten chrome */
+  --color-chrome-hi: #DCE3E8;
+  --color-chrome-mid: #8A949B;
+  --color-chrome-warm: #C9A227;
+
+  /* Font families — CSS vars injected by next/font */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-hanken), system-ui, sans-serif;
+  --font-mono: var(--font-martian), "Courier New", monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #05161B;
+  color: #F4F1EA;
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #2FC6B6;
+  color: #05161B;
+  font-weight: 700;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus rings — shoal colored */
+:focus-visible {
+  outline: 2px solid #2FC6B6;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,51 @@
+# .cursorrules — Saltwater Studio (always-on Composer guardrails)
+
+You are building Saltwater Studio's own flagship site. Read @BRAND.md @DESIGN.md
+@ARCHITECTURE.md @CONTENT.md @SEO.md @INTEGRATIONS.md @PORTFOLIO.md before building.
+These files are the source of truth and override your assumptions.
+
+## Stack (don't add to it without asking)
+Next.js App Router · TypeScript strict · Tailwind · framer-motion · gsap +
+ScrollTrigger · @react-three/fiber + drei (hero only, lazy) · lenis (desktop
+≥1024 only) · resend + zod · lucide-react · @calcom/embed-react.
+
+## Non-negotiables
+1. **Single source of truth:** all facts, NAP, taglines read from `config/site.ts`.
+   Schema + metadata come from `lib/schema.ts` + `lib/seo.ts` (functions fed from
+   site.ts) — NEVER inline schema or metadata literals in pages.
+2. **No placeholder ships.** Replace every `{{TOKEN}}` from START-HERE. Grep `{{`
+   → 0 hits in src/ before any commit that claims a phase complete.
+3. **Type:** Fraunces (display), Hanken Grotesk (body), Martian Mono (mono accent),
+   self-hosted via next/font. Never Inter/Roboto/Clash/Satoshi/Space Grotesk.
+4. **Color:** only the BRAND §3 tokens. `--shoal` is the ONLY interactive accent.
+   Chrome colors are for the hero object only.
+5. **Motion:** transform/opacity only · expo-out `cubic-bezier(0.16,1,0.3,1)`,
+   0.6–1.2s · honor `prefers-reduced-motion` with instant-visible fallback · ONE
+   requestAnimationFrame/useFrame loop per page · cleanup on unmount · nothing
+   animates over the sticky CTA · hero resolves ≤1.2s.
+6. **3D:** hero only, one R3F scene, `next/dynamic` ssr:false, mounted on
+   `useInView`, `dpr={[1,2]}`, ≤3k instanced particles, Suspense fallback = the
+   static poster (which is also mobile + reduced-motion). Pass resize values as
+   uniforms, never interpolate window dims into shader strings. If the scene costs
+   >8 Lighthouse points after lazy-load, ship poster + "Enter the deep" toggle.
+7. **Performance:** homepage may target ~75–85 mobile (the bounded hero
+   exception, DESIGN §0); EVERY other page ≥90. SEO 100 / A11y ≥95 / BP 100 on
+   all. `next/image` everywhere with alt + sizes; GSAP/R3F never in the shared
+   bundle; CLS < 0.05.
+8. **Copy:** verbatim from CONTENT.md. Voice = specific, answer-first, no banned
+   words (elevate, seamless, solutions, leverage, unlock, empower, "we pride
+   ourselves," "in today's digital landscape," etc.). No emoji in copy.
+9. **Pricing: QUOTE-ONLY.** Never render a price. Every CTA → Cal.com call
+   (primary) or the quote form (backup).
+10. **Portfolio permission gate:** components must NOT emit a link or endorsement
+    for any project with `permission !== "live"` (PORTFOLIO.md §0).
+11. **Forms:** Resend via `app/api/contact/route.ts` with zod + honeypot +
+    time-trap; success → `/thanks` → dataLayer `form_submit`. Never lose a lead
+    silently. (INTEGRATIONS §1.)
+12. **Tracking:** events via GTM/dataLayer only, taxonomy in INTEGRATIONS §3; no
+    hardcoded analytics scripts.
+
+## Hygiene
+No localStorage/sessionStorage. No HTML `<form>` navigation (fetch). No console.log
+in committed code. Run `npm run build` (exit 0) before declaring a phase done, and
+end each phase by listing anything that would block the page's performance target.
