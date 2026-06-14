@@ -1,28 +1,4 @@
 {
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 -c \"import sys,json; d=json.load(sys.stdin); fp=d.get('file_path',''); exit(1) if fp.split('/')[-1].startswith('.env') else exit(0)\""
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cd /home/angsec/Projects/saltwater-studio && npm run lint --silent 2>&1 | head -20"
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
       "Bash(npm --version)",
@@ -45,10 +21,43 @@
       "Bash(npm run *)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); deps={**d.get\\('dependencies',{}\\),**d.get\\('devDependencies',{}\\)}; print\\('sharp' in deps, deps.get\\('sharp','NOT FOUND'\\)\\)\")",
       "Read(//home/angsec/Downloads/saltwater-studio-assets/public/**)",
-      "Read(//home/angsec/Downloads/saltwater-studio-assets/**)"
+      "Read(//home/angsec/Downloads/saltwater-studio-assets/**)",
+      "Bash(xargs -I{} sh -c 'printf \"%6s  %s\\\\n\" \"$\\(du -h \"{}\" | cut -f1\\)\" \"$\\(basename \"{}\"\\)\"')",
+      "Bash(xargs ls -lh)",
+      "Bash(sort -k5 -h)",
+      "Bash(sort -k5 -rh)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s http://localhost:3000/contact)",
+      "Bash(curl -s -X POST http://localhost:3000/api/contact -H 'Content-Type: application/json' -d '{\"name\":\"Bot\",\"email\":\"bot@spam.com\",\"message\":\"spam\",\"company\":\"IAmABot\",\"t\":0}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/contact -H 'Content-Type: application/json' -d '{\"name\":\"Human\",\"email\":\"real@test.com\",\"message\":\"need a site\",\"company\":\"\",\"t\":__CMDSUB_OUTPUT__}')",
+      "Bash(curl -s http://localhost:3000/thanks)"
     ],
     "additionalDirectories": [
       "/home/angsec/Projects/saltwater-studio/src/app/work"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import sys,json; d=json.load(sys.stdin); fp=d.get('file_path',''); exit(1) if fp.split('/')[-1].startswith('.env') else exit(0)\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/angsec/Projects/saltwater-studio && npm run lint --silent 2>&1 | head -20"
+          }
+        ]
+      }
     ]
   }
 }

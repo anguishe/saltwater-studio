@@ -1,9 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { site } from "@/config/site";
 import { track } from "@/lib/events";
+
+const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: false });
 
 export default function CtaClose() {
   return (
@@ -18,6 +22,23 @@ export default function CtaClose() {
       >
         <div className="h-[400px] w-[400px] rounded-full bg-shoal/5 blur-[120px]" />
       </div>
+
+      {/* Chrome-mark echo — GSAP scrub fades + scales it in as section enters view */}
+      <ScrollFX
+        variant="ctaEcho"
+        className="pointer-events-none absolute inset-0 flex items-center justify-center"
+        aria-hidden="true"
+      >
+        <div className="relative w-72 h-72 md:w-96 md:h-96 select-none">
+          <Image
+            src="/images/saltwater-studio-chrome-mark.webp"
+            alt=""
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 288px, 384px"
+          />
+        </div>
+      </ScrollFX>
 
       <div className="relative mx-auto max-w-3xl">
         <Reveal>

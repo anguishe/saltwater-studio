@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  verification: {
+    google: site.googleSiteVerification,
+  },
 };
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "";

@@ -12,8 +12,9 @@ import About from "@/components/sections/About";
 import CtaClose from "@/components/sections/CtaClose";
 import { getFaqsByPage } from "@/data/faqs";
 
+// Home: brand-first title (Saltwater Studio | …) — formatTitle inverts for path "/"
 export const metadata: Metadata = buildMetadata({
-  title: "Saltwater Studio | Web Design for Service Businesses",
+  title: "Web Design for Service Businesses",
   description:
     "A web design studio for service businesses that refuse to look like everyone else. Schema-first builds, AI search visibility, and the tracking your competitor skipped.",
   path: "/",
@@ -24,7 +25,9 @@ export default function HomePage() {
 
   return (
     <>
+      {/* FAQ AEO — org+website schema emitted globally from layout.tsx */}
       <JsonLd schema={buildFaqSchema(homeFaqs)} />
+
       <Hero />
       <Trust />
       <Offer />

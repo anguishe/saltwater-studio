@@ -7,14 +7,18 @@ const schema = z.object({
   email: z.string().email(),
   business: z.string().max(200).optional(),
   message: z.string().min(1).max(5000),
-  company: z.string().max(0, "honeypot must be empty"), // honeypot
+  // Honeypot — must be absent or empty; optional so missing key doesn't hard-fail
+  company: z.string().optional().default(""),
   t: z.number(),
 });
 
+// NOTE: Until saltwaterstudio.xyz is verified in Resend (SPF + DKIM DNS records),
+// change FROM_EMAIL to Resend's onboarding domain (e.g. "onboarding@resend.dev")
+// as a stopgap. Once DNS TXT/DKIM records propagate, switch back to studio email.
 const STUDIO_EMAIL = process.env.STUDIO_EMAIL ?? "hello@saltwaterstudio.xyz";
+const FROM_EMAIL = STUDIO_EMAIL;
 
 export async function POST(req: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
   let body: unknown;
   try {
     body = await req.json();
@@ -29,9 +33,9 @@ export async function POST(req: Request) {
 
   const { name, email, business, message, company, t } = parsed.data;
 
-  // Honeypot check
-  if (company && company.length > 0) {
-    return NextResponse.json({ ok: true }); // silently ignore bots
+  // Honeypot — return ok silently so bots don't learn they were caught
+  if (company.length > 0) {
+    return NextResponse.json({ ok: true });
   }
 
   // Time-trap: reject if submitted in under 3 seconds
@@ -39,24 +43,34 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Slow down" }, { status: 400 });
   }
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error("[contact] RESEND_API_KEY not set — add it to Vercel env vars");
+    return NextResponse.json(
+      { error: `Something hiccuped on our end — call us directly.` },
+      { status: 500 }
+    );
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const businessLine = business ? `\nBusiness: ${business}` : "";
 
     // Notify Travis
     await resend.emails.send({
-      from: `Saltwater Studio <${STUDIO_EMAIL}>`,
+      from: `Saltwater Studio <${FROM_EMAIL}>`,
       to: STUDIO_EMAIL,
       replyTo: email,
       subject: `New quote — ${name}`,
       text: `Name: ${name}\nEmail: ${email}${businessLine}\n\n${message}`,
     });
 
-    // Autoresponder to lead
+    // Autoresponder to lead (CONTENT.md thanks copy)
     await resend.emails.send({
-      from: `Saltwater Studio <${STUDIO_EMAIL}>`,
+      from: `Saltwater Studio <${FROM_EMAIL}>`,
       to: email,
       subject: "Got it — talk soon",
-      text: `Hi ${name},\n\nThanks for reaching out to Saltwater Studio. Expect a reply within one business day.\n\nIn the meantime, feel free to book a strategy call at saltwaterstudio.xyz/book.\n\nTravis\nSaltwater Studio`,
+      text: `Hi ${name},\n\nGot it. Expect a reply within one business day.\n\nIn the meantime, you can book a strategy call at saltwaterstudio.xyz/book.\n\nTravis\nSaltwater Studio`,
     });
 
     return NextResponse.json({ ok: true });
@@ -64,7 +78,7 @@ export async function POST(req: Request) {
     // Never lose the lead silently — log to function logs
     console.error("[contact] Resend error:", err);
     return NextResponse.json(
-      { error: "Something hiccuped on our end. Please try again or call us directly." },
+      { error: "Something hiccuped on our end — please try again or call us directly." },
       { status: 500 }
     );
   }

@@ -3,8 +3,8 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { track } from "@/lib/events";
+import { site } from "@/config/site";
 
-// noIndex — conversion page; fires form_submit dataLayer event
 export const dynamic = "force-static";
 
 export default function ThanksPage() {
@@ -21,13 +21,21 @@ export default function ThanksPage() {
         Got it.
       </h1>
       <p className="mt-4 text-foam/60 max-w-sm">
-        Expect a reply within one business day. In the meantime, you can book a
-        strategy call if you&apos;d like to lock in time.
+        Expect a reply within one business day. Need it sooner?{" "}
+        <a
+          href={`tel:${site.phone}`}
+          className="text-shoal hover:text-glow transition-colors"
+          onClick={() => track.phoneClick()}
+        >
+          Call {site.phoneDisplay}
+        </a>
+        .
       </p>
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <Link
           href="/book"
           className="inline-flex items-center justify-center rounded bg-shoal px-8 py-3 text-sm font-semibold text-ink hover:bg-glow transition-colors"
+          onClick={() => track.bookingClick()}
         >
           Book a call
         </Link>

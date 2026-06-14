@@ -22,6 +22,7 @@ export const site = {
   calcom: "{{CALCOM_URL}}", // TODO: your Cal.com booking link
   sameAs: [ /* GBP URL, Instagram, LinkedIn, GitHub, Dribbble — add as live */ ],
   gtmId: "{{GTM_ID}}", // TODO: GTM-XXXXXXX — loaded from NEXT_PUBLIC_GTM_ID env
+  googleSiteVerification: "TtW9ukjyKdvs9lvvzlFkRdpTgLNoXCqrRFNmdPGUVOc",
 } as const;
 
 export type Site = typeof site;

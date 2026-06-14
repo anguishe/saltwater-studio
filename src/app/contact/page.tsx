@@ -8,7 +8,7 @@ import QuoteForm from "./QuoteForm";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact",
+  title: "Contact — Get a Web Design Quote",
   description:
     "Get a quote from Saltwater Studio — web design and SEO for service businesses. Tell us about your project and expect a reply within one business day.",
   path: "/contact",
@@ -33,11 +33,11 @@ export default function ContactPage() {
                 Contact
               </p>
               <h1 className="font-display text-4xl text-foam">
-                Let&apos;s talk about your site.
+                Tell us about the business.
               </h1>
               <p className="mt-4 text-foam/60">
-                Fill out the form and expect a reply within one business day. Or book
-                a strategy call directly.
+                The more specific you are, the more useful the quote. No spam,
+                no obligation — Travis reads every message.
               </p>
             </Reveal>
 
