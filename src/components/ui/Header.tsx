@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { ButtonLink } from "./Button";
@@ -31,8 +32,15 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-lg font-semibold text-foam">
-          Saltwater Studio
+        <Link href="/" aria-label="Saltwater Studio — home">
+          <Image
+            src="/saltwater-studio-logo-light.svg"
+            alt="Saltwater Studio"
+            width={160}
+            height={36}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -56,8 +64,8 @@ export default function Header() {
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href="/book" onClick={track.bookingClick}>
-            Book a call
+          <ButtonLink href={site.calcom} onClick={track.bookingClick}>
+            Book a strategy call
           </ButtonLink>
         </div>
 
@@ -91,8 +99,8 @@ export default function Header() {
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href="/book" onClick={() => setOpen(false)} className="w-full justify-center">
-            Book a call
+          <ButtonLink href={site.calcom} onClick={() => { track.bookingClick(); setOpen(false); }} className="w-full justify-center">
+            Book a strategy call
           </ButtonLink>
         </div>
       )}

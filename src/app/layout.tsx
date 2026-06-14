@@ -55,7 +55,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${hankenGrotesk.variable} ${martianMono.variable}`}
     >
       <body>
-        <a href="#main-content" className="skip-link">
+        <a href="#main" className="skip-link">
           Skip to main content
         </a>
 
@@ -63,7 +63,11 @@ export default function RootLayout({
 
         <Header />
 
-        <main id="main-content" tabIndex={-1}>
+        <main
+          id="main"
+          tabIndex={-1}
+          className="pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0"
+        >
           {children}
         </main>
 

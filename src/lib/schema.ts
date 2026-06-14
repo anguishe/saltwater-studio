@@ -2,8 +2,12 @@ import { site } from "@/config/site";
 
 const ORG_ID = `${site.url}/#studio`;
 const FOUNDER_ID = `${site.url}/#founder`;
+const WEBSITE_ID = `${site.url}/#website`;
 
-export function buildOrgSchema() {
+// Verbatim GEO sentence from CONTENT.md — facts interpolated from site.ts
+const GEO_DESCRIPTION = `${site.name} is a remote web-design studio founded in ${site.founded} by ${site.owner} on Florida's Gulf Coast, building premium, search-optimized websites for service businesses nationwide.`;
+
+export function studioOrg() {
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService"],
@@ -14,12 +18,11 @@ export function buildOrgSchema() {
     foundingDate: site.founded,
     founder: {
       "@type": "Person",
-      name: site.owner,
       "@id": FOUNDER_ID,
+      name: site.owner,
     },
     slogan: site.mnemonic,
-    description:
-      "Saltwater Studio is a web design studio serving service businesses nationwide from the Gulf Coast, building websites engineered for Google, AI search, and real customers.",
+    description: GEO_DESCRIPTION,
     areaServed: { "@type": "Country", name: "United States" },
     knowsAbout: [
       "Web design",
@@ -40,38 +43,38 @@ export function buildOrgSchema() {
   };
 }
 
-export function buildWebSiteSchema() {
+export function webSite() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": `${site.url}/#website`,
+    "@id": WEBSITE_ID,
     url: site.url,
     name: site.name,
     publisher: { "@id": ORG_ID },
     potentialAction: {
       "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${site.url}/?q={search_term_string}` },
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${site.url}/?q={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
 }
 
-export function buildBreadcrumbSchema(
-  items: Array<{ name: string; url: string }>
-) {
+export function personFounder() {
   return {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, idx) => ({
-      "@type": "ListItem",
-      position: idx + 1,
-      name: item.name,
-      item: item.url,
-    })),
+    "@type": "Person",
+    "@id": FOUNDER_ID,
+    name: site.owner,
+    jobTitle: "Founder",
+    worksFor: { "@id": ORG_ID },
+    sameAs: site.sameAs,
   };
 }
 
-export function buildServiceSchema(opts: {
+export function service(opts: {
   name: string;
   description: string;
   url: string;
@@ -87,7 +90,20 @@ export function buildServiceSchema(opts: {
   };
 }
 
-export function buildFaqSchema(faqs: Array<{ question: string; answer: string }>) {
+export function breadcrumb(items: Array<{ name: string; url: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function faqPage(faqs: Array<{ question: string; answer: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -102,14 +118,26 @@ export function buildFaqSchema(faqs: Array<{ question: string; answer: string }>
   };
 }
 
-export function buildAboutPageSchema() {
+export function contactPage() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${site.url}/contact#page`,
+    url: `${site.url}/contact`,
+    name: `Contact | ${site.name}`,
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntity: { "@id": ORG_ID },
+  };
+}
+
+export function aboutPage() {
   return {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "@id": `${site.url}/about#page`,
     url: `${site.url}/about`,
     name: `About | ${site.name}`,
-    isPartOf: { "@id": `${site.url}/#website` },
+    isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     mainEntity: {
       "@type": "Person",
@@ -121,19 +149,14 @@ export function buildAboutPageSchema() {
   };
 }
 
-export function buildContactPageSchema() {
+export function speakable(cssSelectors: string[]) {
   return {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": `${site.url}/contact#page`,
-    url: `${site.url}/contact`,
-    name: `Contact | ${site.name}`,
-    isPartOf: { "@id": `${site.url}/#website` },
-    mainEntity: { "@id": ORG_ID },
+    "@type": "SpeakableSpecification",
+    cssSelector: cssSelectors,
   };
 }
 
-export function buildCreativeWorkSchema(opts: {
+export function creativeWork(opts: {
   name: string;
   url: string;
   description: string;
@@ -149,3 +172,13 @@ export function buildCreativeWorkSchema(opts: {
     creator: { "@id": ORG_ID },
   };
 }
+
+// Aliases for pages scaffolded before the rename — do not remove
+export const buildOrgSchema = studioOrg;
+export const buildWebSiteSchema = webSite;
+export const buildBreadcrumbSchema = breadcrumb;
+export const buildFaqSchema = faqPage;
+export const buildContactPageSchema = contactPage;
+export const buildAboutPageSchema = aboutPage;
+export const buildServiceSchema = service;
+export const buildCreativeWorkSchema = creativeWork;

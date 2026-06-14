@@ -28,6 +28,19 @@
 
 :root {
   color-scheme: dark;
+
+  /* BRAND §3 — bare tokens (component-level; Tailwind gets --color-* in @theme) */
+  --ink:         #05161B;
+  --marine:      #0C3B45;
+  --abyss:       #02090C;
+  --foam:        #F4F1EA;
+  --sand:        #E9E0CE;
+  --shoal:       #2FC6B6;
+  --sun:         #E8B04B;
+  --glow:        #5FF2E0;
+  --chrome-hi:   #DCE3E8;
+  --chrome-mid:  #8A949B;
+  --chrome-warm: #C9A227;
 }
 
 *,
@@ -42,8 +55,8 @@ html {
 }
 
 body {
-  background-color: #05161B;
-  color: #F4F1EA;
+  background-color: var(--ink);
+  color: var(--foam);
   font-family: var(--font-body);
   line-height: 1.6;
 }

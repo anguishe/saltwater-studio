@@ -20,9 +20,7 @@ export const site = {
     "Websites engineered for Google, AI search, and the people in between.",
   mnemonic: "Depth, by design.",
   calcom: "{{CALCOM_URL}}", // TODO: your Cal.com booking link
-  sameAs: [
-    // TODO: add GBP, Instagram, LinkedIn, GitHub, Dribbble as they go live
-  ] as string[],
+  sameAs: [ /* GBP URL, Instagram, LinkedIn, GitHub, Dribbble — add as live */ ],
   gtmId: "{{GTM_ID}}", // TODO: GTM-XXXXXXX — loaded from NEXT_PUBLIC_GTM_ID env
 } as const;
 
