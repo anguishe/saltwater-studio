@@ -1,3 +1,5 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Suspense } from "react";
@@ -17,8 +19,8 @@ export default function Hero() {
     >
       {/* Static poster / LCP — also serves as mobile + reduced-motion hero */}
       <Image
-        src="/images/hero-poster.jpg"
-        alt="Saltwater Studio — bioluminescent deep ocean with a molten-chrome studio mark"
+        src="/images/saltwater-studio-hero-deep-poster.webp"
+        alt="Saltwater Studio — a molten-chrome studio mark suspended in deep water, the studio's &quot;Depth, by design&quot; signature"
         fill
         priority
         className="object-cover opacity-60 motion-reduce:opacity-80"

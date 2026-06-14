@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 
@@ -10,11 +11,15 @@ export default function About() {
             <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
               06 / The Studio
             </p>
-            {/* placeholder for photo */}
-            <div
-              className="aspect-[4/5] rounded-lg bg-marine/30 border border-marine/40"
-              aria-label="Travis — founder of Saltwater Studio (photo coming soon)"
-            />
+            <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+              <Image
+                src="/images/saltwater-studio-about-column.webp"
+                alt="The ocean's full water column from sunlit coastal surface to the deep — Saltwater Studio brand motif"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
           </div>
         </Reveal>
 

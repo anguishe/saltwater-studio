@@ -1,3 +1,5 @@
+"use client";
+
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { site } from "@/config/site";

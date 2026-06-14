@@ -11,11 +11,10 @@ const schema = z.object({
   t: z.number(),
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const STUDIO_EMAIL = process.env.STUDIO_EMAIL ?? "hello@saltwaterstudio.xyz";
 
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   let body: unknown;
   try {
     body = await req.json();
