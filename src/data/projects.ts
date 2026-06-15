@@ -6,8 +6,10 @@ export interface Project {
   category: string;
   result: string;
   image: string;
+  alt?: string; // descriptive tile alt; templates fall back to `${title} — ${result}`
   permission: Permission;
-  url?: string; // only populated when permission === "live"
+  url?: string; // live: client site; preview: demo URL for "Visit the concept" link
+  gallery?: { src: string; alt: string }[]; // hero renders separately; used on live case studies and concept detail pages
   // Case-study fields — LIVE projects only (PORTFOLIO §1). Never populated on
   // preview tiles, which stay label-only with no link or endorsement.
   challenge?: string;
@@ -26,10 +28,24 @@ export const projects: Project[] = [
     category: "Web Design · Local SEO",
     result:
       "Custom Next.js site with county-level service-area pages built to rank — the local SEO moat done right.",
-    // V1: brand plate — swap to a real screenshot later (one-line edit)
-    image: "/images/saltwater-studio-plate-deep-rays.webp",
+    image: "/images/portfolio/portfolio-bhm-hero.webp",
+    alt: "Beach House Moving — homepage",
     permission: "live",
     url: "https://beachhousemoving.xyz",
+    gallery: [
+      {
+        src: "/images/portfolio/portfolio-bhm-service-areas.webp",
+        alt: "Beach House Moving county-level service-area pages",
+      },
+      {
+        src: "/images/portfolio/portfolio-bhm-reviews.webp",
+        alt: "Beach House Moving 'Trusted by Families' reviews section",
+      },
+      {
+        src: "/images/portfolio/portfolio-bhm-footer.webp",
+        alt: "Beach House Moving Google-review call-to-action and footer",
+      },
+    ],
     challenge:
       "Movers don't get found by being good. They get found by owning the geography — the exact town and county someone searches the night before a move. A single-page template that names one city and stops there can't do that. The searches that matter are happening in a dozen places it never mentions, and the visibility a local company should own goes to the aggregator directories instead.",
     approach:
@@ -60,10 +76,20 @@ export const projects: Project[] = [
     category: "Mobile Dog Conditioning",
     result:
       "A novel mobile service with no direct competitor in AI search — built around a founding-member offer and a booking flow.",
-    // V1: brand plate — swap to a real screenshot later (one-line edit)
-    image: "/images/saltwater-studio-plate-bokeh.webp",
+    image: "/images/portfolio/portfolio-kaisrun-hero.webp",
+    alt: "Kai's Run — homepage",
     permission: "live",
     url: "https://kaisrun.xyz",
+    gallery: [
+      {
+        src: "/images/portfolio/portfolio-kaisrun-about.webp",
+        alt: "Kai's Run 'Meet Kai' about page",
+      },
+      {
+        src: "/images/portfolio/portfolio-kaisrun-blog.webp",
+        alt: "Kai's Run 'Field Notes' blog with the founding-member offer",
+      },
+    ],
     challenge:
       "You can't rank for a search nobody makes yet. Kai's Run is mobile dog conditioning — a trainer who comes to you and actually works the dog — in Destin and across Okaloosa County. The problem isn't beating a competitor for the keyword; there's no competitor and barely a keyword. When a category is new, search engines and AI assistants have no entity to attach the business to, so a real service stays invisible until something teaches the machines what it is and who provides it.",
     approach:
@@ -94,10 +120,20 @@ export const projects: Project[] = [
     category: "Content Site",
     result:
       "A content site engineered for both search and AI citation — structured snippets, schema, llms.txt, and a real monetization stack.",
-    // V1: brand plate — swap to a real screenshot later (one-line edit)
-    image: "/images/saltwater-studio-plate-calm.webp",
+    image: "/images/portfolio/portfolio-bashsnippets-hero.webp",
+    alt: "BashSnippets — homepage",
     permission: "live",
     url: "https://bashsnippets.xyz",
+    gallery: [
+      {
+        src: "/images/portfolio/portfolio-bashsnippets-snippets.webp",
+        alt: "BashSnippets snippet library",
+      },
+      {
+        src: "/images/portfolio/portfolio-bashsnippets-about.webp",
+        alt: "BashSnippets about page",
+      },
+    ],
     challenge:
       "Most content sites are written for readers, then hope search shows up. BashSnippets was built the other way around. It's a library of Linux commands and snippets — the kind of answer someone wants handed to them, not buried under a long preamble. The bar isn't a page-one ranking anymore; it's being the source an AI assistant quotes when someone asks how to do the thing. That only happens if the content is structured to be lifted.",
     approach:
@@ -124,31 +160,48 @@ export const projects: Project[] = [
   },
   {
     slug: "watervue",
-    title: "WaterVue Events Co.",
+    title: "Concept — Event Planning",
     category: "Event Planning",
     result:
-      "Cinematic event-planning rebuild — full Next.js + R3F scroll experience.",
-    // V1: brand plate — swap to a real screenshot later (one-line edit)
-    image: "/images/saltwater-studio-plate-calm.webp",
+      "A cinematic event-planning concept — a full Next.js + R3F scroll experience, built to show what the format can do.",
+    image: "/images/portfolio/portfolio-watervue-hero.webp",
+    alt: "WaterVue Events Co. — concept site (sample)",
     permission: "preview",
+    url: "https://watervue-events.vercel.app",
+    gallery: [
+      { src: "/images/portfolio/portfolio-watervue-about.webp", alt: "WaterVue Events Co. — about" },
+      { src: "/images/portfolio/portfolio-watervue-reviews.webp", alt: "WaterVue Events Co. — reviews" },
+    ],
   },
   {
     slug: "aquamarine",
-    title: "Aquamarine Pool Clean",
+    title: "Concept — Pool Service",
     category: "Pool Cleaning",
-    result: "Local service build, Fort Walton Beach.",
-    // V1: brand plate — swap to a real screenshot later (one-line edit)
-    image: "/images/saltwater-studio-plate-calm.webp",
+    result:
+      "A local pool-service concept — the local-service playbook applied end to end.",
+    image: "/images/portfolio/portfolio-aquamarine-hero.webp",
+    alt: "Aquamarine Pool Clean — concept site (sample)",
     permission: "preview",
+    url: "https://aquamarine-pool-clean.vercel.app",
+    gallery: [
+      { src: "/images/portfolio/portfolio-aquamarine-services.webp", alt: "Aquamarine Pool Clean — services" },
+      { src: "/images/portfolio/portfolio-aquamarine-service-area.webp", alt: "Aquamarine Pool Clean — service-area map" },
+    ],
   },
   {
     slug: "alexander-hines",
-    title: "Alexander Hines Construction",
+    title: "Concept — Construction",
     category: "Construction",
-    result: "Construction services site.",
-    // V1: brand plate — swap to a real screenshot later (one-line edit)
-    image: "/images/saltwater-studio-plate-calm.webp",
+    result:
+      "A construction-services concept — schema-first and structured for local search.",
+    image: "/images/portfolio/portfolio-alexander-hines-hero.webp",
+    alt: "Alexander Hines Construction — concept site (sample)",
     permission: "preview",
+    url: "https://hines-construction.vercel.app",
+    gallery: [
+      { src: "/images/portfolio/portfolio-alexander-hines-services.webp", alt: "Alexander Hines Construction — services" },
+      { src: "/images/portfolio/portfolio-alexander-hines-gallery.webp", alt: "Alexander Hines Construction — project gallery" },
+    ],
   },
 ];
 
@@ -158,4 +211,8 @@ export function getProjectBySlug(slug: string): Project | undefined {
 
 export function getLiveProjects(): Project[] {
   return projects.filter((p) => p.permission === "live");
+}
+
+export function getAllProjects(): Project[] {
+  return projects;
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
@@ -6,7 +7,7 @@ import { buildBreadcrumbSchema, buildCreativeWorkSchema } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
-import { projects, getProjectBySlug } from "@/data/projects";
+import { getAllProjects, getProjectBySlug } from "@/data/projects";
 import { site } from "@/config/site";
 
 interface Props {
@@ -14,15 +15,21 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return projects
-    .filter((p) => p.permission === "live")
-    .map((p) => ({ slug: p.slug }));
+  return getAllProjects().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
-  if (!project || project.permission !== "live") return {};
+  if (!project) return {};
+  if (project.permission === "preview") {
+    return buildMetadata({
+      title: project.title,
+      description: `${project.result} — a Saltwater Studio concept.`,
+      path: `/work/${slug}`,
+      noIndex: true,
+    });
+  }
   return buildMetadata({
     title: project.title,
     description:
@@ -36,9 +43,11 @@ export default async function WorkSlugPage({ params }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
 
-  if (!project || project.permission !== "live") {
+  if (!project) {
     notFound();
   }
+
+  const isLive = project.permission === "live";
 
   const breadcrumbs = [
     { name: "Home", url: site.url },
@@ -48,15 +57,19 @@ export default async function WorkSlugPage({ params }: Props) {
 
   return (
     <>
-      <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
-      <JsonLd
-        schema={buildCreativeWorkSchema({
-          name: project.title,
-          url: project.url ?? `${site.url}/work/${slug}`,
-          description: project.result,
-          slug,
-        })}
-      />
+      {isLive && (
+        <>
+          <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
+          <JsonLd
+            schema={buildCreativeWorkSchema({
+              name: project.title,
+              url: project.url ?? `${site.url}/work/${slug}`,
+              description: project.result,
+              slug,
+            })}
+          />
+        </>
+      )}
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-4xl">
@@ -73,6 +86,14 @@ export default async function WorkSlugPage({ params }: Props) {
             <p className="mt-6 text-lg text-foam/70">{project.result}</p>
           </Reveal>
 
+          {!isLive && (
+            <Reveal delay={0.1}>
+              <p className="mt-4 font-mono text-xs text-shoal/60">
+                Concept project — a sample site built by Saltwater Studio to demonstrate this kind of business. Not a real company or client.
+              </p>
+            </Reveal>
+          )}
+
           {project.url && (
             <Reveal delay={0.12}>
               <ButtonLink
@@ -82,8 +103,23 @@ export default async function WorkSlugPage({ params }: Props) {
                 variant="ghost"
                 className="mt-8"
               >
-                Visit site →
+                {isLive ? "Visit site →" : "Visit the concept →"}
               </ButtonLink>
+            </Reveal>
+          )}
+
+          {project.image && (
+            <Reveal delay={0.15}>
+              <div className="mt-12 relative aspect-video overflow-hidden rounded-lg border border-marine/30">
+                <Image
+                  src={project.image}
+                  alt={project.alt ?? project.title}
+                  fill
+                  priority
+                  className="object-cover object-top"
+                  sizes="(min-width: 1024px) 768px, 100vw"
+                />
+              </div>
             </Reveal>
           )}
 
@@ -121,6 +157,29 @@ export default async function WorkSlugPage({ params }: Props) {
                   </li>
                 ))}
               </ul>
+            </Reveal>
+          )}
+
+          {project.gallery && project.gallery.length > 0 && (
+            <Reveal delay={0.23}>
+              <h2 className="mt-16 font-display text-2xl text-foam">A closer look</h2>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {project.gallery.map((img) => (
+                  <div
+                    key={img.src}
+                    className="relative aspect-16/10 overflow-hidden rounded-lg border border-marine/30"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      loading="lazy"
+                      className="object-cover object-top"
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                    />
+                  </div>
+                ))}
+              </div>
             </Reveal>
           )}
 

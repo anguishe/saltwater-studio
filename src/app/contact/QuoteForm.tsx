@@ -114,7 +114,7 @@ export default function QuoteForm() {
             name="business"
             type="text"
             autoComplete="organization"
-            inputMode="url"
+            inputMode="text"
             className={inputClass}
             onFocus={handleFirstInteraction}
           />
@@ -164,7 +164,7 @@ export default function QuoteForm() {
           <p className="mt-3 text-center text-xs text-foam/40">
             Prefer to talk it through?{" "}
             <a
-              href={`https://cal.com/${site.calcom}`}
+              href="/book"
               className="underline underline-offset-2 hover:text-shoal transition-colors"
               onClick={() => track.bookingClick()}
             >

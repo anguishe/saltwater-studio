@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema, buildServiceSchema, buildFaqSchema } from "@/lib/schema";
+import { buildBreadcrumbSchema, buildServiceSchema, buildFaqSchema, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
@@ -55,6 +55,7 @@ export default async function ServiceSlugPage({ params }: Props) {
         })}
       />
       {pageFaqs.length > 0 && <JsonLd schema={buildFaqSchema(pageFaqs)} />}
+      <JsonLd schema={webPage({ path: `/services/${slug}`, name: `${service.title} | ${site.name}`, speakableSelectors: ["h1"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-4xl">
@@ -85,11 +86,11 @@ export default async function ServiceSlugPage({ params }: Props) {
 
           {pageFaqs.length > 0 && (
             <Reveal delay={0.16}>
-              <h2 className="mt-20 font-display text-2xl text-foam">Common questions</h2>
+              <p className="mt-20 font-mono text-xs tracking-[0.2em] text-shoal uppercase">Common questions</p>
               <div className="mt-8 space-y-6 divide-y divide-marine/20">
                 {pageFaqs.map((faq) => (
                   <div key={faq.question} className="pt-6">
-                    <h3 className="font-semibold text-foam">{faq.question}</h3>
+                    <h2 className="text-lg font-semibold text-foam">{faq.question}</h2>
                     <p className="mt-3 text-foam/60">{faq.answer}</p>
                   </div>
                 ))}

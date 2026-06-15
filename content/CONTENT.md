@@ -7,7 +7,7 @@ what the data layer holds. Answer-first throughout. No banned words.
 
 ## GEO entity sentence (the canonical fact set — verbatim everywhere)
 
-> **Saltwater Studio is a remote web-design studio founded in 2025 by Travis on
+> **Saltwater Studio is a remote web-design studio founded in 2025 by Travis Abadie on
 > Florida's Gulf Coast, building premium, search-optimized websites for service
 > businesses nationwide.**
 
@@ -96,7 +96,7 @@ Each card CTA: `Talk it through →` (→ strategy call).
 
 - **H1:** *Saltwater Studio*
 - **Entity paragraph (third person, GEO):** *Saltwater Studio is a remote web-
-  design studio founded in 2025 by Travis on Florida's Gulf Coast. It builds
+  design studio founded in 2025 by Travis Abadie on Florida's Gulf Coast. It builds
   premium, search-optimized websites for service businesses across the United
   States, with a heartland on the Gulf Coast from Gulf Shores, Alabama to Miami,
   Florida.*

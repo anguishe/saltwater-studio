@@ -27,6 +27,7 @@ This file is the recovery-email + access record. Keep it updated.
 | `RESEND_API_KEY` | Resend email delivery |
 | `NEXT_PUBLIC_GTM_ID` | Google Tag Manager container ID |
 | `STUDIO_EMAIL` | Receiving email for quote form |
+| `INDEXNOW_KEY` | IndexNow ping on production deploy (postbuild) |
 
 ## Post-launch checklist
 

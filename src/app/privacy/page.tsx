@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
+import { webPage } from "@/lib/schema";
 import Reveal from "@/components/ui/Reveal";
+import { ButtonLink } from "@/components/ui/Button";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
@@ -12,11 +15,13 @@ export const metadata: Metadata = buildMetadata({
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-32 pb-24 px-6 bg-ink">
+    <>
+      <JsonLd schema={webPage({ path: "/privacy", name: `Privacy Policy | ${site.name}`, speakableSelectors: [] })} />
+      <div className="pt-32 pb-24 px-6 bg-ink">
       <div className="mx-auto max-w-3xl">
         <Reveal>
           <h1 className="font-display text-4xl text-foam">Privacy Policy</h1>
-          <p className="mt-2 text-sm text-foam/40">Last updated: {site.founded}</p>
+          <p className="mt-2 text-sm text-foam/40">Last updated: June 2025</p>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -56,7 +61,19 @@ export default function PrivacyPage() {
             </p>
           </div>
         </Reveal>
+
+        <Reveal delay={0.12}>
+          <div className="mt-12 pt-8 border-t border-marine/20 flex flex-col gap-3 sm:flex-row">
+            <ButtonLink href="/book" variant="primary">
+              Book a strategy call
+            </ButtonLink>
+            <ButtonLink href="/contact" variant="ghost">
+              Get a quote
+            </ButtonLink>
+          </div>
+        </Reveal>
       </div>
     </div>
+    </>
   );
 }

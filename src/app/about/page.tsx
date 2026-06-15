@@ -67,7 +67,7 @@ export default function AboutPage() {
                   {/* Third-person entity paragraph — GEO asset, verbatim per CONTENT.md and SEO.md §5 */}
                   <p id="about-entity">
                     Saltwater Studio is a remote web-design studio founded in 2025 by
-                    Travis on Florida&apos;s Gulf Coast. It builds premium,
+                    Travis Abadie on Florida&apos;s Gulf Coast. It builds premium,
                     search-optimized websites for service businesses across the United
                     States, with a heartland on the Gulf Coast from Gulf Shores, Alabama
                     to Miami, Florida.
@@ -97,7 +97,7 @@ export default function AboutPage() {
                   <ButtonLink href="/work" variant="primary">
                     See the work
                   </ButtonLink>
-                  <ButtonLink href={`https://cal.com/${site.calcom}`} variant="ghost">
+                  <ButtonLink href="/book" variant="ghost">
                     Book a call
                   </ButtonLink>
                 </div>

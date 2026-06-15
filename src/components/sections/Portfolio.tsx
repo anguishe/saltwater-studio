@@ -28,7 +28,7 @@ export default function Portfolio() {
                 <div className="relative aspect-[16/10] overflow-hidden bg-abyss">
                   <Image
                     src={project.image}
-                    alt={`${project.title} — ${project.result}`}
+                    alt={project.alt ?? `${project.title} — ${project.result}`}
                     fill
                     className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -36,7 +36,7 @@ export default function Portfolio() {
                   {project.permission === "preview" && (
                     <div className="absolute inset-0 flex items-center justify-center bg-abyss/60">
                       <span className="font-mono text-xs tracking-widest text-foam/50 uppercase">
-                        Private Preview
+                        Concept
                       </span>
                     </div>
                   )}
@@ -53,6 +53,14 @@ export default function Portfolio() {
                       className="mt-4 inline-block text-sm text-shoal hover:text-glow transition-colors"
                     >
                       View case study →
+                    </Link>
+                  )}
+                  {project.permission === "preview" && (
+                    <Link
+                      href={`/work/${project.slug}`}
+                      className="mt-4 inline-block text-sm text-shoal/60 hover:text-shoal transition-colors"
+                    >
+                      View concept →
                     </Link>
                   )}
                 </div>

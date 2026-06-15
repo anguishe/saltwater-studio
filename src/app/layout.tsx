@@ -58,6 +58,16 @@ export default function RootLayout({
       className={`${fraunces.variable} ${hankenGrotesk.variable} ${martianMono.variable}`}
     >
       <body>
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import QuoteForm from "./QuoteForm";
+import ContactLinks from "./ContactLinks";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
@@ -42,20 +43,7 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="mt-10 space-y-4">
-                <a
-                  href={`mailto:${site.email}`}
-                  className="block text-sm text-foam/60 hover:text-shoal transition-colors"
-                >
-                  {site.email}
-                </a>
-                <a
-                  href={`tel:${site.phone}`}
-                  className="block text-sm text-foam/60 hover:text-shoal transition-colors"
-                >
-                  {site.phoneDisplay}
-                </a>
-              </div>
+              <ContactLinks />
             </Reveal>
 
             <Reveal delay={0.12}>

@@ -11,8 +11,8 @@ Saltwater Studio is a remote web-design studio founded in 2025 by Travis Abadie 
 
 ## Portfolio
 
-- Beach House Moving: https://beachhousemoving.com
-- Kai's Run: https://kaisrun.com
+- Beach House Moving: https://beachhousemoving.xyz
+- Kai's Run: https://kaisrun.xyz
 - BashSnippets: https://bashsnippets.xyz
 
 ## Case Studies

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema } from "@/lib/schema";
+import { buildBreadcrumbSchema, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { projects } from "@/data/projects";
@@ -24,6 +24,7 @@ export default function WorkPage() {
   return (
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
+      <JsonLd schema={webPage({ path: "/work", name: `Our Work — Custom Web Design Projects | ${site.name}`, speakableSelectors: ["h1"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-7xl">
@@ -48,7 +49,7 @@ export default function WorkPage() {
                   <div className="relative aspect-[16/10] overflow-hidden bg-abyss">
                     <Image
                       src={project.image}
-                      alt={`${project.title} — ${project.result}`}
+                      alt={project.alt ?? `${project.title} — ${project.result}`}
                       fill
                       className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -56,7 +57,7 @@ export default function WorkPage() {
                     {project.permission === "preview" && (
                       <div className="absolute inset-0 flex items-center justify-center bg-abyss/60">
                         <span className="font-mono text-xs tracking-widest text-foam/50 uppercase">
-                          Private Preview
+                          Concept
                         </span>
                       </div>
                     )}

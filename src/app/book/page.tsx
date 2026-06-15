@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema } from "@/lib/schema";
+import { buildBreadcrumbSchema, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import CalEmbed from "./CalEmbed";
@@ -22,6 +22,7 @@ export default function BookPage() {
   return (
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
+      <JsonLd schema={webPage({ path: "/book", name: `Book a Strategy Call | ${site.name}`, speakableSelectors: ["h1"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-3xl">

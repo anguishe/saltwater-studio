@@ -87,11 +87,11 @@ export default function ServicesPage() {
 
           {serviceFaqs.length > 0 && (
             <Reveal delay={0.2}>
-              <h2 className="mt-20 font-display text-2xl text-foam">Common questions</h2>
+              <p className="mt-20 font-mono text-xs tracking-[0.2em] text-shoal uppercase">Common questions</p>
               <div className="mt-8 space-y-6 divide-y divide-marine/20">
                 {serviceFaqs.map((faq) => (
                   <div key={faq.question} className="pt-6">
-                    <h3 className="font-semibold text-foam">{faq.question}</h3>
+                    <h2 className="text-lg font-semibold text-foam">{faq.question}</h2>
                     <p className="faq-answer mt-3 text-foam/60">{faq.answer}</p>
                   </div>
                 ))}

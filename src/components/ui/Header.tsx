@@ -64,7 +64,7 @@ export default function Header() {
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href={`https://cal.com/${site.calcom}`} onClick={track.bookingClick}>
+          <ButtonLink href="/book" onClick={track.bookingClick}>
             Book a strategy call
           </ButtonLink>
         </div>
@@ -99,7 +99,7 @@ export default function Header() {
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href={`https://cal.com/${site.calcom}`} onClick={() => { track.bookingClick(); setOpen(false); }} className="w-full justify-center">
+          <ButtonLink href="/book" onClick={() => { track.bookingClick(); setOpen(false); }} className="w-full justify-center">
             Book a strategy call
           </ButtonLink>
         </div>

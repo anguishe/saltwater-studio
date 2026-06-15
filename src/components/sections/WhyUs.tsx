@@ -33,7 +33,7 @@ export default function WhyUs() {
             id="why-heading"
             className="font-display text-3xl text-foam md:text-4xl max-w-2xl"
           >
-            Depth, by design.
+            What a template can&apos;t fake.
           </h2>
         </Reveal>
 
