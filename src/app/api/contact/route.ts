@@ -12,11 +12,18 @@ const schema = z.object({
   t: z.number(),
 });
 
-// NOTE: Until saltwaterstudio.xyz is verified in Resend (SPF + DKIM DNS records),
-// change FROM_EMAIL to Resend's onboarding domain (e.g. "onboarding@resend.dev")
-// as a stopgap. Once DNS TXT/DKIM records propagate, switch back to studio email.
-const STUDIO_EMAIL = process.env.STUDIO_EMAIL ?? "hello@saltwaterstudio.xyz";
-const FROM_EMAIL = STUDIO_EMAIL;
+/*
+ * Required Vercel env vars for this route:
+ * RESEND_API_KEY      — Resend API key (re_...)
+ * RESEND_FROM_EMAIL   — Verified sender: hello@saltwaterstudio.xyz
+ * RESEND_TO_EMAIL     — Notification recipient: anguisheh1@gmail.com
+ *
+ * Domain saltwaterstudio.xyz must be verified in Resend (DKIM record is set).
+ * replyTo is set to the lead's email so Reply goes to them, not back to the sender.
+ */
+const FROM_EMAIL =
+  process.env.RESEND_FROM_EMAIL ?? "hello@saltwaterstudio.xyz";
+const TO_EMAIL = process.env.RESEND_TO_EMAIL ?? "anguisheh1@gmail.com";
 
 export async function POST(req: Request) {
   let body: unknown;
@@ -59,7 +66,7 @@ export async function POST(req: Request) {
     // Notify Travis
     await resend.emails.send({
       from: `Saltwater Studio <${FROM_EMAIL}>`,
-      to: STUDIO_EMAIL,
+      to: TO_EMAIL,
       replyTo: email,
       subject: `New quote — ${name}`,
       text: `Name: ${name}\nEmail: ${email}${businessLine}\n\n${message}`,
