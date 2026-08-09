@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
   {
     question: "How much does this cost?",
     answer:
-      "Pricing is quote-based, because automating one process and rebuilding how a business runs are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.",
+      "The AI Visibility Audit is $150 flat, delivered within 72 hours. Everything else is quote-based, because automating one process and rebuilding how a business runs are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.",
     page: "home",
   },
   {
@@ -54,7 +54,37 @@ export const faqs: FAQ[] = [
   {
     question: "What services does Saltwater Studio offer?",
     answer:
-      "Three AI services — strategy and logistics, automation, and agents — plus the web, search, Google Business Profile, and social work that makes a business findable. Pricing is quote-based on all of it.",
+      "Four engagements: a $150 AI Visibility Audit, the optimization sprint that implements it, ongoing AI-managed presence, and custom AI systems — automation, agents, and integrations. The audit has a flat price; everything else is quoted to the business.",
+    page: "services",
+  },
+  {
+    question: "What does the $150 AI Visibility Audit include?",
+    answer:
+      "Five checks: how your business shows up in ChatGPT, Claude, Perplexity, and Google's AI results; whether your key pages are structured answer-first; schema and entity consistency; your Google Business Profile; and a technical SEO baseline. It arrives as a written report — scored by category, issues ranked by impact, fixes in order — within 72 hours.",
+    page: "services",
+  },
+  {
+    question: "How fast is the audit delivered?",
+    answer:
+      "Within 72 hours of purchase, fully async — buy it, and the report arrives by email. No call, no meeting; if something needs clarifying, we ask by email.",
+    page: "services",
+  },
+  {
+    question: "Do I need to get on a call?",
+    answer:
+      "No. Every engagement can run entirely over email. The intake form asks how you would rather be reached — a call is available, never required.",
+    page: "services",
+  },
+  {
+    question: "What happens after the audit?",
+    answer:
+      "The report stands alone. Fix the items yourself, hand the report to your developer, or have Saltwater Studio implement it as a scoped sprint — your call, no obligation either way.",
+    page: "services",
+  },
+  {
+    question: "What does the AI-Managed Presence retainer cover?",
+    answer:
+      "The monthly work that keeps rankings, profiles, and AI answers current after the fixes land: Google Business Profile management, schema and content-signal upkeep, monitoring what AI assistants say about the business, and a written monthly report of what moved. Quote-based, scoped to the business.",
     page: "services",
   },
   {

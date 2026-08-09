@@ -45,6 +45,10 @@ export const site = {
   // one dead node weakens the whole sameAs cluster.
   sameAs: [] as string[],
   gtmId: "GTM-M3RTZ7C8", // documentation only; runtime reads NEXT_PUBLIC_GTM_ID env var
+  // The ONE price on the site (pricing carve-out, 2026-08-09): the T1 AI
+  // Visibility Audit sells at $150 flat via this live Stripe Payment Link.
+  // Everything else stays quote-only.
+  stripeAuditUrl: "https://buy.stripe.com/eVqcN49uP3uX3gW0VMeUU00",
   googleSiteVerification: "TtW9ukjyKdvs9lvvzlFkRdpTgLNoXCqrRFNmdPGUVOc",
 } as const;
 

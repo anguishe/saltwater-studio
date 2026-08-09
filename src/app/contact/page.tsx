@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { buildMetadata } from "@/lib/seo";
 import { buildContactPageSchema, buildBreadcrumbSchema } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -48,7 +49,11 @@ export default function ContactPage() {
           </div>
 
           <Reveal delay={0.06}>
-            <QuoteForm />
+            {/* Suspense: QuoteForm reads useSearchParams (?interest= prefill) —
+                required for static rendering in Next 16 */}
+            <Suspense fallback={null}>
+              <QuoteForm />
+            </Suspense>
           </Reveal>
         </div>
       </div>

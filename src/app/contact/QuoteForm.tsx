@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { site } from "@/config/site";
 import { track } from "@/lib/events";
@@ -10,15 +10,35 @@ import {
   BOTTLENECKS,
   TEAM_SIZES,
   TIMELINES,
+  PREFERRED_CONTACT,
 } from "@/data/quoteOptions";
+
+// /services tier ids → INTERESTS entries, so ladder CTAs land preselected.
+const INTEREST_PREFILL: Record<string, (typeof INTERESTS)[number]> = {
+  audit: INTERESTS[0],
+  sprint: INTERESTS[1],
+  retainer: INTERESTS[2],
+  custom: INTERESTS[3],
+};
 
 interface FormState {
   status: "idle" | "loading" | "error";
   error?: string;
 }
 
+// "mybusiness.com" is a valid answer; the server's z.url() check is not the
+// place to punish a missing protocol.
+function normalizeUrl(value: FormDataEntryValue | null): string | undefined {
+  const raw = String(value ?? "").trim();
+  if (!raw) return undefined;
+  return /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+}
+
 export default function QuoteForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const prefilledInterest =
+    INTEREST_PREFILL[searchParams.get("interest") ?? ""] ?? "";
   const [state, setState] = useState<FormState>({ status: "idle" });
   const startTimeRef = useRef<number>(0);
   const hasStartedRef = useRef(false);
@@ -47,7 +67,9 @@ export default function QuoteForm() {
           name: data.get("name"),
           email: data.get("email"),
           business: data.get("business") || undefined,
+          siteUrl: normalizeUrl(data.get("siteUrl")),
           interest: data.get("interest") || undefined,
+          preferredContact: data.get("preferredContact") || undefined,
           bottleneck: data.get("bottleneck") || undefined,
           teamSize: data.get("teamSize") || undefined,
           timeline: data.get("timeline") || undefined,
@@ -118,19 +140,37 @@ export default function QuoteForm() {
           />
         </div>
 
-        <div>
-          <label htmlFor="business" className={labelClass}>
-            Business &amp; website (if any)
-          </label>
-          <input
-            id="business"
-            name="business"
-            type="text"
-            autoComplete="organization"
-            inputMode="text"
-            className={inputClass}
-            onFocus={handleFirstInteraction}
-          />
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label htmlFor="business" className={labelClass}>
+              Business name
+            </label>
+            <input
+              id="business"
+              name="business"
+              type="text"
+              autoComplete="organization"
+              inputMode="text"
+              className={inputClass}
+              onFocus={handleFirstInteraction}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="siteUrl" className={labelClass}>
+              Website (if any)
+            </label>
+            <input
+              id="siteUrl"
+              name="siteUrl"
+              type="text"
+              autoComplete="url"
+              inputMode="url"
+              placeholder="https://…"
+              className={inputClass}
+              onFocus={handleFirstInteraction}
+            />
+          </div>
         </div>
 
         <div>
@@ -140,7 +180,7 @@ export default function QuoteForm() {
           <select
             id="interest"
             name="interest"
-            defaultValue=""
+            defaultValue={prefilledInterest}
             className={selectClass}
             onFocus={handleFirstInteraction}
           >
@@ -213,6 +253,29 @@ export default function QuoteForm() {
               ))}
             </select>
           </div>
+        </div>
+
+        <div>
+          <label htmlFor="preferredContact" className={labelClass}>
+            How should we reply?
+          </label>
+          <select
+            id="preferredContact"
+            name="preferredContact"
+            defaultValue=""
+            className={selectClass}
+            onFocus={handleFirstInteraction}
+          >
+            <option value="">Either is fine</option>
+            {PREFERRED_CONTACT.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          <p className="mt-1.5 text-xs text-foam/40">
+            A call is never required — everything can run over email.
+          </p>
         </div>
 
         <div>

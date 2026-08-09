@@ -58,7 +58,7 @@ export default function CtaClose() {
 
         <Reveal delay={0.14}>
           <p className="mt-6 text-lg text-foam/60">
-            Let&apos;s build the site you stop apologizing for.
+            The customers are already asking. Let&apos;s make you the answer.
           </p>
         </Reveal>
 
@@ -68,7 +68,7 @@ export default function CtaClose() {
               href="/contact"
               variant="primary"
               className="text-base px-8 py-4"
-              onClick={track.bookingClick}
+              onClick={track.quoteStart}
             >
               Start the conversation
             </ButtonLink>

@@ -17,7 +17,7 @@ import { getFaqsByPage } from "@/data/faqs";
 export const metadata: Metadata = buildMetadata({
   title: "AI Agency for Local Business",
   description:
-    "AI systems for local business — built, not bolted on. Saltwater Studio builds AI strategy, automation, and agents for local businesses nationwide, plus the search presence that gets them found.",
+    "Get found and recommended by ChatGPT, Claude, Perplexity, and Google's AI results. Saltwater Studio builds AI visibility for local businesses — starting with a $150 flat-rate audit delivered in 72 hours.",
   path: "/",
 });
 
@@ -28,7 +28,7 @@ export default function HomePage() {
     <>
       {/* FAQ AEO — org+website schema emitted globally from layout.tsx */}
       <JsonLd schema={buildFaqSchema(homeFaqs)} />
-      <JsonLd schema={webPage({ path: "/", name: `${site.name} | Web Design for Service Businesses`, speakableSelectors: ["h1", "#about"] })} />
+      <JsonLd schema={webPage({ path: "/", name: `${site.name} | AI Agency for Local Business`, speakableSelectors: ["h1", "#about"] })} />
 
       <Hero />
       <Trust />

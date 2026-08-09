@@ -90,6 +90,8 @@ export function service(opts: {
   name: string;
   description: string;
   url: string;
+  /** Only the T1 audit carries a published price (carve-out, 2026-08-09). */
+  offers?: { price: number; priceCurrency: "USD" };
 }) {
   return {
     "@context": "https://schema.org",
@@ -99,6 +101,16 @@ export function service(opts: {
     url: opts.url,
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "United States" },
+    ...(opts.offers
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: opts.offers.price,
+            priceCurrency: opts.offers.priceCurrency,
+            url: opts.url,
+          },
+        }
+      : {}),
   };
 }
 

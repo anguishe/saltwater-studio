@@ -1,6 +1,6 @@
 # CLAUDE.md — Saltwater Studio (saltwaterstudio.xyz)
-Flagship site for Saltwater Studio — a remote web-design studio (founder Travis
-Abadie, est. 2025, Florida Gulf Coast, serving the US nationwide).
+Flagship site for Saltwater Studio — a remote AI agency (founder Travis
+Abadie, est. 2025, Destin, Florida, serving the US nationwide).
 ## Stack
 Next.js 16 App Router · TypeScript strict · Tailwind · framer-motion · gsap +
 ScrollTrigger · @react-three/fiber + drei (hero only, lazy, ssr:false) · lenis
@@ -19,10 +19,14 @@ tokens (SEO.md §8 launch gate).
 Confident, plainspoken, specific. Answer-first. Banned words: elevate, seamless,
 solutions, leverage, unlock, empower, synergy, "passionate about", "in today's
 digital landscape", "game-changer", "take it to the next level", "we pride
-ourselves". No emoji in copy.
+ourselves", AI-powered, agentic (outside technical context), revolutionize,
+"transform your business", 10x, cutting-edge, harness, supercharge,
+future-proof, AI-first. No emoji in copy.
 ## Hard rules
-- Quote-only pricing; never a price on the site. CTAs route to Cal.com (book) or
-  the quote form (Resend).
+- Quote-only pricing with ONE carve-out (recorded 2026-08-09): the T1 AI
+  Visibility Audit is $150 flat via a Stripe Payment Link (site.stripeAuditUrl).
+  No other price appears anywhere on the site. CTAs route to the quote form at
+  /contact (Resend); Cal.com is retired — /book redirects to /contact.
 - Portfolio permission gate (PORTFOLIO §0): LIVE = Beach House Moving, Kai's Run,
   BashSnippets (may link). PREVIEW = WaterVue, Aquamarine, Alexander Hines (NO
   link, NO client endorsement, "Private preview" label). The component must refuse

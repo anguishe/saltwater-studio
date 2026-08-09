@@ -54,30 +54,31 @@ export default function Hero() {
         </p>
 
         <h1 className="font-display text-4xl font-semibold leading-tight text-foam md:text-6xl lg:text-7xl">
-          Most AI stops at the demo. We build what runs underneath.
+          Be the business AI recommends.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foam/70">
-          AI systems for local business — built, not bolted on. The repetitive
-          part of your day, handled. The calls you miss, answered. The search
-          presence that gets you named when someone asks for a recommendation.
+          ChatGPT, Claude, Perplexity, and Google&apos;s AI results now decide
+          which local businesses get named. Saltwater Studio builds the presence
+          that gets you recommended — and the $150 AI Visibility Audit shows
+          exactly where you stand today.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <ButtonLink
-            href="/contact"
+            href="/services#audit"
             variant="primary"
+            className="px-8 py-4 text-base"
+          >
+            See the audit — $150
+          </ButtonLink>
+          <ButtonLink
+            href="/contact"
+            variant="ghost"
             className="px-8 py-4 text-base"
             onClick={track.quoteStart}
           >
             Start the conversation
-          </ButtonLink>
-          <ButtonLink
-            href="/services"
-            variant="ghost"
-            className="px-8 py-4 text-base"
-          >
-            See what we build
           </ButtonLink>
         </div>
       </div>

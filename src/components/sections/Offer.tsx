@@ -3,31 +3,21 @@
 import dynamic from "next/dynamic";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
-import { headlineServices } from "@/data/services";
+import { tiers } from "@/data/tiers";
 
 const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: false });
 
 /**
- * Four cards, not seven. The three AI services lead; the four legacy pages
- * (web-design, seo-aeo-geo, google-presence, social-content) sit behind one
- * card pointing at /services, so they stay reachable and indexed without
- * burying the reposition on the homepage.
+ * Four cards = the four engagement tiers (visibility-led merge, 2026-08-09).
+ * The three AI service pages stay live under T4 on /services; the homepage
+ * hands off to the ladder anchors instead of individual service routes.
  */
-const cards = [
-  ...headlineServices.map((s) => ({
-    index: s.index,
-    title: s.title,
-    oneLiner: s.oneLiner,
-    href: `/services/${s.slug}`,
-  })),
-  {
-    index: "04",
-    title: "Web & Search Presence",
-    oneLiner:
-      "The site, the schema, the Google profile, and the weekly content that decide whether any of this gets found. Still here, still ours.",
-    href: "/services",
-  },
-];
+const cards = tiers.map((t) => ({
+  index: t.index,
+  title: t.name,
+  oneLiner: t.oneLiner,
+  href: `/services#${t.id}`,
+}));
 
 export default function Offer() {
   return (

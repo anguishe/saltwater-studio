@@ -262,3 +262,28 @@ codebase (commented, not deleted)
    describe method, never results, until that changes.
 3. **Network-first has no keyword sharpening.** Outreach and content can't be tuned to one
    buyer. Accepted trade for speed to a first yes.
+
+---
+
+## 13. Decision log — 2026-08-09 (offer ladder merge)
+
+Operator decisions from the monetization pass, merged onto the shipped rebrand.
+Recorded append-only; earlier sections stand as written with the noted lines
+superseded.
+
+1. **T1 pricing carve-out.** The site sells ONE priced product: the AI Visibility
+   Audit, $150 flat, 72-hour async delivery, purchased via a live Stripe Payment
+   Link (`site.stripeAuditUrl`). This supersedes §2 "Entry offer: None" and the
+   "pricing on the site" exclusion in §11. Everything else stays quote-only —
+   T2 (AI Search Optimization Sprint), T3 (AI-Managed Presence retainer), and
+   T4 (Custom AI Systems) show no prices and route to the intake form.
+2. **Cal.com stays retired.** No booking link returns. The intake form instead
+   gains a "How should we reply?" select (email / call) plus an optional website
+   field; calls are offered, never required.
+3. **Visibility-led homepage merge.** The hero leads with AI visibility ("Be the
+   business AI recommends.") and the homepage Offer section maps the four tiers.
+   The three AI services (ai-strategy, ai-automation, ai-agents) fold under T4
+   "Custom AI Systems" on /services; all service pages stay live, zero 301s.
+
+Ladder source of truth: `src/data/tiers.ts`. Schema: the `service()` builder
+gained an optional `offers` param; only T1 emits an Offer node.

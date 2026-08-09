@@ -6,6 +6,7 @@ import {
   BOTTLENECKS,
   TEAM_SIZES,
   TIMELINES,
+  PREFERRED_CONTACT,
 } from "@/data/quoteOptions";
 
 // Qualifying selects validate against the exact option lists the form offered —
@@ -14,7 +15,9 @@ const schema = z.object({
   name: z.string().min(1).max(200),
   email: z.string().email(),
   business: z.string().max(200).optional(),
+  siteUrl: z.string().url().max(300).optional(),
   interest: z.enum(INTERESTS).optional(),
+  preferredContact: z.enum(PREFERRED_CONTACT).optional(),
   bottleneck: z.enum(BOTTLENECKS).optional(),
   teamSize: z.enum(TEAM_SIZES).optional(),
   timeline: z.enum(TIMELINES).optional(),
@@ -54,7 +57,9 @@ export async function POST(req: Request) {
     name,
     email,
     business,
+    siteUrl,
     interest,
+    preferredContact,
     bottleneck,
     teamSize,
     timeline,
@@ -86,7 +91,9 @@ export async function POST(req: Request) {
   try {
     const details = [
       ["Business", business],
+      ["Website", siteUrl],
       ["Wants", interest],
+      ["Reply by", preferredContact],
       ["Bottleneck", bottleneck],
       ["Team", teamSize],
       ["Timeline", timeline],

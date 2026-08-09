@@ -35,7 +35,7 @@ export default function ThanksPage() {
         <Link
           href="/contact"
           className="inline-flex items-center justify-center rounded bg-shoal px-8 py-3 text-sm font-semibold text-ink hover:bg-glow transition-colors"
-          onClick={() => track.bookingClick()}
+          onClick={() => track.quoteStart()}
         >
           Send a note
         </Link>

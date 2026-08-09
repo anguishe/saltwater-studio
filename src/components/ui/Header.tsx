@@ -64,7 +64,7 @@ export default function Header() {
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href="/contact" onClick={track.bookingClick}>
+          <ButtonLink href="/contact" onClick={track.quoteStart}>
             Start the conversation
           </ButtonLink>
         </div>
@@ -99,7 +99,7 @@ export default function Header() {
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href="/contact" onClick={() => { track.bookingClick(); setOpen(false); }} className="w-full justify-center">
+          <ButtonLink href="/contact" onClick={() => { track.quoteStart(); setOpen(false); }} className="w-full justify-center">
             Start the conversation
           </ButtonLink>
         </div>

@@ -5,18 +5,23 @@
  * drift — the server validates against exactly what the form offered, which is
  * what keeps arbitrary strings out of the notification email.
  *
- * Deliberately no budget field. Quote-only pricing is a hard rule (CLAUDE.md),
- * and a budget range on the form is a price on the site by another name.
+ * Deliberately no budget field. Quote-only pricing is a hard rule (CLAUDE.md,
+ * with the single T1 $150 audit carve-out recorded 2026-08-09), and a budget
+ * range on the form is a price on the site by another name.
  */
 
+// Mirrors the tier ladder in src/data/tiers.ts; the /contact?interest=<id>
+// prefill in QuoteForm.tsx maps tier ids onto the first four entries by index.
 export const INTERESTS = [
-  "AI strategy & logistics",
-  "AI automation",
-  "AI agents (calls, chat, SMS)",
+  "AI Visibility Audit — $150",
+  "AI Search Optimization Sprint",
+  "AI-Managed Presence (monthly)",
+  "Custom AI systems — automation, agents, integrations",
   "Website build or rebuild",
-  "SEO / AI search presence",
   "Not sure yet — help me figure it out",
 ] as const;
+
+export const PREFERRED_CONTACT = ["Email — async works", "Call me"] as const;
 
 export const BOTTLENECKS = [
   "Missed calls and slow follow-up",

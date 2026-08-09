@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <div className="mx-auto max-w-3xl">
         <Reveal>
           <h1 className="font-display text-4xl text-foam">Privacy Policy</h1>
-          <p className="mt-2 text-sm text-foam/40">Last updated: June 2025</p>
+          <p className="mt-2 text-sm text-foam/40">Last updated: August 2026</p>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -47,8 +47,10 @@ export default function PrivacyPage() {
 
             <h2 className="font-display text-xl text-foam mt-8">Third parties</h2>
             <p>
-              We use Resend to deliver email and Cal.com for booking. These services have
-              their own privacy policies. We do not sell your data.
+              We use Resend to deliver email. Payment for the AI Visibility Audit is
+              processed by Stripe on Stripe&apos;s own checkout pages; we never see your
+              card details. These services have their own privacy policies. We do not
+              sell your data.
             </p>
 
             <h2 className="font-display text-xl text-foam mt-8">Contact</h2>

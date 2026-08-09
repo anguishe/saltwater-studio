@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema, buildFaqSchema, webPage } from "@/lib/schema";
+import {
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildServiceSchema,
+  webPage,
+} from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import OfferLadder from "@/components/sections/OfferLadder";
 import { services } from "@/data/services";
+import { tiers, engagementProof } from "@/data/tiers";
 import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services — AI Strategy, Automation & Agents",
+  title: "AI Visibility Services — $150 Audit, Sprint & Retainer",
   description:
-    "AI strategy and logistics, AI automation, and AI agents for local businesses — plus the web, search, and Google presence that makes them found. Quote-based, scoped honestly.",
+    "The AI Visibility Audit ($150 flat, 72-hour delivery), the optimization sprint that implements it, ongoing managed presence, and custom AI systems. Local businesses nationwide.",
   path: "/services",
 });
 
@@ -28,7 +35,25 @@ export default function ServicesPage() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       {serviceFaqs.length > 0 && <JsonLd schema={buildFaqSchema(serviceFaqs)} />}
-      <JsonLd schema={webPage({ path: "/services", name: `Services — AI Strategy, Automation & Agents | ${site.name}`, speakableSelectors: ["h1", ".faq-answer"] })} />
+      <JsonLd schema={webPage({ path: "/services", name: `AI Visibility Services | ${site.name}`, speakableSelectors: ["h1", ".tier-answer", ".faq-answer"] })} />
+      {tiers.map((tier) => (
+        <JsonLd
+          key={tier.id}
+          schema={buildServiceSchema({
+            name: tier.name,
+            description: tier.oneLiner,
+            url: `${site.url}/services#${tier.id}`,
+            ...(tier.price
+              ? {
+                  offers: {
+                    price: tier.price.amount,
+                    priceCurrency: tier.price.currency,
+                  },
+                }
+              : {}),
+          })}
+        />
+      ))}
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-7xl">
@@ -39,20 +64,49 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="font-display text-4xl text-foam md:text-5xl max-w-2xl">
-              What Saltwater Studio does
+              Get found. Get recommended.
             </h1>
             <p className="mt-4 font-display text-xl text-shoal max-w-2xl">
               {site.taglineSecondary}
             </p>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">
-              Three AI services — strategy and logistics, automation, and agents — plus the
-              web, search, Google Business Profile, and social work that decides whether any
-              of it gets found. Everything is quote-based; tell us what the day actually looks
-              like and we&apos;ll scope it honestly.
+              Saltwater Studio makes local businesses visible to Google and to the AI
+              assistants customers now ask first. Start with a $150 audit; everything past
+              it is scoped to your business and quoted within a day.
             </p>
           </Reveal>
 
-          <div className="mt-20 grid gap-0 divide-y divide-marine/30">
+          <OfferLadder />
+
+          <Reveal delay={0.1}>
+            <section aria-labelledby="proof-heading" className="mt-20">
+              <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
+                Proof of work
+              </p>
+              <h2 id="proof-heading" className="sr-only">
+                Engagements delivered
+              </h2>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {engagementProof.map((item) => (
+                  <div key={item.label} className="rounded border border-marine/30 p-5">
+                    <p className="font-semibold text-foam">{item.label}</p>
+                    <p className="mt-2 text-sm text-foam/50">{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p className="mt-24 font-mono text-xs tracking-[0.2em] text-shoal uppercase">
+              The full service catalog
+            </p>
+            <p className="mt-4 text-foam/60 max-w-2xl">
+              Every engagement above is assembled from these.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 grid gap-0 divide-y divide-marine/30">
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 0.08}>
                 <div className="group grid gap-6 py-12 md:grid-cols-[5rem_1fr_auto] md:items-start hover:bg-marine/10 transition-colors px-2 rounded">
