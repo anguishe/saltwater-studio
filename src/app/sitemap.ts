@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/services`, lastModified: SITE_LAUNCH_DATE, changeFrequency: "monthly", priority: 0.9 },
     { url: `${site.url}/about`, lastModified: SITE_LAUNCH_DATE, changeFrequency: "monthly", priority: 0.7 },
     { url: `${site.url}/contact`, lastModified: SITE_LAUNCH_DATE, changeFrequency: "yearly", priority: 0.8 },
-    { url: `${site.url}/book`, lastModified: SITE_LAUNCH_DATE, changeFrequency: "yearly", priority: 0.8 },
     { url: `${site.url}/privacy`, lastModified: SITE_LAUNCH_DATE, changeFrequency: "yearly", priority: 0.2 },
     // /thanks is noIndex — excluded from sitemap
   ];

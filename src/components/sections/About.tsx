@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { site } from "@/config/site";
 
 export default function About() {
   return (
@@ -31,19 +32,16 @@ export default function About() {
             Travis, founder.
           </h2>
           <div className="mt-6 space-y-4 text-foam/70">
+            {/* Canonical entity sentence — single-sourced from site.ts so it can't drift */}
+            <p>{site.entitySentence}</p>
             <p>
-              Saltwater Studio is a remote web-design studio founded in 2025 by Travis Abadie
-              on Florida&apos;s Gulf Coast, building premium, search-optimized websites for
-              service businesses nationwide.
+              The method is the same one I use on my own businesses: map the process before
+              automating it, build the thing that fits, then document it well enough to hand
+              over. Nothing gets bolted onto a workflow nobody looked at first.
             </p>
             <p>
-              The work is schema-first, tracking-first, and specific: structured data validated
-              before launch, analytics live from day one, and one canonical fact set that Google
-              and AI search can quote. Most competitors skip those steps. Saltwater doesn&apos;t.
-            </p>
-            <p>
-              Remote, nationwide, out of the Florida Panhandle. Every engagement is personal —
-              no account managers, no handoffs.
+              Remote, nationwide, out of Destin. Every engagement is personal — no account
+              managers, no handoffs.
             </p>
           </div>
           <ButtonLink href="/about" variant="ghost" className="mt-8">

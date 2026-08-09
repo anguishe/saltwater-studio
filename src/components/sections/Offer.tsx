@@ -3,10 +3,31 @@
 import dynamic from "next/dynamic";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
-import { services } from "@/data/services";
-import { track } from "@/lib/events";
+import { headlineServices } from "@/data/services";
 
 const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: false });
+
+/**
+ * Four cards, not seven. The three AI services lead; the four legacy pages
+ * (web-design, seo-aeo-geo, google-presence, social-content) sit behind one
+ * card pointing at /services, so they stay reachable and indexed without
+ * burying the reposition on the homepage.
+ */
+const cards = [
+  ...headlineServices.map((s) => ({
+    index: s.index,
+    title: s.title,
+    oneLiner: s.oneLiner,
+    href: `/services/${s.slug}`,
+  })),
+  {
+    index: "04",
+    title: "Web & Search Presence",
+    oneLiner:
+      "The site, the schema, the Google profile, and the weekly content that decide whether any of this gets found. Still here, still ours.",
+    href: "/services",
+  },
+];
 
 export default function Offer() {
   return (
@@ -32,30 +53,29 @@ export default function Offer() {
           shared bundle.
         */}
         <ScrollFX variant="offerDepth" className="mt-16 divide-y divide-marine/30">
-          {services.map((service, i) => (
-            <Reveal key={service.slug} delay={i * 0.08}>
+          {cards.map((card, i) => (
+            <Reveal key={card.href} delay={i * 0.08}>
               <div
                 className="relative group grid gap-6 py-10 md:grid-cols-[5rem_1fr_auto] md:items-center px-2 rounded hover:bg-marine/10 transition-colors"
                 data-offer-card
               >
                 <span className="font-mono text-xs tracking-widest text-shoal/50 uppercase">
-                  {service.index}
+                  {card.index}
                 </span>
 
                 <div>
                   <h3 className="font-display text-xl text-foam group-hover:text-shoal transition-colors">
-                    {service.title}
+                    {card.title}
                   </h3>
-                  <p className="mt-2 text-foam/60 max-w-xl">{service.oneLiner}</p>
+                  <p className="mt-2 text-foam/60 max-w-xl">{card.oneLiner}</p>
                 </div>
 
                 <ButtonLink
-                  href="/book"
+                  href={card.href}
                   variant="ghost"
                   className="self-start md:self-center whitespace-nowrap"
-                  onClick={track.bookingClick}
                 >
-                  Talk it through &rarr;
+                  What this looks like &rarr;
                 </ButtonLink>
 
                 {/* Depth overlay — GSAP scrub target; pointer-events-none so clicks pass through */}

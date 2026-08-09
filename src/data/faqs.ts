@@ -1,70 +1,160 @@
 export interface FAQ {
   question: string;
   answer: string;
-  page: "home" | "services" | "web-design" | "seo-aeo-geo" | "google-presence" | "social-content";
+  page:
+    | "home"
+    | "services"
+    | "ai-strategy"
+    | "ai-automation"
+    | "ai-agents"
+    | "web-design"
+    | "seo-aeo-geo"
+    | "google-presence"
+    | "social-content";
 }
 
 export const faqs: FAQ[] = [
   {
     question: "What does Saltwater Studio do?",
     answer:
-      "Saltwater Studio is a remote web-design studio that builds custom, search-optimized websites for service businesses nationwide, plus the SEO, AI-search, Google Business Profile, and social work that makes them found. Founded in 2025 on Florida's Gulf Coast.",
+      "Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in Destin, Florida, building AI automation and AI-search presence for local businesses nationwide. That covers AI strategy, automation of the repetitive parts of a business, AI agents that answer calls and messages, and the web and search presence that makes a business findable.",
     page: "home",
   },
   {
-    question: "How much does a website cost?",
+    question: "What does an AI agency actually do for a local business?",
     answer:
-      "Pricing is quote-based, because a five-page local site and a full presence program aren't the same job. The fastest way to a real number is a short strategy call or the quote form — most projects are scoped within a day.",
+      "It finds the work a business repeats every day — intake, follow-up, quoting, scheduling, reporting — and builds systems that handle it. For most local businesses the first win is the phone: a missed call answered by text in seconds instead of lost to whoever picks up next. The second is anything typed twice.",
+    page: "home",
+  },
+  {
+    question: "How much does this cost?",
+    answer:
+      "Pricing is quote-based, because automating one process and rebuilding how a business runs are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.",
     page: "home",
   },
   {
     question: "Do you only work with Gulf Coast businesses?",
     answer:
-      "No. Saltwater Studio works with service businesses across the United States; the Gulf Coast (Gulf Shores, AL to Miami, FL) is simply home base.",
+      "No. Saltwater Studio works with local businesses across the United States; the Gulf Coast, from Gulf Shores, Alabama to Panama City, Florida, is home base and not a limit. The work is remote by design.",
     page: "home",
   },
   {
-    question: "What's \"AEO\" and \"GEO,\" and why should I care?",
+    question: "Do I own the systems you build?",
     answer:
-      "AEO (answer-engine optimization) and GEO (generative-engine optimization) are how your business gets quoted by AI tools like ChatGPT, Google's AI answers, and Perplexity when someone asks for a recommendation. They reward consistent facts and clear, answer-first pages — which most template sites don't have.",
+      "Yes — completely. The accounts, the code, the automations, and the domain are in your name, with documentation for what each thing does and how to turn it off. Saltwater Studio works as your manager, never your landlord.",
     page: "home",
   },
   {
-    question: "Do I own my website and accounts?",
+    question: "What is AEO and GEO, and why should I care?",
     answer:
-      "Yes — completely. The domain, the code, the Google and analytics accounts are all in your name. Saltwater Studio works as your manager, never your landlord.",
-    page: "home",
-  },
-  {
-    question: "What do you build sites with?",
-    answer:
-      "Custom Next.js with built-in schema, fast loading, and clean code — not a page-builder or a template. That's what makes a site you don't have to rebuild in two years.",
+      "AEO (answer-engine optimization) and GEO (generative-engine optimization) are how a business gets quoted by AI tools like ChatGPT, Google AI Overviews, and Perplexity when someone asks for a recommendation. Both reward consistent facts and clear, answer-first pages — which most template sites do not have.",
     page: "home",
   },
   // services overview
   {
-    question: "What does Saltwater Studio build?",
+    question: "What services does Saltwater Studio offer?",
     answer:
-      "Saltwater Studio builds custom websites for service businesses plus the search presence that makes them found — web design, SEO, AI search (AEO/GEO), Google Business Profile, and social content. Every site is custom Next.js, not a template, and pricing is quote-based.",
+      "Three AI services — strategy and logistics, automation, and agents — plus the web, search, Google Business Profile, and social work that makes a business findable. Pricing is quote-based on all of it.",
     page: "services",
   },
   {
-    question: "How do I get a price?",
+    question: "Where should a business start?",
     answer:
-      "Pricing is quote-based because a five-page local site and a full presence program aren't the same job. Tell us about the business on a short strategy call or the quote form, and most projects are scoped within a day.",
+      "With whichever repetitive task costs the most hours, or with the phone. Strategy is the right first step when nobody has mapped how work moves through the business yet; automation or an agent is the right first step when the bottleneck is already obvious.",
     page: "services",
   },
   {
     question: "Do you work with businesses outside the Gulf Coast?",
     answer:
-      "Yes. Saltwater Studio works with service businesses across the United States; the Gulf Coast from Gulf Shores, Alabama to Miami, Florida is home base, not a limit.",
+      "Yes. Saltwater Studio works with local businesses across the United States; the Gulf Coast, from Gulf Shores, Alabama to Panama City, Florida, is home base, not a limit.",
     page: "services",
+  },
+  // ai-strategy slug
+  {
+    question: "What is an AI strategy for a small business?",
+    answer:
+      "A map of how work actually moves through the business, an inventory of every repetitive task ranked by the hours it costs, and a call on each one: build it, buy it, or leave it alone. It ends in a sequenced roadmap, cheapest reversible wins first.",
+    page: "ai-strategy",
+  },
+  {
+    question: "How do I know which tasks are worth automating?",
+    answer:
+      "Rank by frequency times time. A ten-minute task done twenty times a week costs more than a two-hour task done monthly. Then subtract anything where the real problem is a bad form, a missing handoff, or a report nobody reads — those get fixed, not automated.",
+    page: "ai-strategy",
+  },
+  {
+    question: "What do I get at the end?",
+    answer:
+      "A document, not a subscription. It names the processes, what each costs in hours, what a fix looks like, and what order to do them in. If you hand it to a different builder it still works — that is the test it has to pass.",
+    page: "ai-strategy",
+  },
+  {
+    question: "Do I have to buy the build too?",
+    answer:
+      "No. Strategy stands on its own and is written so someone else can execute it. Plenty of businesses take the roadmap and do the first phase in-house.",
+    page: "ai-strategy",
+  },
+  // ai-automation slug
+  {
+    question: "What is AI automation?",
+    answer:
+      "Software that carries a repetitive business process from start to finish on its own — reading an inquiry, pulling what it needs from your records, drafting the reply, scheduling the follow-up, filing the result — and escalating to a person when something falls outside what it should decide.",
+    page: "ai-automation",
+  },
+  {
+    question: "What is the difference between an AI automation and an AI workflow?",
+    answer:
+      "An automation fires on a trigger and does one job. A workflow carries a whole path from first touch to finished outcome, with the judgment calls handled along the way and exceptions escalated. In practice a business wants the workflow — one notification instead of six tasks.",
+    page: "ai-automation",
+  },
+  {
+    question: "What can actually be automated in a local business?",
+    answer:
+      "New inquiry to booked job without retyping anything. Quote request to sent estimate, priced from your own numbers. Completed job to invoice, review request, and follow-up. Inbox and voicemail sorted by what needs you today. Weekly numbers assembled and sent without anyone building a report.",
+    page: "ai-automation",
+  },
+  {
+    question: "What happens when an automation breaks?",
+    answer:
+      "It says so. Every build includes failure handling that notifies a person rather than failing silently, because a quiet automation that stopped working three weeks ago is worse than never having built it.",
+    page: "ai-automation",
+  },
+  {
+    question: "Will I be locked into you afterward?",
+    answer:
+      "No. Every build ships with documentation of what it does, where it runs, what it costs to run, and how to turn it off — all in accounts you own. Ongoing maintenance is a separate conversation and always your call.",
+    page: "ai-automation",
+  },
+  // ai-agents slug
+  {
+    question: "What is an AI agent for a business?",
+    answer:
+      "A front end that talks to customers — by text, chat, or voice — using your real pricing, policies, and calendar. It answers the routine questions, books what it can, and hands off to a person the moment something needs judgment.",
+    page: "ai-agents",
+  },
+  {
+    question: "What is missed-call text-back?",
+    answer:
+      "When a call goes unanswered, the caller gets a text within seconds with a real answer and a way to book, instead of a voicemail nobody checks. A local business that misses a call usually loses that customer to whoever picks up next, so this is often the first thing worth building.",
+    page: "ai-agents",
+  },
+  {
+    question: "Will it sound like a robot to my customers?",
+    answer:
+      "It gets tuned to how you already talk to customers, and it is scoped to say \"let me get Travis on this\" rather than guess. An agent that confidently invents an answer costs more than the missed call did, so the boundaries are most of the work.",
+    page: "ai-agents",
+  },
+  {
+    question: "Can it book appointments on my calendar?",
+    answer:
+      "Yes — into the calendar you already use, with the rules you already follow about lead time, service area, and what needs a person to confirm first.",
+    page: "ai-agents",
   },
   // web-design slug
   {
     question: "What do you build websites with?",
     answer:
-      "Custom Next.js with built-in schema, fast loading, and clean code you own — not a page-builder or a template. That's what makes a site you don't have to rebuild in two years.",
+      "Custom Next.js with built-in schema, fast loading, and clean code you own — not a page-builder or a template. That is what makes a site you do not have to rebuild in two years, and what lets automation get added later without starting over.",
     page: "web-design",
   },
   {
@@ -83,7 +173,7 @@ export const faqs: FAQ[] = [
   {
     question: "What is SEO and why does it matter for my business?",
     answer:
-      "SEO (search engine optimization) is the practice of making your website findable when potential customers search for what you offer. For service businesses, ranking on Google can be the difference between a full calendar and an empty one. Saltwater Studio builds SEO into every site from day one — not as an add-on.",
+      "SEO (search engine optimization) is the practice of making your website findable when potential customers search for what you offer. For a local business, ranking on Google can be the difference between a full calendar and an empty one. Saltwater Studio builds SEO into every site from day one — not as an add-on.",
     page: "seo-aeo-geo",
   },
   {
@@ -102,13 +192,13 @@ export const faqs: FAQ[] = [
   {
     question: "What does Google presence include?",
     answer:
-      "Google Business Profile setup and optimization, a review system that works, and the local-pack signals that decide whether you show up when someone searches nearby. It's the part of local search most template sites skip.",
+      "Google Business Profile setup and optimization, a review system that works, and the local-pack signals that decide whether you show up when someone searches nearby. It is the part of local search most template sites skip.",
     page: "google-presence",
   },
   {
     question: "Will this help me show up in 'near me' searches?",
     answer:
-      "That's the goal. A complete Business Profile with facts that match across the web is what Google and AI assistants reward when someone asks for a nearby recommendation.",
+      "That is the goal. A complete Business Profile with facts that match across the web is what Google and AI assistants reward when someone asks for a nearby recommendation.",
     page: "google-presence",
   },
   {
@@ -127,7 +217,7 @@ export const faqs: FAQ[] = [
   {
     question: "Do I have to post it myself?",
     answer:
-      "No — that's the point of the managed engine. Saltwater Studio runs the weekly cadence, or hands you a clean system to run yourself if you'd rather.",
+      "No — that is the point of the managed engine. Saltwater Studio runs the weekly cadence, or hands you a clean system to run yourself if you would rather.",
     page: "social-content",
   },
   {

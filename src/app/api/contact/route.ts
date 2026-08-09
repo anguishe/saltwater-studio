@@ -1,11 +1,23 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import {
+  INTERESTS,
+  BOTTLENECKS,
+  TEAM_SIZES,
+  TIMELINES,
+} from "@/data/quoteOptions";
 
+// Qualifying selects validate against the exact option lists the form offered —
+// an arbitrary string in a notification email is an injection surface, not a lead.
 const schema = z.object({
   name: z.string().min(1).max(200),
   email: z.string().email(),
   business: z.string().max(200).optional(),
+  interest: z.enum(INTERESTS).optional(),
+  bottleneck: z.enum(BOTTLENECKS).optional(),
+  teamSize: z.enum(TEAM_SIZES).optional(),
+  timeline: z.enum(TIMELINES).optional(),
   message: z.string().min(1).max(5000),
   // Honeypot — must be absent or empty; optional so missing key doesn't hard-fail
   company: z.string().optional().default(""),
@@ -38,7 +50,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid form data" }, { status: 400 });
   }
 
-  const { name, email, business, message, company, t } = parsed.data;
+  const {
+    name,
+    email,
+    business,
+    interest,
+    bottleneck,
+    teamSize,
+    timeline,
+    message,
+    company,
+    t,
+  } = parsed.data;
 
   // Honeypot — return ok silently so bots don't learn they were caught
   if (company.length > 0) {
@@ -61,15 +84,24 @@ export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const businessLine = business ? `\nBusiness: ${business}` : "";
+    const details = [
+      ["Business", business],
+      ["Wants", interest],
+      ["Bottleneck", bottleneck],
+      ["Team", teamSize],
+      ["Timeline", timeline],
+    ]
+      .filter(([, value]) => value)
+      .map(([label, value]) => `${label}: ${value}`)
+      .join("\n");
 
     // Notify Travis
     await resend.emails.send({
       from: `Saltwater Studio <${FROM_EMAIL}>`,
       to: TO_EMAIL,
       replyTo: email,
-      subject: `New quote — ${name}`,
-      text: `Name: ${name}\nEmail: ${email}${businessLine}\n\n${message}`,
+      subject: interest ? `New lead — ${name} · ${interest}` : `New lead — ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n${details}\n\n${message}`,
     });
 
     // Autoresponder to lead (CONTENT.md thanks copy)
@@ -77,7 +109,7 @@ export async function POST(req: Request) {
       from: `Saltwater Studio <${FROM_EMAIL}>`,
       to: email,
       subject: "Got it — talk soon",
-      text: `Hi ${name},\n\nGot it. Expect a reply within one business day.\n\nIn the meantime, you can book a strategy call at saltwaterstudio.xyz/book.\n\nTravis\nSaltwater Studio`,
+      text: `Hi ${name},\n\nGot it. Expect a reply within one business day.\n\nIf anything changes before then, just reply to this email.\n\nTravis\nSaltwater Studio`,
     });
 
     return NextResponse.json({ ok: true });

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   return buildMetadata({
     title: service.title,
-    description: `${service.oneLiner} — Saltwater Studio, web design and SEO for service businesses.`,
+    description: `${service.oneLiner} — Saltwater Studio, an AI agency for local businesses nationwide.`,
     path: `/services/${slug}`,
   });
 }
@@ -84,6 +84,27 @@ export default async function ServiceSlugPage({ params }: Props) {
             </ul>
           </Reveal>
 
+          {service.sections?.map((section, i) => (
+            <Reveal key={section.heading} delay={0.14 + i * 0.02}>
+              <h2 className="mt-16 font-display text-2xl text-foam">{section.heading}</h2>
+              {section.body.map((para) => (
+                <p key={para} className="mt-5 text-foam/70 max-w-2xl">
+                  {para}
+                </p>
+              ))}
+              {section.points && (
+                <ul className="mt-6 space-y-3">
+                  {section.points.map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-foam/70">
+                      <span className="text-shoal font-mono mt-0.5" aria-hidden="true">—</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Reveal>
+          ))}
+
           {pageFaqs.length > 0 && (
             <Reveal delay={0.16}>
               <p className="mt-20 font-mono text-xs tracking-[0.2em] text-shoal uppercase">Common questions</p>
@@ -100,11 +121,11 @@ export default async function ServiceSlugPage({ params }: Props) {
 
           <Reveal delay={0.2}>
             <div className="mt-16 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="/book" variant="primary">
-                Book a strategy call
+              <ButtonLink href="/contact" variant="primary">
+                Start the conversation
               </ButtonLink>
-              <ButtonLink href="/contact" variant="ghost">
-                Get a quote
+              <ButtonLink href="/work" variant="ghost">
+                See the work
               </ButtonLink>
             </div>
           </Reveal>

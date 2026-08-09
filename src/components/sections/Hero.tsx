@@ -50,35 +50,34 @@ export default function Hero() {
       {/* Foreground text — DOM, not in canvas (crisp + indexable) */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-shoal">
-          Saltwater Studio — Est. 2025 · Gulf Coast → Nationwide
+          Saltwater Studio — Est. 2025 · Destin, FL → Nationwide
         </p>
 
         <h1 className="font-display text-4xl font-semibold leading-tight text-foam md:text-6xl lg:text-7xl">
-          Most websites stop at the surface. We build deeper.
+          Most AI stops at the demo. We build what runs underneath.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foam/70">
-          A web design studio for service businesses that refuse to look like
-          everyone else — engineered to be found by Google, by AI search, and by
-          the people who’ll actually call you.
+          AI systems for local business — built, not bolted on. The repetitive
+          part of your day, handled. The calls you miss, answered. The search
+          presence that gets you named when someone asks for a recommendation.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <ButtonLink
-            href="/book"
-            variant="primary"
-            className="px-8 py-4 text-base"
-            onClick={track.bookingClick}
-          >
-            Book a strategy call
-          </ButtonLink>
-          <ButtonLink
             href="/contact"
-            variant="ghost"
+            variant="primary"
             className="px-8 py-4 text-base"
             onClick={track.quoteStart}
           >
-            Get a quote
+            Start the conversation
+          </ButtonLink>
+          <ButtonLink
+            href="/services"
+            variant="ghost"
+            className="px-8 py-4 text-base"
+          >
+            See what we build
           </ButtonLink>
         </div>
       </div>

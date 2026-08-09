@@ -9,9 +9,9 @@ import { projects } from "@/data/projects";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Work — Custom Web Design Projects",
+  title: "Our Work — Systems, Tools & Sites",
   description:
-    "See the custom websites Saltwater Studio builds for service businesses — Next.js for moving, mobile, and content brands, built to be found. Browse the work.",
+    "The systems and sites Saltwater Studio has built — a live heat-safety tool, a library structured for AI citation, and custom sites for local businesses. Browse the work.",
   path: "/work",
 });
 
@@ -24,7 +24,7 @@ export default function WorkPage() {
   return (
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
-      <JsonLd schema={webPage({ path: "/work", name: `Our Work — Custom Web Design Projects | ${site.name}`, speakableSelectors: ["h1"] })} />
+      <JsonLd schema={webPage({ path: "/work", name: `Our Work — Systems, Tools & Sites | ${site.name}`, speakableSelectors: ["h1"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-7xl">
@@ -38,7 +38,7 @@ export default function WorkPage() {
               Selected work
             </h1>
             <p className="mt-4 text-foam/60 max-w-xl">
-              Saltwater Studio builds websites for service businesses — schema-first, tracking-configured, built to rank.
+              Systems, tools, and sites — built to do a specific job, documented well enough to hand over.
             </p>
           </Reveal>
 

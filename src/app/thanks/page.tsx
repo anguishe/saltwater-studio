@@ -33,11 +33,11 @@ export default function ThanksPage() {
       </p>
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <Link
-          href="/book"
+          href="/contact"
           className="inline-flex items-center justify-center rounded bg-shoal px-8 py-3 text-sm font-semibold text-ink hover:bg-glow transition-colors"
           onClick={() => track.bookingClick()}
         >
-          Book a call
+          Send a note
         </Link>
         <Link
           href="/"

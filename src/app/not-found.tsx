@@ -27,8 +27,8 @@ export default function NotFound() {
         <ButtonLink href="/" variant="primary" className="text-base px-8 py-4">
           Back to the surface
         </ButtonLink>
-        <ButtonLink href="/book" variant="ghost" className="text-base px-8 py-4">
-          Book a strategy call
+        <ButtonLink href="/contact" variant="ghost" className="text-base px-8 py-4">
+          Start the conversation
         </ButtonLink>
       </div>
       <Link

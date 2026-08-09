@@ -115,6 +115,39 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "heat-safety-tool",
+    title: "The Heat-Safety Tool",
+    category: "Live Data · Decision Tool",
+    result:
+      "A question people ask every afternoon in July, answered in under a second from live local weather.",
+    image: "/images/portfolio/portfolio-kaisrun-heat-tool.webp",
+    alt: "Too Hot To Walk Your Dog — pavement temperature checker",
+    permission: "live",
+    url: "https://kaisrun.xyz/tools/too-hot-to-walk",
+    challenge:
+      "“Is it too hot to walk my dog right now?” is one of the most-asked questions of a Gulf Coast summer, and every article answering it gives the same useless response: it depends. It does depend — on the hour, the cloud cover, the surface, and the city you're standing in. An article can't know any of that. The person asking is standing at the door with a leash in their hand, and what they need is a yes or a no.",
+    approach:
+      "Rather than write another article, we built the answer. The tool takes a city or ZIP, pulls live conditions for that exact location, runs the published heat-index calculation, and estimates what the pavement is actually doing under sun or shade right now. It returns a plain verdict — walk, wait, or don't — with the number behind it, so the answer is checkable rather than a vibe. Eleven local cities are one tap away because those are the ones people actually search from.",
+    outcome:
+      "A live tool that turns a genuinely uncertain question into an immediate, specific, defensible answer — and does it in the moment the decision gets made. It runs unattended, costs nothing to operate, and answers a question the rest of the category responds to with a paragraph of hedging. This is the shape of most of the AI work: find the question a business answers by hand fifty times a summer, and build the thing that answers it once, correctly, forever.",
+    stack: [
+      "Live weather data by city and ZIP",
+      "Published heat-index and pavement-temperature models",
+      "Sun and shade surface modes",
+      "Answer-first verdict with the number behind it",
+      "Zero-maintenance, unattended operation",
+    ],
+    metaDescription:
+      "How Saltwater Studio replaced an article with an answer: a live pavement-temperature tool that tells dog owners to walk, wait, or stay in. See the build.",
+    linksLead:
+      "Answering the same question by hand over and over? That's the first thing worth building — see",
+    links: [
+      { href: "/services/ai-automation", label: "AI automation" },
+      { href: "/services/ai-strategy", label: "AI strategy & logistics" },
+      { href: "/contact", label: "a quote on your version of it" },
+    ],
+  },
+  {
     slug: "bash-snippets",
     title: "BashSnippets",
     category: "Content Site",

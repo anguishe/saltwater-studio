@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Saltwater Studio",
     short_name: "Saltwater",
     description:
-      "A web design studio for service businesses that refuse to look like everyone else.",
+      "AI systems for local business — built, not bolted on.",
     start_url: "/",
     display: "standalone",
     background_color: "#05161B",

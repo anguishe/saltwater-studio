@@ -4,8 +4,9 @@ const ORG_ID = `${site.url}/#studio`;
 const FOUNDER_ID = `${site.url}/#founder`;
 const WEBSITE_ID = `${site.url}/#website`;
 
-// Verbatim GEO sentence from CONTENT.md — facts interpolated from site.ts
-const GEO_DESCRIPTION = `${site.name} is a remote web-design studio founded in ${site.founded} by ${site.owner} on Florida's Gulf Coast, building premium, search-optimized websites for service businesses nationwide.`;
+// The canonical entity sentence, byte-identical to About, llms.txt, and every bio.
+// Single-sourced from site.ts so it cannot drift here.
+const GEO_DESCRIPTION = site.entitySentence;
 
 export function studioOrg() {
   return {
@@ -21,17 +22,28 @@ export function studioOrg() {
       "@id": FOUNDER_ID,
       name: site.owner,
     },
-    slogan: site.mnemonic,
+    slogan: site.tagline,
     description: GEO_DESCRIPTION,
     areaServed: { "@type": "Country", name: "United States" },
-    knowsAbout: [
-      "Web design",
-      "SEO",
-      "Answer engine optimization",
-      "Generative engine optimization",
-      "Google Business Profile",
-      "Next.js",
-    ],
+    // Disambiguation anchor. Several unrelated studios share the name, so the
+    // Destin coordinates plus the founder Person node are what separate this
+    // entity from them. Not a storefront claim — the business is remote.
+    location: {
+      "@type": "Place",
+      name: `${site.baseCity}, ${site.region}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.baseCity,
+        addressRegion: site.region,
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: site.geo.lat,
+        longitude: site.geo.lng,
+      },
+    },
+    knowsAbout: site.knowsAbout,
     sameAs: site.sameAs,
     contactPoint: {
       "@type": "ContactPoint",

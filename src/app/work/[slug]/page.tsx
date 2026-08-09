@@ -208,8 +208,8 @@ export default async function WorkSlugPage({ params }: Props) {
 
           <Reveal delay={0.28}>
             <div className="mt-16 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="/book" variant="primary">
-                Book a strategy call
+              <ButtonLink href="/contact" variant="primary">
+                Start the conversation
               </ButtonLink>
               <ButtonLink href="/contact" variant="ghost">
                 Get a quote

@@ -3,15 +3,14 @@ import { buildMetadata } from "@/lib/seo";
 import { buildContactPageSchema, buildBreadcrumbSchema } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
-import { ButtonLink } from "@/components/ui/Button";
 import QuoteForm from "./QuoteForm";
 import ContactLinks from "./ContactLinks";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact — Get a Web Design Quote",
+  title: "Contact — Get a Quote",
   description:
-    "Get a quote from Saltwater Studio — web design and SEO for service businesses. Tell us about your project and expect a reply within one business day.",
+    "Tell Saltwater Studio what the repetitive part of your day looks like. AI strategy, automation, agents, web and search — scoped within a day, reply within one business day.",
   path: "/contact",
 });
 
@@ -46,11 +45,6 @@ export default function ContactPage() {
               <ContactLinks />
             </Reveal>
 
-            <Reveal delay={0.12}>
-              <ButtonLink href="/book" variant="ghost" className="mt-8">
-                Or book a call directly →
-              </ButtonLink>
-            </Reveal>
           </div>
 
           <Reveal delay={0.06}>

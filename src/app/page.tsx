@@ -15,9 +15,9 @@ import { getFaqsByPage } from "@/data/faqs";
 
 // Home: brand-first title (Saltwater Studio | …) — formatTitle inverts for path "/"
 export const metadata: Metadata = buildMetadata({
-  title: "Web Design for Service Businesses",
+  title: "AI Agency for Local Business",
   description:
-    "A web design studio for service businesses that refuse to look like everyone else. Schema-first builds, AI search visibility, and the tracking your competitor skipped.",
+    "AI systems for local business — built, not bolted on. Saltwater Studio builds AI strategy, automation, and agents for local businesses nationwide, plus the search presence that gets them found.",
   path: "/",
 });
 

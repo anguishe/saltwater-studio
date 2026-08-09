@@ -2,17 +2,33 @@
 
 ## 1. Positioning
 
-Saltwater Studio builds premium websites for service businesses — and the search
+Saltwater Studio builds AI systems for local businesses — the automations, agents,
+and strategy that take repetitive work off a small team — and the web and search
 presence (SEO/AEO/GEO + Google + social) that makes them found. Remote, nationwide,
-out of the Florida Gulf Coast. The wedge: **built right the first time.** Most
-small-business sites are rebuilt every two years because the first one was a
-template with no schema, no tracking, and no entity strategy. Saltwater ships the
-version you don't have to redo.
+out of Destin, Florida.
 
-- **Founder:** Travis · **Founded:** 2025 · **Heartland:** Pensacola / FL Panhandle
-- **Service area:** United States (nationwide), Gulf Coast heartland Gulf Shores AL → Miami FL
-- **Model:** remote services studio (not a local storefront) · **KPI:** booked strategy calls + quote leads
+The wedge: **built, not bolted on.** Most AI a small business meets is a plugin
+bolted onto a process nobody mapped, doing a job nobody scoped. Saltwater maps the
+process first, then builds the system that fits it — and owns the result well
+enough to hand it over.
+
+**Canonical entity sentence — verbatim everywhere (site, schema, llms.txt, bios):**
+
+> Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in
+> Destin, Florida, building AI automation and AI-search presence for local
+> businesses nationwide.
+
+- **Founder:** Travis Abadie · **Founded:** 2025 · **Heartland:** Destin / FL Panhandle
+- **Service area:** United States (nationwide), Gulf Coast heartland Gulf Shores AL → Panama City FL
+- **Model:** remote AI agency (not a local storefront) · **KPI:** quote leads
 - **Pricing:** quote-only, never displayed
+
+**Entity disambiguation.** Several unrelated studios share the name — Studio
+Saltwater, Saltwater Design Studio, Saltwatr Studios — and a Pensacola shop already
+sells workflow automation. Four levers separate us, in order of strength: the named
+city (Destin), the founder Person node (Travis Abadie is unique across that set),
+the `.xyz` domain written out in every bio, and the `knowsAbout` topic cluster.
+Never drop the city or the founder name to save characters.
 
 ## 2. The brand world — "the full water column"
 
@@ -99,17 +115,26 @@ stiff. Short sentences earn their length.
   ("In today's digital landscape…" is banned).
 - **Banned words:** elevate, seamless, solutions, leverage, unlock, empower,
   synergy, "we pride ourselves," "passionate about," "take it to the next level,"
-  "in today's digital landscape," "game-changer." 
+  "in today's digital landscape," "game-changer."
+- **Banned — AI-hype register (added 2026-08-09):** AI-powered, agentic (outside a
+  genuine technical context), revolutionize, "transform your business," 10x,
+  cutting-edge, harness, supercharge, future-proof, "AI-first" as a slogan,
+  "the future of work." The AI positioning is carried by what the systems *do*,
+  never by adjectives about AI.
+- **Never name the tooling in customer-facing copy.** No platform names, no model
+  names, no "built with." Outcome first, method second, tooling never. This is a
+  positioning decision, not modesty — the buyer pays for the judgment, and a tool
+  list dates the page.
 - **No emoji** in body copy (a single footer mark is the only allowance).
 - **Read-aloud test:** would Travis say this sentence to a business owner over
   coffee? If not, rewrite.
 
 ## 6. Taglines (locked)
 
-- **Primary tagline:** *A web design studio for service businesses that refuse to
-  look like everyone else.* — hero subhead, meta description base, OG.
+- **Primary tagline:** *AI systems for local business — built, not bolted on.* —
+  hero subhead, meta description base, OG.
 - **Secondary line (use as a services/section header or OG description):**
-  *Websites engineered for Google, AI search, and the people in between.*
+  *Systems engineered for Google, AI search, and the people in between.*
 - **Brand mnemonic:** *Depth, by design.* — logo lockup, OG image, footer,
   preloader resolve.
 

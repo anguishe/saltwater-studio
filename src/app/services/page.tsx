@@ -10,9 +10,9 @@ import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services — Web Design, SEO & AI Search",
+  title: "Services — AI Strategy, Automation & Agents",
   description:
-    "Saltwater Studio builds custom websites plus the SEO, AI-search, Google, and social presence that makes service businesses found. Tell us about the business.",
+    "AI strategy and logistics, AI automation, and AI agents for local businesses — plus the web, search, and Google presence that makes them found. Quote-based, scoped honestly.",
   path: "/services",
 });
 
@@ -28,7 +28,7 @@ export default function ServicesPage() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       {serviceFaqs.length > 0 && <JsonLd schema={buildFaqSchema(serviceFaqs)} />}
-      <JsonLd schema={webPage({ path: "/services", name: `Services — Web Design, SEO & AI Search | ${site.name}`, speakableSelectors: ["h1", ".faq-answer"] })} />
+      <JsonLd schema={webPage({ path: "/services", name: `Services — AI Strategy, Automation & Agents | ${site.name}`, speakableSelectors: ["h1", ".faq-answer"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-7xl">
@@ -45,11 +45,10 @@ export default function ServicesPage() {
               {site.taglineSecondary}
             </p>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">
-              Saltwater Studio builds custom websites for service businesses and the search
-              presence that makes them found — web design, SEO, answer-engine and
-              generative-engine optimization, Google Business Profile, and social content.
-              Everything is quote-based; tell us about the business and we&apos;ll scope it
-              honestly.
+              Three AI services — strategy and logistics, automation, and agents — plus the
+              web, search, Google Business Profile, and social work that decides whether any
+              of it gets found. Everything is quote-based; tell us what the day actually looks
+              like and we&apos;ll scope it honestly.
             </p>
           </Reveal>
 
@@ -101,8 +100,8 @@ export default function ServicesPage() {
 
           <Reveal delay={0.25}>
             <div className="mt-20 flex flex-col items-center gap-4 sm:flex-row">
-              <ButtonLink href="/book" variant="primary">
-                Book a strategy call
+              <ButtonLink href="/contact" variant="primary">
+                Start the conversation
               </ButtonLink>
               <ButtonLink href="/contact" variant="ghost">
                 Get a quote

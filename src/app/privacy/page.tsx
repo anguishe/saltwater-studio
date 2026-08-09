@@ -64,8 +64,8 @@ export default function PrivacyPage() {
 
         <Reveal delay={0.12}>
           <div className="mt-12 pt-8 border-t border-marine/20 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/book" variant="primary">
-              Book a strategy call
+            <ButtonLink href="/contact" variant="primary">
+              Start the conversation
             </ButtonLink>
             <ButtonLink href="/contact" variant="ghost">
               Get a quote

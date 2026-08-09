@@ -65,12 +65,12 @@ export default function CtaClose() {
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <ButtonLink
-              href="/book"
+              href="/contact"
               variant="primary"
               className="text-base px-8 py-4"
               onClick={track.bookingClick}
             >
-              Book a strategy call
+              Start the conversation
             </ButtonLink>
             <ButtonLink
               href="/contact"

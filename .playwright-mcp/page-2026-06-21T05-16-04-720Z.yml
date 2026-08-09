@@ -1,0 +1,68 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Saltwater Studio — home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Saltwater Studio" [ref=e6]
+      - navigation "Primary" [ref=e7]:
+        - link "Work" [ref=e8] [cursor=pointer]:
+          - /url: /work
+        - link "Services" [ref=e9] [cursor=pointer]:
+          - /url: /services
+        - link "Process" [ref=e10] [cursor=pointer]:
+          - /url: /#process
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=e12]:
+        - link "(850) 218-5855" [ref=e13] [cursor=pointer]:
+          - /url: tel:+18502185855
+        - link "Book a strategy call" [ref=e14] [cursor=pointer]:
+          - /url: /book
+  - main [ref=e15]:
+    - generic [ref=e80]:
+      - paragraph [ref=e81]: Message received
+      - heading "Got it." [level=1] [ref=e82]
+      - paragraph [ref=e83]:
+        - text: Expect a reply within one business day. Need it sooner?
+        - link "Call (850) 218-5855" [ref=e84] [cursor=pointer]:
+          - /url: tel:+18502185855
+        - text: .
+      - generic [ref=e85]:
+        - link "Book a call" [ref=e86] [cursor=pointer]:
+          - /url: /book
+        - link "Back to home" [ref=e87] [cursor=pointer]:
+          - /url: /
+  - contentinfo [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - paragraph [ref=e52]: Saltwater Studio
+          - paragraph [ref=e53]: Gulf Coast, FL · serving nationwide
+          - paragraph [ref=e54]: Depth, by design.
+          - paragraph [ref=e55]: Est. 2025
+        - navigation "Footer navigation" [ref=e56]:
+          - paragraph [ref=e57]: Navigate
+          - link "Work" [ref=e58] [cursor=pointer]:
+            - /url: /work
+          - link "Services" [ref=e59] [cursor=pointer]:
+            - /url: /services
+          - link "About" [ref=e60] [cursor=pointer]:
+            - /url: /about
+          - link "Contact" [ref=e61] [cursor=pointer]:
+            - /url: /contact
+          - link "Privacy" [ref=e62] [cursor=pointer]:
+            - /url: /privacy
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Contact
+          - link "hello@saltwaterstudio.xyz" [ref=e65] [cursor=pointer]:
+            - /url: mailto:hello@saltwaterstudio.xyz
+          - link "(850) 218-5855" [ref=e66] [cursor=pointer]:
+            - /url: tel:+18502185855
+      - generic [ref=e67]:
+        - paragraph [ref=e68]: © 2026Saltwater Studio · Est. 2025
+        - paragraph [ref=e69]: Remote studio — Gulf Coast (Gulf Shores, AL to Miami, FL)
+  - button "Open Next.js Dev Tools" [ref=e75] [cursor=pointer]:
+    - img [ref=e76]
+  - alert [ref=e79]: Thank you | Saltwater Studio | Saltwater Studio
