@@ -7,12 +7,13 @@ entity → authority → AI search. Below is everything the build must satisfy.
 ## 1. Per-page requirements (every page, no exceptions)
 
 - Unique `<title>` 50–60 chars: `Primary | Saltwater Studio` (home inverts:
-  `Saltwater Studio | Web Design for Service Businesses`).
+  `Saltwater Studio | AI Agency for Local Business`).
 - Unique meta description 150–160 chars, ends in a soft CTA.
 - Canonical = apex, https, no trailing slash, no query strings.
 - One `<h1>` with the primary phrase; strict heading order.
-- First 100 words contain: **Saltwater Studio + web design + service businesses**
-  (GEO anchor).
+- First 100 words contain: **Saltwater Studio + AI + local businesses + Destin**
+  (GEO anchor). Destin earns its slot: three unrelated studios share the name, so
+  the city is the cheapest disambiguation signal available.
 - ≥2 contextual internal links out, ≥1 in (no orphans).
 - All images: entity-rich alt + explicit dimensions via `next/image`.
 - In `sitemap.ts`; allowed by `robots.ts`.
@@ -104,11 +105,12 @@ validator.schema.org before launch and after any `site.ts` change.
 - **Bing Webmaster:** import from GSC (inherits verification + sitemap). ChatGPT
   search / Copilot lean on Bing — skipping it means invisible in half of AI search.
 - **IndexNow:** key file in `/public`, ping on deploy (INTEGRATIONS deploy hook).
-- **Optional but recommended local signal:** a "Web designer" Google Business
-  Profile for the Pensacola heartland (service-area, address hidden) — legitimate,
-  free, and strong for "web designer near me" + local AI answers. Not required for
-  v1; note it as a launch-week add. If created, its NAP must match `site.ts`
-  character-for-character.
+- **Google Business Profile:** a service-area profile anchored in Destin (address
+  entered for verification, then hidden) — legitimate, free, and the single
+  strongest node in an otherwise empty `sameAs[]`. Deferred until after the rebrand
+  ships so the category, description, and website link match on day one. Verification
+  runs days to weeks, so it is the longest pole once started. Its NAP must match
+  `site.ts` character-for-character.
 
 ## 8. Pre-launch SEO audit (run on the Vercel preview before going live)
 

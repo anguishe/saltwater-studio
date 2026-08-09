@@ -23,7 +23,7 @@ export default function Footer() {
               Saltwater Studio
             </p>
             <p className="mt-1 text-sm text-foam/50">
-              Gulf Coast, FL &middot; serving nationwide
+              Destin, FL &middot; serving nationwide
             </p>
             <p className="mt-4 font-mono text-xs text-foam/30 tracking-widest uppercase">
               {site.mnemonic}

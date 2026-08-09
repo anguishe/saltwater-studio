@@ -2,9 +2,9 @@ import Reveal from "@/components/ui/Reveal";
 
 const proofs = [
   { label: "Nationwide" },
-  { label: "Gulf Coast FL" },
+  { label: "Destin, FL" },
   { label: "Est. 2025" },
-  { label: "Next.js · Schema-First" },
+  { label: "Built, Not Bolted On" },
 ];
 
 export default function Trust() {
@@ -16,7 +16,7 @@ export default function Trust() {
       <div className="mx-auto max-w-7xl flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <Reveal>
           <p className="text-center text-foam/70 md:text-left">
-            Built for Google &middot; AI search &middot; and the people in between.
+            Systems for Google &middot; AI search &middot; and the people in between.
           </p>
         </Reveal>
 

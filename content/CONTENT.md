@@ -7,9 +7,13 @@ what the data layer holds. Answer-first throughout. No banned words.
 
 ## GEO entity sentence (the canonical fact set — verbatim everywhere)
 
-> **Saltwater Studio is a remote web-design studio founded in 2025 by Travis Abadie on
-> Florida's Gulf Coast, building premium, search-optimized websites for service
-> businesses nationwide.**
+> **Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in Destin,
+> Florida, building AI automation and AI-search presence for local businesses
+> nationwide.**
+
+Single-sourced from `site.entitySentence`. Change it there, not here — schema, the
+About page, and the About section all read that one constant. Never write
+"all businesses": vague entity classes are harder for answer engines to match.
 
 This exact sentence (or a trivially-trimmed version) appears in: the About page,
 the meta/OG description base, the Organization schema `description`, the llms.txt,
@@ -20,18 +24,18 @@ and every social bio — character-consistent. Inconsistency = entity confusion.
 ## Home
 
 ### Hero
-- **Mono kicker:** `SALTWATER STUDIO — EST. 2025 · GULF COAST → NATIONWIDE`
-- **H1:** *Most websites stop at the surface. We build deeper.*
-- **Subhead:** *A web design studio for service businesses that refuse to look
-  like everyone else — engineered to be found by Google, by AI search, and by the
-  people who'll actually call you.*
-- **Primary CTA:** `Book a strategy call`
-- **Secondary CTA:** `Get a quote`
+- **Mono kicker:** `SALTWATER STUDIO — EST. 2025 · DESTIN, FL → NATIONWIDE`
+- **H1:** *Most AI stops at the demo. We build what runs underneath.*
+- **Subhead:** *AI systems for local business — built, not bolted on. The
+  repetitive part of your day, handled. The calls you miss, answered. The search
+  presence that gets you named when someone asks for a recommendation.*
+- **Primary CTA:** `Start the conversation` → /contact
+- **Secondary CTA:** `See what we build` → /services
 
 ### Trust strip
-- **Line:** `Built for Google · AI search · and the people in between.`
-- **Proof ticks (mono):** `NATIONWIDE` · `GULF COAST, FL` · `EST. 2025` ·
-  `SCHEMA-FIRST · NEXT.JS`
+- **Line:** `Systems for Google · AI search · and the people in between.`
+- **Proof ticks (mono):** `NATIONWIDE` · `DESTIN, FL` · `EST. 2025` ·
+  `BUILT, NOT BOLTED ON`
 
 ### Offer — "What we build" (quote-only)
 Section header (secondary tagline): **Websites engineered for Google, AI search,
@@ -88,41 +92,32 @@ Each card CTA: `Talk it through →` (→ strategy call).
 ### CTA close
 - **Headline:** *Depth, by design.*
 - **Sub:** *Let's build the site you stop apologizing for.*
-- **CTAs:** `Book a strategy call` / `Get a quote`
+- **CTAs:** `Start the conversation` → /contact · `See the work` → /work
 
 ---
 
 ## About
 
 - **H1:** *Saltwater Studio*
-- **Entity paragraph (third person, GEO):** *Saltwater Studio is a remote web-
-  design studio founded in 2025 by Travis Abadie on Florida's Gulf Coast. It builds
-  premium, search-optimized websites for service businesses across the United
-  States, with a heartland on the Gulf Coast from Gulf Shores, Alabama to Miami,
-  Florida.*
-- **The why (first person):** *I started Saltwater Studio because I kept watching
-  good local businesses pay for websites that were never going to get them found —
-  template sites with no schema, no tracking, no plan. I build the other kind, and
-  I run my own sites on the same method before a client ever pays for it.
-  BashSnippets is mine — a library I structured so AI tools can quote it, not just
-  so Google ranks it. I built Beach House Moving a service-area page for every
-  county it actually works, written from real job knowledge instead of a
-  find-and-replace on the city name. Kai's Run launched into a category search had
-  never seen, so I built the entity from zero and let the structure do the
-  ranking. Schema and entity work go in from the first commit, every time — built
-  right so you never have to redo it, because that's how I run my own businesses,
-  not a line I put on a slide.*
-- **CTA:** `See the work` / `Book a call`
-
----
+- **Entity paragraph (third person, GEO):** the canonical entity sentence, rendered
+  from `site.entitySentence` — never retyped here. Followed by: *It works with local
+  businesses across the United States, with a heartland on the Gulf Coast from Gulf
+  Shores, Alabama to Panama City, Florida.*
+- **The why (first person):** lives in `src/app/about/page.tsx`. Four paragraphs:
+  what keeps failing (template sites then bolted-on AI, both failing the same way),
+  the owned proof (BashSnippets, the Kai's Run heat-safety tool, Beach House Moving
+  service-area pages, the internal asset system), and the method in one line — map
+  the process, build what fits, document it well enough to hand over.
+- **Proof rule:** outcome first, method second, tooling never. No platform names,
+  no model names, no "built with." No metrics, no testimonials, until a real one
+  exists.
 
 ## Services overview (page intro)
 - **H1:** *What Saltwater Studio does*
-- **Answer-first lead:** *Saltwater Studio builds custom websites for service
-  businesses and the search presence that makes them found — web design, SEO,
-  answer-engine and generative-engine optimization, Google Business Profile, and
-  social content. Everything is quote-based; tell us about the business and we'll
-  scope it honestly.*
+- **Answer-first lead:** *Three AI services — strategy and logistics, automation,
+  and agents — plus the web, search, Google Business Profile, and social work that
+  decides whether any of it gets found. Everything is quote-based; tell us what the
+  day actually looks like and we'll scope it honestly.*
 
 ---
 
@@ -130,46 +125,32 @@ Each card CTA: `Talk it through →` (→ strategy call).
 - **H1:** *Tell us about the business.*
 - **Lead:** *The more specific you are, the more useful the quote. No spam, no
   obligation — Travis reads every message.*
-- **Form fields:** Name · Email · Business & website (if any) · What you need ·
-  (honeypot: Company) — labels above fields, not placeholders.
+- **Form fields:** Name · Email · Business & website (if any) · What are you
+  after? · What eats the most time right now? · How many people? · Timeline ·
+  Walk me through it · (honeypot: Company) — labels above fields, not placeholders.
+  Select options live in `src/data/quoteOptions.ts` and are validated server-side
+  against that same list.
+- **No budget field**, ever. Quote-only pricing is a hard rule and a budget range
+  is a price on the site by another name.
 - **Button:** `Send it`
-- **Under button:** *Prefer to talk it through? [Book a strategy call].*
+- **Under button:** *Rather just talk? [phone]. Travis picks up.*
 - **Thanks page:** *Got it. Expect a reply within one business day. Need it
-  sooner? Call {{STUDIO_PHONE_DISPLAY}}.*
+  sooner? Call (850) 218-5855.*
 
 ---
 
-## FAQ (homepage — AEO answer-first, FAQPage schema)
+## FAQ (AEO answer-first, FAQPage schema)
 
-Each answer is a standalone, true-out-of-context first sentence (the snippet test),
-then elaboration.
+**Source of truth: `src/data/faqs.ts`.** Answers were duplicated here and drifted, so
+they now live in one place and this file points at it. Each entry carries a `page`
+key (`home`, `services`, `ai-strategy`, `ai-automation`, `ai-agents`, `web-design`,
+`seo-aeo-geo`, `google-presence`, `social-content`) and renders into both the visible
+FAQ block and the FAQPage schema.
 
-1. **What does Saltwater Studio do?**
-   Saltwater Studio is a remote web-design studio that builds custom, search-
-   optimized websites for service businesses nationwide, plus the SEO, AI-search,
-   Google Business Profile, and social work that makes them found. Founded in 2025
-   on Florida's Gulf Coast.
+Rules when adding one:
 
-2. **How much does a website cost?**
-   Pricing is quote-based, because a five-page local site and a full presence
-   program aren't the same job. The fastest way to a real number is a short
-   strategy call or the quote form — most projects are scoped within a day.
-
-3. **Do you only work with Gulf Coast businesses?**
-   No. Saltwater Studio works with service businesses across the United States;
-   the Gulf Coast (Gulf Shores, AL to Miami, FL) is simply home base.
-
-4. **What's "AEO" and "GEO," and why should I care?**
-   AEO (answer-engine optimization) and GEO (generative-engine optimization) are
-   how your business gets quoted by AI tools like ChatGPT, Google's AI answers,
-   and Perplexity when someone asks for a recommendation. They reward consistent
-   facts and clear, answer-first pages — which most template sites don't have.
-
-5. **Do I own my website and accounts?**
-   Yes — completely. The domain, the code, the Google and analytics accounts are
-   all in your name. Saltwater Studio works as your manager, never your landlord.
-
-6. **What do you build sites with?**
-   Custom Next.js with built-in schema, fast loading, and clean code — not a
-   page-builder or a template. That's what makes a site you don't have to rebuild
-   in two years.
+- First sentence must be true out of context — that is the snippet test, and it is
+  what an answer engine lifts.
+- Answer the question actually asked before adding texture.
+- No price, no metric, no testimonial.
+- One entity mention where it fits naturally, never forced.

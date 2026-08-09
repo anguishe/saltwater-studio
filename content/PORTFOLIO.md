@@ -10,6 +10,7 @@ no client name as endorsement, no live link) until Travis flips them to `live`.
 | Project | Permission | Public link? |
 |---|---|---|
 | Beach House Moving | **live** | ✅ |
+| The Heat-Safety Tool (Kai's Run) | **live** | ✅ |
 | Kai's Run | **live** | ✅ |
 | BashSnippets | **live** | ✅ |
 | Concept — Event Planning | **preview** | ❌ |
@@ -21,6 +22,24 @@ When in doubt, treat as `preview`. Never invent results, metrics, or testimonial
 ---
 
 ## 1. Live case studies (showable now)
+
+**Framing rule (2026-08-09):** outcome first, method second, tooling never. No
+platform names, no model names, no "built with." No metrics, no testimonials, no
+invented results — the outcome paragraph describes what *shipped*, not what it
+produced. Four capabilities are sold; only the owned properties carry hard proof.
+
+### The Heat-Safety Tool — `live`
+- **What:** A live pavement-temperature checker on Kai's Run, an owned property.
+- **Role line:** *A question people ask every afternoon in July, answered in under
+  a second from live local weather.*
+- **Why it leads the AI proof:** it is the clearest small example of the whole
+  pitch — a question a business answers by hand fifty times a summer, built once
+  so it answers itself correctly, forever. Live data in, defensible verdict out,
+  no human in the loop.
+- **Highlight (factual):** live conditions by city or ZIP, published heat-index and
+  pavement models, sun/shade modes, an answer-first verdict with the number behind
+  it, eleven local cities one tap away.
+- **Link:** https://kaisrun.xyz/tools/too-hot-to-walk
 
 ### Beach House Moving — `live`
 - **What:** Service-area moving company, Florida Gulf Coast.
