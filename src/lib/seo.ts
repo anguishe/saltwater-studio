@@ -35,7 +35,8 @@ export function buildMetadata({
   const image = ogImage ?? `${site.url}/og-default.jpg`;
 
   return {
-    title: formattedTitle,
+    // absolute: formatTitle already appends the brand; the layout template would add it twice.
+    title: { absolute: formattedTitle },
     description,
     metadataBase: new URL(site.url),
     alternates: {
