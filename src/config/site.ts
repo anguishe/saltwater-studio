@@ -46,9 +46,18 @@ export const site = {
   sameAs: [] as string[],
   gtmId: "GTM-M3RTZ7C8", // documentation only; runtime reads NEXT_PUBLIC_GTM_ID env var
   // The ONE price on the site (pricing carve-out, 2026-08-09): the T1 AI
-  // Visibility Audit sells at $150 flat via this live Stripe Payment Link.
-  // Everything else stays quote-only.
+  // Visibility Audit, sold via a Stripe Payment Link. Everything else stays
+  // quote-only. Limited-time $50 offer added 2026-09-24 (regular $150).
+  // stripeAuditUrl MUST charge auditOffer.price — swap both together.
+  // ponytail: promo end is a static string; after it passes, set price back to
+  // regularPrice, restore the $150 link, and redeploy (static build won't flip itself).
   stripeAuditUrl: "https://buy.stripe.com/eVqcN49uP3uX3gW0VMeUU00",
+  auditOffer: {
+    price: 50,
+    regularPrice: 150,
+    endsISO: "2026-10-31",
+    endsLabel: "Oct 31",
+  },
   googleSiteVerification: "TtW9ukjyKdvs9lvvzlFkRdpTgLNoXCqrRFNmdPGUVOc",
 } as const;
 

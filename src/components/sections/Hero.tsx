@@ -7,6 +7,7 @@ import { useInView } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
 import Preloader from "@/components/motion/Preloader";
 import { track } from "@/lib/events";
+import { site } from "@/config/site";
 
 const DeepScene = dynamic(() => import("@/components/three/DeepScene"), {
   ssr: false,
@@ -60,7 +61,8 @@ export default function Hero() {
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foam/70">
           ChatGPT, Claude, Perplexity, and Google&apos;s AI results now decide
           which local businesses get named. Saltwater Studio builds the presence
-          that gets you recommended — and the $150 AI Visibility Audit shows
+          that gets you recommended — and the AI Visibility Audit, ${site.auditOffer.price} through{" "}
+          {site.auditOffer.endsLabel}, shows
           exactly where you stand today.
         </p>
 
@@ -70,7 +72,7 @@ export default function Hero() {
             variant="primary"
             className="px-8 py-4 text-base"
           >
-            See the audit — $150
+            See the audit — ${site.auditOffer.price}
           </ButtonLink>
           <ButtonLink
             href="/contact"

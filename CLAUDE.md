@@ -24,7 +24,8 @@ ourselves", AI-powered, agentic (outside technical context), revolutionize,
 future-proof, AI-first. No emoji in copy.
 ## Hard rules
 - Quote-only pricing with ONE carve-out (recorded 2026-08-09): the T1 AI
-  Visibility Audit is $150 flat via a Stripe Payment Link (site.stripeAuditUrl).
+  Visibility Audit is flat-priced via a Stripe Payment Link (site.stripeAuditUrl);
+  price lives in site.auditOffer ($50 limited-time through 2026-10-31, regular $150).
   No other price appears anywhere on the site. CTAs route to the quote form at
   /contact (Resend); Cal.com is retired — /book redirects to /contact.
 - Portfolio permission gate (PORTFOLIO §0): LIVE = Beach House Moving, Kai's Run,

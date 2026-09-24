@@ -6,14 +6,14 @@
  * what keeps arbitrary strings out of the notification email.
  *
  * Deliberately no budget field. Quote-only pricing is a hard rule (CLAUDE.md,
- * with the single T1 $150 audit carve-out recorded 2026-08-09), and a budget
+ * with the single T1 audit carve-out recorded 2026-08-09), and a budget
  * range on the form is a price on the site by another name.
  */
 
 // Mirrors the tier ladder in src/data/tiers.ts; the /contact?interest=<id>
 // prefill in QuoteForm.tsx maps tier ids onto the first four entries by index.
 export const INTERESTS = [
-  "AI Visibility Audit — $150",
+  "AI Visibility Audit",
   "AI Search Optimization Sprint",
   "AI-Managed Presence (monthly)",
   "Custom AI systems — automation, agents, integrations",

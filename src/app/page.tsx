@@ -17,7 +17,7 @@ import { getFaqsByPage } from "@/data/faqs";
 export const metadata: Metadata = buildMetadata({
   title: "AI Agency for Local Business",
   description:
-    "Get found and recommended by ChatGPT, Claude, Perplexity, and Google's AI results. Saltwater Studio builds AI visibility for local businesses — starting with a $150 flat-rate audit delivered in 72 hours.",
+    `Get found and recommended by ChatGPT, Claude, Perplexity, and Google's AI results. Saltwater Studio builds AI visibility for local businesses — starting with a $${site.auditOffer.price} audit (through ${site.auditOffer.endsLabel}) delivered in 72 hours.`,
   path: "/",
 });
 

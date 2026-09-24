@@ -1,3 +1,5 @@
+import { site } from "@/config/site";
+
 export interface FAQ {
   question: string;
   answer: string;
@@ -29,7 +31,7 @@ export const faqs: FAQ[] = [
   {
     question: "How much does this cost?",
     answer:
-      "The AI Visibility Audit is $150 flat, delivered within 72 hours. Everything else is quote-based, because automating one process and rebuilding how a business runs are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.",
+      `The AI Visibility Audit is $${site.auditOffer.price} flat through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice}), delivered within 72 hours. Everything else is quote-based, because automating one process and rebuilding how a business runs are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.`,
     page: "home",
   },
   {
@@ -54,11 +56,11 @@ export const faqs: FAQ[] = [
   {
     question: "What services does Saltwater Studio offer?",
     answer:
-      "Four engagements: a $150 AI Visibility Audit, the optimization sprint that implements it, ongoing AI-managed presence, and custom AI systems — automation, agents, and integrations. The audit has a flat price; everything else is quoted to the business.",
+      `Four engagements: an AI Visibility Audit ($${site.auditOffer.price} through ${site.auditOffer.endsLabel}), the optimization sprint that implements it, ongoing AI-managed presence, and custom AI systems — automation, agents, and integrations. The audit has a flat price; everything else is quoted to the business.`,
     page: "services",
   },
   {
-    question: "What does the $150 AI Visibility Audit include?",
+    question: "What does the AI Visibility Audit include?",
     answer:
       "Five checks: how your business shows up in ChatGPT, Claude, Perplexity, and Google's AI results; whether your key pages are structured answer-first; schema and entity consistency; your Google Business Profile; and a technical SEO baseline. It arrives as a written report — scored by category, issues ranked by impact, fixes in order — within 72 hours.",
     page: "services",

@@ -17,9 +17,9 @@ import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "AI Visibility Services — $150 Audit, Sprint & Retainer",
+  title: `AI Visibility Services — $${site.auditOffer.price} Audit, Sprint & Retainer`,
   description:
-    "The AI Visibility Audit ($150 flat, 72-hour delivery), the optimization sprint that implements it, ongoing managed presence, and custom AI systems. Local businesses nationwide.",
+    `The AI Visibility Audit ($${site.auditOffer.price} through ${site.auditOffer.endsLabel}, 72-hour delivery), the optimization sprint that implements it, ongoing managed presence, and custom AI systems. Local businesses nationwide.`,
   path: "/services",
 });
 
@@ -48,6 +48,7 @@ export default function ServicesPage() {
                   offers: {
                     price: tier.price.amount,
                     priceCurrency: tier.price.currency,
+                    priceValidUntil: site.auditOffer.endsISO,
                   },
                 }
               : {}),
@@ -71,7 +72,7 @@ export default function ServicesPage() {
             </p>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">
               Saltwater Studio makes local businesses visible to Google and to the AI
-              assistants customers now ask first. Start with a $150 audit; everything past
+              assistants customers now ask first. Start with a ${site.auditOffer.price} audit; everything past
               it is scoped to your business and quoted within a day.
             </p>
           </Reveal>

@@ -25,10 +25,10 @@ export const tiers: Tier[] = [
     index: "T1",
     name: "AI Visibility Audit",
     price: {
-      amount: 150,
+      amount: site.auditOffer.price,
       currency: "USD",
-      display: "$150",
-      note: "flat, one-time",
+      display: `$${site.auditOffer.price}`,
+      note: `flat, one-time — limited-time rate through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice})`,
     },
     turnaround: "Delivered within 72 hours, fully async",
     oneLiner:
@@ -45,7 +45,7 @@ export const tiers: Tier[] = [
     followUp:
       "The report stands alone. Fix it yourself, hand it to your developer, or have us run the Sprint.",
     cta: {
-      label: "Get the audit — $150",
+      label: `Get the audit — $${site.auditOffer.price}`,
       href: site.stripeAuditUrl,
       external: true,
     },
@@ -109,7 +109,7 @@ export const engagementProof: { label: string; detail: string }[] = [
   },
   {
     label: "SEO / AEO / GEO audits",
-    detail: "The same report format the $150 audit ships in",
+    detail: "The same report format the audit ships in",
   },
   {
     label: "Google Business Profile",
