@@ -88,7 +88,10 @@ export default function AboutPage() {
                     because the honest answer changes hour to hour and no article can
                     give it to you. Beach House Moving has a service-area page for every
                     county it actually works, written from real job knowledge instead of
-                    a find-and-replace on the city name. Everything I publish moves
+                    a find-and-replace on the city name, and I run its Google profile
+                    every month. WaterVue Event Rentals, a business I&apos;m a partner in,
+                    lists every piece it rents with real sizes and answers the planning
+                    questions renters ask before they ever call. Everything I publish moves
                     through one system I built that takes a single input and produces
                     every asset a launch needs, without a person in the middle.
                   </p>

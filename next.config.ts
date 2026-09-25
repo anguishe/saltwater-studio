@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
         destination: "https://saltwaterstudio.xyz/:path*",
         permanent: true,
       },
+      // Concept tile retired 2026-09-25; the real business is now a live case study.
+      { source: "/work/watervue", destination: "/work/watervue-event-rentals", permanent: true },
     ];
   },
   images: {

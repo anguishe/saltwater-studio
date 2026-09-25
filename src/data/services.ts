@@ -11,6 +11,10 @@ export interface Service {
   slug: string;
   index: string;
   title: string;
+  /** Search-facing <title>, keyword-first. Falls back to `title`. */
+  seoTitle?: string;
+  /** 150–160 chars. Falls back to the oneLiner + agency suffix. */
+  metaDescription?: string;
   oneLiner: string;
   included: string[];
   /**
@@ -25,6 +29,9 @@ export interface Service {
 export const services: Service[] = [
   {
     slug: "ai-strategy",
+    seoTitle: "AI Strategy Consulting for Small Business",
+    metaDescription:
+      "AI strategy for small and local businesses: a process map, a build-or-buy call on every task, and a 90-day roadmap you can hand to anyone to follow.",
     index: "01",
     title: "AI Strategy & Logistics",
     oneLiner:
@@ -56,6 +63,9 @@ export const services: Service[] = [
   },
   {
     slug: "ai-automation",
+    seoTitle: "AI Automation & Workflows for Small Business",
+    metaDescription:
+      "AI automation for small businesses: intake, follow-up, quoting, scheduling, and reporting handled end to end, with a person in the loop where it matters.",
     index: "02",
     title: "AI Automation",
     oneLiner:
@@ -96,6 +106,9 @@ export const services: Service[] = [
   },
   {
     slug: "ai-agents",
+    seoTitle: "AI Agents for Local Business — Chat, Text & Voice",
+    metaDescription:
+      "AI agents for local businesses: chat that answers with your real policies, inbox triage, and booking into your calendar, scoped to hand off, not guess.",
     index: "03",
     title: "AI Agents",
     oneLiner:
@@ -129,6 +142,9 @@ export const services: Service[] = [
   },
   {
     slug: "web-design",
+    seoTitle: "Web Design in Destin, FL — Custom Sites Built to Rank",
+    metaDescription:
+      "Custom web design from Destin, FL for local businesses nationwide: fast Next.js sites with schema, tracking, and Search Console set up before launch.",
     index: "04",
     title: "Websites, Built Right",
     oneLiner:
@@ -146,6 +162,9 @@ export const services: Service[] = [
   },
   {
     slug: "seo-aeo-geo",
+    seoTitle: "Local SEO & AI Search Optimization (AEO / GEO)",
+    metaDescription:
+      "Local SEO plus AI search optimization: rank in Google, get quoted by ChatGPT, Perplexity, and Copilot, and keep one consistent fact set everywhere.",
     index: "05",
     title: "SEO / AEO / GEO",
     oneLiner:
@@ -162,17 +181,43 @@ export const services: Service[] = [
   },
   {
     slug: "google-presence",
+    seoTitle: "Google Business Profile Management — Google Care",
+    metaDescription:
+      "Google Business Profile management for local businesses: weekly posts from your own photos, every review answered, and a monthly report on calls.",
     index: "06",
-    title: "Google Presence",
+    title: "Google Care",
     oneLiner:
-      "Google Business Profile setup, optimization, and the local pack — the most underused free channel a local business has.",
+      "We run your Google Business Profile every month — posts from your own job photos, every review answered, hours and services kept right, and a report that shows the calls it brought in.",
     included: [
-      "GBP creation or full audit + remediation",
-      "NAP consistency across all directories",
-      "Category selection and service area configuration",
-      "Photo strategy and first-post content",
-      "Review response framework",
-      "Local pack ranking baseline and monitoring",
+      "Weekly posts built from your own real job photos, never stock",
+      "Every review answered within two business days",
+      "Hours, holiday hours, services, and service area kept current",
+      "New photos added every month, each one checked for addresses and plates before it posts",
+      "Category and service-area setup, or a full audit and cleanup of an existing profile",
+      "Name, address, and phone matched across the directories that feed Google",
+      "A one-page monthly report: calls, website clicks, direction requests, and the searches that found you",
+      "Setup of a brand-new profile, including verification, if you don't have one yet",
+    ],
+    sections: [
+      {
+        heading: "Why the profile, not just the website",
+        body: [
+          "For most local businesses, the phone call starts on Google, not on the website. Someone searches \"movers near me\" or \"plumber Destin,\" sees three businesses in the map results, and taps Call. That call never touches your site. The profile is the storefront.",
+          "Most owners set the profile up once and never touch it again. Google notices. A profile with fresh posts, recent photos, answered reviews, and correct hours looks open for business, and it shows up more often.",
+        ],
+      },
+      {
+        heading: "It's already running for a client",
+        body: [
+          "This is the monthly routine we run for Beach House Moving. Posts come from the crew's own job photos, every review gets a real reply, and the owners get a report each month. In September, calls from their Google profile jumped, right alongside their homepage moving onto page one in their home market.",
+        ],
+      },
+      {
+        heading: "What you do and what we do",
+        body: [
+          "You add us as a Manager on the profile and text or email photos from jobs when you have them. We do everything else. You keep ownership of the profile the whole time. If you ever stop, you remove us and nothing about the listing changes.",
+        ],
+      },
     ],
   },
   {
@@ -187,6 +232,52 @@ export const services: Service[] = [
       "Answer-first copy — every post a potential AI citation",
       "Brand voice consistency with BRAND.md standards",
       "Monthly content performance review",
+    ],
+  },
+  {
+    slug: "ai-receptionist",
+    seoTitle: "AI Receptionist & Missed-Call Text-Back for Small Business",
+    metaDescription:
+      "An AI receptionist for trades and local businesses: every missed call gets a text back in seconds, after-hours calls answered, job details sent to you.",
+    index: "08",
+    title: "AI Receptionist",
+    oneLiner:
+      "For the owner who's on a roof, under a sink, or driving between jobs when the phone rings. Every missed call gets a text back in seconds, after-hours calls get answered, and you get the job details, not a voicemail.",
+    included: [
+      "Missed-call text-back — a real reply within seconds, in your words",
+      "After-hours and overflow call answering",
+      "Collects what you'd ask: name, address, what's wrong, how urgent",
+      "Sends you a clean summary by text or email, ready to call back",
+      "Books straight into the calendar you already use, if you want it to",
+      "Answers from your real hours, service area, and policies only",
+      "Hands off to you the moment a caller needs a person",
+      "Every conversation logged where you can read it",
+    ],
+    sections: [
+      {
+        heading: "Who this is for",
+        body: [
+          "Plumbers, HVAC techs, roofers, movers, cleaners, landscapers — anyone whose hands are busy when the phone rings. If you've ever listened to a voicemail at 7pm from someone who already hired whoever picked up, this is for you.",
+        ],
+        points: [
+          "You miss calls during the workday because you're on a job",
+          "Calls after hours go to voicemail and don't call back",
+          "You don't have the volume, or the budget, for a full-time receptionist",
+        ],
+      },
+      {
+        heading: "How it works",
+        body: [
+          "Your number stays your number. When a call goes unanswered, the caller gets a text within seconds that sounds like your business, not a robot. It asks what they need, where they are, and how soon. You get one message with everything in it, and you call back a customer who's already waiting for you instead of one who's moved on.",
+          "After hours, it can answer the call itself, take the details the same way, and tell the caller exactly when you'll be in touch.",
+        ],
+      },
+      {
+        heading: "What it will not do",
+        body: [
+          "It won't quote a price it doesn't have, promise a time slot it can't see, or make up a policy. When a caller asks for something outside what it knows, it says a person will follow up and passes the conversation to you. Scoping those edges is most of the setup work, and it's why we build it for your business rather than hand you a generic bot.",
+        ],
+      },
     ],
   },
 ];

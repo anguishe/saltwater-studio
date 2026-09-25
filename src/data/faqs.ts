@@ -12,6 +12,7 @@ export interface FAQ {
     | "web-design"
     | "seo-aeo-geo"
     | "google-presence"
+    | "ai-receptionist"
     | "social-content";
 }
 
@@ -222,15 +223,21 @@ export const faqs: FAQ[] = [
   },
   // google-presence slug
   {
-    question: "What does Google presence include?",
+    question: "What is Google Business Profile management?",
     answer:
-      "Google Business Profile setup and optimization, a review system that works, and the local-pack signals that decide whether you show up when someone searches nearby. It is the part of local search most template sites skip.",
+      "Someone runs your Google listing for you every month: posting updates with your own job photos, answering every review, keeping hours and services correct, and reporting the calls and clicks the profile brought in. Google Care is Saltwater Studio's version of that service, and it is quoted per business.",
     page: "google-presence",
   },
   {
     question: "Will this help me show up in 'near me' searches?",
     answer:
       "That is the goal. A complete Business Profile with facts that match across the web is what Google and AI assistants reward when someone asks for a nearby recommendation.",
+    page: "google-presence",
+  },
+  {
+    question: "Do I have to give up control of my Google profile?",
+    answer:
+      "No. You add Saltwater Studio as a Manager, and you stay the owner. You can see everything we post and remove our access at any time without changing the listing.",
     page: "google-presence",
   },
   {
@@ -257,6 +264,31 @@ export const faqs: FAQ[] = [
     answer:
       "Consistent, specific content is what search engines and AI tools read to understand who you are. Stale or generic profiles are nearly invisible to a model; real, specific activity is what gets you named in a recommendation.",
     page: "social-content",
+  },
+  // ai-receptionist slug
+  {
+    question: "What is an AI receptionist?",
+    answer:
+      "A system that picks up where your phone leaves off. When you miss a call, it texts the caller back within seconds, asks what they need, and sends you the details. After hours it can answer the call itself. It works from your real hours, service area, and policies, and hands off to you when a caller needs a person.",
+    page: "ai-receptionist",
+  },
+  {
+    question: "Do I have to change my phone number?",
+    answer:
+      "No. Your customers keep calling the number they already have. The receptionist only steps in when a call goes unanswered or comes in after hours.",
+    page: "ai-receptionist",
+  },
+  {
+    question: "Is an AI receptionist cheaper than an answering service?",
+    answer:
+      "For most small businesses, yes, because it only works the calls you miss and it never puts a caller on hold. It is quoted per business based on call volume and whether you want after-hours voice answering or text-back only.",
+    page: "ai-receptionist",
+  },
+  {
+    question: "What happens if a caller asks something it can't answer?",
+    answer:
+      "It says so, tells the caller a person will follow up, and sends you the conversation. It never quotes a price or promises a time it has not been given.",
+    page: "ai-receptionist",
   },
 ];
 

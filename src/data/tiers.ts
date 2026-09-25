@@ -74,7 +74,7 @@ export const tiers: Tier[] = [
       "Ongoing management of your search and AI presence — the monthly work that keeps rankings, profiles, and AI answers current after the fixes land. Currently running for an active monthly client.",
     includes: [
       "Monthly upkeep of rankings, schema, and content signals",
-      "Google Business Profile management",
+      "Google Business Profile management (Google Care)",
       "AI-answer monitoring — what assistants say about you, checked and corrected",
       "A monthly written report of what moved and why",
     ],
@@ -97,6 +97,7 @@ export const tiers: Tier[] = [
       { href: "/services/ai-strategy", label: "AI Strategy & Logistics" },
       { href: "/services/ai-automation", label: "AI Automation" },
       { href: "/services/ai-agents", label: "AI Agents" },
+      { href: "/services/ai-receptionist", label: "AI Receptionist" },
     ],
   },
 ];

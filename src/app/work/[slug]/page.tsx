@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
   }
   return buildMetadata({
-    title: project.title,
+    title: `${project.title} Case Study — ${project.category}`,
     description:
       project.metaDescription ??
       `Case study: ${project.result} — a Saltwater Studio web design project.`,

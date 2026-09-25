@@ -22,8 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return buildMetadata({
-    title: service.title,
-    description: `${service.oneLiner} — Saltwater Studio, an AI agency for local businesses nationwide.`,
+    title: service.seoTitle ?? service.title,
+    description:
+      service.metaDescription ??
+      `${service.oneLiner} — Saltwater Studio, an AI agency for local businesses nationwide.`,
     path: `/services/${slug}`,
   });
 }
@@ -50,7 +52,7 @@ export default async function ServiceSlugPage({ params }: Props) {
       <JsonLd
         schema={buildServiceSchema({
           name: service.title,
-          description: service.oneLiner,
+          description: service.metaDescription ?? service.oneLiner,
           url: `${site.url}/services/${slug}`,
         })}
       />
@@ -121,7 +123,7 @@ export default async function ServiceSlugPage({ params }: Props) {
 
           <Reveal delay={0.2}>
             <div className="mt-16 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="/contact" variant="primary">
+              <ButtonLink href={`/contact?interest=${slug}`} variant="primary">
                 Start the conversation
               </ButtonLink>
               <ButtonLink href="/work" variant="ghost">

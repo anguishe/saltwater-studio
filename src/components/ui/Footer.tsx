@@ -12,11 +12,12 @@ const footerNav = [
   { label: "Privacy", href: "/privacy" },
 ];
 
-export default function Footer() {
+// Service links come in as props from the server layout so the service copy stays out of the client bundle.
+export default function Footer({ serviceLinks }: { serviceLinks: { slug: string; title: string }[] }) {
   return (
     <footer className="bg-abyss border-t border-marine/30 px-6 py-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-4">
           {/* NAP — no street address (remote studio) */}
           <div>
             <p className="font-display text-lg text-foam font-semibold">
@@ -44,6 +45,22 @@ export default function Footer() {
                 className="text-sm text-foam/60 hover:text-shoal transition-colors"
               >
                 {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Sitewide links to every service page — the only internal links most of them get outside /services. */}
+          <nav aria-label="Services" className="flex flex-col gap-2">
+            <p className="font-mono text-xs text-foam/30 tracking-widest uppercase mb-2">
+              Services
+            </p>
+            {serviceLinks.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className="text-sm text-foam/60 hover:text-shoal transition-colors"
+              >
+                {s.title}
               </Link>
             ))}
           </nav>

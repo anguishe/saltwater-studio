@@ -29,7 +29,7 @@ future-proof, AI-first. No emoji in copy.
   No other price appears anywhere on the site. CTAs route to the quote form at
   /contact (Resend); Cal.com is retired — /book redirects to /contact.
 - Portfolio permission gate (PORTFOLIO §0): LIVE = Beach House Moving, Kai's Run,
-  BashSnippets (may link). PREVIEW = WaterVue, Aquamarine, Alexander Hines (NO
+  BashSnippets, WaterVue Event Rentals (may link). PREVIEW = Aquamarine, Alexander Hines (NO
   link, NO client endorsement, "Private preview" label). The component must refuse
   to emit a link when permission !== "live".
 - Never invent metrics, results, or testimonials. No placeholder data ships.

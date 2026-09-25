@@ -19,6 +19,10 @@ const INTEREST_PREFILL: Record<string, (typeof INTERESTS)[number]> = {
   sprint: INTERESTS[1],
   retainer: INTERESTS[2],
   custom: INTERESTS[3],
+  // service-page CTAs (/services/<slug> → /contact?interest=<slug>)
+  "google-presence": INTERESTS[4],
+  "ai-receptionist": INTERESTS[5],
+  "web-design": INTERESTS[6],
 };
 
 interface FormState {

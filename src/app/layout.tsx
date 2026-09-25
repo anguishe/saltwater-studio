@@ -3,6 +3,7 @@ import { Fraunces, Hanken_Grotesk, Martian_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/ui/Header";
+import { services } from "@/data/services";
 import Footer from "@/components/ui/Footer";
 import StickyCTA from "@/components/ui/StickyCTA";
 import JsonLd from "@/components/JsonLd";
@@ -84,7 +85,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <Footer />
+        <Footer serviceLinks={services.map(({ slug, title }) => ({ slug, title }))} />
         <StickyCTA />
 
         {/* GTM — afterInteractive, zero analytics in this codebase */}

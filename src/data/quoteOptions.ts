@@ -17,6 +17,8 @@ export const INTERESTS = [
   "AI Search Optimization Sprint",
   "AI-Managed Presence (monthly)",
   "Custom AI systems — automation, agents, integrations",
+  "Google Care — monthly Google Business Profile management",
+  "AI receptionist — missed-call text-back and after-hours answering",
   "Website build or rebuild",
   "Not sure yet — help me figure it out",
 ] as const;

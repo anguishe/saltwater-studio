@@ -13,7 +13,7 @@ no client name as endorsement, no live link) until Travis flips them to `live`.
 | The Heat-Safety Tool (Kai's Run) | **live** | ✅ |
 | Kai's Run | **live** | ✅ |
 | BashSnippets | **live** | ✅ |
-| Concept — Event Planning | **preview** | ❌ |
+| WaterVue Event Rentals | **live** (Travis is a partner, 2026-09-25) | ✅ |
 | Concept — Pool Service | **preview** | ❌ |
 | Concept — Construction | **preview** | ❌ |
 
@@ -55,8 +55,10 @@ produced. Four capabilities are sold; only the owned properties carry hard proof
 - **What:** Mobile dog-conditioning service, Destin / Okaloosa County FL.
 - **Role line:** *A novel mobile service with no direct competitor in AI search —
   built around a founding-member offer and a booking flow.*
-- **Highlight:** Square/booking integration; "Founding 20" launch-offer
-  architecture; entity + AEO work on a brand-new category.
+- **Highlight:** entity + AEO work on a brand-new category; four free owner
+  tools (heat, exercise, body condition, puppy) building the audience pre-opening.
+  (2026-09-25: Founding 20 / Square booking dropped from copy — trailer not
+  operational yet.)
 - **Tags:** Web design · Booking · AEO · Offer design
 - **Screenshots:** hero (`portfolio-kaisrun-hero.webp`) + gallery: about page,
   blog / founding-member offer.
@@ -66,12 +68,24 @@ produced. Four capabilities are sold; only the owned properties carry hard proof
 - **Role line:** *A content site engineered for both search and AI citation —
   structured snippets, schema, llms.txt, and a real monetization stack.*
 - **Highlight:** JSON-LD TechArticle/HowTo schema, AI-extractable structure,
-  affiliate + display monetization, multi-channel distribution.
+  paid toolkit (ads dropped), canonical cross-posting. Owned property, so real
+  figures may publish: Bing 50+ indexed, 100+ Copilot citations (Sep 2026).
 - **Tags:** Content site · AEO/GEO · Schema · Monetization
 - **Screenshots:** hero (`portfolio-bashsnippets-hero.webp`) + gallery: snippet
   library, about page.
 
 ---
+
+### WaterVue Event Rentals — `live` (added 2026-09-25)
+- **What:** Event-rental catalog, Emerald Coast; a business Travis is a partner in.
+- **Highlight:** 51 item pages, 4 intent hubs, budget planner, 12 answer-first
+  guides, multi-item quote cart with lead backup.
+- **Note:** the old "Concept — Event Planning" tile (watervue-events.vercel.app)
+  was removed — its "not a real company" disclaimer contradicts the real business.
+
+### Beach House Moving results (2026-09-25)
+Owner hasn't cleared their numbers: describe outcomes only ("page one in its home
+market", "calls from Google jumped in September"), never the figures.
 
 ## 2. Concept demos (capability showcases — not real clients)
 
@@ -87,14 +101,6 @@ The tile on `/work` shows the "Concept" badge. No client endorsement, no real
 business name used in a testimonial context. If any concept becomes a real
 engagement, Travis flips permission to `live` in `projects.ts`, populates
 case-study copy, and removes the concept label.
-
-### Concept — Event Planning — `preview`
-- **What:** Studio-built sample site for an event-planning business.
-- **Role line:** *A cinematic event-planning concept — a full Next.js + R3F
-  scroll experience, built to show what the format can do.*
-- **Live demo:** https://watervue-events.vercel.app
-- **Slug:** `watervue`
-- **Gallery:** about page, reviews section.
 
 ### Concept — Pool Service — `preview`
 - **What:** Studio-built sample site for a local pool-service business.

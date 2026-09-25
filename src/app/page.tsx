@@ -15,7 +15,7 @@ import { getFaqsByPage } from "@/data/faqs";
 
 // Home: brand-first title (Saltwater Studio | …) — formatTitle inverts for path "/"
 export const metadata: Metadata = buildMetadata({
-  title: "AI Agency for Local Business",
+  title: "AI Agency for Local Business — Destin, FL",
   description:
     `Get found and recommended by ChatGPT, Claude, Perplexity, and Google's AI results. Saltwater Studio builds AI visibility for local businesses — starting with a $${site.auditOffer.price} audit (through ${site.auditOffer.endsLabel}) delivered in 72 hours.`,
   path: "/",

@@ -14,20 +14,19 @@ export default function Reveal({ children, delay = 0, className }: RevealProps) 
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const prefersReduced = useReducedMotion();
 
-  if (prefersReduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  // Always render the motion.div: the server HTML carries inline opacity:0, and
+  // swapping to a plain <div> on hydration leaves that style stuck (blank page
+  // for reduced-motion users). Reduced motion = jump straight to visible.
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{
-        duration: 0.8,
-        delay,
-        ease: [0.16, 1, 0.3, 1],
-      }}
+      animate={inView || prefersReduced ? { opacity: 1, y: 0 } : {}}
+      transition={
+        prefersReduced
+          ? { duration: 0 }
+          : { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }
+      }
       className={className}
     >
       {children}
