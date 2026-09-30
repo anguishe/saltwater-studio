@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ponytail: private preview for the owner, keep it out of search until he says go -->
+<meta name="robots" content="noindex, nofollow">
+<title>Panhandle Mobile RV Repair | We come to you, anywhere in the Panhandle</title>
+<meta name="description" content="Mobile RV repair across the Florida Panhandle: A/C, electrical, generators, slide-outs, levelers, furnaces and winterizing, fixed where you're parked. 4.7 stars on Google.">
+<meta name="theme-color" content="#1D3A2A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%231D3A2A%22/%3E%3Cpath d=%22M0 14h32M0 19h32M0 24h32%22 stroke-width=%224%22 stroke=%22%23E5621C%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@1,75..150,700..900&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/p03.webp" fetchpriority="high">
+<style>
+:root{
+  --gelcoat:#F1F4F2; --pine:#1D3A2A; --pine-2:#2A4E3A; --rust:#7A3B1C;
+  --sunset:#E5621C; --sunset-ink:#B8470F; --mustard:#F0AE38;
+  --ink:#16261D; --muted:#4A5C51; --line:#C9D3CD;
+  --display:"Anybody","Arial Black",sans-serif;
+  --body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--gelcoat);color:var(--ink);font:1.1875rem/1.6 var(--body)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sunset);outline-offset:3px;border-radius:4px}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+p{margin:0 0 1rem;max-width:60ch}
+h1,h2,h3{font-family:var(--display);font-style:italic;font-weight:900;margin:0;line-height:.95;letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,5.2vw,3.6rem);font-stretch:125%;margin-bottom:1.25rem}
+h3{font-size:1.5rem;font-stretch:110%;line-height:1.05}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* preview bar: who built this, and a human to reach */
+.preview{background:var(--mustard);color:var(--pine);font-size:.95rem;line-height:1.45}
+.preview .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.preview p{margin:0;max-width:none}
+.preview a{font-weight:700}
+
+/* buttons: the only rounded-pill thing on the page, so they read as "tap me" */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font:700 1.125rem/1 var(--body);text-decoration:none;padding:1rem 1.35rem;border-radius:999px;border:2px solid transparent;cursor:pointer;min-height:48px}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn.call{background:var(--sunset-ink);color:#fff}
+.btn.call:hover{background:var(--rust)}
+.btn.text{background:transparent;color:var(--pine);border-color:var(--pine)}
+.btn.text:hover{background:var(--pine);color:var(--gelcoat)}
+.on-dark .btn.text{color:var(--gelcoat);border-color:var(--gelcoat)}
+.on-dark .btn.text:hover{background:var(--gelcoat);color:var(--pine)}
+
+header.top{background:var(--gelcoat);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.85rem;padding-bottom:.85rem}
+.mark{text-decoration:none;display:flex;flex-direction:column;line-height:.9}
+.mark b{font:italic 900 1.45rem/.9 var(--display);font-stretch:140%;color:var(--pine);letter-spacing:-.01em}
+.mark span{font:italic 700 .95rem/1.1 var(--display);font-stretch:115%;color:var(--sunset-ink)}
+header.top .btn{padding:.75rem 1.05rem;font-size:1rem}
+@media (max-width:560px){header.top .btn .num{display:none}.mark b{font-size:1.15rem}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding-top:clamp(2.2rem,5vw,4rem)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(3.2rem,8.2vw,6.1rem);font-stretch:150%;color:var(--pine);line-height:.86}
+.hero .lede{font-size:clamp(1.2rem,2.2vw,1.4rem);margin:1.4rem 0 1.6rem;max-width:32ch;color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem}
+.proof{display:flex;align-items:center;gap:.6rem;margin-top:1.5rem;color:var(--muted);font-size:1rem}
+.proof .stars{color:var(--sunset);letter-spacing:.08em;font-size:1.15rem}
+.proof b{color:var(--ink)}
+.shot{position:relative;margin:0}
+.shot img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:32% 62%;border-radius:var(--r)}
+.shot figcaption{font-size:.9rem;color:var(--muted);margin-top:.6rem}
+/* the livery: three stripes, like the side of an RV, swooping up behind the photo */
+.livery{position:relative;z-index:1;display:block;width:100%;height:clamp(90px,14vw,170px);margin-top:clamp(1rem,3vw,2rem)}
+.livery path{fill:none;stroke-width:22;stroke-linecap:butt}
+.livery .s1{stroke:var(--rust)} .livery .s2{stroke:var(--sunset)} .livery .s3{stroke:var(--mustard)}
+@media (prefers-reduced-motion:no-preference){
+  .livery path{stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 1.3s cubic-bezier(.6,0,.2,1) forwards}
+  .livery .s2{animation-delay:.12s} .livery .s3{animation-delay:.24s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr}
+  .shot{order:-1}
+  .shot img{aspect-ratio:16/10}
+}
+
+/* ---------- what's broken ---------- */
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.broken{background:var(--pine);color:var(--gelcoat)}
+.broken h2{color:var(--gelcoat)}
+.broken .intro{color:#C8D6CD;margin-bottom:2rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 2rem;padding:0;list-style:none}
+.chips button{font:700 1.05rem/1.2 var(--body);color:var(--gelcoat);background:transparent;border:2px solid #5E7F6B;border-radius:999px;padding:.7rem 1.1rem;cursor:pointer;min-height:48px}
+.chips button:hover{border-color:var(--mustard)}
+.chips button[aria-pressed="true"]{background:var(--mustard);border-color:var(--mustard);color:var(--pine)}
+.panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.25rem,4vw,3rem);align-items:start;background:var(--pine-2);border-radius:var(--r);padding:clamp(1rem,3vw,1.75rem)}
+.panel img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.panel h3{color:var(--mustard);margin-bottom:.8rem;font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.panel blockquote{margin:1.2rem 0 1.4rem;padding-left:1rem;border-left:4px solid var(--sunset);color:#E3EAE5}
+.panel blockquote p{margin:0 0 .4rem}
+.panel cite{font-style:normal;font-size:.95rem;color:#A9BDB0}
+.panel .btn.call{background:var(--sunset)} .panel .btn.call:hover{background:var(--sunset-ink)}
+.panel .btn.call{color:var(--pine)}
+.panel[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.panel.swap{animation:swap .28s ease-out}@keyframes swap{from{opacity:.2;transform:translateY(6px)}}}
+@media (max-width:760px){.panel{grid-template-columns:1fr}.panel img{aspect-ratio:16/10}}
+
+/* ---------- stories ---------- */
+.stories h2{color:var(--pine);max-width:16ch;margin-bottom:2.5rem}
+.lead-quote{font:700 clamp(1.5rem,3.2vw,2.15rem)/1.3 var(--body);color:var(--pine);max-width:34ch;margin:0 0 .8rem;padding-left:1.25rem;border-left:6px solid var(--sunset)}
+.lead-by{color:var(--muted);margin-bottom:3rem;padding-left:1.25rem}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 2.5rem}
+.quotes figure{margin:0;border-top:4px solid var(--sunset);padding-top:1.1rem}
+.quotes figure:nth-child(2){border-color:var(--mustard)} .quotes figure:nth-child(3){border-color:var(--rust)}
+.quotes blockquote{margin:0 0 .8rem}
+.quotes figcaption{color:var(--muted);font-size:.95rem}
+.source{font-size:.9rem;color:var(--muted);margin-top:2.5rem}
+@media (max-width:820px){.quotes{grid-template-columns:1fr}}
+
+/* ---------- where: a strip map, west to east along the coast ---------- */
+.where{background:#E4EAE6}
+.where h2{color:var(--pine)}
+.strip{margin:2.5rem 0 1rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.strip svg{min-width:760px;width:100%;height:auto}
+.strip .road{stroke:var(--pine);stroke-width:6;fill:none;stroke-linecap:round}
+.strip .gulf{fill:#C6DCDC}
+.strip circle{fill:var(--gelcoat);stroke:var(--pine);stroke-width:4}
+.strip .home circle{fill:var(--sunset);stroke:var(--pine)}
+.strip text{font:700 22px var(--body);fill:var(--ink)}
+.strip .home text{font:italic 900 26px var(--display);font-stretch:120%}
+.strip .note{font:400 17px var(--body);fill:var(--muted)}
+.strip-hint{font-size:.9rem;color:var(--muted)}
+@media (min-width:800px){.strip-hint{display:none}}
+
+/* ---------- work ---------- */
+.work h2{color:var(--pine)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(120px,15vw,190px);gap:.75rem;margin-top:2rem}
+.grid figure{margin:0;position:relative;overflow:hidden;border-radius:10px;background:#cfd8d2}
+.grid img{width:100%;height:100%;object-fit:cover}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .8rem .6rem;font-size:.9rem;line-height:1.3;color:#fff;background:linear-gradient(transparent,rgba(16,32,23,.85))}
+.g1{grid-column:span 5;grid-row:span 2} .g2{grid-column:span 4;grid-row:span 2} .g3{grid-column:span 3;grid-row:span 2}
+.g4{grid-column:span 3;grid-row:span 2} .g5{grid-column:span 5;grid-row:span 2} .g6{grid-column:span 4;grid-row:span 2}
+@media (max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}.grid figure{grid-column:span 1!important;grid-row:span 1!important}.grid .g1{grid-column:span 2!important;grid-row:span 2!important}}
+
+/* ---------- close ---------- */
+.close{background:var(--pine);color:var(--gelcoat);padding-bottom:0;overflow:hidden}
+.close h2{color:var(--gelcoat);max-width:18ch}
+.close p{color:#C8D6CD}
+.close .extra{font-size:1rem;margin-top:1.5rem}
+.close .extra a{color:var(--mustard)}
+.close .livery{margin-top:2.5rem;transform:scaleX(-1)}
+@media (prefers-reduced-motion:no-preference){.close .livery path{animation:none;stroke-dashoffset:0}}
+footer{background:var(--pine);color:#A9BDB0;font-size:.9rem;padding:1.5rem 0 calc(1.5rem + env(safe-area-inset-bottom))}
+footer p{margin:0;max-width:none}
+
+/* ---------- phone: call/text always one thumb away ---------- */
+.dock{display:none}
+@media (max-width:760px){
+  .dock{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(241,244,242,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .dock .btn{justify-content:center;padding:.85rem .5rem}
+  footer{padding-bottom:6rem}
+}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview Saltwater Studio built for Panhandle Mobile RV Repair. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a>.</p></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Panhandle Mobile RV Repair, home"><b>Panhandle Mobile</b><span>RV Repair</span></a>
+    <a class="btn call" href="tel:+14484489804"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span>Call <span class="num">(448) 448-9804</span></span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1" style="padding-bottom:0">
+  <div class="wrap">
+    <div>
+      <h1 id="h1">We come to&nbsp;you.</h1>
+      <p class="lede">Mobile RV repair anywhere in the Florida Panhandle. A/C, electrical, generators, slide-outs, levelers and furnaces, fixed right where you're parked.</p>
+      <div class="ctas">
+        <a class="btn call" href="tel:+14484489804"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (448) 448-9804</a>
+        <a class="btn text" href="#broken">Text Will what's wrong</a>
+      </div>
+      <p class="proof"><span class="stars" aria-hidden="true">★</span><span><b>4.7 on Google</b> from 88 reviews</span></p>
+    </div>
+    <figure class="shot">
+      <img src="img/p03.webp" width="1600" height="1200" alt="A motorhome's front compartment open on a driveway, its yellow generator slid out on a jack stand for service">
+      <figcaption>A motorhome's generator slid out for service, right where the coach was parked.</figcaption>
+    </figure>
+  </div>
+  <svg class="livery" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <path class="s1" d="M0 58 H760 C930 58 1010 20 1150 14 H1440"/>
+    <path class="s2" d="M0 90 H760 C940 90 1030 52 1170 46 H1440"/>
+    <path class="s3" d="M0 122 H760 C950 122 1050 84 1190 78 H1440"/>
+  </svg>
+</section>
+
+<section class="broken on-dark" id="broken" aria-labelledby="broken-h">
+  <div class="wrap">
+    <h2 id="broken-h">What's broken?</h2>
+    <p class="intro">Tap the closest match. You'll get a text to Will that's already started, so you only add where you're parked.</p>
+    <ul class="chips" role="list" aria-label="Pick a problem">
+      <li><button type="button" data-k="ac" aria-pressed="true">A/C isn't cooling</button></li>
+      <li><button type="button" data-k="power" aria-pressed="false">No power or electrical</button></li>
+      <li><button type="button" data-k="gen" aria-pressed="false">Generator won't run</button></li>
+      <li><button type="button" data-k="slide" aria-pressed="false">Slide-out stuck</button></li>
+      <li><button type="button" data-k="level" aria-pressed="false">Levelers or jacks</button></li>
+      <li><button type="button" data-k="heat" aria-pressed="false">Furnace or water heater</button></li>
+      <li><button type="button" data-k="solar" aria-pressed="false">Solar and batteries</button></li>
+      <li><button type="button" data-k="winter" aria-pressed="false">Winterizing</button></li>
+    </ul>
+    <div class="panel" id="panel" aria-live="polite">
+      <img id="p-img" src="img/p23.webp" width="1600" height="1600" alt="">
+      <div>
+        <h3 id="p-h"></h3>
+        <p id="p-t"></p>
+        <blockquote id="p-q"><p></p><cite></cite></blockquote>
+        <div class="ctas">
+          <a class="btn call" id="p-sms" href="sms:+14484489804"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z"/></svg>Text Will about this</a>
+          <a class="btn text" href="tel:+14484489804">Or call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stories" aria-labelledby="stories-h">
+  <div class="wrap">
+    <h2 id="stories-h">When nobody else could get there</h2>
+    <p class="lead-quote">"Other RV repair services didn't return calls even after three days. Will Fox answered phone and came the next morning."</p>
+    <p class="lead-by">Mark H.</p>
+    <div class="quotes">
+      <figure>
+        <blockquote><p>"We lost power in our RV in the middle of the night while vacationing at Topsail Hill Preserve State Park... Will showed up in about 1.5 hours and found our problem... He fixed the problem in under an hour."</p></blockquote>
+        <figcaption>Rich F.</figcaption>
+      </figure>
+      <figure>
+        <blockquote><p>"When we landed the camper levelers wouldnt work. Will came out and got it fixed quickly and we were able to enjoy the rest of our vacation. Nobody else could get to us for days."</p></blockquote>
+        <figcaption>Mark L.</figcaption>
+      </figure>
+      <figure>
+        <blockquote><p>"Basically troubleshot the problem and provided the fix over the phone with-out charge. He even called me back to offer additional troubleshooting advice and followed up the next day."</p></blockquote>
+        <figcaption>Bill C.</figcaption>
+      </figure>
+    </div>
+    <p class="source">Customer words as published on panhandlemobilervrepair.com. Google shows a 4.7 from 88 reviews (checked September 30, 2026).</p>
+  </div>
+</section>
+
+<section class="where" aria-labelledby="where-h">
+  <div class="wrap">
+    <h2 id="where-h">Anywhere in the Panhandle</h2>
+    <p>Based in Freeport and working anywhere in the Panhandle, from Pensacola to Tallahassee.</p>
+    <div class="strip">
+      <!-- ponytail: x = longitude, linear, -87.4 → 40px, -84.1 → 1400px; good enough for a strip map -->
+      <svg viewBox="0 0 1440 270" role="img" aria-labelledby="strip-t">
+        <title id="strip-t">Strip map of towns served, west to east: Pensacola, Niceville, Destin, Miramar Beach, Topsail Hill Preserve State Park, Freeport (home base), Youngstown and Tallahassee.</title>
+        <path class="gulf" d="M0 270 V206 C220 186 420 206 640 184 C860 162 1040 204 1240 214 C1340 229 1400 240 1440 244 V270 Z"/>
+        <path class="road" d="M40 150 C200 146 380 140 520 142 C600 143 640 120 700 110 C800 94 1000 92 1140 100 C1260 106 1330 96 1400 90"/>
+        <g transform="translate(111 149)"><circle r="10"/><text x="0" y="-24" text-anchor="middle">Pensacola</text></g>
+        <g transform="translate(410 96)"><circle r="9"/><text x="0" y="-22" text-anchor="middle">Niceville</text></g>
+        <g transform="translate(432 142)"><circle r="10"/><text x="-6" y="40" text-anchor="end">Destin</text></g>
+        <g transform="translate(486 142)"><circle r="8"/><text x="4" y="40" text-anchor="start">Miramar Beach</text></g>
+        <g transform="translate(578 137)"><circle r="8"/><text x="-4" y="-50" text-anchor="end">Topsail Hill</text><text class="note" x="-4" y="-22" text-anchor="end">state park</text></g>
+        <g class="home" transform="translate(642 118)"><circle r="14"/><text x="4" y="-54" text-anchor="start">Freeport</text><text class="note" x="6" y="-24" text-anchor="start">home base</text></g>
+        <g transform="translate(931 95)"><circle r="10"/><text x="0" y="-24" text-anchor="middle">Youngstown</text></g>
+        <g transform="translate(1398 90)"><circle r="10"/><text x="6" y="-24" text-anchor="end">Tallahassee</text></g>
+        <text class="note" x="1400" y="258" text-anchor="end">Gulf of Mexico</text>
+      </svg>
+    </div>
+    <p class="strip-hint">Swipe the map to see the whole coast.</p>
+  </div>
+</section>
+
+<section class="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h">From the job</h2>
+    <p>Photos from Will's own jobs.</p>
+    <div class="grid">
+      <figure class="g1"><img loading="lazy" src="img/p27.webp" width="1600" height="1200" alt="An Onan generator with its cover off inside an RV compartment"><figcaption>Onan generator, cover off</figcaption></figure>
+      <figure class="g2"><img loading="lazy" src="img/p10.webp" width="1600" height="1200" alt="The burner and controls of an RV water heater behind its access panel"><figcaption>Water heater burner and controls</figcaption></figure>
+      <figure class="g3"><img loading="lazy" src="img/p24.webp" width="1200" height="1600" alt="Heavy orange power cables on a bus bar inside an RV"><figcaption>Main power connections</figcaption></figure>
+      <figure class="g4"><img loading="lazy" src="img/p19.webp" width="1200" height="1600" alt="Solar panels mounted on an RV roof"><figcaption>Rooftop solar</figcaption></figure>
+      <figure class="g5"><img loading="lazy" src="img/p21.webp" width="1600" height="1200" alt="A travel trailer with its awning out at a wooded site"><figcaption>A house call at the campsite</figcaption></figure>
+      <figure class="g6"><img loading="lazy" src="img/p08.webp" width="1600" height="1200" alt="An RV furnace exposed behind its outside access panel, wiring visible"><figcaption>Furnace, outside access</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="close on-dark" aria-labelledby="close-h">
+  <div class="wrap">
+    <h2 id="close-h">Stuck somewhere in the Panhandle?</h2>
+    <p>Tell Will what's wrong and where you're parked. A photo of the problem helps.</p>
+    <div class="ctas">
+      <a class="btn call" style="background:var(--sunset);color:var(--pine)" href="tel:+14484489804">Call (448) 448-9804</a>
+      <a class="btn text" href="sms:+14484489804">Send a text</a>
+    </div>
+    <p class="extra">Email works too: <a href="mailto:panhandlemobilervrepair@gmail.com">panhandlemobilervrepair@gmail.com</a>. Ask about financing for fixed incomes.</p>
+  </div>
+  <svg class="livery" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <path class="s1" d="M0 58 H760 C930 58 1010 20 1150 14 H1440"/>
+    <path class="s2" d="M0 90 H760 C940 90 1030 52 1170 46 H1440"/>
+    <path class="s3" d="M0 122 H760 C950 122 1050 84 1190 78 H1440"/>
+  </svg>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><p>© 2026 Panhandle Mobile RV Repair, Freeport, Florida. Preview design by Saltwater Studio.</p></div>
+</footer>
+
+<nav class="dock" aria-label="Contact">
+  <a class="btn call" href="tel:+14484489804">Call</a>
+  <a class="btn text" href="sms:+14484489804">Text</a>
+</nav>
+
+<script>
+// ponytail: 8 fixed problems, a lookup table beats a framework
+const P = {
+  ac:    {h:"A/C isn't cooling", img:"p23", alt:"The inside of an RV air conditioner control box: capacitors and wiring", t:"A/C is one of the calls Will specializes in. Sometimes it's the unit, and sometimes it's the power feeding it, like a bad campground pedestal or a corroded fuse.", q:"He walked around my campsite testing various poles and found out many of them were putting out bad power... so that I could have air conditioning that night.", by:"Jared F.", msg:"my RV's A/C isn't cooling"},
+  power: {h:"No power or electrical trouble", img:"p05", alt:"A hand holding heavy orange power cables at an RV junction", t:"Electrical troubleshooting is the first thing on Will's list: power that cuts out, a burning smell, a transfer switch that failed.", q:"We lost power in our RV in the middle of the night... Will showed up in about 1.5 hours and found our problem...fried wires in our junction box.", by:"Rich F.", msg:"my RV has no power / an electrical problem"},
+  gen:   {h:"Generator won't run", img:"p26", alt:"An Onan MicroQuiet 4000 generator in its RV compartment", t:"Generator maintenance and repair, done in the compartment where it lives. No towing it to a shop.", q:"", by:"", msg:"my RV generator won't run"},
+  slide: {h:"Slide-out is stuck", img:"p14", alt:"The side of a travel trailer with its entry door", t:"Slides that won't go out or won't come in, fixed where you're parked.", q:"Brand new RV first time out the slide wouldn't work right. They had it fixed in a very short time and even showed me how to correct the problem next time.", by:"John C.", msg:"my RV slide-out is stuck"},
+  level: {h:"Levelers or jacks", img:"p06", alt:"A jack underneath an RV, being serviced", t:"Leveling systems that won't extend, won't retract or throw an error, fixed at the site so the trip isn't over.", q:"When we landed the camper levelers wouldnt work. Will came out and got it fixed quickly and we were able to enjoy the rest of our vacation.", by:"Mark L.", msg:"my RV levelers/jacks aren't working"},
+  heat:  {h:"Furnace or water heater", img:"p10", alt:"The burner and controls of an RV water heater", t:"No heat on a cold night or no hot water in the morning. Furnaces and water heaters get fixed through their outside access panels.", q:"", by:"", msg:"my RV furnace / water heater isn't working"},
+  solar: {h:"Solar and batteries", img:"p33", alt:"A Victron inverter and control unit being installed in an RV", t:"Solar panels, batteries, inverters and chargers: installed, wired and sorted out when they stop playing nice.", q:"", by:"", msg:"I need help with my RV solar / batteries"},
+  winter:{h:"Winterizing", img:"p09", alt:"An RV water heater service panel open on the side of a trailer", t:"Getting the RV ready to sit through the cold.", q:"", by:"", msg:"I'd like to get my RV winterized"}
+};
+const $ = s => document.querySelector(s);
+function show(k, animate) {
+  const d = P[k];
+  document.querySelectorAll(".chips button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+  $("#p-img").src = `img/${d.img}.webp`; $("#p-img").alt = d.alt;
+  $("#p-h").textContent = d.h; $("#p-t").textContent = d.t;
+  $("#p-q").hidden = !d.q; $("#p-q p").textContent = d.q ? `"${d.q}"` : ""; $("#p-q cite").textContent = d.by;
+  $("#p-sms").href = "sms:+14484489804?&body=" + encodeURIComponent(`Hi Will, ${d.msg}. I'm parked at: `);
+  if (animate) { const p = $("#panel"); p.classList.remove("swap"); void p.offsetWidth; p.classList.add("swap"); }
+}
+document.querySelector(".chips").addEventListener("click", e => { const b = e.target.closest("button"); if (b) show(b.dataset.k, true); });
+show("ac", false);
+</script>
+</body>
+</html>

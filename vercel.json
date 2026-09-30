@@ -1,8 +1,23 @@
 {
   "rewrites": [
-    { "source": "/preview/crestview-fence", "destination": "/preview/crestview-fence/index.html" }
+    {
+      "source": "/preview/crestview-fence",
+      "destination": "/preview/crestview-fence/index.html"
+    },
+    {
+      "source": "/preview/panhandle-rv",
+      "destination": "/preview/panhandle-rv/index.html"
+    }
   ],
   "headers": [
-    { "source": "/preview/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+    {
+      "source": "/preview/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
   ]
 }
