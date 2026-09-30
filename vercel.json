@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/preview/crestview-fence", "destination": "/preview/crestview-fence/index.html" }
+  ],
+  "headers": [
+    { "source": "/preview/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+  ]
+}

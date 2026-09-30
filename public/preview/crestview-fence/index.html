@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ponytail: private preview for the owner, keep it out of search until they say go -->
+<meta name="robots" content="noindex, nofollow">
+<title>Crestview Fence Company | Fences and gates in Crestview, FL</title>
+<meta name="description" content="Wood, vinyl and aluminum fences and gates in Crestview, Baker, Niceville and Blue Water Bay. Free on-site estimates. 4.9 stars on Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#FFC000; --black:#000; --tan:#dbd4b4; --tan-soft:#efebdc; --white:#fff;
+  --ink:#1c1c1c; --muted:#555;
+  --display:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;
+  --body:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font:1.0625rem/1.65 var(--body)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1rem}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:1;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1.5rem}
+p{margin:0 0 1rem;max-width:62ch}
+
+/* preview bar: who built this and how to reach a human */
+.preview{background:var(--tan);color:var(--black);font-size:.9rem;line-height:1.45}
+.preview .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.preview p{margin:0;max-width:none}
+.preview a{font-weight:600}
+
+header{background:var(--black);color:var(--white)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.8rem;padding-bottom:.8rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.mono{font:700 1.5rem/1 var(--body);color:var(--gold);border:2px solid var(--gold);padding:.35rem .45rem;letter-spacing:.04em}
+.brand span:last-child{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.02em}
+.btn{display:inline-block;font:700 1.15rem/1 var(--display);letter-spacing:.03em;text-decoration:none;padding:.85rem 1.2rem;border:2px solid var(--gold);background:var(--gold);color:var(--black);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--gold)}
+.btn:hover{background:var(--black);color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:var(--black)}
+header .btn{font-size:1rem;padding:.65rem .9rem;white-space:nowrap}
+@media (max-width:480px){.brand span:last-child{font-size:1.05rem;line-height:1.1}.mono{font-size:1.2rem}}
+
+/* hero: their own job photo, a customer's words as the headline */
+.hero{position:relative;background:var(--black) url(/preview/crestview-fence/img/vinyl-sunburst.jpg) 62% center/cover;color:var(--white)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.7) 45%,rgba(0,0,0,.15) 100%)}
+.hero .wrap{position:relative;padding-top:clamp(3rem,7vw,5rem);padding-bottom:clamp(4.5rem,9vw,6.5rem)}
+.hero h1{font-size:clamp(3.2rem,10vw,6.5rem);color:var(--white);max-width:12ch}
+.hero cite{display:block;font:italic 1rem var(--body);color:var(--tan);margin:1rem 0 2rem}
+.hero .lede{font-size:1.2rem;max-width:34ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.stars{margin-top:1.4rem;font-size:.95rem;color:var(--tan)}
+.stars b{color:var(--gold);font-weight:600}
+
+/* the one flourish: the hero ends in a picket line */
+.pickets{height:46px;margin-top:-46px;position:relative;background:var(--white);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='46'%3E%3Cpath d='M6 46V12L15 2l9 10v34z'/%3E%3C/svg%3E") repeat-x bottom left/36px 46px;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='46'%3E%3Cpath d='M6 46V12L15 2l9 10v34z'/%3E%3C/svg%3E") repeat-x bottom left/36px 46px}
+
+section{padding:clamp(3.5rem,8vw,5.5rem) 0}
+
+/* what neighbors keep saying: claim on the left, the review that proves it on the right */
+.proof{list-style:none;margin:0;padding:0;border-top:2px solid var(--black)}
+.proof li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid #d6d6d6}
+.proof h3{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.proof blockquote{margin:0}
+.proof blockquote p{margin-bottom:.4rem}
+.proof cite{font-style:normal;color:var(--muted);font-size:.9rem}
+@media (max-width:640px){.proof li{grid-template-columns:1fr;gap:.6rem}}
+
+.builds{background:var(--tan-soft)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:2rem 3rem}
+.cols h3{font-size:1.7rem;border-bottom:3px solid var(--gold);padding-bottom:.4rem;margin-bottom:.8rem}
+.cols ul{margin:0;padding-left:1.1rem}
+.cols li{margin-bottom:.3rem}
+
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:block;font:900 3.5rem/1 var(--display);color:var(--gold);-webkit-text-stroke:1px var(--black);margin-bottom:.4rem}
+.steps h3{font-size:1.6rem;margin-bottom:.5rem}
+
+.area{background:var(--black);color:var(--white)}
+.area .towns{font:700 clamp(1.8rem,5vw,3rem)/1.15 var(--display);color:var(--gold);margin:0 0 1rem;max-width:none}
+
+.estimate .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:3rem}
+@media (max-width:760px){.estimate .grid{grid-template-columns:1fr}}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.3rem;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;font-weight:400;padding:.7rem .8rem;border:2px solid var(--black);border-radius:0;background:var(--white);color:var(--ink);width:100%}
+textarea{min-height:7rem;resize:vertical}
+.note{font-size:.9rem;color:var(--muted)}
+#sent{display:none;background:var(--tan-soft);border-left:4px solid var(--gold);padding:1rem}
+#sent:target{display:block}
+
+footer{background:var(--black);color:#cfcfcf;font-size:.95rem;padding:2.5rem 0}
+footer .wrap{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+footer strong{color:var(--white);font-family:var(--display);font-size:1.3rem;letter-spacing:.02em}
+footer p{margin:.2rem 0}
+.credit{border-top:1px solid #333;margin-top:1.5rem;padding-top:1rem;font-size:.85rem;color:#9a9a9a}
+.credit a{color:var(--tan)}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview built for Crestview Fence Company by Travis Abadie at Saltwater Studio in Destin. Google can't see it. Questions? Call or text Travis at <a href="tel:+18502185855">(850) 218-5855</a>.</p></div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Crestview Fence Company home"><span class="mono" aria-hidden="true">CFC</span><span>Crestview Fence Company</span></a>
+    <a class="btn" href="tel:+18508261500">Call or text</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Straight lines, no gaps.</h1>
+      <cite>Alex Truelsen, on the half-yard fence and gates we replaced</cite>
+      <p class="lede">Wood, vinyl and aluminum fences and gates for Crestview, Baker, Niceville and Blue Water Bay. The owner comes out, measures and gives you a free estimate.</p>
+      <div class="ctas">
+        <a class="btn" href="tel:+18508261500">Call or text (850) 826-1500</a>
+        <a class="btn ghost" href="#estimate">Ask for a free estimate</a>
+      </div>
+      <p class="stars"><b>4.9 stars</b> from 39 Google reviews. Family owned, in business since 2014.</p>
+    </div>
+  </div>
+  <div class="pickets" aria-hidden="true"></div>
+
+  <section>
+    <div class="wrap">
+      <h2>What neighbors keep saying</h2>
+      <ul class="proof">
+        <li>
+          <h3>We answer the phone</h3>
+          <blockquote><p>"Only fence company that actually answers their phone or will call back within the hour. Extremely impressed by their quality of work and personable service. Steve and Kina are my new go to."</p><cite>Kai McLemore, Google review</cite></blockquote>
+        </li>
+        <li>
+          <h3>Sloped yards are no problem</h3>
+          <blockquote><p>"Steven the owner was extremely professional, quick to come out and give us a quote, and even quicker to get it done. He is very knowledgeable and makes sure to build the fence exactly how you want it (he is great at building on sloped yards!)."</p><cite>Brittany Redmon, new home, full fence and two gates</cite></blockquote>
+        </li>
+        <li>
+          <h3>Done when we said, often sooner</h3>
+          <blockquote><p>"Steven did a fabulous job and completed one day ahead of schedule. We are very pleased with the quality of work."</p><cite>Jonna DeVar, Google review</cite></blockquote>
+        </li>
+        <li>
+          <h3>Gates that fit how you live</h3>
+          <blockquote><p>"They not only designed the fence I wanted but also recommended and installed an electric gate that is DIY friendly if I ever choose to mess with it or upgrade it."</p><cite>Salvador Oliver, Google review</cite></blockquote>
+        </li>
+        <li>
+          <h3>We work with landlords, too</h3>
+          <blockquote><p>"After searching from out of state for our rental property fence replacement (they were my 5th call) I came across CFC. They worked with us and our [tenants], were super quick to get an estimate and schedule us for install."</p><cite>Goods and Grub, rental property owner</cite></blockquote>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="builds">
+    <div class="wrap">
+      <h2>What we build</h2>
+      <div class="cols">
+        <div><h3>Wood</h3><ul><li>Privacy fences</li><li>Picket fences</li><li>Shadow box and closed shadow box</li><li>Yard fences</li></ul></div>
+        <div><h3>Vinyl and aluminum</h3><ul><li>Vinyl privacy and decorative</li><li>Black aluminum</li></ul></div>
+        <div><h3>Gates</h3><ul><li>Drive gates</li><li>Walk gates</li><li>Electric gates</li><li>Gate repair</li></ul></div>
+        <div><h3>Repair and replace</h3><ul><li>Fence repair</li><li>Tear out and replace</li><li>Fence removal</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>Call or text</h3><p>Reach us at (850) 826-1500, Monday to Friday, 8 to 5. Tell us what you want fenced and why: a dog, privacy, a pool, a rental.</p></li>
+        <li><h3>Free on-site estimate</h3><p>The owner walks your yard, measures, and helps you pick the style and gates.</p></li>
+        <li><h3>We build it</h3><p>Your fence goes up on the schedule we gave you, built the way you picked it out.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="wrap">
+      <h2>Where we work</h2>
+      <p class="towns">Crestview, Baker, Niceville, Blue Water Bay</p>
+      <p>And the surrounding areas of Okaloosa County. Not sure we cover your street? Call and ask.</p>
+    </div>
+  </section>
+
+  <section class="estimate" id="estimate">
+    <div class="wrap grid">
+      <div>
+        <h2>Ask for a free estimate</h2>
+        <p>Send the basics and we'll call you back to set up a time to come out. Or skip the form and call or text <a href="tel:+18508261500">(850) 826-1500</a>.</p>
+        <p class="note">Preview: this form isn't connected yet. On the live site, every request goes straight to crestviewfence@gmail.com.</p>
+      </div>
+      <!-- ponytail: form goes nowhere in the preview; wire to email when they sign -->
+      <form action="#sent">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Town
+          <select name="town"><option>Crestview</option><option>Baker</option><option>Niceville</option><option>Blue Water Bay</option><option>Somewhere else</option></select>
+        </label>
+        <label>What do you need?
+          <select name="job"><option>New wood fence</option><option>New vinyl fence</option><option>New aluminum fence</option><option>Gate</option><option>Repair</option><option>Tear out and replace</option><option>Not sure yet</option></select>
+        </label>
+        <label>Anything we should know?<textarea name="notes" placeholder="Rough length, dogs, slope, HOA rules"></textarea></label>
+        <button class="btn" type="submit">Send my request</button>
+        <p id="sent" role="status">Request sent. This is a preview, so nothing went out. On the live site, Crestview Fence gets it right away.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Crestview Fence Company</strong><p>Fences and gates, Crestview, FL</p></div>
+    <div><p><a href="tel:+18508261500">(850) 826-1500</a></p><p><a href="mailto:crestviewfence@gmail.com">crestviewfence@gmail.com</a></p></div>
+    <div><p>Monday to Friday, 8 AM to 5 PM</p><p>Visa, MasterCard, cash and check</p></div>
+  </div>
+  <div class="wrap"><p class="credit">Preview by Travis Abadie, Saltwater Studio, Destin FL, (850) 218-5855. Photo: a Crestview Fence vinyl job from your old site. Reviews quoted from your Google listing.</p></div>
+</footer>
+</body>
+</html>
