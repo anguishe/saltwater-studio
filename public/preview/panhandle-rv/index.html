@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@1,75..150,700..900&family=Atkinson+Hyperlegible+Next:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/p03.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/preview/panhandle-rv/img/p03.webp" fetchpriority="high">
 <style>
 :root{
   --gelcoat:#F1F4F2; --pine:#1D3A2A; --pine-2:#2A4E3A; --rust:#7A3B1C;
@@ -190,7 +190,7 @@ footer p{margin:0;max-width:none}
       <p class="proof"><span class="stars" aria-hidden="true">★</span><span><b>4.7 on Google</b> from 88 reviews</span></p>
     </div>
     <figure class="shot">
-      <img src="img/p03.webp" width="1600" height="1200" alt="A motorhome's front compartment open on a driveway, its yellow generator slid out on a jack stand for service">
+      <img src="/preview/panhandle-rv/img/p03.webp" width="1600" height="1200" alt="A motorhome's front compartment open on a driveway, its yellow generator slid out on a jack stand for service">
       <figcaption>A motorhome's generator slid out for service, right where the coach was parked.</figcaption>
     </figure>
   </div>
@@ -216,7 +216,7 @@ footer p{margin:0;max-width:none}
       <li><button type="button" data-k="winter" aria-pressed="false">Winterizing</button></li>
     </ul>
     <div class="panel" id="panel" aria-live="polite">
-      <img id="p-img" src="img/p23.webp" width="1600" height="1600" alt="">
+      <img id="p-img" src="/preview/panhandle-rv/img/p23.webp" width="1600" height="1600" alt="">
       <div>
         <h3 id="p-h"></h3>
         <p id="p-t"></p>
@@ -283,12 +283,12 @@ footer p{margin:0;max-width:none}
     <h2 id="work-h">From the job</h2>
     <p>Photos from Will's own jobs.</p>
     <div class="grid">
-      <figure class="g1"><img loading="lazy" src="img/p27.webp" width="1600" height="1200" alt="An Onan generator with its cover off inside an RV compartment"><figcaption>Onan generator, cover off</figcaption></figure>
-      <figure class="g2"><img loading="lazy" src="img/p10.webp" width="1600" height="1200" alt="The burner and controls of an RV water heater behind its access panel"><figcaption>Water heater burner and controls</figcaption></figure>
-      <figure class="g3"><img loading="lazy" src="img/p24.webp" width="1200" height="1600" alt="Heavy orange power cables on a bus bar inside an RV"><figcaption>Main power connections</figcaption></figure>
-      <figure class="g4"><img loading="lazy" src="img/p19.webp" width="1200" height="1600" alt="Solar panels mounted on an RV roof"><figcaption>Rooftop solar</figcaption></figure>
-      <figure class="g5"><img loading="lazy" src="img/p21.webp" width="1600" height="1200" alt="A travel trailer with its awning out at a wooded site"><figcaption>A house call at the campsite</figcaption></figure>
-      <figure class="g6"><img loading="lazy" src="img/p08.webp" width="1600" height="1200" alt="An RV furnace exposed behind its outside access panel, wiring visible"><figcaption>Furnace, outside access</figcaption></figure>
+      <figure class="g1"><img loading="lazy" src="/preview/panhandle-rv/img/p27.webp" width="1600" height="1200" alt="An Onan generator with its cover off inside an RV compartment"><figcaption>Onan generator, cover off</figcaption></figure>
+      <figure class="g2"><img loading="lazy" src="/preview/panhandle-rv/img/p10.webp" width="1600" height="1200" alt="The burner and controls of an RV water heater behind its access panel"><figcaption>Water heater burner and controls</figcaption></figure>
+      <figure class="g3"><img loading="lazy" src="/preview/panhandle-rv/img/p24.webp" width="1200" height="1600" alt="Heavy orange power cables on a bus bar inside an RV"><figcaption>Main power connections</figcaption></figure>
+      <figure class="g4"><img loading="lazy" src="/preview/panhandle-rv/img/p19.webp" width="1200" height="1600" alt="Solar panels mounted on an RV roof"><figcaption>Rooftop solar</figcaption></figure>
+      <figure class="g5"><img loading="lazy" src="/preview/panhandle-rv/img/p21.webp" width="1600" height="1200" alt="A travel trailer with its awning out at a wooded site"><figcaption>A house call at the campsite</figcaption></figure>
+      <figure class="g6"><img loading="lazy" src="/preview/panhandle-rv/img/p08.webp" width="1600" height="1200" alt="An RV furnace exposed behind its outside access panel, wiring visible"><figcaption>Furnace, outside access</figcaption></figure>
     </div>
   </div>
 </section>
@@ -336,7 +336,7 @@ const $ = s => document.querySelector(s);
 function show(k, animate) {
   const d = P[k];
   document.querySelectorAll(".chips button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
-  $("#p-img").src = `img/${d.img}.webp`; $("#p-img").alt = d.alt;
+  $("#p-img").src = `/preview/panhandle-rv/img/${d.img}.webp`; $("#p-img").alt = d.alt;
   $("#p-h").textContent = d.h; $("#p-t").textContent = d.t;
   $("#p-q").hidden = !d.q; $("#p-q p").textContent = d.q ? `"${d.q}"` : ""; $("#p-q cite").textContent = d.by;
   $("#p-sms").href = "sms:+14484489804?&body=" + encodeURIComponent(`Hi Will, ${d.msg}. I'm parked at: `);
