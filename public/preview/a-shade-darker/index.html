@@ -6,7 +6,7 @@
 <!-- ponytail: private preview for the owner, keep it out of search until he says go -->
 <meta name="robots" content="noindex, nofollow">
 <title>A Shade Darker | Window Tint &amp; Wraps in Destin</title>
-<meta name="description" content="Window tint and vehicle wraps in Destin, Florida, by Nick Draper since 2014. 4.9 stars across 128 reviews.">
+<meta name="description" content="Window tint and vehicle wraps in Destin, Florida, by Nick Draper since 2014. Straight answers on Florida tint law, how a job goes, and years of real reviews.">
 <meta name="theme-color" content="#07080a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%2307080a%22/%3E%3Cpath d=%22M4 22h24l-6-11H11z%22 fill=%22%23ff8a1f%22/%3E%3Cpath d=%22M16 22h12l-6-11h-6z%22 fill=%22%23000%22 opacity=%22.55%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -188,10 +188,54 @@ section{padding:5.5rem 0}
 .final p{color:#cfd4db;max-width:36ch;margin:1.4rem 0 1.6rem;font-size:1.1rem}
 footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e;font-size:.85rem}
 
+
+/* v2: law, process, ask, gallery, receipts */
+.body{color:#cfd4db;max-width:56ch;font-size:1.1rem}
+.law .body,.process .body,.ask .body{margin-top:1.2rem}
+.lawgrid{display:grid;gap:.7rem;margin-top:1.6rem}
+.lawrow{all:unset;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:.35rem 1rem;align-items:end;padding:1.1rem 1.15rem;border:1px solid var(--line);border-radius:18px;background:var(--panel);-webkit-tap-highlight-color:transparent;transition:border-color .2s ease,transform .2s ease}
+.lawrow:active{transform:scale(.985)}
+.lawrow:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.lawrow.on{border-color:rgba(255,138,31,.6)}
+.lw{font-weight:700;font-size:1.05rem}
+.lv{font:800 1.9rem/1 var(--display);letter-spacing:-.04em;text-align:right}
+.lv small{display:block;font:600 .72rem/1.3 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.lbar{grid-column:1/-1;height:8px;border-radius:8px;background:linear-gradient(90deg,#0c0d10,rgba(140,150,165,.55) 55%,rgba(255,255,255,.75));position:relative;margin-top:.4rem}
+.lbar i{position:absolute;top:-5px;bottom:-5px;left:calc(var(--v)/.7*100%);width:3px;margin-left:-1.5px;border-radius:3px;background:var(--amber);box-shadow:0 0 10px rgba(255,138,31,.8)}
+.steps{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:0;position:relative}
+.steps::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(180deg,var(--amber),rgba(255,138,31,.05))}
+.steps li{display:flex;gap:1rem;align-items:flex-start;padding:.85rem 0}
+.steps b{flex:none;width:2.15rem;height:2.15rem;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:2px solid var(--amber);font:800 .78rem/1 var(--display);color:var(--amber-2);position:relative}
+.steps strong{display:block;font-size:1.12rem;margin-top:.2rem}
+.steps span{color:var(--muted)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:2rem}
+.gal figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
+.askbox{margin-top:1.6rem;border-radius:var(--r);border:1px solid var(--line-2);background:radial-gradient(120% 90% at 100% 0%,rgba(255,138,31,.14),transparent 60%),var(--panel);padding:1.2rem}
+.lab{display:block;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.field{width:100%;min-height:52px;border-radius:14px;border:1px solid var(--line-2);background:#0a0b0e;color:var(--text);font:600 1.05rem/1 var(--body);padding:0 1rem}
+.field::placeholder{color:#6e7580}
+.field:focus{outline:2px solid var(--amber);outline-offset:1px}
+.qs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.q{all:unset;cursor:pointer;min-height:44px;padding:0 1rem;border-radius:999px;border:1px solid var(--line-2);font-weight:600;font-size:.95rem;display:inline-flex;align-items:center;-webkit-tap-highlight-color:transparent}
+.q[aria-pressed=true]{background:var(--amber);color:var(--amber-ink);border-color:var(--amber)}
+.q:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.bubble{background:#1d2129;border-radius:20px 20px 6px 20px;padding:.9rem 1rem;margin:0 0 1rem auto;max-width:92%;font-size:1rem;line-height:1.45;color:#eef0f3}
+.btn.full{width:100%}
+.receipts{padding:3.5rem 0 1rem}
+.receipts details{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:0 1.15rem}
+.receipts summary{cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-weight:700;list-style:none}
+.receipts summary::-webkit-details-marker{display:none}
+.receipts summary::after{content:"+";font:800 1.4rem/1 var(--display);color:var(--amber)}
+.receipts details[open] summary::after{content:"\2013"}
+.receipts ul{margin:0 0 1.1rem;padding-left:1.1rem;color:#c8cdd5;font-size:.95rem;line-height:1.5}
+.receipts li{margin:.35rem 0}
+@media (min-width:820px){.lawgrid{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(5,1fr);gap:1rem}.steps::before{display:none}.steps li{flex-direction:column}.gal{grid-template-columns:repeat(4,1fr)}.askbox{max-width:40rem}}
+
 /* sticky bar */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:.6rem .75rem calc(.6rem + var(--safe-b));display:grid;grid-template-columns:1.25fr 1fr;gap:.55rem;background:linear-gradient(180deg,rgba(7,8,10,0),rgba(7,8,10,.92) 30%);transform:translateY(110%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:.6rem .75rem calc(.6rem + var(--safe-b));display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:.55rem;background:linear-gradient(180deg,rgba(7,8,10,0),rgba(7,8,10,.92) 30%);transform:translateY(110%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
 .bar.show{transform:none}
-.bar .btn{min-height:54px;font-size:1.02rem}
+.bar .btn{min-height:54px;font-size:.98rem;padding:.85rem .6rem}
 
 /* reveal */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d,0)*90ms)}
@@ -248,7 +292,7 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
     <div class="hero-top">
       <p class="eyebrow">Destin window tint &amp; wraps &middot; since 2014</p>
       <h1 aria-label="A Shade Darker"><span class="ln" aria-hidden="true"><span style="--i:0">A Shade</span></span><span class="ln dk" aria-hidden="true"><span style="--i:1">Darker</span></span></h1>
-      <p class="lede">Window tint and vehicle wraps, done by Nick Draper in Destin.</p>
+      <p class="lede">Nick Draper has tinted and wrapped cars in Destin since 2014. He&rsquo;ll help you pick a shade that looks right and is legal for each window.</p>
       <div class="chips">
         <span class="chip"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg>4.9 &middot; 128 reviews</span>
         <span class="chip js-status"><i class="dot"></i><span class="js-status-text">Mon&ndash;Fri 9 AM&ndash;5 PM</span></span>
@@ -280,21 +324,22 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
 </header>
 <div class="finebar"><div class="wrap"><p class="fine">Shade preview is an illustration, not a film sample. Orange marks are Florida minimums: 28% front sides (Fla. Stat. &sect;316.2953); 15% behind the driver, 6% on multipurpose passenger vehicles (&sect;316.2954).</p></div></div>
 
+
 <div class="marquee" aria-hidden="true"><div class="row">
-  <span>Window tint</span><span>Vehicle wraps</span><span>Destin since 2014</span><span>Mon&ndash;Fri 9&ndash;5</span><span>Window tint</span><span>Vehicle wraps</span>
-  <span>Window tint</span><span>Vehicle wraps</span><span>Destin since 2014</span><span>Mon&ndash;Fri 9&ndash;5</span><span>Window tint</span><span>Vehicle wraps</span>
+  <span>Straight answers</span><span>Window tint</span><span>Vehicle wraps</span><span>Destin since 2014</span><span>Straight answers</span><span>Window tint</span>
+  <span>Straight answers</span><span>Window tint</span><span>Vehicle wraps</span><span>Destin since 2014</span><span>Straight answers</span><span>Window tint</span>
 </div></div>
 
 <main>
 <section class="intro">
   <div class="wrap">
     <p class="eyebrow rv">The shop</p>
-    <p class="big rv" style="--d:1">Nick Draper has tinted cars in Destin since 2014. People come back <em>car after car.</em></p>
-    <p class="body rv" style="--d:2">One customer had Nick do their 4Runner, then drove their new Camry straight back to him three years later. Read the reviews and the same three things keep coming up.</p>
+    <p class="big rv" style="--d:1">Read the reviews. One name keeps <em>coming up.</em></p>
+    <p class="body rv" style="--d:2">Nick Draper has run A Shade Darker in Destin since 2014, and customers name him in review after review. Three things keep coming up, in their own words.</p>
     <div class="three"><ul>
-      <li class="rv" style="--d:1"><div><strong>Help picking the shade</strong><span>First tint? Nick helps you choose what looks best on your car.</span></div></li>
-      <li class="rv" style="--d:2"><div><strong>Your schedule, not his</strong><span>Customers say he worked around them, once on a Saturday.</span></div></li>
-      <li class="rv" style="--d:3"><div><strong>Back on the road fast</strong><span>&ldquo;In &amp; out within an hour &amp; a half,&rdquo; one review says.</span></div></li>
+      <li class="rv" style="--d:1"><div><strong>He helps you choose</strong><span>&ldquo;This was my first time getting a tint done, but he helped chose what would look best with my car.&rdquo;</span></div></li>
+      <li class="rv" style="--d:2"><div><strong>He works around you</strong><span>&ldquo;He even came to work on a Saturday to accommodate our schedule.&rdquo;</span></div></li>
+      <li class="rv" style="--d:3"><div><strong>He sweats the details</strong><span>&ldquo;&hellip;his attention to detail and ability to deliver in a timely manner. Professional. Fair.&rdquo;</span></div></li>
     </ul></div>
 
     <div class="bento">
@@ -305,11 +350,11 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
             <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.5 6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg>
           </div>
         </div>
-        <div><p class="l">Across 128 reviews on Facebook, Google and Yellow Pages.</p><p class="src">Birdeye, October 2026</p></div>
+        <div><p class="l">Across 128 reviews on Facebook, Google and Yellow Pages, collected over years.</p><p class="src">Birdeye count, October 2026</p></div>
       </div>
-      <div class="tile rv tilt" style="--d:1"><div class="k">2014</div><p class="l">Tinting in Destin since</p></div>
+      <div class="tile rv tilt" style="--d:1"><div class="k">2014</div><p class="l">In business in Destin since</p></div>
       <div class="tile rv tilt" style="--d:2"><div class="k sm">Tint<br>+ Wraps</div><p class="l">Window tint and vehicle wraps</p></div>
-      <div class="tile wide rv tilt" style="--d:1"><q>I was in &amp; out within an hour &amp; a half!</q><p class="src" style="margin-top:.8rem">Facebook review</p></div>
+      <div class="tile wide rv tilt" style="--d:1"><q>He was fantastic with my 4Runner 3 yrs ago&hellip; so I made my way back over to him when I got my new Camry.</q><p class="src" style="margin-top:.8rem">Facebook review &middot; about 6 years ago</p></div>
       <div class="tile wide rv tilt" style="--d:2">
         <span class="status js-status"><i class="dot"></i><span class="js-status-text">Mon&ndash;Fri 9 AM&ndash;5 PM</span></span>
         <p class="mini-hours">Mon&ndash;Fri 9 AM&ndash;5 PM &middot; Sat &amp; Sun closed</p>
@@ -318,17 +363,46 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
   </div>
 </section>
 
+<section class="law" id="legal-limits" style="padding-top:1rem">
+  <div class="wrap">
+    <p class="eyebrow rv">Straight answers</p>
+    <h2 class="rv" style="--d:1">How dark<br>can you go?</h2>
+    <p class="body rv" style="--d:2">Start here. Tint is measured in VLT, the percent of visible light the glass lets through, so <b>lower means darker</b>. Florida sets the floor by window:</p>
+    <div class="lawgrid">
+      <button type="button" class="lawrow rv" data-set="2.46" style="--d:1"><span class="lw">Front side windows</span><span class="lv">28%<small>or lighter</small></span><span class="lbar"><i style="--v:.28"></i></span></button>
+      <button type="button" class="lawrow rv" data-set="3.33" style="--d:2"><span class="lw">Behind the driver, cars</span><span class="lv">15%<small>or lighter</small></span><span class="lbar"><i style="--v:.15"></i></span></button>
+      <button type="button" class="lawrow rv" data-set="3.93" style="--d:3"><span class="lw">Behind the driver, SUVs &amp; vans</span><span class="lv">6%<small>or lighter</small></span><span class="lbar"><i style="--v:.06"></i></span></button>
+    </div>
+    <p class="fine rv" style="margin-top:1rem">Tap a row to see it on the glass up top. Source: Fla. Stat. &sect;316.2953 (front side windows) and &sect;316.2954 (windows behind the driver; 6% applies to &ldquo;multipurpose passenger vehicles&rdquo;). Not sure which applies to your car? Ask Nick.</p>
+  </div>
+</section>
+
+<section class="process" style="padding-top:1rem">
+  <div class="wrap">
+    <p class="eyebrow rv">No surprises</p>
+    <h2 class="rv" style="--d:1">How a tint<br>job goes.</h2>
+    <p class="body rv" style="--d:2">The general shape of it, so you know what you&rsquo;re walking into. Nick will tell you how he&rsquo;ll handle your car.</p>
+    <ol class="steps">
+      <li class="rv" style="--d:1"><b>01</b><div><strong>Tell him what you drive</strong><span>Year, make, model, and how dark you&rsquo;re thinking.</span></div></li>
+      <li class="rv" style="--d:2"><b>02</b><div><strong>Pick the shade together</strong><span>What looks right on your car, and what&rsquo;s legal for each window.</span></div></li>
+      <li class="rv" style="--d:3"><b>03</b><div><strong>Glass gets prepped</strong><span>Film only looks as good as the glass under it.</span></div></li>
+      <li class="rv" style="--d:4"><b>04</b><div><strong>Film is cut and applied</strong><span>Shaped to your windows, then laid on.</span></div></li>
+      <li class="rv" style="--d:5"><b>05</b><div><strong>Back on the road</strong><span>One customer: &ldquo;I was in &amp; out within an hour &amp; a half!&rdquo; Ask how long yours will take.</span></div></li>
+    </ol>
+  </div>
+</section>
+
 <section class="services" style="padding-top:1rem">
   <div class="wrap">
     <p class="eyebrow rv">What he does</p>
-    <h2 class="rv" style="--d:1">Glass.<br>And everything around it.</h2>
+    <h2 class="rv" style="--d:1">Glass.<br>And the paint around it.</h2>
     <div class="svc">
       <article class="card rv tilt">
         <div class="art" aria-hidden="true"><div class="strips">
           <div style="--o:.12"><b>70</b></div><div style="--o:.3"><b>50</b></div><div style="--o:.46"><b>35</b></div><div style="--o:.64"><b>20</b></div><div style="--o:.86"><b>5</b></div>
         </div></div>
-        <div class="txt"><h3>Window tint</h3><p>From barely-there to limo dark. Not sure where to land? Nick helps you choose what looks best on your car.</p>
-          <q>This was my first time getting a tint done, but he helped chose what would look best with my car.</q></div>
+        <div class="txt"><h3>Window tint</h3><p>From barely-there to as dark as Florida allows on each window. First time? He&rsquo;ll help you choose.</p>
+          <q>Incredibly happy with the job Nick did on my GLI.</q></div>
       </article>
       <article class="card rv tilt" style="--d:1">
         <div class="art" aria-hidden="true"><div class="wrapart">
@@ -339,27 +413,59 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
               <path d="M128 64l40-24c10-6 20-8 30-8h56c12 0 22 4 32 12l22 20z" fill="#0a0b0e" opacity=".88"/><rect x="214" y="30" width="6" height="36" fill="#2a2e36"/></g>
             <circle cx="104" cy="114" r="20" fill="#0a0b0e" stroke="#555b66" stroke-width="5"/><circle cx="312" cy="114" r="20" fill="#0a0b0e" stroke="#555b66" stroke-width="5"/>
           </svg></div></div>
-        <div class="txt"><h3>Vehicle wraps</h3><p>New color or new look without new paint. Customers who came in for tint stayed for the wrap work.</p>
+        <div class="txt"><h3>Vehicle wraps</h3><p>A new color or look without new paint. A customer who came in for tint had this to say about the wrap work:</p>
           <q>&amp; the wrap jobs, AMAZING! Go find out for yourself!</q></div>
       </article>
     </div>
   </div>
 </section>
 
+<!-- Real work only. Renders when GALLERY (script) has photos from Nick; until then this section doesn't exist on the page. -->
+<template id="galleryTpl">
+<section class="gallery" style="padding-top:1rem">
+  <div class="wrap">
+    <p class="eyebrow rv">Recent work</p>
+    <h2 class="rv" style="--d:1">Real cars.<br>Real shop.</h2>
+    <div class="gal" data-gal></div>
+  </div>
+</section>
+</template>
+<div id="galleryMount"></div>
+
 <section class="reviews" style="padding-top:1rem">
   <div class="wrap">
     <div class="rev-head">
-      <div><p class="eyebrow rv">In their words</p><h2 class="rv" style="--d:1">4.9 stars.<br>128 reviews.</h2></div>
+      <div><p class="eyebrow rv">In their words</p><h2 class="rv" style="--d:1">Years of<br>reviews.</h2></div>
       <p class="swipe rv" style="--d:2">Swipe &rarr;</p>
     </div>
+    <p class="body rv" style="--d:2;margin-top:1rem">Quoted as written, dated honestly. These go back years, and the same name keeps coming up.</p>
     <div class="rail-x" tabindex="0" aria-label="Customer reviews">
-      <article class="rv-card"><p>Nick has done it again! He was fantastic with my 4Runner 3 yrs ago&hellip; so I made my way back over to him when I got my new Camry. I was in &amp; out within an hour &amp; a half!</p><footer><span>Facebook review</span><span>&#9733; Recommended</span></footer></article>
-      <article class="rv-card"><p>Incredibly happy with the job Nick did on my GLI. This was my first time getting a tint done, but he helped chose what would look best with my car.</p><footer><span>Facebook review</span><span>&#9733; Recommended</span></footer></article>
-      <article class="rv-card"><p>I recommend Nick&rsquo;s place of business because of his attention to detail and ability to deliver in a timely manner. Professional. Fair.</p><footer><span>Facebook review</span><span>&#9733; Recommended</span></footer></article>
-      <article class="rv-card"><p>He even came to work on a Saturday to accommodate our schedule.</p><footer><span>Facebook review</span></footer></article>
-      <article class="rv-card"><p>Nick worked with my schedule. Fast, friendly, professional, and affordable!</p><footer><span>Facebook review</span><span>&#9733; Recommended</span></footer></article>
-      <article class="rv-card"><p>Fast and really good. Professional.</p><footer><span>Google review</span><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span></footer></article>
-      <article class="rv-card"><p>Perfect job. Professional service. Will not hesitate to use again.</p><footer><span>Facebook review</span><span>&#9733; Recommended</span></footer></article>
+      <article class="rv-card"><p>Nick has done it again! He was fantastic with my 4Runner 3 yrs ago&hellip; so I made my way back over to him when I got my new Camry. I was in &amp; out within an hour &amp; a half!</p><footer><span>Facebook</span><span>about 6 years ago</span></footer></article>
+      <article class="rv-card"><p>Incredibly happy with the job Nick did on my GLI. This was my first time getting a tint done, but he helped chose what would look best with my car.</p><footer><span>Facebook</span><span>about 6 years ago</span></footer></article>
+      <article class="rv-card"><p>Thanks for the great service. He even came to work on a Saturday to accommodate our schedule.</p><footer><span>Facebook</span><span>about 6 years ago</span></footer></article>
+      <article class="rv-card"><p>Nick worked with my schedule. Fast, friendly, professional, and affordable!</p><footer><span>Facebook</span><span>about 7 years ago</span></footer></article>
+      <article class="rv-card"><p>I recommend Nick&rsquo;s place of business because of his attention to detail and ability to deliver in a timely manner. Professional. Fair.</p><footer><span>Facebook</span><span>about 8 years ago</span></footer></article>
+      <article class="rv-card"><p>Fast and really good. Professional.</p><footer><span>Google</span><span>August 2025</span></footer></article>
+    </div>
+  </div>
+</section>
+
+<section class="ask" id="ask" style="padding-top:1rem">
+  <div class="wrap">
+    <p class="eyebrow rv">Ask Nick</p>
+    <h2 class="rv" style="--d:1">Got a question?<br>Text it.</h2>
+    <p class="body rv" style="--d:2">No sales call needed. Tap a question, add your car, and it opens a text to Nick. Text first; talk if you want to.</p>
+    <div class="askbox rv" style="--d:2">
+      <label class="lab" for="car">Your car</label>
+      <input id="car" class="field" type="text" inputmode="text" autocomplete="off" placeholder="e.g. 2022 Tacoma" maxlength="40">
+      <div class="qs" id="qs">
+        <button type="button" class="q" aria-pressed="true" data-q="How dark can I legally go on my front windows?">How dark can I go up front?</button>
+        <button type="button" class="q" aria-pressed="false" data-q="What shade would you suggest for it?">What shade would you suggest?</button>
+        <button type="button" class="q" aria-pressed="false" data-q="How long would a full tint take?">How long would it take?</button>
+        <button type="button" class="q" aria-pressed="false" data-q="Can you wrap it? What would you need from me?">Can you wrap it?</button>
+      </div>
+      <div class="bubble" aria-live="polite"><span id="msg"></span></div>
+      <a class="btn btn-hot full" id="sms" href="sms:+18507978053"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text this to Nick</a>
     </div>
   </div>
 </section>
@@ -399,11 +505,31 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
   </div>
 </section>
 
+<section class="receipts">
+  <div class="wrap">
+    <details class="rv">
+      <summary>Every fact on this page, and where it came from</summary>
+      <ul>
+        <li>Owner Nicholas Draper; business started July 2014: BBB business profile.</li>
+        <li>4.9 stars across 128 reviews (Facebook 72, Google 55, Yellow Pages 1): Birdeye, October 2026.</li>
+        <li>Review quotes: copied as written from Facebook and Google reviews via Birdeye; ages as Birdeye shows them. Reviewer names left off.</li>
+        <li>Hours Mon&ndash;Fri 9&ndash;5: Birdeye and Google Maps.</li>
+        <li>Address: the one Google Maps shows. Other directories list different ones, so this is the first thing to confirm.</li>
+        <li>Florida tint limits: Fla. Stat. &sect;316.2953 and &sect;316.2954.</li>
+        <li>No stock photos, no invented numbers. The shade preview up top is an illustration, not a film sample.</li>
+      </ul>
+    </details>
+  </div>
+</section>
+
 <section class="final">
   <div class="wrap">
     <h2 class="rv">Go a shade<span>darker.</span></h2>
-    <p class="rv" style="--d:1">Call Nick, tell him what you drive, and he&rsquo;ll help you pick the shade.</p>
-    <a class="btn btn-hot rv" style="--d:2" data-tel href="tel:+18507978053"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call <span data-phone>(850) 797-8053</span></a>
+    <p class="rv" style="--d:1">Tell Nick what you drive. He&rsquo;ll help you pick the shade, and tell you what&rsquo;s legal on each window.</p>
+    <div class="row rv" style="--d:2;display:flex;gap:.6rem;flex-wrap:wrap">
+      <a class="btn btn-hot" href="#ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text Nick</a>
+      <a class="btn btn-glass" data-tel href="tel:+18507978053"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+    </div>
   </div>
 </section>
 </main>
@@ -411,8 +537,9 @@ footer.site{border-top:1px solid var(--line);padding:1.6rem 0 1rem;color:#8d949e
 <footer class="site"><div class="wrap"><p>&copy; 2026 A Shade Darker Window Tinting. Preview design by Saltwater Studio.</p></div></footer>
 
 <nav class="bar" id="bar" aria-label="Quick actions">
-  <a class="btn btn-hot" data-tel href="tel:+18507978053"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call Nick</a>
-  <a class="btn btn-glass" data-dir href="https://www.google.com/maps/dir/?api=1&amp;destination=A%20Shade%20Darker%20Window%20Tinting%2C%20330%20Mountain%20Dr%2C%20Destin%2C%20FL%2032541"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Directions</a>
+  <a class="btn btn-hot" href="#ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Text Nick</a>
+  <a class="btn btn-glass" data-tel href="tel:+18507978053"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn btn-glass" data-dir href="https://www.google.com/maps/dir/?api=1&amp;destination=A%20Shade%20Darker%20Window%20Tinting%2C%20330%20Mountain%20Dr%2C%20Destin%2C%20FL%2032541"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Map</a>
 </nav>
 
 <script>
@@ -422,8 +549,13 @@ const SHOP = {
   phone: '(850) 797-8053', tel: '+18507978053',
   address: '330 Mountain Dr, Destin, FL 32541',   // Google Maps 10/01. BBB/Birdeye say 2021 98 Palms Blvd Unit 106: confirm with Nick
   hours: { 1: [9, 17], 2: [9, 17], 3: [9, 17], 4: [9, 17], 5: [9, 17] }, // 0 = Sun; [open, close] 24h
-  tz: 'America/Chicago'
+  tz: 'America/Chicago',
+  sms: '+18507978053'  // wireless line (carrier lookup 9/29)
 };
+/* ===== GALLERY: add Nick's real photos here (src, alt). Empty = the section is not rendered at all. ===== */
+const GALLERY = [
+  // { src: '/preview/a-shade-darker/img/01.webp', alt: 'Describe the car and the shade' },
+];
 (() => {
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -500,6 +632,34 @@ const SHOP = {
   // scroll reveals
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
   $$('.rv').forEach(e => io.observe(e));
+
+
+  // gallery: real photos only
+  if (GALLERY.length) {
+    const sec = $('#galleryTpl').content.cloneNode(true), g = $('[data-gal]', sec);
+    GALLERY.forEach(p => { const f = document.createElement('figure'), i = document.createElement('img'); i.src = p.src; i.alt = p.alt; i.loading = 'lazy'; f.appendChild(i); g.appendChild(f); });
+    $('#galleryMount').replaceWith(sec);
+    $$('.gallery .rv').forEach(e => io.observe(e));
+  }
+
+  // law rows drive the hero slider
+  $$('.lawrow').forEach(r => r.addEventListener('click', () => {
+    $$('.lawrow').forEach(x => x.classList.toggle('on', x === r));
+    input.value = r.dataset.set; setTint(+input.value);
+    $('#hero').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }));
+
+  // Ask Nick: builds a text
+  const car = $('#car'), msg = $('#msg'), sms = $('#sms'), qs = $$('#qs .q');
+  let q = qs[0].dataset.q;
+  function build() {
+    const c = car.value.trim();
+    const body = `Hi Nick, I have a ${c || '[your car]'}. ${q}`;
+    msg.textContent = body;
+    sms.href = `sms:${SHOP.sms}&body=${encodeURIComponent(c ? body : `Hi Nick. ${q}`)}`;
+  }
+  qs.forEach(b => b.addEventListener('click', () => { qs.forEach(x => x.setAttribute('aria-pressed', x === b)); q = b.dataset.q; build(); }));
+  car.addEventListener('input', build); build();
 
   // sticky bar once the tint card scrolls away
   const bar = $('#bar');
