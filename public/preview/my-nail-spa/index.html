@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- private preview for the owners: keep it out of search until they say go -->
+<meta name="robots" content="noindex, nofollow">
+<title>My Nail Spa | A small Destin nail salon that never rushes you</title>
+<meta name="description" content="Manicures, pedicures, gel, nail art and waxing at My Nail Spa, run by Loc and My in Commerce Row on Main Street, Destin. 4.9 stars on Google.">
+<meta name="theme-color" content="#F4ECE3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232A1C17%22/%3E%3Crect x=%2212%22 y=%224%22 width=%228%22 height=%229%22 rx=%222%22 fill=%22%23C9A46A%22/%3E%3Cpath d=%22M9 14h14v11a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3z%22 fill=%22%238C2340%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<style>
+:root{
+  --linen:#F4ECE3; --linen-2:#EDE2D6; --porcelain:#FBF7F2;
+  --ink:#2A1C17; --ink-2:#4A3730; --muted:#6B5650;
+  --lacquer:#8C2340; --lacquer-ink:#741B34; --blush:#E8C6BC; --gold:#B8925A; --gold-2:#C9A46A;
+  --line:#D9CBBE;
+  --polish:#8C2340;
+  --display:"Instrument Serif","Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,sans-serif;
+  --r:20px;
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--linen);color:var(--ink);font:1.0625rem/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--lacquer);outline-offset:3px;border-radius:8px}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+p{margin:0 0 1rem}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:.95;letter-spacing:-.01em}
+h2{font-size:clamp(2.6rem,9vw,4.4rem);margin-bottom:1rem}
+h2 em,h1 em{font-style:italic;color:var(--lacquer)}
+h3{font-size:1.75rem;line-height:1.05}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lacquer-ink)}
+
+/* preview bar */
+.preview{background:var(--ink);color:#F4ECE3;font-size:.92rem;line-height:1.45}
+.preview .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.preview p{margin:0}
+.preview a{color:var(--gold-2);font-weight:700}
+
+/* header */
+header.top{position:relative;z-index:5}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.9rem;padding-bottom:.4rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand svg{flex:none}
+.brand b{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1}
+.brand small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:.15rem}
+.pill{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.55rem 1rem;border-radius:999px;background:var(--ink);color:var(--porcelain);text-decoration:none;font-weight:600;font-size:.95rem}
+
+/* hero */
+.hero{position:relative;padding:.8rem 0 0}
+.hero .grid{display:grid;gap:.4rem;grid-template-areas:"ha" "st" "hb"}
+.ha{grid-area:ha}.hb{grid-area:hb;margin-top:.6rem}.stage{grid-area:st}
+.hero h1{font-size:clamp(3.2rem,14.6vw,7.4rem);line-height:.88;margin:.5rem 0 1.1rem}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(105%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .ln:nth-child(3)>span{animation-delay:.24s}
+@keyframes rise{to{transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1 .ln>span{animation:none;transform:none}}
+.lead{font-size:1.125rem;color:var(--ink-2);max-width:34ch}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.2rem 0 1.1rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .8rem;border-radius:999px;background:var(--porcelain);border:1px solid var(--line);font-size:.92rem;font-weight:600}
+.chip .star{color:var(--gold)}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:#3E8E5C;box-shadow:0 0 0 0 rgba(62,142,92,.5);animation:pulse 2.2s infinite}
+.dot.off{background:#A0675C;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(62,142,92,0)}100%{box-shadow:0 0 0 0 rgba(62,142,92,0)}}
+.ctas{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.8rem 1.35rem;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1.02rem;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn-main{background:var(--lacquer);color:#fff;box-shadow:0 10px 24px -10px rgba(140,35,64,.7)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+
+/* stage */
+.stage{position:relative;height:min(118vw,500px);margin-top:.4rem;touch-action:pan-y}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.stage .halo{position:absolute;left:50%;top:52%;width:78%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(232,198,188,.9),rgba(232,198,188,0) 68%);pointer-events:none}
+.poster{position:absolute;inset:0;display:none;align-items:center;justify-content:center}
+.no3d .poster{display:flex}
+.no3d .stage canvas{display:none}
+.poster svg{height:86%;width:auto}
+.hint{position:absolute;left:50%;bottom:4.4rem;transform:translateX(-50%);font-size:.82rem;color:var(--muted);letter-spacing:.06em;white-space:nowrap;pointer-events:none;transition:opacity .5s}
+.swatches{position:absolute;left:0;right:0;bottom:.6rem;display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap}
+.sw{width:46px;height:46px;border-radius:50%;border:3px solid var(--porcelain);box-shadow:0 0 0 1px var(--line),0 6px 14px -6px rgba(42,28,23,.5);cursor:pointer;padding:0;position:relative;background:var(--c)}
+.sw[aria-pressed=true]{box-shadow:0 0 0 2px var(--ink),0 6px 14px -6px rgba(42,28,23,.5)}
+.sw.pearl{background:conic-gradient(from 30deg,#F3E7E4,#D9E4EC,#EADCF0,#F6EBD8,#F3E7E4)}
+.shade{position:absolute;top:.4rem;right:0;text-align:right;font-family:var(--display);font-style:italic;font-size:1.45rem;color:var(--ink-2);pointer-events:none}
+.shade small{display:block;font-family:var(--body);font-style:normal;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* marquee */
+.marquee{overflow:hidden;background:var(--ink);color:var(--linen);padding:1rem 0;margin-top:1.4rem}
+.marquee .track{display:flex;gap:2.2rem;width:max-content;animation:slide 34s linear infinite;font-family:var(--display);font-size:1.6rem;font-style:italic;white-space:nowrap}
+.marquee .track span::after{content:"";display:inline-block;width:.45rem;height:.45rem;border-radius:50%;background:var(--gold-2);margin-left:2.2rem;vertical-align:middle}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+section{padding:4.2rem 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* bento */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.tile{background:var(--porcelain);border:1px solid var(--line);border-radius:var(--r);padding:1.15rem;position:relative;overflow:hidden}
+.tile .big{font-family:var(--display);font-size:3.6rem;line-height:.9}
+.tile .lbl{font-size:.92rem;color:var(--muted);margin-top:.35rem;line-height:1.35}
+.tile.wide{grid-column:1/-1}
+.tile.dark{background:var(--ink);color:var(--linen);border-color:var(--ink)}
+.tile.dark .lbl{color:#CDBDB2}
+.tile.lac{background:var(--lacquer);color:#fff;border-color:var(--lacquer)}
+.tile.lac .lbl{color:#F3D5DC}
+.years{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.7rem}
+.years span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.2rem .65rem;font-size:.85rem;font-weight:600}
+.stars{color:var(--gold);letter-spacing:.12em;font-size:1.05rem}
+.tile q{font-family:var(--display);font-style:italic;font-size:1.5rem;line-height:1.15;quotes:none;display:block}
+.tile cite{display:block;font-style:normal;font-size:.82rem;color:var(--muted);margin-top:.6rem;letter-spacing:.04em}
+.tile.dark cite{color:#CDBDB2}
+
+/* services */
+.svc{display:grid;gap:.75rem}
+.card{display:grid;grid-template-columns:64px 1fr;gap:1rem;align-items:center;background:var(--porcelain);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem}
+.card svg{width:64px;height:64px}
+.card h3{font-size:1.6rem}
+.card p{margin:.25rem 0 0;color:var(--muted);font-size:.98rem;line-height:1.45}
+
+/* builder */
+.builder{background:var(--ink);color:var(--linen);border-radius:28px;padding:1.5rem 1.2rem;position:relative;overflow:hidden}
+.builder h2{color:var(--linen)}
+.builder h2 em{color:var(--blush)}
+.builder .eyebrow{color:var(--gold-2)}
+.step{margin-top:1.3rem}
+.step > b{display:block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#CDBDB2;margin-bottom:.55rem}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem}
+.opt{min-height:44px;padding:.55rem 1rem;border-radius:999px;border:1.5px solid rgba(244,236,227,.35);background:transparent;cursor:pointer;font-weight:600;font-size:.98rem;color:var(--linen);transition:background .2s,border-color .2s,transform .15s}
+.opt[aria-pressed=true]{background:var(--blush);border-color:var(--blush);color:var(--ink)}
+.opt:active{transform:scale(.96)}
+.ticket{margin-top:1.4rem;background:var(--porcelain);color:var(--ink);border-radius:18px;padding:1.1rem 1.1rem 1.2rem;position:relative}
+.ticket::before{content:"";position:absolute;left:-9px;right:-9px;top:50%;height:0;border-top:2px dashed var(--line);display:none}
+.ticket small{display:block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.ticket p{font-family:var(--display);font-size:1.6rem;line-height:1.15;margin:.4rem 0 1rem;min-height:3.5em}
+.ticket .ctas .btn{flex:1 1 auto}
+.copied{font-size:.88rem;color:var(--lacquer-ink);font-weight:600;min-height:1.3em;margin-top:.5rem}
+
+/* reviews */
+.rail{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.25rem 1rem;margin:0 -1.25rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rev{flex:0 0 84%;scroll-snap-align:center;background:var(--porcelain);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.2rem;display:flex;flex-direction:column;justify-content:space-between;min-height:15rem}
+.rev blockquote{margin:0;font-family:var(--display);font-size:1.55rem;line-height:1.2}
+.rev cite{font-style:normal;color:var(--muted);font-size:.85rem;margin-top:1rem;display:block}
+.dots{display:flex;justify-content:center;gap:.45rem}
+.dots i{width:.5rem;height:.5rem;border-radius:50%;background:var(--line);transition:background .3s,width .3s}
+.dots i.on{background:var(--lacquer);width:1.4rem;border-radius:999px}
+
+/* visit */
+.visit{display:grid;gap:1rem}
+.mapcard{position:relative;border-radius:var(--r);overflow:hidden;background:var(--linen-2);border:1px solid var(--line);aspect-ratio:4/3}
+.mapcard svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:54%;top:46%;transform:translate(-50%,-100%)}
+.pin::after{content:"";position:absolute;left:50%;bottom:-6px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:rgba(140,35,64,.25);animation:ping 2s infinite;z-index:-1}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.6);opacity:0}}
+.info{background:var(--porcelain);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem}
+.info address{font-style:normal;font-size:1.1rem;font-weight:600;margin-bottom:.3rem}
+table.hrs{width:100%;border-collapse:collapse;margin:.8rem 0 1rem;font-size:1rem}
+table.hrs td{padding:.45rem 0;border-bottom:1px solid var(--line)}
+table.hrs td:last-child{text-align:right}
+table.hrs tr.today td{font-weight:700;color:var(--lacquer-ink)}
+.notes{display:flex;flex-wrap:wrap;gap:.45rem;margin:.2rem 0 1rem}
+.notes span{font-size:.85rem;background:var(--linen);border-radius:999px;padding:.3rem .75rem;border:1px solid var(--line)}
+
+/* closer */
+.closer{text-align:center;padding:4.5rem 0 5rem}
+.closer h2{font-size:clamp(3rem,13vw,6rem)}
+.closer .ctas{justify-content:center;margin-top:1.4rem}
+footer{border-top:1px solid var(--line);padding:1.4rem 0 calc(6.5rem + var(--safe-b));font-size:.88rem;color:var(--muted)}
+
+/* sticky bar */
+.sticky{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + var(--safe-b));z-index:30;display:flex;gap:.5rem;padding:.5rem;border-radius:999px;background:rgba(42,28,23,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 40px -16px rgba(42,28,23,.6);transform:translateY(160%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.sticky.show{transform:none}
+.sticky a{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;gap:.45rem;border-radius:999px;text-decoration:none;font-weight:700;color:var(--linen)}
+.sticky a.call{background:var(--lacquer);color:#fff}
+
+@media (min-width:880px){
+  .hero .grid{grid-template-columns:1.05fr .95fr;grid-template-areas:"ha st" "hb st";align-content:center;min-height:calc(100vh - 160px)}
+  .hb{margin-top:1.4rem}
+  .stage{height:560px;margin-top:0}
+  .hint{bottom:5rem}
+  .bento{grid-template-columns:repeat(4,1fr)}
+  .tile.wide{grid-column:span 2}
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .builder{padding:2.6rem}
+  .rev{flex-basis:32%}
+  .visit{grid-template-columns:1.1fr .9fr}
+  .sticky{left:auto;right:1.5rem;width:24rem}
+}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview Saltwater Studio built for My Nail Spa. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a></p></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="My Nail Spa, top of page">
+      <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><rect x="11" y="1" width="12" height="14" rx="3" fill="#C9A46A"/><rect x="10" y="13" width="14" height="3" rx="1" fill="#2A1C17"/><path d="M5 18h24v15a6 6 0 0 1-6 6H11a6 6 0 0 1-6-6z" fill="var(--polish)"/><path d="M9 22v10" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><b>My Nail Spa</b><small>Main Street · Destin</small></span>
+    </a>
+    <a class="pill" data-tel href="tel:+18505864838"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap grid">
+    <div class="ha">
+      <div class="eyebrow">Commerce Row · 225 Main St, Destin</div>
+      <h1><span class="ln"><span>A small shop</span></span><span class="ln"><span>that never</span></span><span class="ln"><span><em>rushes</em> you.</span></span></h1>
+      <div class="ctas" id="heroCtas">
+        <a class="btn btn-main" data-tel href="tel:+18505864838">Call to book</a>
+        <a class="btn btn-ghost" href="#visit-builder">Plan your visit</a>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="halo" aria-hidden="true"></div>
+      <canvas id="gl" aria-label="A glossy nail polish bottle you can spin and recolor" role="img"></canvas>
+      <div class="poster" aria-hidden="true">
+        <svg viewBox="0 0 200 300"><defs><linearGradient id="gl1" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><rect x="72" y="20" width="56" height="86" rx="10" fill="#C9A46A"/><rect x="68" y="102" width="64" height="12" rx="4" fill="#2A1C17"/><path d="M38 120h124v140a26 26 0 0 1-26 26H64a26 26 0 0 1-26-26z" fill="var(--polish)"/><path d="M38 120h124v140a26 26 0 0 1-26 26H64a26 26 0 0 1-26-26z" fill="url(#gl1)"/></svg>
+      </div>
+      <div class="shade" aria-live="polite"><small>Shade</small><span id="shadeName">Oxblood</span></div>
+      <div class="hint" id="hint">Drag to spin · tap a shade</div>
+      <div class="swatches" role="group" aria-label="Try a shade">
+        <button class="sw" style="--c:#8C2340" data-c="#8C2340" data-n="Oxblood" aria-pressed="true" aria-label="Oxblood"></button>
+        <button class="sw" style="--c:#E39A8B" data-c="#E39A8B" data-n="Rosewater" aria-pressed="false" aria-label="Rosewater"></button>
+        <button class="sw" style="--c:#E8583F" data-c="#E8583F" data-n="Coral reef" aria-pressed="false" aria-label="Coral reef"></button>
+        <button class="sw" style="--c:#1F7A7A" data-c="#1F7A7A" data-n="Gulf teal" aria-pressed="false" aria-label="Gulf teal"></button>
+        <button class="sw pearl" data-c="#EFE4E2" data-n="Pearl" data-pearl="1" aria-pressed="false" aria-label="Pearl"></button>
+        <button class="sw" style="--c:#1C1A2B" data-c="#1C1A2B" data-n="Midnight" aria-pressed="false" aria-label="Midnight"></button>
+      </div>
+    </div>
+    <div class="hb">
+      <p class="lead">Manicures, pedicures, gel and nail art, done by Loc and My in a quiet little salon off Main Street.</p>
+      <div class="chips">
+        <span class="chip"><span class="star" aria-hidden="true">★</span> 4.9 on Google · 150 reviews</span>
+        <span class="chip" id="openChip"><span class="dot" aria-hidden="true"></span><span id="openTxt">Checking hours…</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track">
+    <span>Manicures</span><span>Pedicures</span><span>Gel</span><span>Nail art</span><span>Callus care</span><span>Repairs &amp; removals</span><span>Waxing</span>
+    <span>Manicures</span><span>Pedicures</span><span>Gel</span><span>Nail art</span><span>Callus care</span><span>Repairs &amp; removals</span><span>Waxing</span>
+  </div></div>
+</section>
+
+<section aria-labelledby="why">
+  <div class="wrap">
+    <div class="eyebrow reveal">What the regulars say</div>
+    <h2 id="why" class="reveal">Small room. <em>Full</em> attention.</h2>
+    <div class="bento">
+      <div class="tile reveal"><div class="big">4.9</div><div class="stars" aria-hidden="true">★★★★★</div><div class="lbl">on Google from 150 reviews</div></div>
+      <div class="tile lac reveal"><div class="big">20</div><div class="lbl">neighborhoods named it a Nextdoor Neighborhood Favorite</div></div>
+      <div class="tile dark wide reveal"><q>Loc and his wife My were so kind and friendly and totally professional. A small intimate shop. Very relaxing. Never felt rushed.</q><cite>Customer review, 2026</cite></div>
+      <div class="tile wide reveal"><div class="lbl" style="margin:0 0 .3rem;font-weight:700;color:var(--ink);letter-spacing:.12em;text-transform:uppercase;font-size:.78rem">Nextdoor Fave, won in</div>
+        <div class="years" style="margin-top:.2rem"><span style="border-color:var(--line)">2019</span><span style="border-color:var(--line)">2020</span><span style="border-color:var(--line)">2022</span><span style="border-color:var(--line)">2024</span></div></div>
+      <div class="tile reveal"><div class="big" style="font-size:2.4rem">Loc &amp; My</div><div class="lbl">A husband and wife run the shop themselves</div></div>
+      <div class="tile reveal"><div class="big" style="font-size:2.4rem">Call ahead</div><div class="lbl">Appointments, so they're set up when you walk in</div></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="svc" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="eyebrow reveal">The menu</div>
+    <h2 id="svc" class="reveal">Hands, feet, <em>and the details.</em></h2>
+    <div class="svc">
+      <div class="card reveal"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#EDE2D6"/><path d="M22 46V24a4 4 0 0 1 8 0v14m0-16a4 4 0 0 1 8 0v16m0-12a4 4 0 0 1 8 0v14c0 8-6 12-12 12h-4c-6 0-10-5-12-10l-4-8a3 3 0 0 1 5-3l3 4" fill="none" stroke="#2A1C17" stroke-width="2.4" stroke-linecap="round"/><rect x="23" y="17" width="5" height="6" rx="2" fill="var(--polish)"/><rect x="31" y="15" width="5" height="6" rx="2" fill="var(--polish)"/><rect x="39" y="19" width="5" height="6" rx="2" fill="var(--polish)"/></svg><div><h3>Manicures</h3><p>Done carefully, never hurried.</p></div></div>
+      <div class="card reveal"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#EDE2D6"/><path d="M14 40c6 0 10-4 14-4s8 6 16 6h6v6H14z" fill="#E8C6BC" stroke="#2A1C17" stroke-width="2.2"/><path d="M12 50h40" stroke="#2A1C17" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30c2-3 2-6 0-9m8 9c2-3 2-6 0-9m8 9c2-3 2-6 0-9" stroke="#B8925A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><div><h3>Pedicures</h3><p>Including callus care. Regulars rave about the massage.</p></div></div>
+      <div class="card reveal"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#EDE2D6"/><path d="M24 50c0-12 2-24 8-30 6 6 8 18 8 30z" fill="var(--polish)"/><path d="M28 30c1-3 2-5 4-7" stroke="#fff" stroke-opacity=".7" stroke-width="2.4" stroke-linecap="round"/></svg><div><h3>Gel</h3><p>Gel sets, plus repairs and removals.</p></div></div>
+      <div class="card reveal"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#EDE2D6"/><path d="M32 14l4 10 10 1-8 7 3 10-9-6-9 6 3-10-8-7 10-1z" fill="none" stroke="#B8925A" stroke-width="2.4" stroke-linejoin="round"/><circle cx="32" cy="31" r="4" fill="var(--polish)"/></svg><div><h3>Nail art</h3><p>Ask what's possible when you call.</p></div></div>
+      <div class="card reveal"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#EDE2D6"/><path d="M18 42c8-14 20-14 28 0" fill="none" stroke="#2A1C17" stroke-width="2.4" stroke-linecap="round"/><path d="M22 36l20-12" stroke="#B8925A" stroke-width="5" stroke-linecap="round"/></svg><div><h3>Waxing</h3><p>Ask when you book.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit-builder" aria-labelledby="bld" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="builder reveal">
+      <div class="eyebrow">Plan your visit</div>
+      <h2 id="bld">Tell them what <em>you'd like.</em></h2>
+      <p style="color:#CDBDB2;max-width:40ch">Pick a few things and your request writes itself. Then call, and it's ready to read.</p>
+      <div class="step"><b>Who's coming</b><div class="opts" data-group="who" data-single>
+        <button class="opt" aria-pressed="true" data-v="just me">Just me</button>
+        <button class="opt" aria-pressed="false" data-v="me and a friend">Me + a friend</button>
+        <button class="opt" aria-pressed="false" data-v="a few of us">A few of us</button>
+      </div></div>
+      <div class="step"><b>What for</b><div class="opts" data-group="what">
+        <button class="opt" aria-pressed="true" data-v="a pedicure">Pedicure</button>
+        <button class="opt" aria-pressed="false" data-v="a manicure">Manicure</button>
+        <button class="opt" aria-pressed="false" data-v="gel">Gel</button>
+        <button class="opt" aria-pressed="false" data-v="nail art">Nail art</button>
+        <button class="opt" aria-pressed="false" data-v="a repair or removal">Repair / removal</button>
+        <button class="opt" aria-pressed="false" data-v="waxing">Waxing</button>
+      </div></div>
+      <div class="step"><b>When</b><div class="opts" data-group="when" data-single id="dayOpts"></div></div>
+      <div class="ticket" aria-live="polite">
+        <small>Your request</small>
+        <p id="ticket">Hi, I'd like to book a pedicure for just me.</p>
+        <div class="ctas">
+          <a class="btn btn-main" data-tel href="tel:+18505864838">Call to book</a>
+          <a class="btn btn-ghost" id="smsBtn" href="#" hidden>Text it</a>
+          <button class="btn btn-ghost" id="copyBtn" type="button">Copy</button>
+        </div>
+        <div class="copied" id="copied"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="rv" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="eyebrow reveal">In their words</div>
+    <h2 id="rv" class="reveal">Their regulars, <em>in their words.</em></h2>
+    <div class="rail" id="rail">
+      <article class="rev"><blockquote>The owners made us feel so welcomed and at home. My mother, sister and I came in for mani pedis, and they treated us each with quality care and service. Very family friendly.</blockquote><cite>Customer review · 2026</cite></article>
+      <article class="rev"><blockquote>Had a wonderful mani pedi by Loc, with the best foot massage I've ever had.</blockquote><cite>Customer review · 2026</cite></article>
+      <article class="rev"><blockquote>The nicest couple runs this place and they do an amazing job. I will never visit anyone else! Client for life here!</blockquote><cite>Customer review · 2025</cite></article>
+      <article class="rev"><blockquote>Very small, a couple runs it… it's the best pedicure you will ever get. Great massage.</blockquote><cite>Nextdoor neighbor · 2023</cite></article>
+      <article class="rev"><blockquote>Definitely better to call ahead, and schedule so they can get all set up for you.</blockquote><cite>Customer review · 2025</cite></article>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="visit" aria-labelledby="vs" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="eyebrow reveal">Find the shop</div>
+    <h2 id="vs" class="reveal">Commerce Row, <em>on Main.</em></h2>
+    <div class="visit">
+      <div class="mapcard reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#EDE2D6"/>
+          <g stroke="#FBF7F2" stroke-width="22" fill="none" stroke-linecap="round"><path d="M-10 210 C 120 200 260 205 410 190"/><path d="M215 -10 V 310"/></g>
+          <g stroke="#D9CBBE" stroke-width="1.5" fill="none" opacity=".8"><path d="M0 60 C 80 70 140 40 230 55 S 360 40 400 50"/><path d="M0 110 C 90 120 150 95 230 105 S 350 95 400 100"/></g>
+          <rect x="150" y="98" width="140" height="56" rx="10" fill="#FBF7F2" stroke="#D9CBBE"/>
+          <text x="220" y="131" text-anchor="middle" font-family="Figtree,sans-serif" font-size="13" font-weight="700" fill="#4A3730">Commerce Row</text>
+          <text x="226" y="245" font-family="Figtree,sans-serif" font-size="12" font-weight="700" fill="#6B5650">Main St</text>
+        </svg>
+        <svg class="pin" width="40" height="52" viewBox="0 0 40 52"><path d="M20 51C8 36 2 28 2 19a18 18 0 0 1 36 0c0 9-6 17-18 32z" fill="var(--lacquer)"/><circle cx="20" cy="19" r="7" fill="#FBF7F2"/></svg>
+      </div>
+      <div class="info reveal">
+        <address>225 Main St, Suite 17<br>Destin, FL 32541</address>
+        <div style="color:var(--muted)">In Commerce Row</div>
+        <table class="hrs" id="hrs" aria-label="Hours"></table>
+        <div class="notes"><span>Appointments</span><span>Private lot parking</span><span>Credit cards accepted</span></div>
+        <div class="ctas">
+          <a class="btn btn-main" data-tel href="tel:+18505864838">Call (850) 586-4838</a>
+          <a class="btn btn-ghost" data-dir href="#">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closer">
+  <div class="wrap">
+    <h2 class="reveal">Sit back. <em>They've got you.</em></h2>
+    <div class="ctas reveal"><a class="btn btn-main" data-tel href="tel:+18505864838">Call to book</a><a class="btn btn-ghost" data-dir href="#">Directions</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 My Nail Spa. Preview design by Saltwater Studio.</div></footer>
+
+<nav class="sticky" id="sticky" aria-label="Quick actions">
+  <a class="call" data-tel href="tel:+18505864838"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to book</a>
+  <a data-dir href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+// One place to change the facts (see RECON.md). Phone: Google's number; Nextdoor/YP show (850) 837-8373 — confirm with the owners.
+const SHOP = {
+  name: "My Nail Spa",
+  phone: "+18505864838", phoneDisplay: "(850) 586-4838",
+  textable: false, // flip to true once they confirm the line takes texts
+  address: "225 Main St Ste 17, Destin, FL 32541",
+  // 0=Sun … 6=Sat, [open, close] in 24h decimal; null = closed
+  hours: [null, [10,17], [10,17], [10,17], [10,17], [10,17], [10,16]]
+};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = h => { const hr = Math.floor(h), m = Math.round((h - hr) * 60), ap = hr >= 12 ? "PM" : "AM", h12 = ((hr + 11) % 12) + 1; return h12 + (m ? ":" + String(m).padStart(2, "0") : "") + " " + ap; };
+
+// wire facts
+$$("[data-tel]").forEach(a => a.href = "tel:" + SHOP.phone);
+$$("[data-dir]").forEach(a => { a.href = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(SHOP.name + ", " + SHOP.address); a.target = "_blank"; a.rel = "noopener"; });
+
+// live open/closed, Destin time
+function now() {
+  const p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return { d: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday")), h: (+g("hour") % 24) + (+g("minute")) / 60 };
+}
+function status() {
+  const { d, h } = now(), t = SHOP.hours[d];
+  if (t && h >= t[0] && h < t[1]) return { open: true, txt: "Open now · until " + fmt(t[1]) };
+  for (let i = 0; i < 8; i++) {
+    const dd = (d + i) % 7, x = SHOP.hours[dd];
+    if (!x) continue;
+    if (i === 0 && h < x[0]) return { open: false, txt: "Closed · opens " + fmt(x[0]) };
+    if (i > 0) return { open: false, txt: "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[dd].slice(0, 3)) + " " + fmt(x[0]) };
+  }
+  return { open: false, txt: "Closed" };
+}
+function paintStatus() { const s = status(); $("#openTxt").textContent = s.txt; $("#openChip .dot").classList.toggle("off", !s.open); }
+paintStatus(); setInterval(paintStatus, 60000);
+
+// hours table
+(() => {
+  const { d } = now(), order = [1,2,3,4,5,6,0];
+  $("#hrs").innerHTML = order.map(i => { const t = SHOP.hours[i]; return `<tr class="${i === d ? "today" : ""}"><td>${DAYS[i]}${i === d ? " · today" : ""}</td><td>${t ? fmt(t[0]) + " – " + fmt(t[1]) : "Closed"}</td></tr>`; }).join("");
+})();
+
+// visit builder
+(() => {
+  const { d } = now(), days = [];
+  for (let i = 0; i < 7 && days.length < 4; i++) { const dd = (d + i) % 7; if (SHOP.hours[dd]) days.push(i === 0 ? "today" : i === 1 ? "tomorrow" : DAYS[dd]); }
+  days.push("whenever works");
+  $("#dayOpts").innerHTML = days.map((v, i) => `<button class="opt" aria-pressed="${i === days.length - 1}" data-v="${v}">${v[0].toUpperCase() + v.slice(1)}</button>`).join("");
+  const join = a => a.length < 2 ? a[0] || "" : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+  function build() {
+    const pick = g => $$(`[data-group="${g}"] .opt[aria-pressed="true"]`).map(b => b.dataset.v);
+    const who = pick("who")[0] || "just me", what = pick("what"), when = pick("when")[0] || "whenever works";
+    const forWho = who === "just me" ? "for just me" : "for " + who;
+    const whenTxt = when === "whenever works" ? ", whenever you have an opening" : (when === "today" || when === "tomorrow" ? " " + when : " on " + when);
+    const msg = `Hi, I'd like to book ${what.length ? join(what) : "a visit"} ${forWho}${whenTxt}.`;
+    $("#ticket").textContent = msg;
+    const sms = $("#smsBtn");
+    if (SHOP.textable) { sms.hidden = false; sms.href = `sms:${SHOP.phone}&body=${encodeURIComponent(msg)}`; }
+    return msg;
+  }
+  $$(".opts").forEach(g => g.addEventListener("click", e => {
+    const b = e.target.closest(".opt"); if (!b) return;
+    if (g.hasAttribute("data-single")) g.querySelectorAll(".opt").forEach(o => o.setAttribute("aria-pressed", o === b));
+    else { const on = b.getAttribute("aria-pressed") === "true"; if (on && g.querySelectorAll('[aria-pressed="true"]').length === 1) return; b.setAttribute("aria-pressed", !on); }
+    build();
+  }));
+  $("#copyBtn").addEventListener("click", async () => {
+    const msg = build();
+    try { await navigator.clipboard.writeText(msg); $("#copied").textContent = "Copied. Paste it anywhere."; }
+    catch { $("#copied").textContent = "Select the text above to copy it."; }
+  });
+  build();
+})();
+
+// reveals
+(() => {
+  const els = $$(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  els.forEach(e => io.observe(e));
+})();
+
+// review dots
+(() => {
+  const rail = $("#rail"), cards = [...rail.children], dots = $("#dots");
+  dots.innerHTML = cards.map(() => "<i></i>").join("");
+  const set = () => { const c = rail.scrollLeft + rail.clientWidth / 2; let best = 0, bd = 1e9; cards.forEach((k, i) => { const m = Math.abs(k.offsetLeft + k.offsetWidth / 2 - c); if (m < bd) { bd = m; best = i; } }); [...dots.children].forEach((d, i) => d.classList.toggle("on", i === best)); };
+  rail.addEventListener("scroll", () => requestAnimationFrame(set), { passive: true }); set();
+})();
+
+// sticky bar once the hero CTAs leave the screen
+(() => {
+  const s = $("#sticky"), t = $("#heroCtas");
+  new IntersectionObserver(([e]) => s.classList.toggle("show", !e.isIntersecting && e.boundingClientRect.top < 0)).observe(t);
+})();
+
+// swatches (work with or without WebGL)
+window.__setShade = null;
+$$(".sw").forEach(b => b.addEventListener("click", () => {
+  $$(".sw").forEach(o => o.setAttribute("aria-pressed", o === b));
+  document.documentElement.style.setProperty("--polish", b.dataset.pearl ? "#D8C9CF" : b.dataset.c);
+  $("#shadeName").textContent = b.dataset.n;
+  $("#hint").style.opacity = 0;
+  if (window.__setShade) window.__setShade(b.dataset.c, !!b.dataset.pearl);
+}));
+</script>
+
+<script type="module">
+const stage = document.getElementById("stage"), canvas = document.getElementById("gl");
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function fallback() { document.documentElement.classList.add("no3d"); }
+if (reduce) fallback();
+else {
+  try { await run(); } catch (e) { console.warn("3D off:", e && e.message); fallback(); }
+}
+async function run() {
+  const THREE = await import("three");
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
+  if (!renderer.getContext()) throw new Error("no webgl");
+  let dpr = Math.min(devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(dpr);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.95;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 50);
+  camera.position.set(0, 0.25, 7.6); camera.lookAt(0, 0.05, 0);
+
+  // studio environment from emissive panels (soft warm boxes, one cool rim)
+  const env = new THREE.Scene();
+  const panel = (w, h, c, x, y, z, ry) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: c, side: THREE.DoubleSide })); m.position.set(x, y, z); m.rotation.y = ry; m.lookAt(0, 0, 0); env.add(m); };
+  env.background = new THREE.Color("#3a2a24");
+  panel(6, 4, new THREE.Color(6, 5.4, 4.8), -4, 3, 3);
+  panel(3, 6, new THREE.Color(3.2, 3.4, 4), 5, 1, -1);
+  panel(8, 1.2, new THREE.Color(5, 4.4, 4), 0, 5, -2);
+  panel(5, 3, new THREE.Color(1.6, 1.2, 1.1), 0, -3, 4);
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(env, 0.04).texture;
+
+  const key = new THREE.DirectionalLight("#fff3e6", 1.4); key.position.set(-3, 4, 5); scene.add(key);
+
+  const bottle = new THREE.Group(); scene.add(bottle);
+  // profile of a squat, rounded bottle (x = radius, y = height)
+  const prof = [[0,-1.05],[0.5,-1.05],[0.66,-1.0],[0.74,-0.86],[0.76,-0.5],[0.76,0.15],[0.72,0.38],[0.55,0.55],[0.3,0.64],[0.26,0.72],[0.26,0.86]];
+  const v2 = a => a.map(([x, y]) => new THREE.Vector2(x, y));
+  const glass = new THREE.Mesh(new THREE.LatheGeometry(v2(prof), 64),
+    new THREE.MeshPhysicalMaterial({ color: "#ffffff", roughness: 0.03, metalness: 0, transparent: true, opacity: 0.13, clearcoat: 1, clearcoatRoughness: 0.02, envMapIntensity: 1.5, depthWrite: false }));
+  glass.renderOrder = 2;
+  const inner = prof.filter(([, y]) => y <= 0.42).map(([x, y]) => [Math.max(0, x - 0.07), y + 0.05]); inner.push([0, 0.42]);
+  const lacMat = new THREE.MeshPhysicalMaterial({ color: "#8C2340", roughness: 0.22, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.03, iridescence: 0, iridescenceIOR: 1.6, envMapIntensity: 0.7 });
+  const lac = new THREE.Mesh(new THREE.LatheGeometry(v2(inner), 64), lacMat);
+  bottle.add(lac, glass);
+  // cap: champagne metal with fine ridges + a dark collar
+  const capMat = new THREE.MeshStandardMaterial({ color: "#C9A46A", metalness: 1, roughness: 0.28, envMapIntensity: 1.3 });
+  const capProf = []; for (let i = 0; i <= 30; i++) { const y = 0.9 + i * 0.026; capProf.push(new THREE.Vector2(0.34 + (i % 2 ? 0.006 : 0) + (i === 30 ? -0.04 : 0), y)); }
+  capProf.unshift(new THREE.Vector2(0, 0.9)); capProf.push(new THREE.Vector2(0, 1.68));
+  const cap = new THREE.Mesh(new THREE.LatheGeometry(capProf, 64), capMat);
+  const collar = new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.36, 0.08, 64), new THREE.MeshStandardMaterial({ color: "#2A1C17", metalness: 0.3, roughness: 0.2 }));
+  collar.position.y = 0.88;
+  bottle.add(cap, collar);
+  bottle.position.y = -0.2;
+
+  // floating lacquer drops
+  const drops = [];
+  const dropGeo = new THREE.SphereGeometry(1, 32, 24);
+  [[-1.55, 0.7, 0.2, 0.17], [1.45, 1.15, -0.4, 0.12], [1.25, -0.8, 0.6, 0.2], [-1.25, -1.0, -0.5, 0.11], [0.2, 1.75, -0.8, 0.09]].forEach(([x, y, z, s], i) => {
+    const m = new THREE.Mesh(dropGeo, lacMat); m.scale.set(s, s * 1.08, s); m.position.set(x, y, z); m.userData = { x, y, z, p: i * 1.7 }; scene.add(m); drops.push(m);
+  });
+
+  // soft contact shadow
+  const sc = document.createElement("canvas"); sc.width = sc.height = 128;
+  const g = sc.getContext("2d"), gr = g.createRadialGradient(64, 64, 4, 64, 64, 64); gr.addColorStop(0, "rgba(42,28,23,.45)"); gr.addColorStop(1, "rgba(42,28,23,0)"); g.fillStyle = gr; g.fillRect(0, 0, 128, 128);
+  const shadow = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.0), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(sc), transparent: true, depthWrite: false }));
+  shadow.rotation.x = -Math.PI / 2; shadow.position.y = -1.3; scene.add(shadow);
+
+  // shade control from the swatches
+  const target = new THREE.Color("#8C2340"); let iriTarget = 0;
+  window.__setShade = (hex, pearl) => { target.set(hex); iriTarget = pearl ? 1 : 0; spinBoost = 2.2; };
+
+  // drag to spin
+  let rotY = -0.5, vel = 0.35, dragging = false, lastX = 0, spinBoost = 0, tiltX = 0;
+  canvas.addEventListener("pointerdown", e => { dragging = true; lastX = e.clientX; canvas.setPointerCapture(e.pointerId); document.getElementById("hint").style.opacity = 0; });
+  canvas.addEventListener("pointermove", e => { if (!dragging) return; const dx = e.clientX - lastX; lastX = e.clientX; vel = dx * 0.012 / (1 / 60); rotY += dx * 0.012; });
+  const up = () => { dragging = false; };
+  canvas.addEventListener("pointerup", up); canvas.addEventListener("pointercancel", up);
+
+  function size() { const r = stage.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.fov = r.width < 600 ? 32 : 28; camera.updateProjectionMatrix(); }
+  size(); addEventListener("resize", size);
+
+  let visible = true, running = true, last = performance.now(), slow = 0;
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(stage);
+  document.addEventListener("visibilitychange", () => { running = !document.hidden; last = performance.now(); });
+  const clock = { t: 0 };
+  function frame(now) {
+    requestAnimationFrame(frame);
+    if (!visible || !running) { last = now; return; }
+    const dt = Math.min((now - last) / 1000, 0.05); last = now; clock.t += dt;
+    if (dt > 0.034 && dpr > 1.25) { if (++slow > 40) { dpr = 1.25; renderer.setPixelRatio(dpr); size(); } } else slow = Math.max(0, slow - 1);
+    if (!dragging) { vel += (0.35 - vel) * Math.min(1, dt * 1.6); rotY += (vel + spinBoost) * dt; }
+    spinBoost *= Math.pow(0.15, dt);
+    bottle.rotation.y = rotY;
+    tiltX += ((dragging ? 0.08 : 0.02 * Math.sin(clock.t * 0.7)) - tiltX) * dt * 3;
+    bottle.rotation.x = tiltX; bottle.rotation.z = 0.05 * Math.sin(clock.t * 0.6);
+    bottle.position.y = -0.2 + 0.06 * Math.sin(clock.t * 1.1);
+    lacMat.color.lerp(target, Math.min(1, dt * 4));
+    lacMat.iridescence += (iriTarget - lacMat.iridescence) * Math.min(1, dt * 4);
+    drops.forEach(m => { const u = m.userData; m.position.set(u.x + 0.08 * Math.sin(clock.t * 0.8 + u.p), u.y + 0.14 * Math.sin(clock.t * 1.2 + u.p), u.z); m.rotation.y += dt; });
+    renderer.render(scene, camera);
+  }
+  requestAnimationFrame(frame);
+}
+</script>
+</body>
+</html>

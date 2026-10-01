@@ -19,6 +19,14 @@
     {
       "source": "/preview/a-shade-darker",
       "destination": "/preview/a-shade-darker/index.html"
+    },
+    {
+      "source": "/preview/my-nail-spa",
+      "destination": "/preview/my-nail-spa/index.html"
+    },
+    {
+      "source": "/preview/banana-barts",
+      "destination": "/preview/banana-barts/index.html"
     }
   ],
   "headers": [
