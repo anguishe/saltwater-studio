@@ -21,6 +21,10 @@
       "destination": "/preview/a-shade-darker/index.html"
     },
     {
+      "source": "/preview/a-shade-darker-v2",
+      "destination": "/preview/a-shade-darker-v2/index.html"
+    },
+    {
       "source": "/preview/my-nail-spa",
       "destination": "/preview/my-nail-spa/index.html"
     },
