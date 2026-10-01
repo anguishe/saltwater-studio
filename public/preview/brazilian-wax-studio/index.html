@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ponytail: private preview for the owner, kept out of search until she says go -->
+<meta name="robots" content="noindex, nofollow">
+<title>Brazilian Wax Studio | Clean, calm waxing on Harbor Blvd, Destin</title>
+<meta name="description" content="Brazilian Wax Studio, a women-owned waxing studio at 625 Harbor Blvd in Destin. Rated 4.8 from 129 Google reviews.">
+<meta name="theme-color" content="#2B1E2A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232B1E2A%22/%3E%3Cpath d=%22M16 6c4 6 7 9.5 7 13a7 7 0 0 1-14 0c0-3.5 3-7 7-13z%22 fill=%22%23D9A55B%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<style>
+:root{
+  --cream:#F6EFE6; --sand:#EADBC8; --shell:#FBF7F1; --clay:#A9573C; --clay-2:#8E4430;
+  --honey:#D9A55B; --plum:#2B1E2A; --plum-2:#3D2B3B; --ink:#2B1E2A; --muted:#5E4D58; --line:#DCCBB9;
+  --serif:"Instrument Serif",Georgia,serif; --sans:"Hanken Grotesk",system-ui,sans-serif;
+  --r:20px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:1.0625rem/1.65 var(--sans);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:6px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+p{margin:0 0 1rem;max-width:58ch}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:.98;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,7.5vw,4.2rem);margin-bottom:1.1rem}
+h3{font-size:1.65rem;line-height:1.1}
+em{font-style:italic}
+.kick{font:700 .8rem/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--clay-2);margin:0 0 .9rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* preview bar */
+.preview{background:var(--plum);color:var(--shell);font-size:.95rem;line-height:1.45}
+.preview .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.preview p{margin:0;max-width:none}
+.preview a{font-weight:700;color:var(--honey)}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--cream) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:62px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand b{font:400 1.45rem/1 var(--serif)}
+.brand small{display:block;font:700 .66rem/1.2 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.7rem 1.25rem;border-radius:999px;font:700 1rem/1 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease),background .2s,box-shadow .2s}
+.pill:active{transform:scale(.97)}
+.pill.solid{background:var(--plum);color:var(--shell);box-shadow:0 10px 24px -12px rgba(43,30,42,.6)}
+.pill.solid:hover{background:var(--plum-2)}
+.pill.ghost{background:transparent;color:var(--plum);box-shadow:inset 0 0 0 1.5px var(--plum)}
+.pill.small{min-height:44px;padding:.55rem 1rem;font-size:.95rem}
+
+/* hero */
+.hero{position:relative;padding:2.2rem 0 0;overflow:hidden}
+.hero h1{font-size:clamp(3.4rem,16vw,7.4rem);line-height:.9}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(105%);animation:rise 1s var(--ease) forwards}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .ln:nth-child(3)>span{animation-delay:.24s}
+.hero h1 em{color:var(--clay)}
+@keyframes rise{to{transform:none}}
+.lead{font-size:1.15rem;color:var(--muted);margin:1.2rem 0 1.2rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.3rem}
+.chip{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .85rem;border-radius:999px;background:var(--shell);border:1px solid var(--line);font:600 .95rem/1.2 var(--sans)}
+.chip .star{color:var(--clay)}
+.dot{width:9px;height:9px;border-radius:50%;background:#3E8E5A;box-shadow:0 0 0 4px rgba(62,142,90,.18)}
+.dot.off{background:#9A8B92;box-shadow:0 0 0 4px rgba(154,139,146,.2)}
+.ctas{display:flex;flex-wrap:wrap;gap:.6rem}
+.stage{position:relative;height:min(58vh,480px);margin-top:1.2rem;touch-action:pan-y}
+.stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}
+.stage::before{content:"";position:absolute;left:50%;top:50%;width:min(88vw,520px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(217,165,91,.32),rgba(217,165,91,0) 70%)}
+.stage::after{content:"";position:absolute;left:50%;bottom:7%;width:min(52vw,300px);height:26px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(43,30,42,.22),transparent)}
+.poster{position:absolute;inset:0;display:none;align-items:center;justify-content:center}
+.no3d .poster{display:flex}
+.poster svg{width:min(66vw,340px);height:auto}
+.hint{position:absolute;left:50%;bottom:.4rem;transform:translateX(-50%);font:600 .85rem/1 var(--sans);letter-spacing:.06em;color:var(--muted);white-space:nowrap;transition:opacity .5s}
+.hint.gone{opacity:0}
+
+/* marquee */
+.strip{background:var(--plum);color:var(--shell);overflow:hidden;padding:1rem 0;margin-top:1rem}
+.track{display:flex;gap:2.4rem;width:max-content;animation:slide 38s linear infinite;font:400 1.6rem/1 var(--serif);white-space:nowrap}
+.track span{display:inline-flex;align-items:center;gap:2.4rem}
+.track span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--honey)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:4.5rem 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* what to expect */
+.steps{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1rem}
+.step{position:relative;background:var(--shell);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.3rem 1.2rem 4.4rem}
+.step .n{position:absolute;left:1.2rem;top:1.15rem;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;background:var(--sand);font:400 1.35rem/1 var(--serif);color:var(--clay-2)}
+.step h3{margin-bottom:.35rem}
+.step q{display:block;color:var(--muted);quotes:"\201C" "\201D"}
+.src{display:block;margin-top:.4rem;font:600 .82rem/1.3 var(--sans);letter-spacing:.04em;color:var(--muted)}
+
+/* bento */
+.bento{display:grid;gap:.8rem;grid-template-columns:1fr 1fr;margin-top:2rem}
+.tile{background:var(--shell);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;min-height:9.5rem;display:flex;flex-direction:column;justify-content:space-between}
+.tile.dark{background:var(--plum);color:var(--shell);border-color:var(--plum)}
+.tile.honey{background:var(--honey);border-color:var(--honey)}
+.tile.wide{grid-column:span 2}
+.big{font:400 clamp(3rem,13vw,4.4rem)/.9 var(--serif)}
+.tile small{font:600 .9rem/1.35 var(--sans)}
+.tile.dark small{color:#E9DCCB}
+.tile q{font:400 1.45rem/1.2 var(--serif);quotes:"\201C" "\201D"}
+
+/* reviews */
+.rail{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.25rem 1rem;margin:1.6rem -1.25rem 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(84%,25rem);scroll-snap-align:center;background:var(--shell);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;display:flex;flex-direction:column;gap:.9rem}
+.card .stars{color:var(--clay);letter-spacing:.15em}
+.card q{font:400 1.35rem/1.3 var(--serif);quotes:"\201C" "\201D"}
+.card .who{margin-top:auto;font:600 .85rem/1.3 var(--sans);color:var(--muted)}
+.dots{display:flex;gap:.45rem;justify-content:center;margin-top:.4rem}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:background .3s,width .3s}
+.dots i.on{background:var(--clay);width:20px;border-radius:5px}
+
+/* planner */
+.plan{background:var(--plum);color:var(--shell);border-radius:28px;padding:1.6rem 1.25rem;margin-top:2rem}
+.plan h3{color:var(--shell)}
+.grp{margin:1.2rem 0 0}
+.grp p{margin:0 0 .55rem;font:700 .82rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#E9DCCB}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem}
+.opt{min-height:44px;padding:.55rem 1rem;border-radius:999px;border:1.5px solid rgba(246,239,230,.35);background:transparent;color:var(--shell);font:600 1rem/1 var(--sans);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.opt[aria-pressed="true"]{background:var(--honey);border-color:var(--honey);color:var(--plum)}
+.ticket{margin:1.4rem 0 1rem;background:var(--shell);color:var(--ink);border-radius:18px;padding:1.1rem 1.2rem;font:400 1.4rem/1.3 var(--serif);min-height:5.5rem}
+.plan .row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.plan .pill.solid{background:var(--honey);color:var(--plum)}
+.plan .pill.ghost{color:var(--shell);box-shadow:inset 0 0 0 1.5px rgba(246,239,230,.6)}
+.note{font-size:.95rem;color:#E9DCCB;margin:.8rem 0 0}
+
+/* visit */
+.visit{display:grid;gap:1.2rem;margin-top:2rem}
+.map{position:relative;border-radius:var(--r);overflow:hidden;background:var(--sand);aspect-ratio:4/3;border:1px solid var(--line)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:54%;top:46%;transform:translate(-50%,-100%)}
+.pin::after{content:"";position:absolute;left:50%;bottom:-6px;width:14px;height:14px;transform:translateX(-50%);border-radius:50%;background:var(--clay);animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{from{box-shadow:0 0 0 0 rgba(169,87,60,.5)}to{box-shadow:0 0 0 22px rgba(169,87,60,0)}}
+.addr{font:400 1.8rem/1.1 var(--serif);margin:0 0 .6rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0 1.2rem}
+td{padding:.55rem 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+tr.today td{color:var(--clay-2);font-weight:700}
+
+/* closing */
+.close{text-align:center}
+.close h2{font-size:clamp(3rem,13vw,5.6rem)}
+.close .ctas{justify-content:center}
+footer{padding:2rem 0 7rem;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+
+/* sticky bar */
+.bar{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom));z-index:40;display:flex;gap:.5rem;padding:.45rem;border-radius:999px;background:color-mix(in srgb,var(--plum) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 40px -16px rgba(43,30,42,.7);transform:translateY(160%);transition:transform .5s var(--ease)}
+.bar.on{transform:none}
+.bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:.45rem;min-height:48px;border-radius:999px;color:var(--shell);text-decoration:none;font:700 1rem/1 var(--sans)}
+.bar a.call{background:var(--honey);color:var(--plum)}
+
+@media (max-width:859px){
+  /* phones: the drop leads, so the first screen is the moment, then the words */
+  .hero .wrap{display:flex;flex-direction:column}
+  .stage{order:-1;height:34vh;min-height:230px;max-height:320px;margin:-.6rem 0 .2rem}
+  .hero h1{font-size:clamp(3.2rem,15vw,5rem)}
+}
+@media (min-width:860px){
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center}
+  .stage{height:560px;margin-top:0}
+  .steps{grid-template-columns:1fr 1fr}
+  .bento{grid-template-columns:repeat(4,1fr)}
+  .tile.wide{grid-column:span 2}
+  .plan{padding:2.4rem}
+  .visit{grid-template-columns:1.1fr 1fr;align-items:start}
+  .bar{left:auto;right:1.5rem;width:22rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 .ln>span{transform:none}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview Saltwater Studio built for Brazilian Wax Studio. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a>.</p></div>
+</div>
+
+<header id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Brazilian Wax Studio, top of page">
+      <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#2B1E2A"/><path d="M16 6c4 6 7 9.5 7 13a7 7 0 0 1-14 0c0-3.5 3-7 7-13z" fill="#D9A55B"/><path d="M13 19.5a3 3 0 0 0 3 3" stroke="#FBF7F1" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      <span><b>Brazilian Wax Studio</b><small>Harbor Blvd · Destin</small></span>
+    </a>
+    <a class="pill solid small" data-tel href="#">Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-top:2.2rem;padding-bottom:0">
+  <div class="wrap">
+    <div>
+      <p class="kick">Brazilian waxing · Women-owned · Destin</p>
+      <h1><span class="ln"><span>Clean.</span></span><span class="ln"><span>Calm.</span></span><span class="ln"><span><em>Welcoming.</em></span></span></h1>
+      <p class="lead">A women-owned waxing studio on Harbor Blvd. Those three words come straight from a customer's review.</p>
+      <div class="chips">
+        <span class="chip"><span class="star" aria-hidden="true">★</span> 4.8 · 129 Google reviews</span>
+        <span class="chip" id="openChip"><span class="dot" aria-hidden="true"></span><span id="openTxt">Checking hours…</span></span>
+      </div>
+      <div class="ctas" id="heroCtas">
+        <a class="pill solid" data-tel href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to book</a>
+        <a class="pill ghost" href="#plan">Plan your visit</a>
+      </div>
+    </div>
+    <div class="stage" id="stage" aria-label="A slow drop of warm wax that ripples when you touch it" role="img">
+      <div class="poster" aria-hidden="true">
+        <svg viewBox="0 0 300 300"><defs><radialGradient id="pg" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#FBE6BF"/><stop offset=".45" stop-color="#D9A55B"/><stop offset="1" stop-color="#8E4430"/></radialGradient></defs><path d="M150 30c55 0 112 44 112 112 0 66-46 128-112 128S38 214 38 150C38 80 95 30 150 30z" fill="url(#pg)"/><ellipse cx="112" cy="92" rx="34" ry="18" fill="#FFF7E8" opacity=".55" transform="rotate(-28 112 92)"/><circle cx="258" cy="62" r="14" fill="url(#pg)"/><circle cx="48" cy="250" r="9" fill="url(#pg)"/></svg>
+      </div>
+      <span class="hint" id="hint">Touch the drop</span>
+    </div>
+  </div>
+  <div class="strip" aria-hidden="true"><div class="track"><span>Clean</span><span>Calm</span><span>Welcoming</span><span>Every step explained</span><span>Quick and thorough</span><span>No irritation</span><span>Clean</span><span>Calm</span><span>Welcoming</span><span>Every step explained</span><span>Quick and thorough</span><span>No irritation</span></div></div>
+</section>
+
+<section id="expect">
+  <div class="wrap">
+    <p class="kick reveal">Your first visit</p>
+    <h2 class="reveal">What to expect, in <em>customers'</em> words.</h2>
+    <p class="reveal">Nervous about a first Brazilian? Here is how the people who've been describe it.</p>
+    <ol class="steps">
+      <li class="step reveal"><span class="n">1</span><h3>You walk in</h3><q>From the moment I walked in, everything was clean, calm, and welcoming.</q><span class="src">Google review · about 8 months ago</span></li>
+      <li class="step reveal"><span class="n">2</span><h3>Every step is explained</h3><q>…made me feel comfortable the entire time, explaining each step and checking in with me.</q><span class="src">Google review · about 8 months ago</span></li>
+      <li class="step reveal"><span class="n">3</span><h3>Quick, and thorough</h3><q>The service was quick, thorough, and much more comfortable than I expected.</q><span class="src">Google review · about 8 months ago</span></li>
+      <li class="step reveal"><span class="n">4</span><h3>After</h3><q>The results were amazing—super smooth with no irritation.</q><span class="src">Google review · about 8 months ago</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="proof" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick reveal">The short version</p>
+    <h2 class="reveal">Small studio. <em>Real</em> reviews.</h2>
+    <div class="bento">
+      <div class="tile dark reveal"><span class="big">4.8</span><small>stars on Google</small></div>
+      <div class="tile reveal"><span class="big">129</span><small>Google reviews</small></div>
+      <div class="tile honey wide reveal"><q>Very clean and professional.</q><small>Google review · about 7 months ago</small></div>
+      <div class="tile wide reveal"><span class="big" style="font-size:clamp(2.2rem,9vw,3rem)">Women-owned</span><small>As listed on their Google profile</small></div>
+      <div class="tile reveal"><span class="big" style="font-size:clamp(2.2rem,9vw,3rem)">Harbor Blvd</span><small>Destin, FL</small></div>
+      <div class="tile dark reveal"><span class="big" style="font-size:clamp(2rem,8vw,2.8rem)" id="todayBig">Today</span><small id="todaySmall">Hours below</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick reveal">Ask the regulars</p>
+    <h2 class="reveal">Straight from <em>Google.</em></h2>
+    <div class="rail" id="rail">
+      <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><q>I had an excellent experience at this studio.. From the moment I walked in, everything was clean, calm, and welcoming.</q><span class="who">Google review · about 8 months ago</span></article>
+      <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><q>Super friendly, fast, and thorough. … Clean space, great energy, and flawless results.</q><span class="who">Google review · about 8 months ago</span></article>
+      <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><q>Highly recommend this place! Very clean and professional. … very informative about the service</q><span class="who">Google review · about 7 months ago</span></article>
+      <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><q>As a former waxing specialist and salon owner, I definitely recommend … The Brazilian Wax Studio, Destin. She is thorough, efficient, knowledgeable and kind.</q><span class="who">Google review · about 11 months ago</span></article>
+      <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><q>She makes a not so pleasant appointment very tolerable. Thanks for that.</q><span class="who">Google review · about 11 months ago</span></article>
+      <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><q>The service was quick, thorough, and much more comfortable than I expected. … I will definitely be returning</q><span class="who">Google review · about 8 months ago</span></article>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="plan" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick reveal">Plan your visit</p>
+    <h2 class="reveal">Know what to say <em>before</em> you call.</h2>
+    <div class="plan reveal">
+      <h3>Three taps, then call.</h3>
+      <div class="grp"><p>Is this your first Brazilian?</p><div class="opts" data-group="first" data-single><button class="opt" aria-pressed="true" data-v="first">First time</button><button class="opt" aria-pressed="false" data-v="again">I've been before</button></div></div>
+      <div class="grp"><p>Which day?</p><div class="opts" data-group="when" data-single id="dayOpts"></div></div>
+      <div class="grp"><p>What time works?</p><div class="opts" data-group="time" data-single><button class="opt" aria-pressed="false" data-v="morning">Morning</button><button class="opt" aria-pressed="false" data-v="midday">Midday</button><button class="opt" aria-pressed="false" data-v="after work">After work</button><button class="opt" aria-pressed="true" data-v="any">Any time</button></div></div>
+      <div class="ticket" id="ticket" aria-live="polite"></div>
+      <div class="row">
+        <a class="pill solid" data-tel href="#">Call to book</a>
+        <button class="pill ghost" id="copyBtn" type="button">Copy</button>
+        <a class="pill ghost" id="smsBtn" href="#" hidden>Text it</a>
+      </div>
+      <p class="note" id="copied">First time? Reviewers say each step gets explained and you're checked in with the whole way.</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <p class="kick reveal">Find the studio</p>
+    <h2 class="reveal">On Harbor Blvd, <em>Destin.</em></h2>
+    <div class="visit">
+      <div class="map reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#EADBC8"/><path d="M0 232c80-14 150-6 220 4s130 10 180-6v70H0z" fill="#C9D9D6"/><path d="M0 248c90-12 160-2 240 8s120 6 160-6" stroke="#B4CAC6" stroke-width="2" fill="none"/><path d="M-10 150C80 136 170 140 250 132s110-10 170-16" stroke="#FBF7F1" stroke-width="22" fill="none" stroke-linecap="round"/><path d="M-10 150C80 136 170 140 250 132s110-10 170-16" stroke="#E2CDB2" stroke-width="2" fill="none" stroke-dasharray="10 12"/><g fill="#DFCDB6"><rect x="40" y="70" width="54" height="40" rx="6"/><rect x="118" y="62" width="70" height="48" rx="6"/><rect x="246" y="58" width="60" height="44" rx="6"/><rect x="60" y="168" width="64" height="36" rx="6"/><rect x="290" y="150" width="70" height="42" rx="6"/></g><text x="20" y="128" font-family="Hanken Grotesk,sans-serif" font-size="13" font-weight="700" fill="#5E4D58" letter-spacing="2">HARBOR BLVD</text><text x="300" y="282" font-family="Instrument Serif,serif" font-size="18" fill="#5E7C78">Destin Harbor</text></svg>
+        <span class="pin"><svg width="40" height="50" viewBox="0 0 40 50"><path d="M20 49S4 31 4 19a16 16 0 0 1 32 0c0 12-16 30-16 30z" fill="#2B1E2A"/><path d="M20 10c3 4.5 5 7 5 9.4a5 5 0 0 1-10 0c0-2.4 2-4.9 5-9.4z" fill="#D9A55B"/></svg></span>
+      </div>
+      <div class="reveal">
+        <p class="addr" id="addr"></p>
+        <p style="margin:0 0 .4rem"><span class="chip" id="openChip2"><span class="dot" aria-hidden="true"></span><span id="openTxt2"></span></span></p>
+        <table><tbody id="hrs"></tbody></table>
+        <div class="ctas"><a class="pill solid" data-dir href="#">Directions</a><a class="pill ghost" data-tel href="#" id="telTxt">Call</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <h2 class="reveal">Clean. Calm. <em>Booked.</em></h2>
+    <p class="reveal" style="margin:0 auto 1.4rem">Call the studio and ask for the next opening.</p>
+    <div class="ctas reveal"><a class="pill solid" data-tel href="#">Call to book</a><a class="pill ghost" data-dir href="#">Directions</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>© 2026 Brazilian Wax Studio. Preview design by Saltwater Studio.</p></div></footer>
+
+<nav class="bar" id="bar" aria-label="Quick actions">
+  <a class="call" data-tel href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to book</a>
+  <a data-dir href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Directions</a>
+</nav>
+
+<script>
+// One place to change the facts (see RECON.md). Address = Google's; Yelp shows 127 Harbor Blvd Ste 7A — confirm with the owner.
+const SHOP = {
+  name: "Brazilian Wax Studio",
+  phone: "+18502409040", phoneDisplay: "(850) 240-9040",
+  textable: false, // flip once she confirms the line takes texts
+  address: "625 Harbor Blvd #4.5, Destin, FL 32541",
+  // 0=Sun … 6=Sat, [open, close] 24h decimal; null = closed (Google Maps 10/01)
+  hours: [null, null, [8.5,19.5], [8.5,19.5], [8.5,19.5], [8.5,19.5], [8.5,16]]
+};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt = h => { const hr = Math.floor(h), m = Math.round((h - hr) * 60), ap = hr >= 12 ? "PM" : "AM", h12 = ((hr + 11) % 12) + 1; return h12 + (m ? ":" + String(m).padStart(2, "0") : "") + " " + ap; };
+
+$$("[data-tel]").forEach(a => a.href = "tel:" + SHOP.phone);
+$$("[data-dir]").forEach(a => { a.href = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(SHOP.name + ", " + SHOP.address); a.target = "_blank"; a.rel = "noopener"; });
+$("#addr").textContent = SHOP.address.replace(", Destin", ", Destin");
+$("#telTxt").textContent = "Call " + SHOP.phoneDisplay;
+
+function now() {
+  const p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return { d: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday")), h: (+g("hour") % 24) + (+g("minute")) / 60 };
+}
+function status() {
+  const { d, h } = now(), t = SHOP.hours[d];
+  if (t && h >= t[0] && h < t[1]) return { open: true, txt: "Open now · until " + fmt(t[1]) };
+  for (let i = 0; i < 8; i++) {
+    const dd = (d + i) % 7, x = SHOP.hours[dd];
+    if (!x) continue;
+    if (i === 0 && h < x[0]) return { open: false, txt: "Closed · opens " + fmt(x[0]) };
+    if (i > 0) return { open: false, txt: "Closed · opens " + (i === 1 ? "tomorrow" : DAYS[dd].slice(0, 3)) + " " + fmt(x[0]) };
+  }
+  return { open: false, txt: "Closed" };
+}
+function paint() {
+  const s = status();
+  ["", "2"].forEach(k => { $("#openTxt" + k).textContent = s.txt; $("#openChip" + k + " .dot").classList.toggle("off", !s.open); });
+  const { d } = now(), t = SHOP.hours[d];
+  $("#todayBig").textContent = t ? "Until " + fmt(t[1]) : "Closed today";
+  $("#todaySmall").textContent = t ? DAYS[d] + "'s hours, " + fmt(t[0]) + " – " + fmt(t[1]) : "Open Tuesday to Saturday";
+}
+paint(); setInterval(paint, 60000);
+
+(() => {
+  const { d } = now(), order = [1,2,3,4,5,6,0];
+  $("#hrs").innerHTML = order.map(i => { const t = SHOP.hours[i]; return `<tr class="${i === d ? "today" : ""}"><td>${DAYS[i]}${i === d ? " · today" : ""}</td><td>${t ? fmt(t[0]) + " – " + fmt(t[1]) : "Closed"}</td></tr>`; }).join("");
+})();
+
+// visit planner: builds what to say on the phone
+(() => {
+  const { d } = now(), days = [];
+  for (let i = 0; i < 8 && days.length < 4; i++) { const dd = (d + i) % 7; if (SHOP.hours[dd]) days.push({ v: i === 0 ? "today" : i === 1 ? "tomorrow" : DAYS[dd], dd }); }
+  days.push({ v: "whenever works", dd: -1 });
+  $("#dayOpts").innerHTML = days.map((o, i) => `<button class="opt" aria-pressed="${i === days.length - 1}" data-v="${o.v}" data-dd="${o.dd}">${o.v[0].toUpperCase() + o.v.slice(1)}</button>`).join("");
+  const pick = g => ($$(`[data-group="${g}"] .opt[aria-pressed="true"]`)[0] || {}).dataset || {};
+  function build() {
+    const first = pick("first").v === "first", day = pick("when"), time = pick("time").v || "any";
+    // "after work" only exists on long days; Saturday closes at 4
+    const aw = $('[data-group="time"] [data-v="after work"]'), dd = +day.dd;
+    const short = dd >= 0 && SHOP.hours[dd] && SHOP.hours[dd][1] < 17;
+    aw.disabled = short; aw.style.opacity = short ? .4 : 1;
+    let t = time; if (short && t === "after work") { t = "any"; $$('[data-group="time"] .opt').forEach(o => o.setAttribute("aria-pressed", o.dataset.v === "any")); }
+    const when = day.v === "whenever works" || !day.v ? "whenever you have an opening" : (day.v === "today" || day.v === "tomorrow" ? day.v : "on " + day.v);
+    const tt = t === "any" ? "" : t === "after work" ? ", after work if you have it" : ", in the " + (t === "midday" ? "middle of the day" : t);
+    const msg = `Hi, I'd like to book a Brazilian wax${first ? ". It's my first time" : ""}. ${when[0].toUpperCase() + when.slice(1)}${tt}.`;
+    $("#ticket").textContent = msg;
+    const sms = $("#smsBtn");
+    if (SHOP.textable) { sms.hidden = false; sms.href = `sms:${SHOP.phone}&body=${encodeURIComponent(msg)}`; }
+    return msg;
+  }
+  $$(".opts").forEach(g => g.addEventListener("click", e => {
+    const b = e.target.closest(".opt"); if (!b || b.disabled) return;
+    g.querySelectorAll(".opt").forEach(o => o.setAttribute("aria-pressed", o === b));
+    build();
+  }));
+  $("#copyBtn").addEventListener("click", async () => {
+    const msg = build();
+    try { await navigator.clipboard.writeText(msg); $("#copied").textContent = "Copied. Read it off when they pick up."; }
+    catch { $("#copied").textContent = "Select the text above to copy it."; }
+  });
+  build();
+})();
+
+// reviews dots
+(() => {
+  const rail = $("#rail"), cards = [...rail.children], dots = $("#dots");
+  dots.innerHTML = cards.map(() => "<i></i>").join("");
+  const set = () => { const i = Math.round(rail.scrollLeft / (cards[0].offsetWidth + 14)); [...dots.children].forEach((d, k) => d.classList.toggle("on", k === Math.min(i, cards.length - 1))); };
+  rail.addEventListener("scroll", set, { passive: true }); set();
+})();
+
+// reveals, header, sticky bar
+(() => {
+  const els = $$(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  els.forEach(e => io.observe(e));
+  new IntersectionObserver(([e]) => $("#bar").classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0)).observe($("#heroCtas"));
+  addEventListener("scroll", () => $("#hdr").classList.toggle("scrolled", scrollY > 8), { passive: true });
+})();
+</script>
+
+<script type="module">
+// Signature moment: a slow drop of warm wax. Vertex noise breathes the surface; a touch dents it and sends a ripple.
+const stage = document.getElementById("stage"), hint = document.getElementById("hint");
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fallback = () => { stage.classList.add("no3d"); hint.classList.add("gone"); };
+let THREE;
+try { THREE = await import("three"); } catch { fallback(); }
+if (THREE) start();
+
+function start() {
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" }); }
+  catch { fallback(); return; }
+  if (!renderer.getContext()) { fallback(); return; }
+  let dpr = Math.min(devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(dpr);
+  renderer.setClearColor(0x000000, 0);
+  stage.prepend(renderer.domElement);
+  renderer.domElement.setAttribute("aria-hidden", "true");
+
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(32, 1, .1, 50);
+  cam.position.set(0, 0, 6.2);
+
+  const NOISE = `
+  vec3 m289(vec3 x){return x-floor(x*(1./289.))*289.;}vec4 m289(vec4 x){return x-floor(x*(1./289.))*289.;}
+  vec4 perm(vec4 x){return m289(((x*34.)+1.)*x);}vec4 tis(vec4 r){return 1.79284291400159-.85373472095314*r;}
+  float sn(vec3 v){const vec2 C=vec2(1./6.,1./3.);const vec4 D=vec4(0.,.5,1.,2.);
+  vec3 i=floor(v+dot(v,C.yyy));vec3 x0=v-i+dot(i,C.xxx);vec3 g=step(x0.yzx,x0.xyz);vec3 l=1.-g;
+  vec3 i1=min(g.xyz,l.zxy);vec3 i2=max(g.xyz,l.zxy);vec3 x1=x0-i1+C.xxx;vec3 x2=x0-i2+C.yyy;vec3 x3=x0-D.yyy;
+  i=m289(i);vec4 p=perm(perm(perm(i.z+vec4(0.,i1.z,i2.z,1.))+i.y+vec4(0.,i1.y,i2.y,1.))+i.x+vec4(0.,i1.x,i2.x,1.));
+  float n_=.142857142857;vec3 ns=n_*D.wyz-D.xzx;vec4 j=p-49.*floor(p*ns.z*ns.z);vec4 x_=floor(j*ns.z);vec4 y_=floor(j-7.*x_);
+  vec4 x=x_*ns.x+ns.yyyy;vec4 y=y_*ns.x+ns.yyyy;vec4 h=1.-abs(x)-abs(y);vec4 b0=vec4(x.xy,y.xy);vec4 b1=vec4(x.zw,y.zw);
+  vec4 s0=floor(b0)*2.+1.;vec4 s1=floor(b1)*2.+1.;vec4 sh=-step(h,vec4(0.));vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
+  vec3 p0=vec3(a0.xy,h.x);vec3 p1=vec3(a0.zw,h.y);vec3 p2=vec3(a1.xy,h.z);vec3 p3=vec3(a1.zw,h.w);
+  vec4 norm=tis(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
+  vec4 m=max(.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.);m=m*m;
+  return 42.*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));}`;
+
+  const uniforms = { uT: { value: 0 }, uAmp: { value: 1 }, uDent: { value: new THREE.Vector3(0, 0, 1) }, uDentAmt: { value: 0 }, uRip: { value: 0 } };
+  const mat = new THREE.ShaderMaterial({
+    uniforms,
+    vertexShader: NOISE + `
+      uniform float uT,uAmp,uDentAmt,uRip; uniform vec3 uDent;
+      varying vec3 vN; varying vec3 vV; varying float vH;
+      vec3 disp(vec3 p){
+        vec3 n=normalize(p);
+        float d=sn(n*.85+vec3(0.,uT*.1,uT*.06))*.13+sn(n*1.6-vec3(uT*.07,0.,uT*.04))*.025;
+        float a=distance(n,uDent);
+        d-=uDentAmt*exp(-a*a*7.)*.34;
+        d+=uDentAmt*sin(a*15.-uRip)*exp(-a*2.2)*.035;
+        return n*(1.+d*uAmp);
+      }
+      void main(){
+        vec3 p=disp(position);
+        vec3 n=normalize(position);
+        vec3 t=normalize(cross(n,abs(n.y)<.99?vec3(0.,1.,0.):vec3(1.,0.,0.)));
+        vec3 b=normalize(cross(n,t));
+        float e=.012;
+        vec3 pt=disp(normalize(position+t*e)), pb=disp(normalize(position+b*e));
+        vec3 nn=normalize(cross(pt-p,pb-p));
+        if(dot(nn,n)<0.) nn=-nn;
+        vec4 mv=modelViewMatrix*vec4(p,1.);
+        vN=normalize(normalMatrix*nn); vV=normalize(-mv.xyz); vH=p.y;
+        gl_Position=projectionMatrix*mv;
+      }`,
+    fragmentShader: `
+      varying vec3 vN; varying vec3 vV; varying float vH;
+      void main(){
+        vec3 N=normalize(vN), V=normalize(vV);
+        vec3 L=normalize(vec3(-.5,.8,.6)), L2=normalize(vec3(.7,-.2,.5));
+        float nl=max(dot(N,L),0.), nv=max(dot(N,V),0.);
+        vec3 deep=vec3(.55,.24,.15), mid=vec3(.85,.6,.32), light=vec3(.99,.88,.68);
+        vec3 col=mix(deep,mid,smoothstep(-.9,.6,vH));
+        col=mix(col,light,pow(nl,1.6)*.55);
+        float fres=pow(1.-nv,3.);
+        float back=pow(max(dot(-N,L2),0.),2.)*.35;
+        col+=vec3(1.,.72,.42)*back;
+        col=mix(col,vec3(1.,.95,.86),fres*.55);
+        vec3 H=normalize(L+V); float sp=pow(max(dot(N,H),0.),90.)*1.1;
+        vec3 H2=normalize(L2+V); float sp2=pow(max(dot(N,H2),0.),40.)*.25;
+        vec3 R=reflect(-V,N); float env=smoothstep(.2,.9,R.y)*.18;
+        col+=vec3(sp+sp2)+vec3(1.,.96,.9)*env;
+        gl_FragColor=vec4(col,1.);
+      }`
+  });
+
+  const blob = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 40), mat);
+  scene.add(blob);
+  const drops = [];
+  const smallGeo = new THREE.IcosahedronGeometry(1, 10);
+  [[1.55, .95, .17, .0], [-1.5, -1.05, .11, 2.1], [1.25, -1.3, .08, 4.0]].forEach(([x, y, s, ph]) => {
+    const m = new THREE.Mesh(smallGeo, mat); m.scale.setScalar(s); m.position.set(x, y, .2); m.userData = { x, y, ph }; scene.add(m); drops.push(m);
+  });
+
+  function size() {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    renderer.setSize(w, h, false); cam.aspect = w / h;
+    const fit = w / h < .9 ? 1.25 + (0.9 - w / h) * 1.2 : 1.1;
+    cam.position.z = 6.2 * fit; cam.updateProjectionMatrix();
+  }
+  size(); addEventListener("resize", size);
+
+  // touch: dent where the finger lands, drag to turn
+  let rotY = 0, rotX = 0, velY = .0025, drag = null, touched = false;
+  const toDir = (e) => {
+    const r = stage.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 2 - 1, y = -(((e.clientY - r.top) / r.height) * 2 - 1);
+    const v = new THREE.Vector3(x * cam.aspect * 1.4, y * 1.4, 1).normalize();
+    return v.applyQuaternion(blob.quaternion.clone().invert());
+  };
+  stage.addEventListener("pointerdown", e => {
+    uniforms.uDent.value.copy(toDir(e)); uniforms.uDentAmt.value = 1; uniforms.uRip.value = 0;
+    drag = { x: e.clientX, y: e.clientY };
+    if (!touched) { touched = true; hint.classList.add("gone"); }
+    if (navigator.vibrate) navigator.vibrate(8);
+  });
+  addEventListener("pointermove", e => { if (!drag) return; const dx = e.clientX - drag.x, dy = e.clientY - drag.y; velY = dx * .00025; rotX = Math.max(-.5, Math.min(.5, rotX + dy * .002)); drag = { x: e.clientX, y: e.clientY }; });
+  addEventListener("pointerup", () => drag = null);
+  addEventListener("pointercancel", () => drag = null);
+
+  // scroll eases the drop down and calms it
+  let sp = 0; addEventListener("scroll", () => { sp = Math.min(1, scrollY / (stage.offsetTop + stage.offsetHeight)); }, { passive: true });
+
+  let visible = true, running = false, last = performance.now(), t = 0, frames = 0, acc = 0;
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; kick(); }).observe(stage);
+  document.addEventListener("visibilitychange", kick);
+  function kick() { if (visible && !document.hidden && !running) { running = true; last = performance.now(); requestAnimationFrame(loop); } }
+
+  function loop(now) {
+    if (!visible || document.hidden) { running = false; return; }
+    const dt = Math.min(.05, (now - last) / 1000); last = now;
+    // adaptive resolution: if the phone is struggling, render fewer pixels
+    acc += dt; frames++;
+    if (acc > 2) { const fps = frames / acc; if (fps < 45 && dpr > 1.25) { dpr = 1.25; renderer.setPixelRatio(dpr); size(); } acc = 0; frames = 0; }
+    const speed = reduce ? 0 : 1;
+    t += dt * speed;
+    uniforms.uT.value = t;
+    uniforms.uDentAmt.value *= Math.pow(.18, dt);
+    uniforms.uRip.value += dt * 9;
+    uniforms.uAmp.value = 1 - sp * .45;
+    velY += (.0025 - velY) * dt * 1.5;
+    rotY += velY * speed * 60 * dt;
+    blob.rotation.set(rotX * .6 + Math.sin(t * .3) * .08, rotY, 0);
+    blob.position.y = -sp * .35;
+    drops.forEach(m => { const u = m.userData; m.position.x = u.x + Math.sin(t * .4 + u.ph) * .08; m.position.y = u.y + Math.cos(t * .35 + u.ph) * .1 - sp * .5; });
+    renderer.render(scene, cam);
+    requestAnimationFrame(loop);
+  }
+  if (reduce) { renderer.render(scene, cam); new IntersectionObserver(() => renderer.render(scene, cam)).observe(stage); hint.classList.add("gone"); }
+  else kick();
+}
+</script>
+</body>
+</html>

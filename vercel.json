@@ -31,6 +31,26 @@
     {
       "source": "/preview/wildflowers-grooming",
       "destination": "/preview/wildflowers-grooming/index.html"
+    },
+    {
+      "source": "/preview/domo-izakaya",
+      "destination": "/preview/domo-izakaya/index.html"
+    },
+    {
+      "source": "/preview/brazilian-wax-studio",
+      "destination": "/preview/brazilian-wax-studio/index.html"
+    },
+    {
+      "source": "/preview/taqueria-el-rinconcito",
+      "destination": "/preview/taqueria-el-rinconcito/index.html"
+    },
+    {
+      "source": "/preview/sugar-land-destin",
+      "destination": "/preview/sugar-land-destin/index.html"
+    },
+    {
+      "source": "/preview/rose-nails-destin",
+      "destination": "/preview/rose-nails-destin/index.html"
     }
   ],
   "headers": [

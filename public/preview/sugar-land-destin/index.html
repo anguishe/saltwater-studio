@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ponytail: private preview for the owner; noindex until they say go. Facts: ~/Projects/sugar-land-destin-poc/_inbox/RECON.md -->
+<meta name="robots" content="noindex, nofollow">
+<title>Sugar Land Candy, Ice Cream &amp; Coffee | 47 Harbor Blvd, Destin</title>
+<meta name="description" content="Ice cream, candy, shakes, sundaes, gourmet popcorn and iced coffee on Harbor Blvd in Destin. Open daily 12 to 9. 4.8 stars from 347 Google reviews.">
+<meta name="theme-color" content="#2A1712">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%232A1712%22/%3E%3Cpath d=%22M10 15l6 14 6-14z%22 fill=%22%23E0A458%22/%3E%3Ccircle cx=%2216%22 cy=%2212%22 r=%227%22 fill=%22%23F27BA0%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF6EC; --cream-2:#FCEBD8; --cocoa:#2A1712; --cocoa-2:#4A2A1C; --muted:#6B4A3E;
+  --rasp:#C7285A; --rasp-ink:#A51F49; --pink:#F27BA0; --lime:#C9DF7E; --butter:#FFD36E; --cone:#E0A458;
+  --line:#EBD3BC; --r:20px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--cocoa);font:400 1.0625rem/1.6 var(--display);font-variation-settings:"opsz" 16;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+:focus-visible{outline:3px solid var(--rasp);outline-offset:3px;border-radius:6px}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--display);font-weight:800;margin:0;line-height:.92;letter-spacing:-.02em;font-variation-settings:"opsz" 96,"wdth" 80}
+h2{font-size:clamp(2.4rem,7vw,4.4rem);margin-bottom:1rem}
+h3{font-size:1.4rem;line-height:1.05;font-variation-settings:"opsz" 48,"wdth" 90}
+p{margin:0 0 1rem;max-width:58ch}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0;font-variation-settings:normal}
+.kick{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rasp-ink);margin:0 0 .9rem;display:flex;gap:.5rem;align-items:center}
+.kick::before{content:"";width:22px;height:2px;background:currentColor}
+section{padding:5rem 0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* preview bar */
+.preview{background:var(--butter);color:var(--cocoa);font-size:.95rem;line-height:1.45}
+.preview .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.preview p{margin:0;max-width:none}
+.preview a{font-weight:700}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,246,236,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(42,23,18,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.brand b{display:block;font-size:1.3rem;font-weight:800;letter-spacing:-.02em;line-height:1;font-variation-settings:"opsz" 48,"wdth" 85}
+.brand small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+
+/* pills */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:0 1.25rem;border-radius:999px;font:700 1rem/1 var(--display);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s}
+.pill:active{transform:scale(.97)}
+.pill svg{width:18px;height:18px}
+.pill.rasp{background:var(--rasp);color:#fff}
+.pill.rasp:hover{background:var(--rasp-ink)}
+.pill.ghost{border-color:var(--cocoa);color:var(--cocoa);background:transparent}
+.pill.ghost:hover{background:var(--cocoa);color:var(--cream)}
+.pill.small{min-height:44px;padding:0 1rem;font-size:.95rem}
+
+/* hero */
+.hero{padding:2.2rem 0 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -30% auto auto;width:80vw;height:80vw;max-width:760px;max-height:760px;background:radial-gradient(closest-side,rgba(242,123,160,.28),transparent 70%);pointer-events:none}
+.hero .grid{display:grid;gap:1.5rem;position:relative;grid-template-columns:minmax(0,1fr)}
+.hero .grid>*{min-width:0}
+.h1{font-size:clamp(3.6rem,17vw,8.4rem);line-height:.86;margin:0 0 1.1rem}
+.h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.h1 .ln>span{display:inline-block;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.h1 .ln:nth-child(2)>span{animation-delay:.09s}
+.h1 .ln:nth-child(3)>span{animation-delay:.18s}
+.h1 em.s{color:var(--rasp)}
+@keyframes up{to{transform:none}}
+.lede{font-size:1.15rem;color:var(--cocoa-2);max-width:34ch;opacity:0;animation:fade .8s .45s forwards}
+@keyframes fade{to{opacity:1}}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.25rem;opacity:0;animation:fade .8s .55s forwards}
+.chip{display:inline-flex;align-items:center;gap:.4rem;min-height:36px;padding:.35rem .8rem;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;font-weight:600}
+.chip .st{color:#E09A1B}
+.badge::before{content:"";width:9px;height:9px;border-radius:50%;background:#2E9B57;box-shadow:0 0 0 4px rgba(46,155,87,.18)}
+.badge.closed::before{background:#B9473B;box-shadow:0 0 0 4px rgba(185,71,59,.16)}
+.ctas{display:flex;flex-wrap:wrap;gap:.6rem;opacity:0;animation:fade .8s .65s forwards}
+
+/* the cone stage */
+.stage{position:relative;height:min(62vh,560px);min-height:400px;border-radius:28px;overflow:hidden;
+  background:radial-gradient(120% 80% at 50% 20%,#FFE3EC 0%,#FBD6C2 45%,#F2B98F 100%);box-shadow:inset 0 0 0 1px rgba(42,23,18,.06)}
+.stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;touch-action:pan-y}
+.stage .poster{position:absolute;inset:0;display:none;align-items:center;justify-content:center}
+.stage.nogl .poster{display:flex}
+.stage .tag{position:absolute;left:1rem;top:1rem;z-index:2;background:rgba(255,255,255,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:14px;padding:.55rem .8rem;font-size:.85rem;line-height:1.3;max-width:70%}
+.stage .tag b{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rasp-ink)}
+.stage .hint{position:absolute;right:1rem;top:1rem;z-index:2;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cocoa-2);opacity:.75}
+.builder{margin-top:1rem}
+.builder p.small{font-size:.9rem;color:var(--muted);margin:.6rem 0 0}
+.flavors{display:flex;gap:.5rem;overflow-x:auto;padding:.2rem .1rem .6rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.flavors::-webkit-scrollbar{display:none}
+.fl{flex:0 0 auto;scroll-snap-align:start;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:0 1rem 0 .45rem;border-radius:999px;background:#fff;border:1.5px solid var(--line);font:600 .95rem/1 var(--display);color:var(--cocoa);cursor:pointer;transition:transform .15s,border-color .2s}
+.fl i{width:30px;height:30px;border-radius:50%;background:var(--c);box-shadow:inset -4px -5px 0 rgba(0,0,0,.12),inset 3px 3px 0 rgba(255,255,255,.35)}
+.fl:active{transform:scale(.95)}
+.fl[aria-pressed="true"]{border-color:var(--rasp)}
+.brow{display:flex;gap:.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.brow .reset{background:none;border:0;font:700 .95rem var(--display);color:var(--rasp-ink);text-decoration:underline;text-underline-offset:3px;min-height:44px;cursor:pointer}
+
+/* marquee */
+.strip{background:var(--cocoa);color:var(--cream);overflow:hidden;padding:1rem 0;margin-top:3.5rem}
+.track{display:flex;gap:2.2rem;width:max-content;animation:mq 30s linear infinite;font-weight:800;font-size:1.35rem;letter-spacing:-.01em;font-variation-settings:"opsz" 48,"wdth" 85}
+.track span{display:inline-flex;align-items:center;gap:2.2rem;white-space:nowrap}
+.track span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* menu bento */
+.bento{display:grid;gap:1rem;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;position:relative;overflow:hidden}
+.card h3{margin:.2rem 0 .5rem}
+.card p{margin:0;color:var(--cocoa-2)}
+.card q{display:block;font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.25;color:var(--cocoa);margin-top:.8rem;quotes:"\201C" "\201D"}
+.card .src{display:block;font-size:.8rem;color:var(--muted);margin-top:.5rem}
+.card .ico{width:64px;height:64px;margin-bottom:.4rem}
+.card.dark{background:var(--cocoa);color:var(--cream);border-color:var(--cocoa)}
+.card.dark p,.card.dark q,.card.dark .src{color:#F3DCCB}
+.card.pinkbg{background:#FFE3EC;border-color:#F8C7D7}
+.card.lime{background:#F1F7D9;border-color:#DCE9A9}
+.big{font-size:clamp(3.4rem,13vw,5.6rem);font-weight:800;line-height:.85;letter-spacing:-.03em;font-variation-settings:"opsz" 96,"wdth" 75}
+.wob{animation:wob 3.4s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes wob{50%{transform:rotate(-6deg) translateY(-3px)}}
+.pop{animation:pop 2.8s ease-in-out infinite}
+@keyframes pop{0%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+
+/* proof */
+.proof{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+.tile{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.2rem}
+.tile .n{font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.03em;font-variation-settings:"opsz" 96,"wdth" 80}
+.tile .l{font-size:.9rem;color:var(--muted);margin-top:.35rem;line-height:1.35}
+.tile.wide{grid-column:1/-1;background:var(--rasp);color:#fff;border-color:var(--rasp)}
+.tile.wide .l{color:#FFE3EC}
+
+/* reviews */
+.revs{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem 1.25rem 1rem;margin:0 -1.25rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.revs::-webkit-scrollbar{display:none}
+.rev{flex:0 0 min(84%,380px);scroll-snap-align:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;margin:0}
+.rev .stars{color:#E09A1B;letter-spacing:.15em;font-size:1rem}
+.rev p{font-family:var(--serif);font-size:1.3rem;line-height:1.3;margin:.6rem 0 .8rem}
+.rev footer{font-size:.85rem;color:var(--muted)}
+.dots{display:flex;gap:.4rem;justify-content:center}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:width .2s,background .2s}
+.dots i.on{width:22px;border-radius:6px;background:var(--rasp)}
+
+/* visit */
+.visit{background:var(--cocoa);color:var(--cream)}
+.visit .kick{color:var(--pink)}
+.vgrid{display:grid;gap:1.5rem}
+.map{border-radius:var(--r);overflow:hidden;background:#3A2219;aspect-ratio:4/3;position:relative}
+.map svg{width:100%;height:100%}
+.pinpulse{transform-origin:center;animation:pp 2s ease-out infinite}
+@keyframes pp{0%{opacity:.7;transform:scale(.6)}100%{opacity:0;transform:scale(2.2)}}
+.addr{font-size:1.3rem;font-weight:700;line-height:1.35;margin:0 0 .3rem}
+.vnote{color:#E9CDBB;margin:0 0 1rem}
+.hours{list-style:none;margin:1rem 0 1.4rem;padding:0;border-top:1px solid rgba(255,246,236,.15)}
+.hours li{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid rgba(255,246,236,.15);font-size:1rem}
+.hours li.today{color:var(--butter);font-weight:700}
+.visit .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:var(--cream)}
+.visit .pill.ghost{border-color:var(--cream);color:var(--cream)}
+.visit .pill.ghost:hover{background:var(--cream);color:var(--cocoa)}
+
+/* final */
+.final{text-align:center;padding:5rem 0 6rem}
+.final h2{font-size:clamp(3rem,12vw,6.4rem)}
+.final p{margin:0 auto 1.5rem}
+.final .ctas{justify-content:center;opacity:1;animation:none}
+footer.site{border-top:1px solid var(--line);padding:1.5rem 0 7rem;font-size:.9rem;color:var(--muted)}
+footer.site p{margin:0}
+
+/* sticky dock */
+.dock{position:fixed;left:.75rem;right:.75rem;bottom:calc(.75rem + env(safe-area-inset-bottom));z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.5rem;border-radius:999px;background:rgba(42,23,18,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 12px 30px rgba(42,23,18,.3);transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.dock.on{transform:none}
+.dock .pill{min-height:48px}
+.dock .pill.ghost{border-color:rgba(255,246,236,.5);color:var(--cream)}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .hero .grid{grid-template-columns:1.05fr 1fr;align-items:center}
+  .stage{height:600px}
+  .bento{grid-template-columns:repeat(6,1fr)}
+  .bento .c1{grid-column:span 4}.bento .c2{grid-column:span 2}.bento .c3{grid-column:span 2}.bento .c4{grid-column:span 2}.bento .c5{grid-column:span 2}.bento .c6{grid-column:span 6}
+  .proof{grid-template-columns:repeat(4,1fr)}
+  .tile.wide{grid-column:span 2}
+  .vgrid{grid-template-columns:1.1fr 1fr;align-items:center}
+  .dock{left:auto;right:1.25rem;width:380px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .h1 .ln>span{transform:none}.lede,.chips,.ctas{opacity:1}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview Saltwater Studio built for Sugar Land. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a></p></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 2.8c.6-.4 1.4-.3 1.9.3l2.3 2.9c.5.6.4 1.4-.1 2l-1.4 1.5a13 13 0 0 0 5.2 5.2l1.5-1.4c.6-.5 1.4-.6 2-.1l2.9 2.3c.6.5.7 1.3.3 1.9l-1.3 2c-.7 1-2 1.5-3.2 1.1C10 18.8 5.2 14 3.5 6.4c-.3-1.2.1-2.5 1.1-3.2z"/></symbol>
+    <symbol id="i-walk" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="13" cy="4" r="2"/><path d="M10.2 7.6l2.6-.9c.9-.3 1.8.1 2.2.9l1.1 2.3 2.4 1.1-.8 1.7-3-1.4-.6-1.2-.9 3.7 2.5 2.4.9 5.3h-2l-.8-4.4-2.6-2.4-.9 3.4L7.4 21l-1.6-1.2 3.4-4.4 1.6-6.4-1.3.4-1 2.9-1.9-.6z"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.3 6.4 11.6 6.7 11.9.4.4 1.1.4 1.5 0 .3-.3 6.8-6.6 6.8-11.9A7.5 7.5 0 0 0 12 2zm0 10.3a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/></symbol>
+    <symbol id="i-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9.2z"/><path fill="#EA4335" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10C7.2 7.7 9.4 6 12 6z"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sugar Land Candy, Ice Cream and Coffee, top of page">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#2A1712"/><path d="M13 19l7 16 7-16z" fill="#E0A458"/><path d="M15 23l8 0M16.5 27l5 0" stroke="#B9783A" stroke-width="1.4"/><circle cx="20" cy="15" r="8" fill="#F27BA0"/><circle cx="17" cy="12.5" r="2" fill="#fff" opacity=".55"/></svg>
+      <span><b>Sugar Land</b><small>Candy · Ice cream · Coffee</small></span>
+    </a>
+    <a class="pill rasp small" href="tel:+18505989958"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap grid">
+      <div>
+        <p class="kick">47 Harbor Blvd · Moreno Plaza · Destin</p>
+        <h1 class="h1" id="h1"><span class="ln"><span>Dessert</span></span><span class="ln"><span>before</span></span><span class="ln"><span><em class="s">dinner.</em></span></span></h1>
+        <p class="lede">Ice cream, candy, shakes, sundaes, gourmet popcorn and iced coffee, right on Harbor Blvd next to McGuire's.</p>
+        <div class="chips">
+          <span class="chip"><span class="st" aria-hidden="true">★</span>4.8 · 347 Google reviews</span>
+          <span class="chip badge" id="badge">Open daily 12 – 9 PM</span>
+        </div>
+        <div class="ctas" id="heroCtas">
+          <a class="pill rasp" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sugar+Land+Candy+Ice+Cream+Coffee+47+Harbor+Blvd+Destin+FL+32541&amp;travelmode=walking" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-walk"/></svg>Walk me there</a>
+          <a class="pill ghost" href="tel:+18505989958"><svg aria-hidden="true"><use href="#i-phone"/></svg>(850) 598-9958</a>
+        </div>
+      </div>
+
+      <div class="builder">
+        <div class="stage" id="stage">
+          <div class="tag" aria-live="polite"><b>Your cone</b><span id="coneTxt">Tap a flavor to stack a scoop</span></div>
+          <span class="hint" id="hint" aria-hidden="true">Drag to spin</span>
+          <div class="poster" aria-hidden="true">
+            <svg viewBox="0 0 240 320" width="62%" style="max-width:260px">
+              <ellipse cx="120" cy="300" rx="62" ry="10" fill="rgba(42,23,18,.14)"/>
+              <path d="M70 150 L120 292 L170 150 Z" fill="#E0A458"/>
+              <path d="M78 172l78 0M88 200l58 0M98 228l38 0M86 160l40 120M154 160l-40 120" stroke="#B9783A" stroke-width="3" opacity=".7"/>
+              <circle id="ps1" cx="120" cy="138" r="54" fill="#4A2A1C"/>
+              <circle id="ps2" cx="120" cy="88" r="48" fill="#B98457" opacity="0"/>
+              <circle id="ps3" cx="120" cy="44" r="42" fill="#D8E89A" opacity="0"/>
+              <ellipse cx="100" cy="118" rx="14" ry="9" fill="#fff" opacity=".25"/>
+            </svg>
+          </div>
+        </div>
+        <div class="brow" style="margin-top:.9rem">
+          <span class="kick" style="margin:0">Build a cone</span>
+          <button class="reset" id="reset" type="button">Start over</button>
+        </div>
+        <div class="flavors" id="flavors" role="group" aria-label="Pick flavors, up to three scoops"></div>
+        <p class="small">Flavors named in Google reviews. Ask what's in the case today.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"><div class="track">
+    <span>Ice cream</span><span>Candy</span><span>Shakes</span><span>Sundaes</span><span>Gourmet popcorn</span><span>Iced coffee</span><span>Open daily 12 – 9</span>
+    <span>Ice cream</span><span>Candy</span><span>Shakes</span><span>Sundaes</span><span>Gourmet popcorn</span><span>Iced coffee</span><span>Open daily 12 – 9</span>
+  </div></div>
+
+  <section id="menu" aria-labelledby="h-menu">
+    <div class="wrap">
+      <p class="kick rv">What people order</p>
+      <h2 id="h-menu" class="rv">Go big. <em class="s">Share.</em></h2>
+      <p class="rv" style="color:var(--muted)">Everything below comes straight from what guests wrote in their Google reviews.</p>
+      <div class="bento">
+        <article class="card c1 dark rv">
+          <svg class="ico pop" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="34" width="44" height="18" rx="4" fill="#6B3A22"/><rect x="10" y="34" width="44" height="6" rx="3" fill="#8B5232"/><circle cx="32" cy="26" r="13" fill="#FBEBD8"/><path d="M22 22c4 6 16 6 20 0" stroke="#4A2A1C" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+          <h3>Brownie à la mode</h3>
+          <q>I got the brownie a la mode and it was fantastic. Recommend sharing, it's huge!!</q>
+          <span class="src">Google review</span>
+        </article>
+        <article class="card c2 pinkbg rv">
+          <svg class="ico wob" viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="24" r="12" fill="#F27BA0"/><circle cx="40" cy="22" r="12" fill="#9AD0F5"/><circle cx="32" cy="14" r="10" fill="#F9C1D6"/><path d="M14 34h36l-6 20H20z" fill="#fff" stroke="#F27BA0" stroke-width="2"/></svg>
+          <h3>Cotton candy explosion sundae</h3>
+          <q>really blew up our taste buds.</q>
+          <span class="src">Google review</span>
+        </article>
+        <article class="card c3 rv">
+          <svg class="ico wob" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 40c8 10 44 10 52 0z" fill="#fff" stroke="#EBD3BC" stroke-width="2"/><path d="M8 38c10-16 38-16 48 0" fill="#F6D96B"/><circle cx="22" cy="30" r="7" fill="#F27BA0"/><circle cx="32" cy="27" r="7" fill="#4A2A1C"/><circle cx="42" cy="30" r="7" fill="#FBEBD8"/><circle cx="32" cy="18" r="3" fill="#C7285A"/></svg>
+          <h3>Banana split</h3>
+          <q>The banana split was huge!</q>
+          <span class="src">Google review</span>
+        </article>
+        <article class="card c4 lime rv">
+          <svg class="ico pop" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 16h24l-3 42H23z" fill="#fff" stroke="#B98457" stroke-width="2"/><path d="M21.5 26h21l-2.2 30H23.7z" fill="#B98457"/><path d="M36 16l6-12" stroke="#C7285A" stroke-width="3" stroke-linecap="round"/><ellipse cx="32" cy="16" rx="13" ry="5" fill="#FBEBD8"/></svg>
+          <h3>Cappuccino crunch shakes</h3>
+          <p>Cappuccino Crunch shows up again and again, in a cup and as a shake.</p>
+          <span class="src">Google reviews</span>
+        </article>
+        <article class="card c5 rv">
+          <svg class="ico pop" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 26h32l-4 32H20z" fill="#fff"/><path d="M16 26h32l-4 32H20z" fill="none" stroke="#C7285A" stroke-width="2"/><path d="M24 26l-1 32M32 26v32M40 26l1 32" stroke="#C7285A" stroke-width="3" opacity=".8"/><g fill="#FFE8B0"><circle cx="22" cy="22" r="6"/><circle cx="32" cy="18" r="7"/><circle cx="42" cy="22" r="6"/><circle cx="27" cy="13" r="5"/><circle cx="38" cy="12" r="5"/></g></svg>
+          <h3>Gourmet popcorn</h3>
+          <q>gourmet (homemade, made in house) popcorn</q>
+          <span class="src">Google review</span>
+        </article>
+        <article class="card c6 rv" style="display:grid;gap:.4rem">
+          <h3>And the flavors people come back for</h3>
+          <p>Chocolate Extreme, Cappuccino Crunch, Key Lime Pie, peanut butter pie, lemon, chocolate moose tracks, coffee cookies and cream. Plus iced coffee and a whole lot of candy.</p>
+          <q>Lemon lovers beware!! They have the best lemon ice cream I ever had.</q>
+          <span class="src">Google review</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof" aria-labelledby="h-proof" style="padding-top:1rem">
+    <div class="wrap">
+      <p class="kick rv">Ask the regulars</p>
+      <h2 id="h-proof" class="rv">347 reviews <em class="s">and counting.</em></h2>
+      <div class="proof">
+        <div class="tile rv"><div class="n">4.8<span style="font-size:1.4rem;color:#E09A1B"> ★</span></div><div class="l">on Google</div></div>
+        <div class="tile rv"><div class="n">347</div><div class="l">Google reviews</div></div>
+        <div class="tile rv"><div class="n">12–9</div><div class="l">open every day</div></div>
+        <div class="tile wide rv"><div class="n" style="font-size:1.9rem;line-height:1.1">Family friendly, with a sitting area.</div><div class="l">"Has a nice sitting area to eat at. Family friendly." Google review</div></div>
+      </div>
+      <div style="margin-top:2.5rem">
+        <div class="revs" id="revs" tabindex="0" aria-label="Google reviews, swipe for more">
+          <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>We had 1.5 hrs to kill before our dinner reservation at McGuire Irish Pub and decided to do dessert before dinner - wonderful decision!</p><footer>Google review · about a month ago</footer></figure>
+          <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>Got a medium cup with Chocolate Extreme (kiddo loved it), Cappuccino Crunch (absolutely fantastic, must try) and Key Lime Pie (fantastic)!!!</p><footer>Google review · about a month ago</footer></figure>
+          <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>I had the peanut butter pie flavor here and by far it's the best flavor ice cream I have ever had. Kids loved their ice cream and husband loved the coffee cookies and cream.</p><footer>Google review · about 4 months ago</footer></figure>
+          <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>The cotton candy explosion sundae really blew up our taste buds. The banana split was huge! We also enjoyed the cappuccino crunch shakes.</p><footer>Google review · about 2 years ago</footer></figure>
+          <figure class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>I'm addicted and I work next door!! And I looooove the chocolate moosetracks it's filled with crunchy goodness I'm going back for seconds!!</p><footer>Google review · about a month ago</footer></figure>
+        </div>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="h-visit">
+    <div class="wrap vgrid">
+      <div class="map rv" aria-hidden="true">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="300" fill="#3A2219"/>
+          <path d="M0 230 C90 210 170 250 260 228 S380 214 400 220 V300 H0Z" fill="#2E6F7A" opacity=".55"/>
+          <path d="M0 246 C100 230 180 266 270 244 S380 232 400 238" stroke="#7FC0C9" stroke-width="2" fill="none" opacity=".5"/>
+          <path d="M0 150 H400" stroke="#6B4A3E" stroke-width="26"/>
+          <path d="M0 150 H400" stroke="#E9CDBB" stroke-width="2" stroke-dasharray="14 12" opacity=".5"/>
+          <text x="16" y="132" fill="#E9CDBB" font-family="Bricolage Grotesque,system-ui" font-size="13" font-weight="700" letter-spacing="2">HARBOR BLVD</text>
+          <text x="16" y="282" fill="#BFE3E8" font-family="Instrument Serif,Georgia" font-style="italic" font-size="18">the harbor</text>
+          <rect x="240" y="96" width="54" height="34" rx="6" fill="#5A3A2C"/>
+          <text x="267" y="117" text-anchor="middle" fill="#E9CDBB" font-family="Bricolage Grotesque,system-ui" font-size="9" font-weight="700">McGUIRE'S</text>
+          <g transform="translate(196 104)">
+            <circle class="pinpulse" r="18" fill="#F27BA0"/>
+            <path d="M0-30a14 14 0 0 0-14 14c0 10 12 22 13 23a1.4 1.4 0 0 0 2 0c1-1 13-13 13-23A14 14 0 0 0 0-30z" fill="#F27BA0"/>
+            <circle cy="-16" r="5" fill="#2A1712"/>
+          </g>
+          <text x="196" y="190" text-anchor="middle" fill="#FFF6EC" font-family="Bricolage Grotesque,system-ui" font-size="15" font-weight="800">Sugar Land</text>
+          <text x="384" y="20" text-anchor="end" fill="#B99A8A" font-family="Bricolage Grotesque,system-ui" font-size="10">stylized, not to scale</text>
+        </svg>
+      </div>
+      <div class="rv">
+        <p class="kick">Come by</p>
+        <h2 id="h-visit">On Harbor Blvd, <em class="s">next to McGuire's.</em></h2>
+        <p class="addr">47 Harbor Blvd, Moreno Plaza<br>Destin, FL 32541</p>
+        <span class="chip badge" id="badge2">Open daily 12 – 9 PM</span>
+        <ul class="hours" id="hours"></ul>
+        <div class="ctas" style="opacity:1;animation:none">
+          <a class="pill rasp" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sugar+Land+Candy+Ice+Cream+Coffee+47+Harbor+Blvd+Destin+FL+32541" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+          <a class="pill ghost" href="tel:+18505989958"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the shop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="h-final">
+    <div class="wrap">
+      <p class="kick rv" style="justify-content:center">Sugar Land · Destin</p>
+      <h2 id="h-final" class="rv">See you <em class="s">at the counter.</em></h2>
+      <p class="rv">Open every day from noon to 9 PM.</p>
+      <div class="ctas">
+        <a class="pill rasp" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sugar+Land+Candy+Ice+Cream+Coffee+47+Harbor+Blvd+Destin+FL+32541" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+        <a class="pill ghost" href="tel:+18505989958"><svg aria-hidden="true"><use href="#i-phone"/></svg>(850) 598-9958</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap"><p>&copy; 2026 Sugar Land Candy, Ice Cream &amp; Coffee. Preview design by Saltwater Studio.</p></div></footer>
+
+<nav class="dock" id="dock" aria-label="Quick contact">
+  <a class="pill rasp" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sugar+Land+Candy+Ice+Cream+Coffee+47+Harbor+Blvd+Destin+FL+32541" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+  <a class="pill ghost" href="tel:+18505989958"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+</nav>
+
+<script>
+// Shop facts in one place (see RECON.md). Hours: daily 12-9 PM (Maps 10/01).
+window.SHOP = {
+  name: "Sugar Land Candy, Ice Cream & Coffee", phone: "+18505989958", phoneTxt: "(850) 598-9958",
+  address: "47 Harbor Blvd, Moreno Plaza, Destin, FL 32541",
+  hours: [[720,1260],[720,1260],[720,1260],[720,1260],[720,1260],[720,1260],[720,1260]], // 0 = Sunday, minutes
+  flavors: [ // only flavors named in Google reviews
+    {n:"Chocolate Extreme", c:"#4A2A1C", f:"#2A160E"},
+    {n:"Cappuccino Crunch", c:"#B98457", f:"#4A2A1C"},
+    {n:"Key Lime Pie", c:"#D8E89A", f:"#C49A5A"},
+    {n:"Peanut Butter Pie", c:"#C99A5B", f:"#7A4E2A"},
+    {n:"Lemon", c:"#F6E27A", f:"#FFF6C9"},
+    {n:"Chocolate Moose Tracks", c:"#7A4E35", f:"#2A160E"},
+    {n:"Coffee Cookies & Cream", c:"#D9C4AA", f:"#2A1712"}
+  ]
+};
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const S = window.SHOP, DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const t = m => { const h = Math.floor(m/60), mm = m%60; return (((h+11)%12)+1) + (mm ? ":" + String(mm).padStart(2,"0") : "") + " " + (h >= 12 ? "PM" : "AM"); };
+  function chicago() {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date()).map(x => [x.type,x.value]));
+    return {d:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), m:(+p.hour % 24)*60 + +p.minute};
+  }
+  function status() {
+    const {d, m} = chicago(), h = S.hours, today = h[d];
+    if (today && m >= today[0] && m < today[1]) return {open:true, txt:"Open now · until " + t(today[1])};
+    if (today && m < today[0]) return {open:false, txt:"Closed · opens today " + t(today[0])};
+    for (let i = 1; i <= 7; i++) { const dd = (d+i)%7; if (h[dd]) return {open:false, txt:"Closed · opens " + (i === 1 ? "tomorrow" : DAYS[dd].slice(0,3)) + " " + t(h[dd][0])}; }
+    return {open:false, txt:"Closed"};
+  }
+  function renderHours() {
+    const st = status();
+    ["#badge","#badge2"].forEach(id => { const b = $(id); b.textContent = st.txt; b.classList.toggle("closed", !st.open); });
+    const {d} = chicago();
+    $("#hours").innerHTML = [1,2,3,4,5,6,0].map(k => `<li class="${k === d ? "today" : ""}"><span>${DAYS[k]}${k === d ? " (today)" : ""}</span><span>${t(S.hours[k][0])} – ${t(S.hours[k][1])}</span></li>`).join("");
+  }
+  renderHours(); setInterval(renderHours, 60000);
+
+  // reveals
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {rootMargin:"0px 0px -8% 0px", threshold:.1});
+  $$(".rv").forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + "ms"; io.observe(el); });
+
+  // sticky dock once hero CTAs scroll away
+  const dock = $("#dock");
+  new IntersectionObserver(([e]) => dock.classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0)).observe($("#heroCtas"));
+
+  // review dots
+  const revs = $("#revs"), cards = $$("#revs .rev"), dots = $("#dots");
+  dots.innerHTML = cards.map(() => "<i></i>").join("");
+  const di = $$("#dots i");
+  const setDot = () => { const c = revs.scrollLeft + revs.clientWidth / 2; let best = 0, bd = 1e9; cards.forEach((el, i) => { const m = el.offsetLeft + el.offsetWidth / 2, dd = Math.abs(m - c); if (dd < bd) { bd = dd; best = i; } }); di.forEach((d, i) => d.classList.toggle("on", i === best)); };
+  revs.addEventListener("scroll", () => requestAnimationFrame(setDot), {passive:true}); setDot();
+
+  // cone builder state (shared with the 3D scene and the poster fallback)
+  const stack = [], MAX = 3;
+  const fl = $("#flavors");
+  fl.innerHTML = S.flavors.map((f, i) => `<button class="fl" type="button" data-i="${i}" aria-pressed="false" style="--c:${f.c}"><i></i>${f.n.replace("&","&amp;")}</button>`).join("");
+  function label() {
+    $("#coneTxt").textContent = stack.length ? stack.map(i => S.flavors[i].n).reverse().join(" on ") : "Tap a flavor to stack a scoop";
+    $$(".fl").forEach(b => b.setAttribute("aria-pressed", String(stack.includes(+b.dataset.i))));
+    ["#ps1","#ps2","#ps3"].forEach((id, k) => { const el = $(id); if (stack[k] !== undefined) { el.setAttribute("fill", S.flavors[stack[k]].c); el.setAttribute("opacity", 1); } else el.setAttribute("opacity", k === 0 ? 1 : 0); });
+  }
+  window.CONE = {stack, add: null, reset: null};
+  fl.addEventListener("click", e => {
+    const b = e.target.closest(".fl"); if (!b) return;
+    if (stack.length >= MAX) { stack.length = 0; window.CONE.reset && window.CONE.reset(); }
+    stack.push(+b.dataset.i); label();
+    window.CONE.add && window.CONE.add(+b.dataset.i);
+    if (navigator.vibrate) navigator.vibrate(12);
+  });
+  $("#reset").addEventListener("click", () => { stack.length = 0; label(); window.CONE.reset && window.CONE.reset(); });
+  stack.push(0); label(); // start with one scoop of Chocolate Extreme
+})();
+</script>
+
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<script type="module">
+// Signature moment: a waffle cone you build scoop by scoop, with glossy candies drifting around it.
+const stage = document.getElementById("stage");
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let THREE;
+try { THREE = await import("three"); } catch (e) { stage.classList.add("nogl"); }
+if (THREE) init();
+
+function init() {
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({antialias:true, alpha:true, powerPreference:"high-performance"}); }
+  catch (e) { stage.classList.add("nogl"); return; }
+  if (!renderer.getContext()) { stage.classList.add("nogl"); return; }
+  let dpr = Math.min(devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(dpr);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  stage.prepend(renderer.domElement);
+  renderer.domElement.setAttribute("aria-hidden", "true");
+
+  let need = true;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, .1, 50);
+
+  // soft studio environment for the glossy candies (built from emissive panels; no external HDR)
+  const envScene = new THREE.Scene();
+  const panel = (c, x, y, z, w, h) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({color:c, side:THREE.DoubleSide})); m.position.set(x, y, z); m.lookAt(0, 0, 0); envScene.add(m); };
+  envScene.background = new THREE.Color("#3a2a28");
+  panel("#ffffff", 0, 6, 2, 8, 3); panel("#ffd2df", -6, 2, 2, 3, 6); panel("#ffe1b0", 6, 1, 3, 3, 6); panel("#ffffff", 0, 1, -6, 6, 2);
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(envScene, .02).texture;
+
+  scene.add(new THREE.HemisphereLight("#fff4ea", "#d98f6a", .7));
+  const key = new THREE.DirectionalLight("#fff1e0", 2.0); key.position.set(3, 5, 4); scene.add(key);
+  const rim = new THREE.DirectionalLight("#ff9ec0", 1.6); rim.position.set(-4, 2, -3); scene.add(rim);
+
+  const world = new THREE.Group(); scene.add(world);
+  const cone = new THREE.Group(); world.add(cone);
+
+  // waffle texture drawn to canvas; doubles as the bump map
+  const wc = document.createElement("canvas"); wc.width = wc.height = 256;
+  const g = wc.getContext("2d");
+  g.fillStyle = "#E3A65C"; g.fillRect(0, 0, 256, 256);
+  g.strokeStyle = "#A9692F"; g.lineWidth = 9;
+  for (let i = -256; i < 512; i += 42) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i + 256, 256); g.stroke(); g.beginPath(); g.moveTo(i + 256, 0); g.lineTo(i, 256); g.stroke(); }
+  for (let i = 0; i < 900; i++) { g.fillStyle = `rgba(255,230,180,${Math.random()*.18})`; g.fillRect(Math.random()*256, Math.random()*256, 2, 2); }
+  const waffle = new THREE.CanvasTexture(wc); waffle.colorSpace = THREE.SRGBColorSpace;
+  waffle.wrapS = waffle.wrapT = THREE.RepeatWrapping; waffle.repeat.set(3, 2); waffle.anisotropy = 4;
+  const bump = new THREE.CanvasTexture(wc); bump.wrapS = bump.wrapT = THREE.RepeatWrapping; bump.repeat.copy(waffle.repeat);
+  const coneMat = new THREE.MeshStandardMaterial({map:waffle, bumpMap:bump, bumpScale:2.2, roughness:.72, metalness:0});
+  const cg = new THREE.ConeGeometry(.6, 1.75, 48, 1, true); cg.rotateX(Math.PI); cg.translate(0, -.875, 0);
+  cone.add(new THREE.Mesh(cg, coneMat));
+  const rimG = new THREE.TorusGeometry(.6, .07, 16, 64); rimG.rotateX(Math.PI / 2);
+  cone.add(new THREE.Mesh(rimG, coneMat));
+
+  // soft contact shadow
+  const sc = document.createElement("canvas"); sc.width = sc.height = 128;
+  const sg = sc.getContext("2d"), grd = sg.createRadialGradient(64, 64, 4, 64, 64, 62);
+  grd.addColorStop(0, "rgba(60,25,15,.42)"); grd.addColorStop(1, "rgba(60,25,15,0)"); sg.fillStyle = grd; sg.fillRect(0, 0, 128, 128);
+  const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 1.6), new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc), transparent:true, depthWrite:false}));
+  shadow.rotation.x = -Math.PI / 2; shadow.position.y = -1.78; world.add(shadow);
+
+  // scoop geometry: a lumpy sphere with a rippled lip where it meets the cone
+  function scoopGeo() {
+    const geo = new THREE.SphereGeometry(.64, 56, 40), p = geo.attributes.position, v = new THREE.Vector3();
+    for (let i = 0; i < p.count; i++) {
+      v.fromBufferAttribute(p, i);
+      const th = Math.atan2(v.z, v.x), y = v.y / .64;
+      let r = 1 + .035 * Math.sin(th * 5 + y * 4) + .025 * Math.sin(th * 9 - y * 7) + .02 * Math.sin(y * 13);
+      if (y < -.15) { const k = (-y - .15) / .85; r *= 1 + .1 * Math.exp(-((k - .25) ** 2) * 40) + .045 * Math.sin(th * 14) * Math.exp(-((k - .3) ** 2) * 30); v.y *= 1 - .45 * k; }
+      v.x *= r; v.z *= r; v.y *= r * .92;
+      p.setXYZ(i, v.x, v.y, v.z);
+    }
+    geo.computeVertexNormals(); return geo;
+  }
+  const SG = scoopGeo();
+  const fleck = {};
+  function scoopMat(i) {
+    if (fleck[i]) return fleck[i];
+    const f = window.SHOP.flavors[i], c = document.createElement("canvas"); c.width = c.height = 256;
+    const x = c.getContext("2d"); x.fillStyle = f.c; x.fillRect(0, 0, 256, 256);
+    for (let k = 0; k < 2600; k++) { x.fillStyle = `rgba(255,255,255,${Math.random()*.05})`; x.fillRect(Math.random()*256, Math.random()*256, 3, 3); }
+    for (let k = 0; k < 160; k++) { x.fillStyle = f.f; x.globalAlpha = .45 + Math.random() * .45; const r = 1 + Math.random() * 3.2; x.beginPath(); x.ellipse(Math.random()*256, Math.random()*256, r, r * (.5 + Math.random()), Math.random()*3, 0, 7); x.fill(); }
+    x.globalAlpha = 1;
+    const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+    return fleck[i] = new THREE.MeshPhysicalMaterial({map:tex, roughness:.58, clearcoat:.25, clearcoatRoughness:.5, sheen:.6, sheenColor:new THREE.Color("#ffffff"), sheenRoughness:.6});
+  }
+  const scoops = [];
+  const baseY = .3, step = .78;
+  function addScoop(i, instant) {
+    const m = new THREE.Mesh(SG, scoopMat(i));
+    const n = scoops.length, y = baseY + n * step;
+    m.rotation.y = Math.random() * 6;
+    m.userData = {y, t0: instant || reduce ? -10 : performance.now()};
+    m.position.y = instant || reduce ? y : y + 3.2;
+    cone.add(m); scoops.push(m);
+    need = true;
+  }
+  function reset() { scoops.splice(0).forEach(m => cone.remove(m)); need = true; }
+  window.CONE.add = i => addScoop(i, false);
+  window.CONE.reset = reset;
+  window.CONE.stack.forEach(i => addScoop(i, true));
+
+  // drifting candies: glossy gumballs and swirl lollipops
+  const candies = new THREE.Group(); world.add(candies);
+  const gumG = new THREE.SphereGeometry(.16, 24, 16);
+  const lolC = document.createElement("canvas"); lolC.width = lolC.height = 256;
+  const lc = lolC.getContext("2d"); lc.translate(128, 128);
+  for (let a = 0; a < 12; a++) { lc.fillStyle = a % 2 ? "#ffffff" : "#F27BA0"; lc.beginPath(); lc.moveTo(0, 0); for (let r = 0; r <= 128; r += 4) { const an = a * Math.PI / 6 + r * .045; lc.lineTo(Math.cos(an) * r, Math.sin(an) * r); } for (let r = 128; r >= 0; r -= 4) { const an = (a + 1) * Math.PI / 6 + r * .045; lc.lineTo(Math.cos(an) * r, Math.sin(an) * r); } lc.fill(); }
+  const lolTex = new THREE.CanvasTexture(lolC); lolTex.colorSpace = THREE.SRGBColorSpace;
+  const lolG = new THREE.CylinderGeometry(.34, .34, .1, 40); lolG.rotateX(Math.PI / 2);
+  const lolMat = [new THREE.MeshPhysicalMaterial({color:"#F27BA0", roughness:.15, clearcoat:1}), new THREE.MeshPhysicalMaterial({map:lolTex, roughness:.12, clearcoat:1, clearcoatRoughness:.05}), new THREE.MeshPhysicalMaterial({map:lolTex, roughness:.12, clearcoat:1, clearcoatRoughness:.05})];
+  const stickMat = new THREE.MeshStandardMaterial({color:"#FFF6EC", roughness:.6});
+  const stickG = new THREE.CylinderGeometry(.03, .03, .9, 8); stickG.translate(0, -.5, 0);
+  const COLS = ["#C7285A", "#9AD0F5", "#FFD36E", "#C9DF7E", "#F27BA0", "#ffffff"];
+  const spots = [[-1.7, 1.6, -.6], [1.75, 1.9, -.4], [-1.5, -.5, .3], [1.6, -.2, .4], [-.9, 2.7, -1], [1.1, 3.0, -1.2], [-2.0, .7, -1.4], [2.1, .9, -1.5], [.0, -1.2, 1.1]];
+  spots.forEach((p, k) => {
+    let m;
+    if (k % 3 === 1) { m = new THREE.Group(); const d = new THREE.Mesh(lolG, lolMat); m.add(d); m.add(new THREE.Mesh(stickG, stickMat)); m.scale.setScalar(.9); }
+    else m = new THREE.Mesh(gumG, new THREE.MeshPhysicalMaterial({color:COLS[k % COLS.length], roughness:.08, clearcoat:1, clearcoatRoughness:.04}));
+    m.position.set(...p); m.userData = {p, ph: k * 1.7, sp: .5 + (k % 4) * .15};
+    candies.add(m);
+  });
+
+  // framing + interaction
+  let W = 1, H = 1, visible = true, dragging = false, lastX = 0, spin = 0, spinV = 0, scrollK = 0;
+  function size() {
+    W = stage.clientWidth; H = stage.clientHeight;
+    renderer.setSize(W, H, false); camera.aspect = W / H;
+    const narrow = W / H < .85;
+    camera.position.set(0, 1.1, narrow ? 10.2 : 9); camera.lookAt(0, .42, 0);
+    camera.updateProjectionMatrix(); need = true;
+  }
+  new ResizeObserver(size).observe(stage); size();
+  const cv = renderer.domElement;
+  cv.addEventListener("pointerdown", e => { dragging = true; lastX = e.clientX; document.getElementById("hint").style.opacity = 0; });
+  addEventListener("pointermove", e => { if (!dragging) return; spinV = (e.clientX - lastX) * .012; spin += spinV; lastX = e.clientX; need = true; });
+  addEventListener("pointerup", () => dragging = false);
+  addEventListener("scroll", () => { const r = stage.getBoundingClientRect(); scrollK = Math.max(-1, Math.min(1, (innerHeight / 2 - (r.top + r.height / 2)) / innerHeight)); need = true; }, {passive:true});
+
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) loop(); }, {threshold:0}).observe(stage);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) loop(); });
+
+  // adaptive quality: drop DPR if frames run slow
+  let frames = 0, t0 = performance.now(), running = false, last = performance.now();
+  function loop() { if (running) return; running = true; requestAnimationFrame(tick); }
+  function tick(now) {
+    if (!visible || document.hidden) { running = false; return; }
+    const dt = Math.min(.05, (now - last) / 1000); last = now;
+    const tt = now / 1000;
+    if (!dragging) { spinV *= .94; spin += spinV + (reduce ? 0 : dt * .35); }
+    world.rotation.y = spin * .6 + scrollK * .5;
+    world.rotation.x = scrollK * .08;
+    cone.position.y = reduce ? 0 : Math.sin(tt * 1.2) * .05;
+    for (const m of scoops) {
+      const u = m.userData, k = Math.min(1, (now - u.t0) / 750);
+      if (k < 1) {
+        const e = 1 - Math.pow(1 - k, 3), b = k > .7 ? Math.sin((k - .7) / .3 * Math.PI) * .12 : 0;
+        m.position.y = u.y + 3.2 * (1 - e) + b * .3;
+        const sq = k > .55 && k < 1 ? 1 - Math.sin((k - .55) / .45 * Math.PI) * .16 : 1;
+        m.scale.set(2 - sq, sq, 2 - sq);
+      } else { m.position.y = u.y; m.scale.set(1, 1, 1); }
+    }
+    candies.children.forEach(c => { const u = c.userData; if (reduce) return; c.position.y = u.p[1] + Math.sin(tt * u.sp + u.ph) * .18; c.rotation.y = tt * u.sp * .6 + u.ph; c.rotation.z = Math.sin(tt * .4 + u.ph) * .4; });
+    renderer.render(scene, camera);
+    frames++;
+    if (now - t0 > 2000) { const fps = frames * 1000 / (now - t0); if (fps < 45 && dpr > 1.25) { dpr = Math.max(1.25, dpr - .5); renderer.setPixelRatio(dpr); size(); } frames = 0; t0 = now; }
+    if (reduce && !scoops.some(m => now - m.userData.t0 < 800) && !dragging && !need) { running = false; return; }
+    need = false;
+    requestAnimationFrame(tick);
+  }
+  loop();
+}
+</script>
+</body>
+</html>

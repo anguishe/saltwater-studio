@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ponytail: private preview for the owner, keep it out of search until they say go -->
+<meta name="robots" content="noindex, nofollow">
+<title>Domo Izakaya | Ramen, sushi and tempura on Harbor Blvd, Destin</title>
+<meta name="description" content="Domo Izakaya, a Japanese restaurant at 753 Harbor Blvd in Destin: ramen, sushi, tempura and curry katsu. Open 7 days, 4.7 stars from 1,646 Google reviews.">
+<meta name="theme-color" content="#0B1020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230B1020%22/%3E%3Crect x=%2213%22 y=%224%22 width=%226%22 height=%223%22 fill=%22%23F5EBDD%22/%3E%3Cellipse cx=%2216%22 cy=%2216.5%22 rx=%228%22 ry=%229.5%22 fill=%22%23E0533D%22/%3E%3Crect x=%2213%22 y=%2226%22 width=%226%22 height=%223%22 fill=%22%23F5EBDD%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0B1020; --night-2:#121A33; --deep:#070B16; --paper:#F4ECDF; --paper-2:#E9DCC7;
+  --cream:#F5EBDD; --muted:#B9B2C4; --ink:#1A1822; --ink-2:#4A4452;
+  --ver:#E0533D; --ver-d:#B83424; --gold:#F2B85B; --line:rgba(245,235,221,.14);
+  --display:"Shippori Mincho B1","Hiragino Mincho ProN",Georgia,serif;
+  --body:"Zen Kaku Gothic New",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:20px; --sb:env(safe-area-inset-bottom,0px); --hz:44%;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--cream);font:1.125rem/1.65 var(--body);overflow-x:hidden}
+a{color:inherit}
+p{margin:0 0 1rem}
+button{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;margin:0;line-height:1.02;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* preview bar */
+.preview{background:var(--gold);color:var(--ink);font-size:.95rem;line-height:1.45}
+.preview .wrap{padding-top:.6rem;padding-bottom:.6rem}
+.preview p{margin:0}
+.preview a{font-weight:700}
+
+/* header */
+header{position:absolute;left:0;right:0;z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.9rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand b{font-family:var(--display);font-size:1.3rem;letter-spacing:.01em}
+.brand small{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:-.15rem}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.3rem;border-radius:999px;font-weight:700;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease,background .2s ease}
+.pill:active{transform:scale(.97)}
+.pill svg{width:20px;height:20px;flex:none}
+.pill.red{background:var(--ver-d);color:#fff;box-shadow:0 10px 30px -10px rgba(224,83,61,.8)}
+.pill.ghost{background:rgba(245,235,221,.1);color:var(--cream);box-shadow:inset 0 0 0 1.5px rgba(245,235,221,.35)}
+.pill.small{min-height:44px;padding:.5rem 1rem;font-size:.95rem}
+
+/* hero */
+.hero{position:relative;padding:0;min-height:calc(100svh - var(--pv,107px));overflow:hidden;isolation:isolate;
+  background:linear-gradient(180deg,#05081a 0%,#0d1430 calc(var(--hz) - 12%),#2a2240 calc(var(--hz) - 1%),#141b33 var(--hz),#0a0f1f calc(var(--hz) + 14%),var(--night) 100%)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;z-index:0}
+.poster{position:absolute;inset:0;width:100%;height:100%;display:none;z-index:0}
+.nogl #gl{display:none}
+.nogl .poster{display:block}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(11,16,32,0) 0%,rgba(11,16,32,.55) 38%,rgba(11,16,32,.92) 100%)}
+.hero-in{position:relative;z-index:2;min-height:calc(100svh - var(--pv,107px));display:flex;flex-direction:column;justify-content:flex-end;padding-top:min(38svh,19rem);padding-bottom:1.4rem;pointer-events:none}
+.hero-in a,.hero-in button{pointer-events:auto}
+.kick{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.9rem}
+.kick .jp{font-family:var(--display);letter-spacing:.15em;font-size:1rem;color:var(--cream)}
+.h1{font-size:clamp(2.9rem,13.5vw,7.2rem);line-height:.9}
+.h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.h1 .ln>span{display:inline-block;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.h1 .ln:nth-child(2)>span{animation-delay:.12s}
+.h1 .ln:nth-child(3)>span{animation-delay:.24s}
+.h1 em{font-style:normal;color:var(--ver)}
+@keyframes rise{to{transform:none}}
+.lede{max-width:34rem;margin-top:.8rem;font-size:1.13rem;color:#E8DFD2;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0 1rem}
+.hero .chip{font-size:.88rem;padding:.4rem .7rem}
+.chip{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .8rem;border-radius:999px;background:rgba(11,16,32,.72);box-shadow:inset 0 0 0 1px var(--line);font-size:.95rem;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.chip .dot{width:9px;height:9px;border-radius:50%;background:#53D18A;box-shadow:0 0 0 4px rgba(83,209,138,.18)}
+.chip.closed .dot{background:#E0533D;box-shadow:0 0 0 4px rgba(224,83,61,.2)}
+.star{color:var(--gold)}
+.ctas{display:flex;flex-wrap:wrap;gap:.6rem}
+.hint{position:absolute;z-index:3;top:calc(var(--hz) - 8.6rem);left:50%;transform:translateX(-50%);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,235,221,.8);background:rgba(11,16,32,.55);padding:.4rem .8rem;border-radius:999px;pointer-events:none;transition:opacity .6s;white-space:nowrap}
+.hint.gone{opacity:0}
+.nogl .hint{display:none}
+
+/* marquee */
+.strip{background:var(--ver-d);color:#fff;overflow:hidden;padding:.85rem 0;border-block:1px solid rgba(255,255,255,.15)}
+.track{display:flex;gap:2.2rem;width:max-content;animation:mq 38s linear infinite;font-family:var(--display);font-size:1.25rem;white-space:nowrap}
+.track span::after{content:"・";margin-left:2.2rem;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:4.5rem 0}
+.eyebrow{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ver);margin-bottom:.8rem}
+h2{font-size:clamp(2.2rem,8.5vw,4rem)}
+.sub{color:var(--muted);max-width:38rem;margin-top:.9rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* menu (paper section) */
+.menu{background:var(--paper);color:var(--ink);position:relative}
+.menu .sub{color:var(--ink-2)}
+.menu .eyebrow{color:var(--ver-d)}
+.tag{display:inline-block;margin-top:1rem;font-size:.85rem;padding:.35rem .7rem;border-radius:999px;background:var(--paper-2);color:var(--ink-2)}
+.tabs{display:flex;gap:.45rem;margin:1.6rem 0 1.2rem;overflow-x:auto;scrollbar-width:none;padding-bottom:.2rem}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;min-height:46px;padding:.55rem 1.1rem;border-radius:999px;border:0;background:#fff;box-shadow:inset 0 0 0 1.5px var(--paper-2);font-weight:700;cursor:pointer;transition:background .25s,color .25s}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);box-shadow:none}
+.dishes{display:grid;gap:.8rem}
+.dish{display:grid;grid-template-columns:64px 1fr;gap:.9rem;align-items:start;background:#fff;border-radius:var(--r);padding:1.1rem;box-shadow:0 1px 0 var(--paper-2),0 14px 30px -24px rgba(26,24,34,.5);opacity:0;transform:translateY(14px);animation:pop .55s cubic-bezier(.2,.8,.2,1) forwards}
+.dish:nth-child(2){animation-delay:.07s}.dish:nth-child(3){animation-delay:.14s}.dish:nth-child(4){animation-delay:.21s}
+@keyframes pop{to{opacity:1;transform:none}}
+.dish h3{font-size:1.45rem;margin-bottom:.35rem}
+.dish q{display:block;font-size:1rem;color:var(--ink-2);quotes:"\201C" "\201D"}
+.dish small{display:block;margin-top:.35rem;font-size:.82rem;color:#7A7280}
+.ico{width:64px;height:64px;border-radius:16px;background:var(--paper);display:grid;place-items:center}
+.ico svg{width:44px;height:44px}
+.steam path{animation:steam 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+.steam path:nth-child(2){animation-delay:.5s}.steam path:nth-child(3){animation-delay:1s}
+@keyframes steam{0%{opacity:0;transform:translateY(4px) scaleY(.7)}40%{opacity:.9}100%{opacity:0;transform:translateY(-6px) scaleY(1.1)}}
+
+/* proof bento */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:2rem}
+.tile{border-radius:var(--r);padding:1.2rem;background:var(--night-2);box-shadow:inset 0 0 0 1px var(--line);min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.tile .big{font-family:var(--display);font-size:clamp(2.6rem,11vw,4rem);line-height:1}
+.tile .lbl{color:var(--muted);font-size:.98rem}
+.tile.wide{grid-column:1/-1}
+.tile.red{background:linear-gradient(150deg,#C23A28,#7E1F15)}
+.tile.red .lbl{color:#FBDCD3}
+.tile.gold{background:linear-gradient(150deg,#F2B85B,#D98E2B);color:var(--ink)}
+.tile.gold .lbl{color:#3C2A12}
+.tile q{font-family:var(--display);font-size:1.3rem;line-height:1.3;quotes:"\201C" "\201D"}
+.tile cite{font-style:normal;font-size:.85rem;color:var(--muted);margin-top:.7rem}
+
+/* reviews */
+.rev{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 1.25rem .6rem;margin:0 -1.25rem;scrollbar-width:none}
+.rev::-webkit-scrollbar{display:none}
+.card{flex:0 0 86%;max-width:26rem;scroll-snap-align:center;border-radius:var(--r);padding:1.4rem;background:var(--paper);color:var(--ink);position:relative}
+.card::before{content:"\201C";position:absolute;top:-.35rem;right:1rem;font-family:var(--display);font-size:5rem;color:var(--ver);line-height:1}
+.card p{font-size:1.06rem;margin:0}
+.card .src{margin-top:1rem;font-size:.85rem;color:var(--ink-2);display:flex;align-items:center;gap:.4rem}
+.dots{display:flex;gap:.45rem;justify-content:center;margin-top:1rem}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(245,235,221,.25);transition:background .3s,transform .3s}
+.dots i.on{background:var(--gold);transform:scale(1.25)}
+
+/* visit */
+.visit-grid{display:grid;gap:1rem;margin-top:2rem}
+.panel{border-radius:var(--r);padding:1.4rem;background:var(--night-2);box-shadow:inset 0 0 0 1px var(--line)}
+.addr{font-family:var(--display);font-size:1.6rem;line-height:1.2;margin:.3rem 0 1rem}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.hours li:last-child{border:0}
+.hours li.today{color:var(--gold);font-weight:700}
+.panel .ctas{margin-top:1.2rem}
+
+/* closing */
+.close{text-align:center;padding:5rem 0 6rem;background:radial-gradient(60% 50% at 50% 30%,rgba(224,83,61,.28),transparent 70%)}
+.close h2{font-size:clamp(2.6rem,12vw,5rem)}
+.close p{color:var(--muted);margin:1rem auto 1.6rem}
+.close .ctas{justify-content:center}
+footer{padding:2rem 0 calc(6.5rem + var(--sb));color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+/* dock */
+.dock{position:fixed;left:.6rem;right:.6rem;bottom:calc(.6rem + var(--sb));z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.45rem;border-radius:999px;background:rgba(11,16,32,.88);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 18px 40px -16px rgba(0,0,0,.8),inset 0 0 0 1px var(--line);transform:translateY(140%);transition:transform .5s cubic-bezier(.3,1.3,.5,1)}
+.dock.on{transform:none}
+.dock .pill{min-height:50px;padding:.6rem .9rem}
+
+@media (min-width:760px){
+  .hero-in{padding-top:40svh}
+  .dishes{grid-template-columns:1fr 1fr}
+  .bento{grid-template-columns:repeat(4,1fr)}
+  .tile.wide{grid-column:span 2}
+  .visit-grid{grid-template-columns:1.1fr 1fr}
+  .card{flex-basis:24rem}
+  .dock{left:auto;right:1.2rem;width:360px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  .h1 .ln>span{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview Saltwater Studio built for Domo Izakaya. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a>.</p></div>
+</div>
+
+<main>
+<section class="hero" id="hero" aria-label="Domo Izakaya">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <svg class="poster" viewBox="0 0 390 800" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="pg" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#FFE7B8"/><stop offset=".55" stop-color="#FF7A45"/><stop offset="1" stop-color="#B8301E"/></radialGradient>
+      <radialGradient id="pw" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#FFF4DA"/><stop offset=".6" stop-color="#FFC77A"/><stop offset="1" stop-color="#D9893A"/></radialGradient>
+      <radialGradient id="halo"><stop offset="0" stop-color="#FF9A55" stop-opacity=".55"/><stop offset="1" stop-color="#FF9A55" stop-opacity="0"/></radialGradient>
+      <linearGradient id="rf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8A4C" stop-opacity=".7"/><stop offset="1" stop-color="#FF8A4C" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g stroke="#1b1512" stroke-width="1.2"><path d="M60 0v150M130 0v120M195 0v175M262 0v120M330 0v150"/></g>
+    <g>
+      <circle cx="60" cy="190" r="70" fill="url(#halo)"/><circle cx="130" cy="160" r="60" fill="url(#halo)"/><circle cx="195" cy="240" r="95" fill="url(#halo)"/><circle cx="262" cy="160" r="60" fill="url(#halo)"/><circle cx="330" cy="190" r="70" fill="url(#halo)"/>
+      <ellipse cx="60" cy="190" rx="26" ry="36" fill="url(#pg)"/><ellipse cx="130" cy="160" rx="22" ry="30" fill="url(#pw)"/><ellipse cx="195" cy="240" rx="38" ry="52" fill="url(#pg)"/><ellipse cx="262" cy="160" rx="22" ry="30" fill="url(#pw)"/><ellipse cx="330" cy="190" rx="26" ry="36" fill="url(#pg)"/>
+      <text x="195" y="232" text-anchor="middle" font-family="Shippori Mincho B1,serif" font-size="20" font-weight="800" fill="#2a0d08">居</text>
+      <text x="195" y="256" text-anchor="middle" font-family="Shippori Mincho B1,serif" font-size="20" font-weight="800" fill="#2a0d08">酒</text>
+      <text x="195" y="280" text-anchor="middle" font-family="Shippori Mincho B1,serif" font-size="20" font-weight="800" fill="#2a0d08">屋</text>
+    </g>
+    <g opacity=".75"><rect x="52" y="352" width="16" height="160" fill="url(#rf)"/><rect x="123" y="352" width="14" height="120" fill="url(#rf)"/><rect x="185" y="352" width="20" height="210" fill="url(#rf)"/><rect x="255" y="352" width="14" height="120" fill="url(#rf)"/><rect x="322" y="352" width="16" height="160" fill="url(#rf)"/></g>
+  </svg>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#hero" aria-label="Domo Izakaya, top of page">
+        <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><rect x="11" y="0" width="12" height="4" rx="1" fill="#F5EBDD"/><ellipse cx="17" cy="20" rx="14" ry="16" fill="#E0533D"/><path d="M4 14h26M3 20h28M4 26h26" stroke="#7E1F15" stroke-width="1.4"/><rect x="11" y="36" width="12" height="4" rx="1" fill="#F5EBDD"/></svg>
+        <span><b>Domo Izakaya</b><small>Harbor Blvd · Destin</small></span>
+      </a>
+      <a class="pill ghost small js-call" href="tel:+18503532096"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+    </div>
+  </header>
+  <p class="hint" id="hint">Tap a lantern</p>
+  <div class="hero-in">
+    <div class="wrap">
+      <p class="kick"><span class="jp" lang="ja">居酒屋</span><span>753 Harbor Blvd · Destin</span></p>
+      <h1 class="h1"><span class="ln"><span>Slurp.</span></span><span class="ln"><span>Roll.</span></span><span class="ln"><span><em>Crunch.</em></span></span></h1>
+      <p class="lede">Japanese ramen, sushi, tempura and curry katsu. Lunch and dinner, seven days a week.</p>
+      <div class="chips">
+        <span class="chip"><span class="star" aria-hidden="true">★</span> 4.7 · 1,646 reviews</span>
+        <span class="chip js-open"><span class="dot" aria-hidden="true"></span><span class="js-open-txt">Checking hours…</span></span>
+      </div>
+      <div class="ctas" id="heroCtas">
+        <a class="pill red js-call" href="tel:+18503532096"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+        <a class="pill ghost js-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Domo%20Izakaya%2C%20753%20Harbor%20Blvd%2C%20Destin%2C%20FL%2032541"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track"><span>Miso ramen</span><span>Nagasaki ramen</span><span>Tan tan</span><span>California roll</span><span>Crazy California</span><span>Veggie sushi</span><span>Shrimp tempura</span><span>Ginger salad</span><span>Curry katsu</span><span>Creamy udon with wagyu</span><span>Lunch box</span><span>Miso ramen</span><span>Nagasaki ramen</span><span>Tan tan</span><span>California roll</span><span>Crazy California</span><span>Veggie sushi</span><span>Shrimp tempura</span><span>Ginger salad</span><span>Curry katsu</span><span>Creamy udon with wagyu</span><span>Lunch box</span></div></div>
+
+<section class="menu" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <p class="eyebrow reveal">What people order</p>
+    <h2 id="menu-h" class="reveal">The menu, as your regulars tell it.</h2>
+    <p class="sub reveal">Every dish below is one a Google reviewer named, with what they said about it.</p>
+    <span class="tag reveal">From the reviews, not the full menu</span>
+    <div class="tabs" role="tablist" aria-label="Dishes">
+      <button role="tab" aria-selected="true" aria-controls="dishes" data-k="ramen">Ramen</button>
+      <button role="tab" aria-selected="false" aria-controls="dishes" data-k="sushi">Sushi</button>
+      <button role="tab" aria-selected="false" aria-controls="dishes" data-k="tempura">Tempura</button>
+      <button role="tab" aria-selected="false" aria-controls="dishes" data-k="plates">Plates</button>
+    </div>
+    <div class="dishes" id="dishes" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section aria-labelledby="proof-h">
+  <div class="wrap">
+    <p class="eyebrow reveal">The numbers on Google</p>
+    <h2 id="proof-h" class="reveal">People keep coming back, and they keep posting.</h2>
+    <div class="bento">
+      <div class="tile red reveal"><span class="big"><span class="js-count" data-n="1646">1,646</span></span><span class="lbl">Google reviews</span></div>
+      <div class="tile reveal"><span class="big">4.7<span class="star" style="font-size:.5em"> ★</span></span><span class="lbl">Average rating</span></div>
+      <div class="tile gold reveal"><span class="big"><span class="js-count" data-n="1991">1,991</span></span><span class="lbl">Photos posted to the Google listing</span></div>
+      <div class="tile reveal"><span class="big">7</span><span class="lbl">Days a week, lunch and dinner</span></div>
+      <div class="tile wide reveal"><q>It's a cozy restaurant with a welcoming atmosphere.</q><cite>Google review, 2026</cite></div>
+      <div class="tile wide reveal"><q>We requested specific food for our baby and they gladly prepared it for us.</q><cite>Google review, 2026</cite></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="rev-h" style="padding-top:1rem">
+  <div class="wrap">
+    <p class="eyebrow reveal">In their words</p>
+    <h2 id="rev-h" class="reveal">Straight from the reviews.</h2>
+    <div class="rev" id="rev" tabindex="0" aria-label="Customer reviews, swipe for more">
+      <article class="card"><p>The food was fresh, flavorful, and delicious. Even the packaging was impressive-everything was neatly packed and arrived in perfect condition.</p><p class="src"><span class="star" aria-hidden="true">★★★★★</span> Google review, 2026 · takeout</p></article>
+      <article class="card"><p>The wagyu is so fresh and goes perfectly in the creamy udon dish. … The sushi is fresh, the tempura is light, and really everything tastes unreal.</p><p class="src"><span class="star" aria-hidden="true">★★★★★</span> Google review, 2026</p></article>
+      <article class="card"><p>My kids had the Curried Chicken Dish, Ramen and a Crazy California and they raved about it too. If you are visiting for vacation DEFINITELY hit this spot.</p><p class="src"><span class="star" aria-hidden="true">★★★★★</span> Google review, 2026</p></article>
+      <article class="card"><p>The curry katsu was flavorful and perfectly cooked, the Nagasaki ramen was amazing, and the lunch box was great as well.</p><p class="src"><span class="star" aria-hidden="true">★★★★★</span> Google review, 2026</p></article>
+      <article class="card"><p>The staff were all very friendly and attentive throughout our visit. We'll definitely be coming back!</p><p class="src"><span class="star" aria-hidden="true">★★★★★</span> Google review, 2026</p></article>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section aria-labelledby="visit-h">
+  <div class="wrap">
+    <p class="eyebrow reveal">Find us</p>
+    <h2 id="visit-h" class="reveal">On Harbor Blvd, open every day.</h2>
+    <div class="visit-grid">
+      <div class="panel reveal">
+        <span class="chip js-open"><span class="dot" aria-hidden="true"></span><span class="js-open-txt">Checking hours…</span></span>
+        <p class="addr">753 Harbor Blvd<br>Destin, FL 32541</p>
+        <p style="color:var(--muted);margin:0">Phone <a href="tel:+18503532096" class="js-call">(850) 353-2096</a></p>
+        <div class="ctas">
+          <a class="pill red js-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Domo%20Izakaya%2C%20753%20Harbor%20Blvd%2C%20Destin%2C%20FL%2032541">Get directions</a>
+          <a class="pill ghost js-call" href="tel:+18503532096">Call</a>
+        </div>
+      </div>
+      <div class="panel reveal">
+        <h3 style="font-size:1.4rem;margin-bottom:.6rem">Hours</h3>
+        <ul class="hours" id="hours"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-h">
+  <div class="wrap">
+    <h2 id="close-h" class="reveal">Hungry yet?</h2>
+    <p class="reveal js-tonight">Lunch from 11:30 AM, every day.</p>
+    <div class="ctas reveal">
+      <a class="pill red js-call" href="tel:+18503532096">Call (850) 353-2096</a>
+      <a class="pill ghost js-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Domo%20Izakaya%2C%20753%20Harbor%20Blvd%2C%20Destin%2C%20FL%2032541">Directions</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>© 2026 Domo Izakaya, 753 Harbor Blvd, Destin, Florida. Preview design by Saltwater Studio.</p></div></footer>
+
+<nav class="dock" id="dock" aria-label="Quick actions">
+  <a class="pill red js-call" href="tel:+18503532096">Call</a>
+  <a class="pill ghost js-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Domo%20Izakaya%2C%20753%20Harbor%20Blvd%2C%20Destin%2C%20FL%2032541">Directions</a>
+</nav>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  // Mon-Thu 11:30-9, Fri-Sat 11:30-10, Sun 11:30-9 (Google Maps, 10/01). Minutes since midnight; 0 = Sunday.
+  const HOURS = {0:[690,1260],1:[690,1260],2:[690,1260],3:[690,1260],4:[690,1260],5:[690,1320],6:[690,1320]};
+  const DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const t = m => { const h = Math.floor(m/60), mm = m%60, ap = h >= 12 ? "PM" : "AM", hh = ((h+11)%12)+1; return hh + (mm ? ":" + String(mm).padStart(2,"0") : "") + " " + ap; };
+  function chicago() {
+    const p = Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date()).map(x => [x.type,x.value]));
+    return {d:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), m:(+p.hour % 24)*60 + (+p.minute)};
+  }
+  function status() {
+    const {d, m} = chicago(), h = HOURS[d];
+    if (m >= h[0] && m < h[1]) return {open:true, txt:"Open · until " + t(h[1]), tonight:"Open tonight until " + t(h[1]) + "."};
+    if (m < h[0]) return {open:false, txt:"Closed · opens today " + t(h[0]), tonight:"Doors open today at " + t(h[0]) + "."};
+    return {open:false, txt:"Closed · opens tomorrow " + t(HOURS[(d+1)%7][0]), tonight:"Back tomorrow at " + t(HOURS[(d+1)%7][0]) + "."};
+  }
+  function paint() {
+    const s = status(), {d} = chicago();
+    $$(".js-open").forEach(c => c.classList.toggle("closed", !s.open));
+    $$(".js-open-txt").forEach(e => e.textContent = s.txt);
+    $(".js-tonight").textContent = s.tonight + " Lunch from 11:30 AM, every day.";
+    $("#hours").innerHTML = [1,2,3,4,5,6,0].map(k => `<li class="${k === d ? "today" : ""}"><span>${DAYS[k]}${k === d ? " (today)" : ""}</span><span>${t(HOURS[k][0])} – ${t(HOURS[k][1])}</span></li>`).join("");
+  }
+  paint(); setInterval(paint, 60000);
+  const pv = () => document.documentElement.style.setProperty("--pv", $(".preview").offsetHeight + "px"); pv(); addEventListener("resize", pv);
+
+  // dishes: only what reviewers named, with their words (Google, signed-out Maps 10/01)
+  const I = {
+    ramen:'<svg viewBox="0 0 48 48" fill="none" stroke="#1A1822" stroke-width="2.2" stroke-linecap="round"><g class="steam" stroke="#B83424"><path d="M17 12c-2-3 2-4 0-7"/><path d="M24 12c-2-3 2-4 0-7"/><path d="M31 12c-2-3 2-4 0-7"/></g><path d="M7 22h34a17 15 0 0 1-34 0z" fill="#F2B85B"/><path d="M12 22l14-12M16 22l14-12" stroke="#1A1822"/><circle cx="20" cy="26" r="3" fill="#fff"/><path d="M17 36h14"/></svg>',
+    sushi:'<svg viewBox="0 0 48 48" fill="none" stroke="#1A1822" stroke-width="2.2"><circle cx="17" cy="26" r="10" fill="#1A1822"/><circle cx="17" cy="26" r="7" fill="#fff"/><circle cx="17" cy="26" r="3" fill="#E0533D" stroke="none"/><circle cx="34" cy="26" r="10" fill="#1A1822"/><circle cx="34" cy="26" r="7" fill="#fff"/><circle cx="34" cy="26" r="3" fill="#8FB570" stroke="none"/></svg>',
+    tempura:'<svg viewBox="0 0 48 48" fill="none" stroke="#1A1822" stroke-width="2.2" stroke-linecap="round"><path d="M12 36c4-14 14-24 26-26-2 12-12 22-26 26z" fill="#F2B85B"/><path d="M16 30l3-3M21 25l3-3M26 20l3-3" stroke="#B8701F"/><path d="M38 10l4-4M12 36l-4 4" stroke="#E0533D"/></svg>',
+    plates:'<svg viewBox="0 0 48 48" fill="none" stroke="#1A1822" stroke-width="2.2"><ellipse cx="24" cy="28" rx="18" ry="9" fill="#fff"/><path d="M12 26c3-6 21-6 24 0" fill="#C98A3A"/><path d="M14 27c4-3 16-3 20 0" stroke="#7A4A16"/></svg>'
+  };
+  const D = {
+    ramen:[["Miso ramen","Food (had shrimp tempura and miso ramen), service (very nice) and atmosphere.","Google review highlight"],["Nagasaki ramen","…the Nagasaki ramen was amazing…","Google review, 2026"],["Tan tan","The tan tan was fantastic as well…","Google review, 2026"]],
+    sushi:[["California roll","Great California roll…","Google review highlight"],["Crazy California","My kids had … a Crazy California and they raved about it too.","Google review, 2026"],["Veggie sushi","The sushi slices were a really nice size. One roll can fill you up.","Google review, 2026"]],
+    tempura:[["Shrimp tempura","Food (had shrimp tempura and miso ramen), service (very nice) and atmosphere.","Google review highlight"],["Veggie tempura","The sushi is fresh, the tempura is light, and really everything tastes unreal.","Google review, 2026"]],
+    plates:[["Curry katsu","The curry katsu was flavorful and perfectly cooked…","Google review, 2026"],["Creamy udon with wagyu","The wagyu is so fresh and goes perfectly in the creamy udon dish.","Google review, 2026"],["Ginger salad","The ginger salad was incredible.","Google review, 2026"],["Lunch box","…and the lunch box was great as well.","Google review, 2026"]]
+  };
+  function showTab(k) {
+    $$(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.k === k)));
+    $("#dishes").innerHTML = D[k].map(([n,q,s]) => `<article class="dish"><div class="ico" aria-hidden="true">${I[k]}</div><div><h3>${n}</h3><q>${q}</q><small>${s}</small></div></article>`).join("");
+  }
+  $$(".tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.k)));
+  showTab("ramen");
+
+  // reveals + counters
+  const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; e.target.classList.add("in"); io.unobserve(e.target);
+    e.target.querySelectorAll(".js-count").forEach(c => { const n = +c.dataset.n, t0 = performance.now();
+      (function f(now){ const p = Math.min(1,(now-t0)/1400), v = Math.round(n*(1-Math.pow(1-p,3))); c.textContent = v.toLocaleString("en-US"); if (p < 1) requestAnimationFrame(f); })(t0); });
+  }), {rootMargin:"0px 0px -8% 0px", threshold:.12});
+  $$(".reveal").forEach(el => io.observe(el));
+
+  // sticky dock once the hero buttons scroll away
+  const dock = $("#dock"), hc = $("#heroCtas"), dk = () => dock.classList.toggle("on", hc.getBoundingClientRect().bottom < 0);
+  addEventListener("scroll", dk, {passive:true}); dk();
+
+  // review dots
+  const rev = $("#rev"), cards = [...rev.children], dots = $("#dots");
+  dots.innerHTML = cards.map(() => "<i></i>").join("");
+  const di = [...dots.children];
+  const qio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) di.forEach((d,i) => d.classList.toggle("on", cards[i] === e.target)); }), {root:rev, threshold:.6});
+  cards.forEach(c => qio.observe(c));
+})();
+</script>
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<script type="module">
+// Signature moment: paper lanterns (chochin) swing over the harbor at night; tap one to send it swinging.
+import * as THREE from "three";
+const hero = document.getElementById("hero"), canvas = document.getElementById("gl"), hint = document.getElementById("hint");
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let renderer = null;
+if (!reduce) { try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true, powerPreference:"high-performance"}); } catch (e) { renderer = null; } }
+if (!renderer) hero.classList.add("nogl"); else start();
+
+function start() {
+  let dpr = Math.min(devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(dpr);
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(42, 1, .1, 60);
+  cam.position.set(0, .6, 10); cam.lookAt(0, .6, 0);
+  const HZ = 1.15; // world-space horizon height
+
+  // kanji texture for the big lantern
+  const kc = document.createElement("canvas"); kc.width = 1024; kc.height = 512;
+  const kt = new THREE.CanvasTexture(kc); kt.colorSpace = THREE.SRGBColorSpace;
+  function drawKanji() {
+    const g = kc.getContext("2d"); g.clearRect(0,0,1024,512);
+    g.fillStyle = "#000"; g.textAlign = "center"; g.textBaseline = "middle";
+    const sx = 0.78; // ponytail: hand-tuned squash so glyphs read square on the lantern's curve
+    ["居","酒","屋"].forEach((ch, i) => { g.save(); g.translate(512, 120 + i*136); g.scale(sx, 1); g.font = '800 128px "Shippori Mincho B1", "Hiragino Mincho ProN", serif'; g.fillText(ch, 0, 0); g.restore(); });
+    kt.needsUpdate = true;
+  }
+  drawKanji();
+  if (document.fonts) document.fonts.load('800 128px "Shippori Mincho B1"', "居酒屋").then(drawKanji).catch(() => {});
+
+  const paperVS = `varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+    void main(){ vUv = uv; vec4 mv = modelViewMatrix*vec4(position,1.); vN = normalMatrix*normal; vV = -mv.xyz; gl_Position = projectionMatrix*mv; }`;
+  const paperFS = `uniform vec3 uColor; uniform float uGlow, uTime, uSeed, uHasMap; uniform sampler2D uMap;
+    varying vec2 vUv; varying vec3 vN; varying vec3 vV;
+    void main(){
+      float facing = clamp(dot(normalize(vN), normalize(vV)), 0., 1.);
+      float rib = smoothstep(0., .1, abs(fract(vUv.y*15.) - .5));
+      float flick = .93 + .07*sin(uTime*7.3 + uSeed*13.)*sin(uTime*3.1 + uSeed*5.);
+      vec3 c = uColor*(.5 + .85*pow(facing, .8))*flick*uGlow;
+      c *= mix(.7, 1., rib);
+      c *= mix(.45, 1., smoothstep(0., .14, vUv.y)*smoothstep(1., .86, vUv.y));
+      if (uHasMap > .5) { float a = texture2D(uMap, vUv).a; c = mix(c, vec3(.06, .02, .02), a*.92); }
+      gl_FragColor = vec4(c, 1.);
+    }`;
+  const reflFS = `uniform vec3 uColor; uniform float uTime, uSeed, uGlow; varying vec2 vUv;
+    void main(){
+      float w = pow(max(1. - abs(vUv.x - .5)*2., 0.), 1.6);
+      float y = vUv.y;
+      float wob = .5 + .5*sin((1. - y)*30. - uTime*2.2 + uSeed*7. + sin(vUv.x*4. + uTime*.8)*.5);
+      float a = w*pow(y, 1.8)*smoothstep(.3, .95, wob)*.42*uGlow;
+      gl_FragColor = vec4(uColor, a);
+    }`;
+  const basicVS = `varying vec2 vUv; void main(){ vUv = uv; gl_PointSize = 2.; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`;
+
+  // halo texture
+  const hc = document.createElement("canvas"); hc.width = hc.height = 128;
+  { const g = hc.getContext("2d"), gr = g.createRadialGradient(64,64,0,64,64,64);
+    gr.addColorStop(0, "rgba(255,180,110,.85)"); gr.addColorStop(.35, "rgba(255,120,60,.32)"); gr.addColorStop(1, "rgba(255,90,40,0)");
+    g.fillStyle = gr; g.fillRect(0,0,128,128); }
+  const haloTex = new THREE.CanvasTexture(hc);
+
+  const capMat = new THREE.MeshBasicMaterial({color:0x17110d});
+  const strMat = new THREE.MeshBasicMaterial({color:0x2a2320});
+  const L = []; // lanterns
+  function makeLantern(R, H, color, map, seed) {
+    const pts = [];
+    for (let i = 0; i <= 14; i++) { const t = i/14; pts.push(new THREE.Vector2(R*(.32 + .68*Math.pow(Math.sin(Math.PI*t), .75)), -H/2 + t*H)); }
+    const geo = new THREE.LatheGeometry(pts, 28);
+    const uni = {uColor:{value:new THREE.Color(color)}, uGlow:{value:1}, uTime:{value:0}, uSeed:{value:seed}, uHasMap:{value:map ? 1 : 0}, uMap:{value:map || kt}};
+    const body = new THREE.Mesh(geo, new THREE.ShaderMaterial({uniforms:uni, vertexShader:paperVS, fragmentShader:paperFS}));
+    body.rotation.y = Math.PI; // texture seam to the back, kanji to the front
+    const cg = new THREE.CylinderGeometry(R*.36, R*.36, H*.08, 18);
+    const top = new THREE.Mesh(cg, capMat), bot = new THREE.Mesh(cg, capMat);
+    top.position.y = H/2; bot.position.y = -H/2;
+    const halo = new THREE.Sprite(new THREE.SpriteMaterial({map:haloTex, color:new THREE.Color(color), blending:THREE.AdditiveBlending, transparent:true, depthWrite:false, opacity:.75}));
+    halo.scale.setScalar(R*5.2);
+    const lan = new THREE.Group(); lan.add(halo, body, top, bot);
+    const str = new THREE.Mesh(new THREE.CylinderGeometry(.008, .008, 1, 5), strMat);
+    const piv = new THREE.Group(); piv.add(lan, str);
+    const refl = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.ShaderMaterial({
+      uniforms:{uColor:{value:new THREE.Color(color).lerp(new THREE.Color(0xffb070), .35)}, uTime:uni.uTime, uSeed:{value:seed}, uGlow:uni.uGlow},
+      vertexShader:basicVS, fragmentShader:reflFS, transparent:true, depthWrite:false, blending:THREE.AdditiveBlending}));
+    scene.add(piv, refl);
+    const o = {piv, lan, str, refl, body, uni, R, H, seed, th:(Math.random()-.5)*.2, v:0, ph:0, pv:0, glow:1, len:2};
+    body.userData.o = o; L.push(o); return o;
+  }
+  const RED = 0xff5a34, PAPER = 0xffcf8a;
+  // slot: [x fraction of visible half-width, y center, z, R, H, color, has kanji]
+  const SLOTS = [
+    [0, 2.55, .6, .55, 1.32, RED, true],
+    [-.6, 2.95, -1, .4, .96, PAPER, false], [.6, 2.95, -1, .4, .96, PAPER, false],
+    [-1.02, 3.3, -2.6, .38, .9, RED, false], [1.02, 3.3, -2.6, .38, .9, RED, false],
+    [-1.4, 3.55, -4, .36, .86, PAPER, false], [1.4, 3.55, -4, .36, .86, PAPER, false]
+  ];
+  SLOTS.forEach((s, i) => { const o = makeLantern(s[3], s[4], s[5], s[6] ? kt : null, i*1.7 + .3); o.slot = s; });
+
+  // stars
+  { const n = 70, p = new Float32Array(n*3), ph = new Float32Array(n);
+    for (let i = 0; i < n; i++) { p[i*3] = (Math.random()-.5)*26; p[i*3+1] = HZ + .8 + Math.random()*7; p[i*3+2] = -8; ph[i] = Math.random()*6.28; }
+    const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(p, 3)); g.setAttribute("ph", new THREE.BufferAttribute(ph, 1));
+    const sm = new THREE.ShaderMaterial({uniforms:{uTime:{value:0}, uDpr:{value:dpr}}, transparent:true, depthWrite:false,
+      vertexShader:`attribute float ph; uniform float uTime, uDpr; varying float vA; void main(){ vA = .35 + .45*sin(uTime*1.3 + ph); gl_PointSize = 1.6*uDpr; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+      fragmentShader:`varying float vA; void main(){ float d = length(gl_PointCoord - .5); gl_FragColor = vec4(1., .96, .9, vA*smoothstep(.5, .1, d)); }`});
+    scene.add(new THREE.Points(g, sm)); scene.userData.stars = sm; }
+
+  const PIVOT_Y = 5.4;
+  function layout() {
+    const w = hero.clientWidth, h = hero.clientHeight;
+    renderer.setSize(w, h, false); cam.aspect = w/h; cam.updateProjectionMatrix();
+    const tanH = Math.tan(THREE.MathUtils.degToRad(cam.fov/2)), wide = cam.aspect > 1.05;
+    L.forEach((o, i) => {
+      const [fx, y, z, , , , ] = o.slot, dist = cam.position.z - z, halfW = tanH*dist*cam.aspect;
+      const show = wide || i < 5; o.piv.visible = o.refl.visible = show;
+      const x = fx*halfW*(wide ? .55 : .78) + (wide ? halfW*.18 : 0); // desktop: lanterns drift right of the copy
+      o.piv.position.set(x, PIVOT_Y, z); o.len = PIVOT_Y - y;
+      o.lan.position.y = -o.len; o.str.scale.y = o.len - o.H/2; o.str.position.y = -(o.len - o.H/2)/2;
+    });
+    // put the CSS horizon where the 3D horizon lands
+    const v = new THREE.Vector3(0, HZ, 0).project(cam);
+    hero.style.setProperty("--hz", ((1 - (v.y*.5 + .5))*100).toFixed(1) + "%");
+  }
+  layout(); addEventListener("resize", layout);
+
+  // input: tap a lantern to swing it; drags still scroll the page (touch-action: pan-y)
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null, hinted = false;
+  canvas.addEventListener("pointerdown", e => { down = {x:e.clientX, y:e.clientY, t:performance.now()}; });
+  canvas.addEventListener("pointerup", e => {
+    if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10 || performance.now() - down.t > 500) return;
+    const r = canvas.getBoundingClientRect(); ndc.set(((e.clientX - r.left)/r.width)*2 - 1, -((e.clientY - r.top)/r.height)*2 + 1);
+    ray.setFromCamera(ndc, cam);
+    const hit = ray.intersectObjects(L.filter(o => o.piv.visible).map(o => o.body))[0];
+    if (!hit) return;
+    const o = hit.object.userData.o, side = hit.point.x > o.lan.getWorldPosition(new THREE.Vector3()).x ? -1 : 1;
+    o.v += side*1.4; o.pv += (Math.random() - .5)*1.2; o.glow = 1.9;
+    if (navigator.vibrate) navigator.vibrate(8);
+    if (!hinted) { hinted = true; hint.classList.add("gone"); }
+  });
+
+  let lastY = scrollY, gust = 0;
+  addEventListener("scroll", () => { gust = Math.min(gust + Math.abs(scrollY - lastY)*.004, 1.2); lastY = scrollY; }, {passive:true});
+
+  let visible = true, raf = 0, t0 = performance.now(), prev = t0, slow = 0, frames = 0;
+  const tmp = new THREE.Vector3();
+  function frame(now) {
+    raf = requestAnimationFrame(frame);
+    const dt = Math.min((now - prev)/1000, .05), t = (now - t0)/1000; prev = now;
+    // adaptive resolution: drop to 1.25x if frames run slow
+    if (++frames > 30 && dpr > 1.25) { slow = dt > .022 ? slow + 1 : Math.max(0, slow - 1); if (slow > 40) { dpr = 1.25; renderer.setPixelRatio(dpr); layout(); scene.userData.stars.uniforms.uDpr.value = dpr; } }
+    gust *= .96;
+    L.forEach(o => {
+      if (!o.piv.visible) return;
+      const k = 9.8/o.len, wind = (.18 + gust*.9)*Math.sin(t*.7 + o.seed) + .06*Math.sin(t*1.9 + o.seed*3.);
+      o.v += (-k*o.th - 1.1*o.v + wind)*dt; o.th += o.v*dt;
+      o.pv += (-k*o.ph - 1.4*o.pv + .05*Math.sin(t*.9 + o.seed*2.))*dt; o.ph += o.pv*dt;
+      o.piv.rotation.z = o.th; o.piv.rotation.x = o.ph;
+      o.lan.rotation.y = .25*Math.sin(t*.35 + o.seed);
+      o.glow += (1 - o.glow)*Math.min(1, dt*1.6); o.uni.uGlow.value = o.glow; o.uni.uTime.value = t;
+      o.lan.children[0].material.opacity = .62*o.glow;
+      o.lan.getWorldPosition(tmp);
+      const len = 1.4 + (tmp.y - HZ)*.55;
+      o.refl.position.set(tmp.x, HZ - len/2 - .05, tmp.z); o.refl.scale.set(o.R*1.5, len, 1);
+    });
+    scene.userData.stars.uniforms.uTime.value = t;
+    cam.position.y = .6 - Math.min(scrollY/innerHeight, 1)*.5; cam.lookAt(0, .6, 0);
+    renderer.render(scene, cam);
+  }
+  function sync() { const run = visible && !document.hidden; if (run && !raf) { prev = performance.now(); raf = requestAnimationFrame(frame); } else if (!run && raf) { cancelAnimationFrame(raf); raf = 0; } }
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }).observe(hero);
+  document.addEventListener("visibilitychange", sync);
+  sync();
+}
+</script>
+</body>
+</html>
