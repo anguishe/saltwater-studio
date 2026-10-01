@@ -27,6 +27,10 @@
     {
       "source": "/preview/banana-barts",
       "destination": "/preview/banana-barts/index.html"
+    },
+    {
+      "source": "/preview/wildflowers-grooming",
+      "destination": "/preview/wildflowers-grooming/index.html"
     }
   ],
   "headers": [
