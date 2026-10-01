@@ -46,11 +46,12 @@ export default function Offer() {
         </Reveal>
 
         {/*
-          ScrollFX (GSAP, dynamic) scrubs the per-card dark overlay from 0 to its
-          depth value as each card scrolls through the viewport — no GSAP in the
-          shared bundle.
+          Cards render server-side (crawlable). ScrollFX (GSAP, dynamic, ssr:false)
+          mounts as an empty first-child marker and scrubs each card's dark overlay
+          as it scrolls through — no GSAP in the shared bundle.
         */}
-        <ScrollFX variant="offerDepth" className="mt-16 divide-y divide-marine/30">
+        <div className="mt-16 divide-y divide-marine/30">
+          <ScrollFX variant="offerDepth" />
           {cards.map((card, i) => (
             <Reveal key={card.href} delay={i * 0.08}>
               <div
@@ -85,7 +86,7 @@ export default function Offer() {
               </div>
             </Reveal>
           ))}
-        </ScrollFX>
+        </div>
       </div>
     </section>
   );

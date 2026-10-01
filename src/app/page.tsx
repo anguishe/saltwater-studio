@@ -17,7 +17,7 @@ import { getFaqsByPage } from "@/data/faqs";
 export const metadata: Metadata = buildMetadata({
   title: "Web Design & Google Business Profiles — Destin, FL",
   description:
-    `Custom websites, monthly Google Business Profile management, and AI that answers missed calls, for local businesses nationwide. Start with a $${site.auditOffer.price} audit (through ${site.auditOffer.endsLabel}).`,
+    `Custom websites, Google Business Profile management, and AI that answers missed calls for local businesses. Start with a $${site.auditOffer.price} visibility audit.`,
   path: "/",
 });
 

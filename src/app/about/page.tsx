@@ -16,7 +16,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = buildMetadata({
   title: "About Travis — Web Design & AI, Destin FL",
   description:
-    "Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide.",
+    "Travis Abadie founded Saltwater Studio in Destin, FL in 2025: custom websites, Google Business Profile management, and AI automation for local businesses.",
   path: "/about",
 });
 

@@ -11,7 +11,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = buildMetadata({
   title: "Contact — Get a Quote",
   description:
-    "Tell Saltwater Studio about the business. Websites, Google Business Profile management, local search, and AI automation — scoped within a day, reply within one business day.",
+    "Tell Saltwater Studio about the business: a website, Google Business Profile management, local search, or AI. Scoped within a day, reply in one business day.",
   path: "/contact",
 });
 

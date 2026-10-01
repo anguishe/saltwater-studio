@@ -19,7 +19,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = buildMetadata({
   title: `Services — Websites, Google Care & AI, $${site.auditOffer.price} Audit`,
   description:
-    `Custom websites, monthly Google Business Profile management, local and AI search, and AI receptionists. Start with the $${site.auditOffer.price} visibility audit (through ${site.auditOffer.endsLabel}, 72-hour delivery).`,
+    `Custom websites, Google Business Profile management, local and AI search, and AI receptionists. Start with the $${site.auditOffer.price} audit, delivered in 72 hours.`,
   path: "/services",
 });
 

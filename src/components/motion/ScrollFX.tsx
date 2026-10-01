@@ -10,7 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 type Variant = "offerDepth" | "ctaEcho";
 
 interface ScrollFXProps extends Omit<ComponentPropsWithoutRef<"div">, "children"> {
-  children: ReactNode;
+  /**
+   * Omit to mount as an empty marker that animates its PARENT. Use that when the
+   * content must be in the server HTML: this component loads ssr:false, so any
+   * children passed in only appear after hydration (invisible to crawlers).
+   */
+  children?: ReactNode;
   variant: Variant;
 }
 
@@ -27,11 +32,13 @@ interface ScrollFXProps extends Omit<ComponentPropsWithoutRef<"div">, "children"
  */
 export default function ScrollFX({ children, variant, className, ...props }: ScrollFXProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const hasChildren = Boolean(children);
 
   useLenis(); // ref-counted — safe to call from multiple instances
 
   useEffect(() => {
-    const el = ref.current;
+    const marker = ref.current;
+    const el = hasChildren ? marker : marker?.parentElement;
     if (!el) return;
 
     const ctx = gsap.context(() => {
@@ -73,11 +80,12 @@ export default function ScrollFX({ children, variant, className, ...props }: Scr
           }
         );
       }
-    }, ref);
+    }, el);
 
     return () => ctx.revert();
-  }, [variant]);
+  }, [variant, hasChildren]);
 
+  if (!hasChildren) return <div ref={ref} hidden />;
   return (
     <div ref={ref} className={className} {...props}>
       {children}
