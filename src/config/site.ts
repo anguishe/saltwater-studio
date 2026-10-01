@@ -51,7 +51,9 @@ export const site = {
   // stripeAuditUrl MUST charge auditOffer.price — swap both together.
   // ponytail: promo end is a static string; after it passes, set price back to
   // regularPrice, restore the $150 link, and redeploy (static build won't flip itself).
-  stripeAuditUrl: "https://buy.stripe.com/eVqcN49uP3uX3gW0VMeUU00",
+  // $50 link (price_1ULcMf…, created 2026-10-01). Regular $150 link, to restore
+  // after the promo: https://buy.stripe.com/eVqcN49uP3uX3gW0VMeUU00
+  stripeAuditUrl: "https://buy.stripe.com/9B614m5ezghJ8Bg5c2eUU01",
   auditOffer: {
     price: 50,
     regularPrice: 150,
