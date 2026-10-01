@@ -90,18 +90,19 @@ CLAUDE.md "Meta: never scrape" line and the `facebook-scraping-workarounds` memo
 
 ## 5. Outreach kit (per prospect)
 
-Staged in `docs/prospects/STAGED-PAGES-WAVE-NN.{md,json}`, shown on the :8890 dashboard as "Page wave NN".
+Staged as a normal text wave (`STAGED-TEXTS-WAVE-NN.{md,json}`) whose items carry `preview_url`, `mms`, `followup`; promoted with
+`./promote-wave.sh - NN` (no email batch) into the dashboard's "Text today" slot.
 
-- `mms.png`: their hero in a phone frame, from the qa.js 390px shot, ≤ 1 MB (MMS-safe).
+- `mms.jpg`: phone-size screenshot of their live preview hero (390×844 @2x), JPEG ≤ 600 KB (MMS-safe), saved to
+  `docs/prospects/claim-audit/evidence/page-<slug>-mms.jpg` (the dashboard already serves that folder). No device frame (YAGNI).
 - **Text** (Travis's voice, 2–3 lines): who he is (Travis, Destin), "built you a free page using your
   photos", the link. Passes `gate.js` the same day.
-- **Messenger variant** for Facebook-first businesses; **email variant** when a verified address exists
+- **Messenger:** same text body (Travis pastes it + the image in the Messenger app); **email variant** when a verified address exists
   (From anguisheh1 "Saltwater Studio", Gmail safe-compose rules).
 - **Reply kit** (`TALKING-POINTS.md`): what's on the page and where each fact came from, the $297/mo
   scope list, the 4-month minimum line, open questions for the owner.
 - Cadence: one follow-up on day 3 if no reply, then stop. Sends 8 AM–8 PM, opt-out honored (FTSA).
 - Takedown within 24 h on request.
-- `promote-wave.sh` extended for page waves (staged → current → archived).
 
 ## 6. Unchanged rules
 
