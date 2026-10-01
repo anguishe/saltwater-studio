@@ -55,15 +55,15 @@ export default function Hero() {
         </p>
 
         <h1 className="font-display text-4xl font-semibold leading-tight text-foam md:text-6xl lg:text-7xl">
-          Be the business AI recommends.
+          Websites and Google profiles that make the phone ring.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foam/70">
-          ChatGPT, Claude, Perplexity, and Google&apos;s AI results now decide
-          which local businesses get named. Saltwater Studio builds the presence
-          that gets you recommended — and the AI Visibility Audit, ${site.auditOffer.price} through{" "}
-          {site.auditOffer.endsLabel}, shows
-          exactly where you stand today.
+          Saltwater Studio builds fast, custom websites and runs your Google
+          Business Profile every month, so local customers find you first. Then
+          we add AI where it saves you time, like a receptionist that texts back
+          every missed call. The visibility audit, ${site.auditOffer.price} through{" "}
+          {site.auditOffer.endsLabel}, shows exactly where you stand today.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

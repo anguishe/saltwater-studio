@@ -3,21 +3,29 @@
 import dynamic from "next/dynamic";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
-import { tiers } from "@/data/tiers";
+import { getServiceBySlug } from "@/data/services";
 
 const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: false });
 
 /**
- * Four cards = the four engagement tiers (visibility-led merge, 2026-08-09).
- * The three AI service pages stay live under T4 on /services; the homepage
- * hands off to the ladder anchors instead of individual service routes.
+ * Five service cards, web + Google first, AI second — the ~65/35 positioning
+ * mix (2026-09-30). The tier ladder lives on /services.
  */
-const cards = tiers.map((t) => ({
-  index: t.index,
-  title: t.name,
-  oneLiner: t.oneLiner,
-  href: `/services#${t.id}`,
-}));
+const cards = [
+  "web-design",
+  "google-presence",
+  "seo-aeo-geo",
+  "ai-receptionist",
+  "ai-automation",
+].map((slug, i) => {
+  const s = getServiceBySlug(slug)!;
+  return {
+    index: String(i + 1).padStart(2, "0"),
+    title: s.title,
+    oneLiner: s.oneLiner,
+    href: `/services/${s.slug}`,
+  };
+});
 
 export default function Offer() {
   return (

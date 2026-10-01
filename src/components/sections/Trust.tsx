@@ -16,7 +16,7 @@ export default function Trust() {
       <div className="mx-auto max-w-7xl flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <Reveal>
           <p className="text-center text-foam/70 md:text-left">
-            Systems for Google &middot; AI search &middot; and the people in between.
+            Websites &middot; Google Business Profiles &middot; and AI that answers the phone.
           </p>
         </Reveal>
 

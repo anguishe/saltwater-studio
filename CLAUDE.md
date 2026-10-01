@@ -1,5 +1,5 @@
 # CLAUDE.md — Saltwater Studio (saltwaterstudio.xyz)
-Flagship site for Saltwater Studio — a remote AI agency (founder Travis
+Flagship site for Saltwater Studio — a remote web design and AI studio (founder Travis
 Abadie, est. 2025, Destin, Florida, serving the US nationwide).
 ## Stack
 Next.js 16 App Router · TypeScript strict · Tailwind · framer-motion · gsap +
@@ -23,6 +23,10 @@ ourselves", AI-powered, agentic (outside technical context), revolutionize,
 "transform your business", 10x, cutting-edge, harness, supercharge,
 future-proof, AI-first. No emoji in copy.
 ## Hard rules
+- Positioning mix (Travis, 2026-09-30): ~65% websites + Google Business Profile
+  management (Google Care) + local search, ~35% AI (receptionist, automation,
+  agents, strategy). Web/GBP leads the hero, titles, entity sentence, offer
+  cards, and catalog order; AI is the add-on. Don't let AI copy retake the lead.
 - Quote-only pricing with ONE carve-out (recorded 2026-08-09): the T1 AI
   Visibility Audit is flat-priced via a Stripe Payment Link (site.stripeAuditUrl);
   price lives in site.auditOffer ($50 limited-time through 2026-10-31, regular $150).

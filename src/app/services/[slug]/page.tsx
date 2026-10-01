@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.seoTitle ?? service.title,
     description:
       service.metaDescription ??
-      `${service.oneLiner} — Saltwater Studio, an AI agency for local businesses nationwide.`,
+      `${service.oneLiner} — Saltwater Studio, web design and AI for local businesses nationwide.`,
     path: `/services/${slug}`,
   });
 }

@@ -17,9 +17,9 @@ import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: `AI Visibility Services — $${site.auditOffer.price} Audit, Sprint & Retainer`,
+  title: `Services — Websites, Google Care & AI, $${site.auditOffer.price} Audit`,
   description:
-    `The AI Visibility Audit ($${site.auditOffer.price} through ${site.auditOffer.endsLabel}, 72-hour delivery), the optimization sprint that implements it, ongoing managed presence, and custom AI systems. Local businesses nationwide.`,
+    `Custom websites, monthly Google Business Profile management, local and AI search, and AI receptionists. Start with the $${site.auditOffer.price} visibility audit (through ${site.auditOffer.endsLabel}, 72-hour delivery).`,
   path: "/services",
 });
 
@@ -35,7 +35,7 @@ export default function ServicesPage() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       {serviceFaqs.length > 0 && <JsonLd schema={buildFaqSchema(serviceFaqs)} />}
-      <JsonLd schema={webPage({ path: "/services", name: `AI Visibility Services | ${site.name}`, speakableSelectors: ["h1", ".tier-answer", ".faq-answer"] })} />
+      <JsonLd schema={webPage({ path: "/services", name: `Services | ${site.name}`, speakableSelectors: ["h1", ".tier-answer", ".faq-answer"] })} />
       {tiers.map((tier) => (
         <JsonLd
           key={tier.id}
@@ -65,15 +65,16 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="font-display text-4xl text-foam md:text-5xl max-w-2xl">
-              Get found. Get recommended.
+              Get found. Get the call.
             </h1>
             <p className="mt-4 font-display text-xl text-shoal max-w-2xl">
               {site.taglineSecondary}
             </p>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">
-              Saltwater Studio makes local businesses visible to Google and to the AI
-              assistants customers now ask first. Start with a ${site.auditOffer.price} audit; everything past
-              it is scoped to your business and quoted within a day.
+              Saltwater Studio builds the websites and runs the Google profiles local
+              customers find you through, then adds AI where it saves you hours. Start
+              with a ${site.auditOffer.price} audit; everything past it is scoped to your business and
+              quoted within a day.
             </p>
           </Reveal>
 

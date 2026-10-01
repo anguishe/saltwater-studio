@@ -35,9 +35,10 @@ export default function About() {
             {/* Canonical entity sentence — single-sourced from site.ts so it can't drift */}
             <p>{site.entitySentence}</p>
             <p>
-              The method is the same one I use on my own businesses: map the process before
-              automating it, build the thing that fits, then document it well enough to hand
-              over. Nothing gets bolted onto a workflow nobody looked at first.
+              The method is the same one I use on my own businesses: get the website and the
+              Google profile right first, because that&apos;s where customers find you. Then
+              automate the parts of the day that eat your time — mapped first, built to fit,
+              documented well enough to hand over.
             </p>
             <p>
               Remote, nationwide, out of Destin. Every engagement is personal — no account

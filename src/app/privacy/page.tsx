@@ -47,7 +47,7 @@ export default function PrivacyPage() {
 
             <h2 className="font-display text-xl text-foam mt-8">Third parties</h2>
             <p>
-              We use Resend to deliver email. Payment for the AI Visibility Audit is
+              We use Resend to deliver email. Payment for the Google &amp; AI Visibility Audit is
               processed by Stripe on Stripe&apos;s own checkout pages; we never see your
               card details. These services have their own privacy policies. We do not
               sell your data.

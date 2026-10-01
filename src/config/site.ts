@@ -14,7 +14,7 @@ export const site = {
   owner: "Travis Abadie",
   areaServed: "United States", // nationwide
   heartland: "Gulf Coast (Gulf Shores, AL to Panama City, FL)",
-  tagline: "AI systems for local business — built, not bolted on.",
+  tagline: "Websites and Google profiles for local business — built, not bolted on.",
   taglineSecondary:
     "Systems engineered for Google, AI search, and the people in between.",
   mnemonic: "Depth, by design.",
@@ -22,19 +22,19 @@ export const site = {
   // llms.txt, and every social bio. Never write "all businesses" — vague entity
   // classes are harder for answer engines to match than concrete ones.
   entitySentence:
-    "Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in Destin, Florida, building AI automation and AI-search presence for local businesses nationwide.",
+    "Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide.",
   // Topics the entity claims. Feeds Organization.knowsAbout — a disambiguation
   // lever against the unrelated "Saltwater" studios that share the name.
   knowsAbout: [
-    "AI automation",
-    "AI workflow automation",
-    "AI agents",
-    "AI strategy",
-    "business process automation",
+    "web design",
+    "web development",
+    "Google Business Profile management",
+    "local SEO",
     "answer engine optimization",
     "generative engine optimization",
-    "local SEO",
-    "web development",
+    "AI receptionist",
+    "AI automation",
+    "AI agents",
   ],
   // Cal.com booking is OFF. The qualifying form at /contact replaced it 2026-08-09
   // so leads arrive scoped instead of as a raw calendar slot. /book redirects to

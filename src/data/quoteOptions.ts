@@ -13,13 +13,13 @@
 // Mirrors the tier ladder in src/data/tiers.ts; the /contact?interest=<id>
 // prefill in QuoteForm.tsx maps tier ids onto the first four entries by index.
 export const INTERESTS = [
-  "AI Visibility Audit",
-  "AI Search Optimization Sprint",
-  "AI-Managed Presence (monthly)",
+  "Google & AI Visibility Audit",
+  "Website & Search Sprint",
+  "Google Care & Monthly Management",
   "Custom AI systems — automation, agents, integrations",
+  "Website build or rebuild",
   "Google Care — monthly Google Business Profile management",
   "AI receptionist — missed-call text-back and after-hours answering",
-  "Website build or rebuild",
   "Not sure yet — help me figure it out",
 ] as const;
 

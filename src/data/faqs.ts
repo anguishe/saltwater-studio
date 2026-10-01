@@ -20,19 +20,19 @@ export const faqs: FAQ[] = [
   {
     question: "What does Saltwater Studio do?",
     answer:
-      "Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in Destin, Florida, building AI automation and AI-search presence for local businesses nationwide. That covers AI strategy, automation of the repetitive parts of a business, AI agents that answer calls and messages, and the web and search presence that makes a business findable.",
+      "Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide. That covers custom websites, monthly Google Business Profile management, local and AI search, and AI tools like a receptionist that texts back every missed call.",
     page: "home",
   },
   {
-    question: "What does an AI agency actually do for a local business?",
+    question: "Do I need a new website or just a better Google profile?",
     answer:
-      "It finds the work a business repeats every day — intake, follow-up, quoting, scheduling, reporting — and builds systems that handle it. For most local businesses the first win is the phone: a missed call answered by text in seconds instead of lost to whoever picks up next. The second is anything typed twice.",
+      "Usually both, but rarely at once. For most local businesses the call starts on the Google Business Profile — the map listing — so that is often the faster fix. The website is what turns a maybe into a call, and what Google and AI tools read to decide what you do. The audit tells you which one is costing you more right now.",
     page: "home",
   },
   {
     question: "How much does this cost?",
     answer:
-      `The AI Visibility Audit is $${site.auditOffer.price} flat through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice}), delivered within 72 hours. Everything else is quote-based, because automating one process and rebuilding how a business runs are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.`,
+      `The Google & AI Visibility Audit is $${site.auditOffer.price} flat through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice}), delivered within 72 hours. Everything else is quote-based, because a five-page website, a monthly Google profile, and an AI receptionist are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.`,
     page: "home",
   },
   {
@@ -57,13 +57,13 @@ export const faqs: FAQ[] = [
   {
     question: "What services does Saltwater Studio offer?",
     answer:
-      `Four engagements: an AI Visibility Audit ($${site.auditOffer.price} through ${site.auditOffer.endsLabel}), the optimization sprint that implements it, ongoing AI-managed presence, and custom AI systems — automation, agents, and integrations. The audit has a flat price; everything else is quoted to the business.`,
+      `Custom websites, monthly Google Business Profile management (Google Care), SEO and AI search, social content, and AI services — a receptionist, automation, and agents. They come together as four engagements: a Google & AI Visibility Audit ($${site.auditOffer.price} through ${site.auditOffer.endsLabel}), a website and search sprint that implements it, Google Care and monthly management, and custom AI systems. The audit has a flat price; everything else is quoted to the business.`,
     page: "services",
   },
   {
-    question: "What does the AI Visibility Audit include?",
+    question: "What does the visibility audit include?",
     answer:
-      "Five checks: how your business shows up in ChatGPT, Claude, Perplexity, and Google's AI results; whether your key pages are structured answer-first; schema and entity consistency; your Google Business Profile; and a technical SEO baseline. It arrives as a written report — scored by category, issues ranked by impact, fixes in order — within 72 hours.",
+      "Five checks: your Google Business Profile; your website's speed, mobile experience, and key pages; a technical SEO baseline; schema and entity consistency; and how your business shows up in ChatGPT, Claude, Perplexity, and Google's AI results. It arrives as a written report — scored by category, issues ranked by impact, fixes in order — within 72 hours.",
     page: "services",
   },
   {
@@ -85,15 +85,15 @@ export const faqs: FAQ[] = [
     page: "services",
   },
   {
-    question: "What does the AI-Managed Presence retainer cover?",
+    question: "What does monthly management cover?",
     answer:
-      "The monthly work that keeps rankings, profiles, and AI answers current after the fixes land: Google Business Profile management, schema and content-signal upkeep, monitoring what AI assistants say about the business, and a written monthly report of what moved. Quote-based, scoped to the business.",
+      "Google Care — your Google Business Profile run every month, with posts, photos, and every review answered — plus the upkeep that keeps the website and rankings current: schema and content signals, a check on what AI assistants say about the business, and a written monthly report of what moved. Quote-based, scoped to the business.",
     page: "services",
   },
   {
     question: "Where should a business start?",
     answer:
-      "With whichever repetitive task costs the most hours, or with the phone. Strategy is the right first step when nobody has mapped how work moves through the business yet; automation or an agent is the right first step when the bottleneck is already obvious.",
+      "With wherever customers find you first. For most local businesses that is the Google Business Profile, then the website. If the phone is already ringing faster than you can answer, an AI receptionist is the right first step. When it is not obvious which, the audit answers it.",
     page: "services",
   },
   {

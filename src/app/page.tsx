@@ -15,9 +15,9 @@ import { getFaqsByPage } from "@/data/faqs";
 
 // Home: brand-first title (Saltwater Studio | …) — formatTitle inverts for path "/"
 export const metadata: Metadata = buildMetadata({
-  title: "AI Agency for Local Business — Destin, FL",
+  title: "Web Design & Google Business Profiles — Destin, FL",
   description:
-    `Get found and recommended by ChatGPT, Claude, Perplexity, and Google's AI results. Saltwater Studio builds AI visibility for local businesses — starting with a $${site.auditOffer.price} audit (through ${site.auditOffer.endsLabel}) delivered in 72 hours.`,
+    `Custom websites, monthly Google Business Profile management, and AI that answers missed calls, for local businesses nationwide. Start with a $${site.auditOffer.price} audit (through ${site.auditOffer.endsLabel}).`,
   path: "/",
 });
 
@@ -28,7 +28,7 @@ export default function HomePage() {
     <>
       {/* FAQ AEO — org+website schema emitted globally from layout.tsx */}
       <JsonLd schema={buildFaqSchema(homeFaqs)} />
-      <JsonLd schema={webPage({ path: "/", name: `${site.name} | AI Agency for Local Business`, speakableSelectors: ["h1", "#about"] })} />
+      <JsonLd schema={webPage({ path: "/", name: `${site.name} | Web Design & Google Business Profiles`, speakableSelectors: ["h1", "#about"] })} />
 
       <Hero />
       <Trust />

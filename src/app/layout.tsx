@@ -32,7 +32,7 @@ const martianMono = Martian_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Saltwater Studio | AI Agency for Local Business",
+    default: "Saltwater Studio | Web Design, Google Profiles & AI for Local Business",
     template: "%s | Saltwater Studio",
   },
   description: site.tagline,

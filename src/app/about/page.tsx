@@ -14,9 +14,9 @@ import { ButtonLink } from "@/components/ui/Button";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Travis — AI Agency, Destin FL",
+  title: "About Travis — Web Design & AI, Destin FL",
   description:
-    "Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in Destin, Florida, building AI automation and AI-search presence for local businesses nationwide.",
+    "Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide.",
   path: "/about",
 });
 
@@ -31,7 +31,7 @@ export default function AboutPage() {
       <JsonLd schema={buildAboutPageSchema()} />
       <JsonLd schema={personFounder()} />
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
-      <JsonLd schema={webPage({ path: "/about", name: `About Travis — AI Agency, Destin FL | ${site.name}`, speakableSelectors: ["h1", "#about-entity"] })} />
+      <JsonLd schema={webPage({ path: "/about", name: `About Travis — Web Design & AI, Destin FL | ${site.name}`, speakableSelectors: ["h1", "#about-entity"] })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-4xl">

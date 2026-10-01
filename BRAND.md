@@ -14,13 +14,13 @@ enough to hand it over.
 
 **Canonical entity sentence — verbatim everywhere (site, schema, llms.txt, bios):**
 
-> Saltwater Studio is a remote AI agency founded in 2025 by Travis Abadie in
-> Destin, Florida, building AI automation and AI-search presence for local
-> businesses nationwide.
+> Saltwater Studio is a remote web design and AI studio founded in 2025 by
+> Travis Abadie in Destin, Florida, building websites, Google Business Profile
+> management, and AI automation for local businesses nationwide.
 
 - **Founder:** Travis Abadie · **Founded:** 2025 · **Heartland:** Destin / FL Panhandle
 - **Service area:** United States (nationwide), Gulf Coast heartland Gulf Shores AL → Panama City FL
-- **Model:** remote AI agency (not a local storefront) · **KPI:** quote leads
+- **Model:** remote web design and AI studio (not a local storefront) · **Mix:** ~65% websites + Google Business Profile, ~35% AI (2026-09-30) · **KPI:** quote leads
 - **Pricing:** quote-only, never displayed
 
 **Entity disambiguation.** Several unrelated studios share the name — Studio
