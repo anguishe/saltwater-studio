@@ -7,6 +7,18 @@
     {
       "source": "/preview/panhandle-rv",
       "destination": "/preview/panhandle-rv/index.html"
+    },
+    {
+      "source": "/preview/dog-gone-cute",
+      "destination": "/preview/dog-gone-cute/index.html"
+    },
+    {
+      "source": "/preview/a-plus-outboard",
+      "destination": "/preview/a-plus-outboard/index.html"
+    },
+    {
+      "source": "/preview/a-shade-darker",
+      "destination": "/preview/a-shade-darker/index.html"
     }
   ],
   "headers": [

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ponytail: private preview for the owner, keep it out of search until he says go -->
+<meta name="robots" content="noindex, nofollow">
+<title>A Plus Outboard Repair | Outboard repair in Destin since 2009</title>
+<meta name="description" content="Outboard repair, diagnostics and service from Gene Perkins at 330 Mountain Dr, Destin. 4.9 stars on Google. Mon–Fri 8 AM–5 PM. (850) 642-0023.">
+<meta name="theme-color" content="#0A1622">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230A1622%22/%3E%3Cpath d=%22M8 23 13.5 8h5L24 23h-4.4l-1-3.2h-5.2l-1 3.2zm6.4-6.6h3.2L16 11.3z%22 fill=%22%23F2EDE4%22/%3E%3Cpath d=%22M23 6v6m-3-3h6%22 stroke=%22%23FF6B1A%22 stroke-width=%222.4%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="modulepreload" href="/preview/_lib/three/three.module.min.js">
+<style>
+:root{
+  --ink:#0A1622; --navy:#0F2233; --navy-2:#16314A; --deep:#071019;
+  --teal:#2EC4B6; --teal-ink:#0E6F67; --orange:#FF6B1A; --orange-ink:#B5440A;
+  --bone:#F2EDE4; --bone-2:#E6DFD2; --steel:#C9D4DC; --muted:#9DB0BF; --muted-ink:#4D5D6A; --line:rgba(201,212,220,.16);
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:18px; --barh:0px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--ink);overflow-x:clip}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 1.0625rem/1.6 var(--body);overflow-x:clip}
+body.has-bar{padding-bottom:calc(5rem + env(safe-area-inset-bottom))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+p{margin:0 0 1rem;max-width:62ch}
+h1,h2,h3{font-family:var(--display);font-weight:900;margin:0;line-height:.9;letter-spacing:.005em;text-transform:uppercase}
+h2{font-size:clamp(2.9rem,12vw,5.6rem)}
+h3{font-size:1.65rem;line-height:1}
+.eyebrow{font:800 .78rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin:0 0 1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:1.6rem;height:2px;background:currentColor}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* preview bar */
+.preview{background:var(--orange);color:var(--ink);font-size:.9rem;line-height:1.4;position:relative;z-index:3}
+.preview .wrap{padding-top:.55rem;padding-bottom:.55rem}
+.preview p{margin:0;max-width:none}
+.preview a{font-weight:800}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--barh));min-height:max(640px,calc(100svh - var(--barh)));display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(120% 70% at 50% 25%,#123047 0%,#0A1622 55%,#071019 100%);touch-action:pan-y;isolation:isolate}
+.hero canvas,.hero .poster{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero canvas{opacity:0;transition:opacity .9s ease}
+.hero.gl canvas{opacity:1}
+.hero.gl .poster{display:none}
+.poster{display:grid;place-items:start center;padding-top:9%}
+.poster svg{width:min(78vw,26rem);height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(10,22,34,0) 30%,rgba(10,22,34,.72) 58%,rgba(7,16,25,.97) 100%)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:1rem 1.25rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.mark{width:2.6rem;height:2.6rem;border-radius:10px;background:var(--orange);color:var(--ink);display:grid;place-items:center;font:900 1.5rem/1 var(--display);letter-spacing:-.02em;box-shadow:0 6px 20px rgba(255,107,26,.35)}
+.brand b{display:block;font:900 1.15rem/.95 var(--display);text-transform:uppercase;letter-spacing:.03em}
+.brand small{display:block;font:600 .72rem/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.status{display:inline-flex;align-items:center;gap:.45rem;font:700 .8rem/1 var(--body);padding:.55rem .75rem;border-radius:99px;background:rgba(10,22,34,.6);border:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);white-space:nowrap}
+.status i{width:.55rem;height:.55rem;border-radius:50%;background:var(--muted)}
+.status.open i{background:#3BE08A;box-shadow:0 0 0 0 rgba(59,224,138,.6);animation:ping 2s infinite}
+.status.closed i{background:var(--orange)}
+@keyframes ping{70%{box-shadow:0 0 0 .5rem rgba(59,224,138,0)}100%{box-shadow:0 0 0 0 rgba(59,224,138,0)}}
+
+.tach{position:absolute;right:1rem;top:4.9rem;width:5.2rem;text-align:center;pointer-events:none;font-family:var(--display)}
+.tach svg{width:100%;height:auto;display:block}
+.tach .num{font-weight:900;font-size:1.5rem;line-height:1;margin-top:-1.55rem;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.tach .lbl{font:700 .6rem/1 var(--body);letter-spacing:.2em;color:var(--muted);margin-top:.3rem}
+
+.hero-copy{margin-top:auto;padding:0 1.25rem 1.5rem}
+h1{font-size:clamp(4.1rem,20vw,9.5rem);line-height:.82;margin:0 0 1rem}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+h1 .ln>span{display:block;transform:translateY(105%);animation:rise .9s cubic-bezier(.2,.8,.15,1) forwards}
+h1 .ln:nth-child(2)>span{animation-delay:.12s;color:transparent;-webkit-text-stroke:2px var(--bone)}
+h1 .ln:nth-child(3)>span{animation-delay:.24s;color:var(--orange)}
+@keyframes rise{to{transform:none}}
+.lede{font-size:1.0625rem;color:#DCE4EA;max-width:32ch;margin-bottom:.9rem;opacity:0;animation:fade .8s .55s forwards}
+.lede strong{color:var(--bone)}
+@keyframes fade{to{opacity:1}}
+.rating{display:flex;align-items:center;gap:.55rem;font-weight:700;font-size:.95rem;margin-bottom:1rem;opacity:0;animation:fade .8s .7s forwards}
+.stars{color:#FFC34D;letter-spacing:.08em}
+.cta{display:flex;gap:.6rem;flex-wrap:wrap;opacity:0;animation:fade .8s .8s forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3.25rem;padding:.85rem 1.3rem;border-radius:14px;font:800 1.02rem/1 var(--body);text-decoration:none;border:0;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:active{transform:scale(.97)}
+.btn svg{width:1.15rem;height:1.15rem;flex:none}
+.btn-o{background:var(--orange);color:var(--ink);box-shadow:0 10px 28px rgba(255,107,26,.32)}
+.btn-g{background:rgba(242,237,228,.08);color:var(--bone);border:1px solid rgba(242,237,228,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-ink{background:var(--ink);color:var(--bone)}
+.hint{display:flex;align-items:center;gap:.5rem;margin-top:1rem;font:700 .7rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hint span{width:1px;height:1.2rem;background:linear-gradient(var(--muted),transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.mq{overflow:hidden;margin:-1.4rem 0 -.6rem;padding:.8rem 0;position:relative;z-index:2}
+.marquee{background:var(--orange);color:var(--ink);overflow:hidden;border-block:2px solid var(--ink);transform:rotate(-2deg);margin:0 -1rem}
+.marquee div{display:flex;width:max-content;animation:slide 26s linear infinite}
+.marquee span{font:900 1.6rem/1 var(--display);text-transform:uppercase;letter-spacing:.04em;padding:.85rem 0;white-space:nowrap}
+.marquee span::after{content:"\2726";margin:0 1.1rem;font-size:1rem;vertical-align:.2em}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:5.5rem 0}
+.light{background:var(--bone);color:var(--ink)}
+.light .eyebrow{color:var(--teal-ink)}
+.light .muted{color:var(--muted-ink)}
+.muted{color:var(--muted)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:2.2rem}
+.tile{position:relative;border-radius:var(--r);padding:1.25rem;background:#fff;border:1px solid rgba(10,22,34,.08);overflow:hidden;box-shadow:0 1px 0 rgba(10,22,34,.04),0 18px 40px -26px rgba(10,22,34,.35);transform-style:preserve-3d;transition:transform .25s ease}
+.tile.w2{grid-column:span 2}
+.tile.dark{background:var(--ink);color:var(--bone);border-color:transparent}
+.tile.or{background:var(--orange);color:var(--ink);border-color:transparent}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-120%);pointer-events:none}
+.tile.in::after{animation:sheen 1.4s .25s ease}
+@keyframes sheen{to{transform:translateX(120%)}}
+.quote{font:800 1.35rem/1.25 var(--body);letter-spacing:-.01em;margin:0 0 .9rem;max-width:none}
+.quote.xl{font:900 clamp(2.1rem,9.5vw,3.4rem)/.95 var(--display);text-transform:uppercase;letter-spacing:.005em}
+.src{font:700 .72rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;opacity:.72;margin:0}
+.big{font:900 clamp(3.3rem,15vw,4.4rem)/.85 var(--display);margin:0 0 .35rem;font-variant-numeric:tabular-nums}
+.tile .k{font:700 .78rem/1.25 var(--body);letter-spacing:.12em;text-transform:uppercase;margin:0;opacity:.8}
+.qm{position:absolute;right:.8rem;top:-.6rem;font:900 7rem/1 var(--display);opacity:.1;pointer-events:none}
+.pays{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.55rem}
+.pays span{font:800 .78rem/1 var(--body);padding:.45rem .6rem;border-radius:8px;background:var(--bone-2);color:var(--ink)}
+
+/* case file */
+.case{background:linear-gradient(180deg,#0A1622,#0F2233);overflow:hidden}
+.case::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:2.2rem 2.2rem;mask-image:radial-gradient(90% 70% at 50% 40%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(90% 70% at 50% 40%,#000 30%,transparent 80%);pointer-events:none}
+.file{position:relative;margin-top:2rem;border-radius:22px;background:#0C1C2B;border:1px solid var(--line);padding:1.4rem 1.25rem 1.5rem;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.file-h{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px dashed var(--line);padding-bottom:.9rem;margin-bottom:1.2rem}
+.file-h b{font:900 1.5rem/1 var(--display);text-transform:uppercase;letter-spacing:.04em}
+.file-h small{font:700 .7rem/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:right}
+.steps{list-style:none;margin:0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--teal),var(--orange));transform-origin:top;transform:scaleY(var(--p,0));transition:transform 1.4s cubic-bezier(.3,.7,.2,1)}
+.file.in .steps::before{--p:1}
+.steps li{position:relative;padding-left:3.2rem;margin-bottom:1.35rem}
+.steps li:last-child{margin-bottom:0}
+.steps .n{position:absolute;left:0;top:0;width:2.15rem;height:2.15rem;border-radius:50%;display:grid;place-items:center;background:var(--ink);border:2px solid var(--teal);font:900 .95rem/1 var(--display);color:var(--teal)}
+.steps li:last-child .n{border-color:var(--orange);color:var(--orange)}
+.steps h3{font-size:1.35rem;margin:.2rem 0 .3rem;color:var(--steel)}
+.steps p{margin:0;color:#DCE4EA}
+.stamp{position:absolute;right:.9rem;bottom:-1.1rem;transform:rotate(-9deg) scale(1.6);opacity:0;border:3px solid var(--orange);color:var(--orange);border-radius:10px;padding:.45rem .7rem;font:900 1.15rem/1 var(--display);text-transform:uppercase;letter-spacing:.06em;background:#0C1C2B;transition:transform .45s cubic-bezier(.3,1.6,.5,1) .9s,opacity .2s .9s}
+.file.in .stamp{opacity:1;transform:rotate(-9deg) scale(1)}
+.bolt{position:absolute;right:1.1rem;top:4.4rem;width:3.4rem;color:var(--orange);opacity:.9}
+.bolt path{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset 1s ease .3s}
+.file.in .bolt path{stroke-dashoffset:0}
+.case blockquote{margin:3rem 0 0;padding:0 0 0 1rem;border-left:3px solid var(--orange);color:#DCE4EA;font-size:1.05rem}
+.case blockquote footer{margin-top:.6rem}
+
+/* symptom picker */
+.pick{background:radial-gradient(120% 80% at 80% 0%,#0F3A44 0%,#0A1622 60%)}
+fieldset{border:0;margin:1.8rem 0 0;padding:0}
+legend{font:800 .78rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem;padding:0}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip label{display:flex;align-items:center;gap:.55rem;min-height:3.4rem;padding:.7rem .85rem;border-radius:14px;border:1px solid rgba(242,237,228,.18);background:rgba(242,237,228,.04);font-weight:700;font-size:.98rem;line-height:1.2;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.chip label svg{width:1.3rem;height:1.3rem;flex:none;color:var(--teal)}
+.chip input:checked+label{background:var(--teal);border-color:var(--teal);color:var(--ink);transform:translateY(-2px)}
+.chip input:checked+label svg{color:var(--ink)}
+.chip input:focus-visible+label{outline:3px solid var(--orange);outline-offset:2px}
+.fields{display:grid;gap:.7rem;margin-top:1.4rem}
+.fields label{display:block;font:800 .78rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.fields input{width:100%;min-height:3.25rem;border-radius:14px;border:1px solid rgba(242,237,228,.22);background:rgba(7,16,25,.6);color:var(--bone);font:600 1.0625rem/1.2 var(--body);padding:.8rem .95rem}
+.fields input::placeholder{color:#7F93A3}
+.phone{margin-top:1.8rem;border-radius:28px;background:#05090E;border:1px solid var(--line);padding:1rem 1rem 1.2rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.phone-h{display:flex;flex-direction:column;align-items:center;gap:.35rem;padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:1rem}
+.phone-h .av{width:2.4rem;height:2.4rem;border-radius:50%;background:var(--orange);color:var(--ink);display:grid;place-items:center;font:900 1.1rem/1 var(--display)}
+.phone-h b{font-size:.85rem;font-weight:700;color:#C9D4DC}
+.bubble{margin-left:auto;max-width:88%;background:#1F8BFF;color:#fff;border-radius:20px 20px 6px 20px;padding:.75rem .95rem;font-size:1rem;line-height:1.4;min-height:3rem;transition:transform .25s ease}
+.bubble.pop{animation:pop .35s ease}
+@keyframes pop{40%{transform:scale(1.035)}}
+.phone .btn{width:100%;margin-top:1rem}
+.or-call{text-align:center;margin:.85rem 0 0;font-size:.95rem;color:var(--muted)}
+.or-call a{color:var(--bone);font-weight:800}
+
+/* services */
+.svc{display:grid;gap:.75rem;margin-top:2.2rem}
+.card{display:grid;grid-template-columns:3rem 1fr;gap:.95rem;align-items:start;padding:1.15rem;border-radius:var(--r);background:#fff;border:1px solid rgba(10,22,34,.08);box-shadow:0 16px 36px -28px rgba(10,22,34,.4)}
+.card .ic{width:3rem;height:3rem;border-radius:12px;background:var(--ink);color:var(--orange);display:grid;place-items:center}
+.card .ic svg{width:1.6rem;height:1.6rem}
+.card h3{font-size:1.45rem;margin:.15rem 0 .3rem}
+.card p{margin:0;color:var(--muted-ink);font-size:1rem}
+.cut{display:block;width:100%;max-width:26rem;margin:2.5rem auto 0;color:var(--ink)}
+.cut path,.cut circle,.cut line{vector-effect:non-scaling-stroke}
+.cut .draw{stroke-dasharray:1200;stroke-dashoffset:1200;transition:stroke-dashoffset 2.4s ease}
+.cut.in .draw{stroke-dashoffset:0}
+.callout{font:700 .7rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;fill:var(--muted-ink)}
+
+/* visit */
+.visit{background:var(--deep);overflow:hidden}
+.chart{position:relative;margin-top:2rem;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0B1B29;aspect-ratio:4/3}
+.chart svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:52%;top:46%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}
+.pin b{background:var(--orange);color:var(--ink);font:900 1rem/1 var(--display);text-transform:uppercase;letter-spacing:.04em;padding:.5rem .7rem;border-radius:10px;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.pin i{width:2px;height:1.4rem;background:var(--orange)}
+.pin i::after{content:"";display:block;width:.8rem;height:.8rem;border-radius:50%;background:var(--orange);margin:1.3rem 0 0 -.35rem;box-shadow:0 0 0 0 rgba(255,107,26,.6);animation:ping2 2s infinite}
+@keyframes ping2{70%{box-shadow:0 0 0 1rem rgba(255,107,26,0)}100%{box-shadow:0 0 0 0 rgba(255,107,26,0)}}
+.addr{font:900 clamp(2.2rem,10vw,3.4rem)/.9 var(--display);text-transform:uppercase;margin:1.6rem 0 .4rem}
+.hours{list-style:none;margin:1.6rem 0 0;padding:0;border-top:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;padding:.8rem .2rem;border-bottom:1px solid var(--line);font-weight:600}
+.hours li.today{color:var(--ink);background:var(--teal);border-radius:10px;padding-inline:.8rem;border-color:transparent;font-weight:800}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.vbtns{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.6rem}
+.vbtns .btn{width:100%}
+.vbtns .btn:first-child{grid-column:span 2}
+
+.final{background:var(--orange);color:var(--ink);text-align:left}
+.final h2{font-size:clamp(3.4rem,15vw,6.5rem)}
+.final p{font-size:1.15rem;font-weight:600}
+.final .btn-ink{margin-top:.6rem}
+footer.site{background:var(--ink);color:var(--muted);font-size:.9rem;padding:2rem 0}
+footer.site p{margin:0}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:.45rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(7,16,25,.86);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.bar.show{transform:none}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;min-height:3.3rem;border-radius:12px;text-decoration:none;font:800 .82rem/1 var(--body);color:var(--bone);background:rgba(242,237,228,.07)}
+.bar a:first-child{background:var(--orange);color:var(--ink);flex-direction:row;gap:.45rem;font-size:.98rem}
+.bar svg{width:1.2rem;height:1.2rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (min-width:760px){
+  .bento{grid-template-columns:repeat(4,1fr)}
+  .tile.w2{grid-column:span 2}
+  .svc{grid-template-columns:1fr 1fr}
+  .chips{grid-template-columns:repeat(3,1fr)}
+  .pick .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+  .phone{margin-top:6rem;position:sticky;top:2rem}
+  .tach{top:6rem;right:2rem;width:7rem}
+  .hero-copy{padding:0 2rem 3rem;max-width:44rem}
+  .top{padding:1.4rem 2rem 0}
+  .bar{left:auto;right:1.2rem;bottom:1.2rem;width:26rem;border-radius:18px;border:1px solid var(--line)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .marquee div{animation:none}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap"><p>This is a private preview Saltwater Studio built for A Plus Outboard Repair. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a>.</p></div>
+</div>
+
+<header class="hero" id="hero">
+  <div class="poster" aria-hidden="true">
+    <svg viewBox="-150 -150 300 300">
+      <defs>
+        <linearGradient id="st" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F7FA"/><stop offset=".45" stop-color="#8FA2B1"/><stop offset=".7" stop-color="#E3EAF0"/><stop offset="1" stop-color="#5E7282"/></linearGradient>
+        <radialGradient id="hb" cx=".4" cy=".35"><stop offset="0" stop-color="#E9EEF2"/><stop offset="1" stop-color="#3E4F5D"/></radialGradient>
+      </defs>
+      <g fill="url(#st)" stroke="#0A1622" stroke-opacity=".35">
+        <path id="bl" d="M-6-22C-30-46-44-92-22-128C-4-150 40-142 48-108C56-74 30-40 8-24Z"/>
+        <use href="#bl" transform="rotate(120)"/><use href="#bl" transform="rotate(240)"/>
+      </g>
+      <circle r="30" fill="url(#hb)"/><circle r="11" fill="#22313D"/>
+    </svg>
+  </div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <div class="top">
+    <a class="brand" href="#hero" aria-label="A Plus Outboard Repair, top of page">
+      <span class="mark" aria-hidden="true">A+</span>
+      <span><b>Outboard Repair</b><small>Destin, Florida</small></span>
+    </a>
+    <span class="status" id="status" aria-live="polite"><i></i><span>Mon–Fri 8–5</span></span>
+  </div>
+
+  <div class="tach" aria-hidden="true">
+    <svg viewBox="0 0 120 80">
+      <path d="M12 72a50 50 0 0 1 96 0" fill="none" stroke="rgba(201,212,220,.18)" stroke-width="7" stroke-linecap="round"/>
+      <path id="tachArc" d="M12 72a50 50 0 0 1 96 0" fill="none" stroke="url(#tg)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="90"/>
+      <defs><linearGradient id="tg"><stop offset="0" stop-color="#2EC4B6"/><stop offset=".75" stop-color="#2EC4B6"/><stop offset="1" stop-color="#FF6B1A"/></linearGradient></defs>
+    </svg>
+    <div class="num" id="rpm">0650</div>
+    <div class="lbl">RPM</div>
+  </div>
+
+  <div class="hero-copy">
+    <h1><span class="ln"><span>Get back</span></span><span class="ln"><span>on the</span></span><span class="ln"><span>water.</span></span></h1>
+    <p class="lede">Outboard repair, diagnostics and service from <strong>Gene Perkins</strong>, on Mountain Drive in Destin since 2009.</p>
+    <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 on Google &middot; 15 reviews</p>
+    <div class="cta">
+      <a class="btn btn-o" href="tel:+18506420023"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call Gene</a>
+      <a class="btn btn-g" href="#text">Text a problem</a>
+    </div>
+    <div class="hint"><span></span>Scroll to rev it up</div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div class="marquee"><div>
+  <span>Outboard repair</span><span>Diagnostics</span><span>Yamaha</span><span>Suzuki</span><span>OMC</span><span>Steering</span><span>Control cables</span><span>Engine computers</span><span>Routine service</span>
+  <span>Outboard repair</span><span>Diagnostics</span><span>Yamaha</span><span>Suzuki</span><span>OMC</span><span>Steering</span><span>Control cables</span><span>Engine computers</span><span>Routine service</span>
+</div></div></div>
+
+<main>
+<section class="sec light" id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <p class="eyebrow rv">What boat owners say</p>
+    <h2 id="proof-h" class="rv d1">Honest work.<br>Fast turnaround.</h2>
+    <div class="bento">
+      <figure class="tile w2 dark rv" style="margin:0">
+        <span class="qm" aria-hidden="true">&ldquo;</span>
+        <blockquote class="quote xl" style="margin:0 0 1rem">He is the only mechanic I&rsquo;ll allow to service my Yamaha.</blockquote>
+        <figcaption class="src">Google review</figcaption>
+      </figure>
+      <div class="tile or rv d1">
+        <p class="big"><span id="cnt">4.9</span></p>
+        <p class="k">Stars on Google<br>15 reviews</p>
+      </div>
+      <div class="tile rv d2">
+        <p class="big">2009</p>
+        <p class="k">Incorporated<br>in Destin</p>
+      </div>
+      <figure class="tile w2 rv" style="margin:0">
+        <blockquote class="quote" style="margin:0 0 .9rem">&ldquo;Gene did a wonderful job working on my twin 350 Yamaha&rsquo;s. He is honest and trustworthy. He trouble shot and repaired a steering problem and fixed it on time and within budget.&rdquo;</blockquote>
+        <figcaption class="src">Google review</figcaption>
+      </figure>
+      <figure class="tile rv" style="margin:0">
+        <blockquote class="quote" style="font-size:1.1rem;margin:0 0 .8rem">&ldquo;Gets you in and out without delay and always at a fair price.&rdquo;</blockquote>
+        <figcaption class="src">Google review</figcaption>
+      </figure>
+      <figure class="tile rv d1" style="margin:0">
+        <blockquote class="quote" style="font-size:1.1rem;margin:0 0 .8rem">&ldquo;Great service, wonderful prices, quick turn around&rdquo;</blockquote>
+        <figcaption class="src">Google review</figcaption>
+      </figure>
+      <figure class="tile w2 dark rv" style="margin:0">
+        <blockquote class="quote" style="margin:0 0 .9rem">&ldquo;Best mechanic in Destin area. Reasonable and honest.&rdquo;</blockquote>
+        <figcaption class="src">YellowPages review, 2013</figcaption>
+      </figure>
+      <div class="tile rv">
+        <p class="k">Open</p>
+        <p class="big" style="font-size:2.3rem;margin:.4rem 0 .2rem">Mon&ndash;Fri</p>
+        <p style="margin:0;font-weight:800">8 AM &ndash; 5 PM</p>
+      </div>
+      <div class="tile rv d1">
+        <p class="k">Pay with</p>
+        <div class="pays"><span>Check</span><span>Visa</span><span>Mastercard</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec case" aria-labelledby="case-h">
+  <div class="wrap">
+    <p class="eyebrow rv">Case file</p>
+    <h2 id="case-h" class="rv d1">Struck by<br>lightning.</h2>
+    <div class="file rv d2" id="file">
+      <svg class="bolt" viewBox="0 0 40 60" aria-hidden="true"><path d="M24 2 6 34h13l-4 24 19-34H21z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      <div class="file-h"><b>Pontoon &middot; Suzuki 140</b><small>From a 2016<br>customer review</small></div>
+      <ol class="steps">
+        <li><span class="n">01</span><h3>The symptom</h3><p>Would barely start, wouldn&rsquo;t accelerate past idle, wouldn&rsquo;t shift into gear.</p></li>
+        <li><span class="n">02</span><h3>The diagnosis</h3><p>Lightning had hit the motor and damaged its computer.</p></li>
+        <li><span class="n">03</span><h3>The fix</h3><p>Gene found an excellent used computer, freed up the locked control cables and replaced the spark plugs.</p></li>
+        <li><span class="n">04</span><h3>The result</h3><p>Out the door in one day.</p></li>
+      </ol>
+      <span class="stamp" aria-hidden="true">Done in one day</span>
+    </div>
+    <blockquote class="rv">&ldquo;I am grateful for the great service and the honesty of Mr. Gene Perkins, and I strongly recommend his service to anyone in need.&rdquo;<footer class="src">YellowPages review, 2016</footer></blockquote>
+  </div>
+</section>
+
+<section class="sec pick" id="text" aria-labelledby="pick-h">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rv">Text Gene in ten seconds</p>
+      <h2 id="pick-h" class="rv d1">What&rsquo;s your<br>motor doing?</h2>
+      <p class="muted rv d2">Tap what you&rsquo;re seeing. We&rsquo;ll write the text, you hit send.</p>
+      <fieldset class="rv">
+        <legend>The problem</legend>
+        <div class="chips" id="chips">
+          <div class="chip"><input type="radio" name="sym" id="s1" value="won't start" checked><label for="s1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v8"/></svg>Won&rsquo;t start</label></div>
+          <div class="chip"><input type="radio" name="sym" id="s2" value="won't shift into gear"><label for="s2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 4v16M12 4v16M18 4v8H6"/></svg>Won&rsquo;t shift</label></div>
+          <div class="chip"><input type="radio" name="sym" id="s3" value="bogs down and won't rev past idle"><label for="s3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18 8 12"/></svg>Bogs, won&rsquo;t rev</label></div>
+          <div class="chip"><input type="radio" name="sym" id="s4" value="is overheating or sounding an alarm"><label for="s4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 4v10a4 4 0 1 0 4 0V4a2 2 0 0 0-4 0"/></svg>Overheating or alarm</label></div>
+          <div class="chip"><input type="radio" name="sym" id="s5" value="has a steering problem"><label for="s5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v6M5 16l5-3M19 16l-5-3"/></svg>Steering problem</label></div>
+          <div class="chip"><input type="radio" name="sym" id="s6" value="is due for its routine service"><label for="s6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Routine service</label></div>
+        </div>
+      </fieldset>
+      <div class="fields rv">
+        <div><label for="motor">Your motor</label><input id="motor" autocomplete="off" placeholder="e.g. Yamaha 150"></div>
+        <div><label for="where">Where&rsquo;s the boat?</label><input id="where" autocomplete="off" placeholder="e.g. on the trailer at home"></div>
+      </div>
+    </div>
+    <div class="phone rv" aria-label="Your text message preview">
+      <div class="phone-h"><span class="av" aria-hidden="true">G</span><b>Gene &middot; A Plus Outboard</b></div>
+      <p class="bubble" id="bubble" aria-live="polite">Hi Gene, my outboard won't start. When could you take a look?</p>
+      <a class="btn btn-o" id="sms" href="sms:+18506420023"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Send this text to Gene</a>
+      <p class="or-call">Rather talk? <a href="tel:+18506420023">(850) 642-0023</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="svc-h">
+  <div class="wrap">
+    <p class="eyebrow rv">The work</p>
+    <h2 id="svc-h" class="rv d1">Outboard repair,<br>diagnostics<br>&amp; service.</h2>
+    <div class="svc">
+      <div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></span><div><h3>Diagnostics</h3><p>Hard starting, no power past idle, won&rsquo;t rev. Reviews mention Gene trouble-shooting the problem, then fixing it.</p></div></div>
+      <div class="card rv d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 4v16M12 4v16M18 4v8H6"/></svg></span><div><h3>Shifting &amp; controls</h3><p>Won&rsquo;t shift into gear, stiff or locked control cables.</p></div></div>
+      <div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v6M5 16l5-3M19 16l-5-3"/></svg></span><div><h3>Steering</h3><p>One twin-350 owner&rsquo;s steering problem: found, fixed, on time and within budget.</p></div></div>
+      <div class="card rv d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></svg></span><div><h3>Engine electronics</h3><p>Damaged engine computers, including one after a lightning strike.</p></div></div>
+      <div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12 6l6 6"/></svg></span><div><h3>Routine service</h3><p>Plugs and regular upkeep so the season starts on the first turn of the key.</p></div></div>
+      <div class="card rv d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 17c3 0 3-2 6-2s3 2 6 2 3-2 6-2"/><path d="M3 21c3 0 3-2 6-2s3 2 6 2 3-2 6-2"/><path d="M12 3v9"/></svg></span><div><h3>Yamaha, Suzuki &amp; more</h3><p>Customer reviews cover Yamaha and Suzuki outboards. Got something else? Text Gene the make.</p></div></div>
+    </div>
+    <svg class="cut rv" id="cut" viewBox="0 0 340 340" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Line drawing of an outboard motor, side view">
+      <path class="draw" d="M118 44c0-17 14-28 32-28h70c27 0 44 17 46 41l4 50c1 16-10 27-26 27H136c-12 0-22-10-22-22z"/>
+      <path class="draw" d="M116 88c48 7 104 7 154-2M150 16c-6 10-6 22 0 30M126 112h40"/>
+      <path class="draw" d="M136 134h112l-10 26H148z"/>
+      <path class="draw" d="M154 160h76l-6 82h-64z"/>
+      <path class="draw" d="M166 178v36M178 178v36M190 178v36"/>
+      <path class="draw" d="M136 150h-28v58h26M116 150v58M108 166h-14v26h14"/>
+      <path class="draw" d="M140 242h112l-4 9H144z"/>
+      <path class="draw" d="M150 268c0-11 10-16 28-16h46c13 0 20 8 20 16s-7 16-21 16h-45c-18 0-28-5-28-16z"/>
+      <path class="draw" d="M186 284l9 34 9-34M244 268h10"/>
+      <path class="draw" d="M262 236c-7 8-7 56 0 64 7-8 7-56 0-64z"/>
+      <path class="draw" d="M254 268h18"/>
+      <g stroke-width="1.2" stroke-dasharray="2 4" opacity=".7"><path d="M262 64h56"/><path d="M128 100H24"/><path d="M106 186H24"/><path d="M152 274H24"/></g>
+      <g class="callout" stroke="none"><text x="318" y="56" text-anchor="end">Powerhead</text><text x="24" y="92">Electronics</text><text x="24" y="178">Controls</text><text x="24" y="266">Lower unit</text></g>
+    </svg>
+  </div>
+</section>
+
+<section class="sec visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <p class="eyebrow rv">Find the shop</p>
+    <h2 id="visit-h" class="rv d1">Mountain<br>Drive.</h2>
+    <div class="chart rv d2" aria-hidden="true">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+        <defs><radialGradient id="rg" cx=".52" cy=".46" r=".7"><stop offset="0" stop-color="#14344A"/><stop offset="1" stop-color="#0B1B29"/></radialGradient></defs>
+        <rect width="400" height="300" fill="url(#rg)"/>
+        <g fill="none" stroke="#2EC4B6" stroke-opacity=".28" stroke-width="1">
+          <path d="M-10 250c60-30 120 10 190-20s120-60 230-30"/><path d="M-10 270c70-26 130 14 200-14s130-54 220-26"/>
+          <path d="M-10 228c60-34 110 4 180-26s120-66 240-36"/><path d="M-10 206c50-30 100-4 170-30s120-64 250-44"/>
+          <path d="M-10 60c70 20 150-20 210 0s130 30 210 10" stroke="#C9D4DC" stroke-opacity=".14"/>
+          <path d="M-10 40c70 20 150-20 210 0s130 30 210 10" stroke="#C9D4DC" stroke-opacity=".12"/>
+          <path d="M-10 80c70 20 150-20 210 0s130 30 210 10" stroke="#C9D4DC" stroke-opacity=".1"/>
+        </g>
+        <g stroke="#C9D4DC" stroke-opacity=".35" stroke-width="5" stroke-linecap="round" fill="none">
+          <path d="M208 -10c-6 90-4 200-2 320"/><path d="M208 196c50-4 120-2 200-8" stroke-opacity=".18" stroke-width="3"/><path d="M-10 92c80-4 150 0 216-2" stroke-opacity=".18" stroke-width="3"/>
+        </g>
+        <g font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#9DB0BF" letter-spacing="1.5">
+          <text x="216" y="22">MOUNTAIN DR</text>
+        </g>
+        <g transform="translate(350 48)" stroke="#C9D4DC" stroke-opacity=".5" fill="none"><circle r="18"/><path d="M0-24v48M-24 0h48"/><path d="M0-18l5 18h-10z" fill="#FF6B1A" stroke="none"/></g>
+      </svg>
+      <div class="pin"><b>A+ Outboard</b><i></i></div>
+    </div>
+    <p class="addr rv">330 Mountain Dr</p>
+    <p class="muted rv">Destin, FL 32541</p>
+    <ul class="hours rv" id="hours">
+      <li data-d="1"><span>Monday</span><span>8 AM &ndash; 5 PM</span></li>
+      <li data-d="2"><span>Tuesday</span><span>8 AM &ndash; 5 PM</span></li>
+      <li data-d="3"><span>Wednesday</span><span>8 AM &ndash; 5 PM</span></li>
+      <li data-d="4"><span>Thursday</span><span>8 AM &ndash; 5 PM</span></li>
+      <li data-d="5"><span>Friday</span><span>8 AM &ndash; 5 PM</span></li>
+      <li data-d="6"><span>Saturday</span><span>Closed</span></li>
+      <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+    </ul>
+    <div class="vbtns rv">
+      <a class="btn btn-o" href="https://www.google.com/maps/dir/?api=1&amp;destination=A+Plus+Outboard+Repair+Inc,+330+Mountain+Dr,+Destin,+FL+32541" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 21 3l-8 18-2-8z"/></svg>Get directions</a>
+      <a class="btn btn-g" href="tel:+18506420023">Call</a>
+      <a class="btn btn-g" href="#text">Text</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h" class="rv">Motor acting up?</h2>
+    <p class="rv d1">Text Gene what it&rsquo;s doing. He&rsquo;s on Mountain Drive, Monday to Friday.</p>
+    <a class="btn btn-ink rv d2" href="tel:+18506420023"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(850) 642-0023</a>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap"><p>&copy; 2026 A Plus Outboard Repair Inc. Preview design by Saltwater Studio.</p></div></footer>
+
+<nav class="bar" id="bar" aria-label="Quick contact">
+  <a href="tel:+18506420023"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call Gene</a>
+  <a href="#text"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Text</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=A+Plus+Outboard+Repair+Inc,+330+Mountain+Dr,+Destin,+FL+32541" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 21 3l-8 18-2-8z"/></svg>Directions</a>
+</nav>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const root = document.documentElement;
+  const setBar = () => root.style.setProperty('--barh', $('.preview').offsetHeight + 'px');
+  setBar(); addEventListener('resize', setBar);
+
+  // open/closed in shop time (Mon–Fri 8–17, America/Chicago)
+  const status = () => {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(p => [p.type, p.value]));
+    const d = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(parts.weekday), h = +parts.hour + parts.minute / 60;
+    const wk = d >= 1 && d <= 5, open = wk && h >= 8 && h < 17;
+    let txt = open ? 'Open now · until 5 PM' : (wk && h < 8) ? 'Closed · opens 8 AM' : (d >= 1 && d <= 4) ? 'Closed · opens 8 AM tomorrow' : 'Closed · opens Mon 8 AM';
+    const el = $('#status'); el.className = 'status ' + (open ? 'open' : 'closed'); el.lastElementChild.textContent = txt;
+    document.querySelectorAll('#hours li').forEach(li => li.classList.toggle('today', +li.dataset.d === d));
+  };
+  status(); setInterval(status, 60000);
+
+  // reveals
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+  document.querySelectorAll('.rv, .tile, #file, #cut').forEach(el => io.observe(el));
+
+  // count-up on the rating tile
+  const cnt = $('#cnt');
+  new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now();
+    const step = t => { const k = Math.min(1, (t - t0) / 1100); cnt.textContent = (4.9 * (1 - Math.pow(1 - k, 3))).toFixed(1); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step); }), { threshold: .5 }).observe(cnt);
+
+  // sticky bar once the hero CTAs are gone
+  const bar = $('#bar');
+  new IntersectionObserver(([e]) => { const show = !e.isIntersecting; bar.classList.toggle('show', show); document.body.classList.toggle('has-bar', show); }, { threshold: 0 }).observe($('.cta'));
+
+  // text builder
+  const ios = /iP(hone|ad|od)|Macintosh/.test(navigator.userAgent);
+  const bubble = $('#bubble'), sms = $('#sms');
+  const build = () => {
+    const sym = (document.querySelector('input[name=sym]:checked') || {}).value || "won't start";
+    const motor = $('#motor').value.trim() || 'outboard', where = $('#where').value.trim();
+    const msg = `Hi Gene, my ${motor} ${sym}.${where ? ' The boat is ' + where.replace(/^is\s+/i, '') + '.' : ''} When could you take a look?`;
+    bubble.textContent = msg; bubble.classList.remove('pop'); void bubble.offsetWidth; bubble.classList.add('pop');
+    sms.href = 'sms:+18506420023' + (ios ? '&' : '?') + 'body=' + encodeURIComponent(msg);
+  };
+  document.querySelectorAll('input[name=sym]').forEach(r => r.addEventListener('change', build));
+  ['#motor', '#where'].forEach(s => $(s).addEventListener('input', build));
+  build();
+
+  // desktop tilt on bento tiles
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) document.querySelectorAll('.tile').forEach(t => {
+    t.addEventListener('pointermove', e => { const r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; t.style.transform = `perspective(700px) rotateX(${-y * 6}deg) rotateY(${x * 8}deg)`; });
+    t.addEventListener('pointerleave', () => t.style.transform = '');
+  });
+})();
+</script>
+
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<script type="module">
+// Hero: procedural stainless 3-blade prop over a caustics shader; scroll = throttle, drag = rotate.
+// ponytail: one canvas, one rAF, paused offscreen/hidden; any failure leaves the SVG poster up.
+const hero = document.getElementById('hero');
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  try { await start(); } catch (e) { hero.classList.remove('gl'); }
+}
+async function start() {
+  const THREE = await import('three');
+  const canvas = document.getElementById('gl');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+  renderer.autoClear = false;
+
+  // caustics background (full-screen triangle)
+  const bgScene = new THREE.Scene(), bgCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+  const bgU = { uT: { value: 0 }, uA: { value: 1 } };
+  bgScene.add(new THREE.Mesh(new THREE.BufferGeometry().setAttribute('position', new THREE.Float32BufferAttribute([-1,-1,0, 3,-1,0, -1,3,0], 3)),
+    new THREE.ShaderMaterial({ uniforms: bgU, depthTest: false, depthWrite: false,
+      vertexShader: 'varying vec2 v;void main(){v=position.xy*.5+.5;gl_Position=vec4(position.xy,0.,1.);}',
+      fragmentShader: `precision mediump float;varying vec2 v;uniform float uT,uA;
+      void main(){vec2 uv=v*vec2(uA,1.)*1.15;vec2 p=mod(uv*6.2831853,6.2831853)-250.;vec2 i=p;float c=1.;
+      for(int n=0;n<4;n++){float t=uT*(1.-(3.5/float(n+1)));i=p+vec2(cos(t-i.x)+sin(t+i.y),sin(t-i.y)+cos(t+i.x));
+      c+=1./length(vec2(p.x/(sin(i.x+t)/.005),p.y/(cos(i.y+t)/.005)));}
+      c/=4.;c=1.17-pow(c,1.4);float k=pow(abs(c),8.);
+      vec3 col=mix(vec3(.02,.05,.08),vec3(.05,.16,.23),smoothstep(.0,1.,v.y));
+      col+=vec3(.11,.6,.56)*k*.28*smoothstep(.15,.95,v.y);
+      float vg=smoothstep(1.25,.25,length((v-vec2(.5,.7))*vec2(uA*1.2,1.)));col*=mix(.55,1.,vg);
+      gl_FragColor=vec4(col,1.);}` })));
+
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(35, 1, .1, 50);
+
+  // studio environment from emissive panels
+  const env = new THREE.Scene(); env.background = new THREE.Color(0x1a2b39);
+  const panel = (w, h, c, k, p) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(c).multiplyScalar(k), side: THREE.DoubleSide })); m.position.set(...p); m.lookAt(0, 0, 0); env.add(m); };
+  panel(9, 3, 0xffffff, 5, [0, 6, 3]); panel(3, 7, 0x5fe0d3, 2.4, [-6, 0, 2]); panel(2.4, 6, 0xff7a2e, 3, [6, -1, -1]);
+  panel(7, 2, 0xdfe9f0, 1.4, [0, -5, 5]); panel(3, 3, 0xffffff, 2.5, [3, 3, 6]); panel(10, 5, 0xbfd6e2, 1.3, [-1, 1, 9]);
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(env, .035).texture; pm.dispose();
+
+  // blade: helical surface with chord, skew, cup and thickness
+  function blade() {
+    const R = 1, r0 = .2, P = 1.45, C = .98, NU = 30, NV = 14, TH = .05, pos = [], idx = [];
+    const surf = side => {
+      const base = pos.length / 3;
+      for (let a = 0; a <= NU; a++) {
+        const t = a / NU, r = r0 + (R - r0) * t, e = (t - .38) / .62;
+        const chord = C * Math.sqrt(Math.max(0, 1 - e * e)) * (.82 + .18 * (1 - t)), skew = -.26 * t * t, phi = Math.atan(P / (2 * Math.PI * r));
+        for (let b = 0; b <= NV; b++) {
+          const v = b / NV * 2 - 1, s = skew + v * chord / 2, th = s * Math.cos(phi) / r;
+          const z = s * Math.sin(phi) + .07 * (1 - v * v) * (.35 + t) + side * TH * (1 - v * v) * (1 - .7 * t) * .5;
+          pos.push(r * Math.cos(th), r * Math.sin(th), z);
+        }
+      }
+      for (let a = 0; a < NU; a++) for (let b = 0; b < NV; b++) {
+        const i = base + a * (NV + 1) + b, j = i + NV + 1;
+        side > 0 ? idx.push(i, j, i + 1, j, j + 1, i + 1) : idx.push(i, i + 1, j, j, i + 1, j + 1);
+      }
+    };
+    surf(1); surf(-1);
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setIndex(idx); g.computeVertexNormals(); return g;
+  }
+  const steel = new THREE.MeshStandardMaterial({ color: 0xdbe3ea, metalness: 1, roughness: .24, side: THREE.DoubleSide, envMapIntensity: 1.25 });
+  const satin = new THREE.MeshStandardMaterial({ color: 0x9aa9b5, metalness: 1, roughness: .38, envMapIntensity: 1.1 });
+  const dark = new THREE.MeshStandardMaterial({ color: 0x1b2833, metalness: .6, roughness: .45 });
+
+  const prop = new THREE.Group(), spin = new THREE.Group(); prop.add(spin);
+  const bg = blade();
+  for (let k = 0; k < 3; k++) { const m = new THREE.Mesh(bg, steel); m.rotation.z = k * Math.PI * 2 / 3; spin.add(m); }
+  const prof = [[.0,-.7],[.2,-.7],[.24,-.62],[.25,-.25],[.25,.18],[.23,.26],[.17,.3],[.15,.42],[.1,.56],[.035,.64],[0,.65]].map(([x, y]) => new THREE.Vector2(x, y));
+  const hubG = new THREE.LatheGeometry(prof, 48); hubG.rotateX(Math.PI / 2);
+  spin.add(new THREE.Mesh(hubG, satin));
+  const nut = new THREE.Mesh(new THREE.CylinderGeometry(.1, .1, .09, 6), dark); nut.rotation.x = Math.PI / 2; nut.position.z = .34; spin.add(nut);
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(.245, .018, 12, 48), dark); ring.position.z = .2; spin.add(ring);
+  prop.rotation.set(-.32, .55, 0);
+  scene.add(prop);
+
+  let portrait = true;
+  const layout = () => {
+    const w = hero.clientWidth, h = hero.clientHeight;
+    renderer.setSize(w, h, false); cam.aspect = w / h; bgU.uA.value = w / h;
+    const tanH = Math.tan(THREE.MathUtils.degToRad(cam.fov / 2));
+    portrait = cam.aspect < .95;
+    if (portrait) { const visH = 2.6 / cam.aspect, hr = hero.getBoundingClientRect(); cam.position.z = visH / (2 * tanH);
+      const top = (document.querySelector('.top').getBoundingClientRect().bottom - hr.top) / h, room = (document.querySelector('h1').getBoundingClientRect().top - hr.top) / h;
+      const d = Math.max(.24, (room - top) * 1.2); // diameter as a fraction of hero height, allowed to dip behind the headline
+      prop.position.set(-.12, visH / 2 - visH * (top + d / 2 + .01), 0); prop.scale.setScalar(Math.min(1.05, visH * d / 2.1)); }
+    else { cam.position.z = 5.6; const visH = 2 * 5.6 * tanH; prop.position.set(visH * cam.aspect * .2, .2, 0); prop.scale.setScalar(.95); }
+    cam.updateProjectionMatrix();
+  };
+  layout(); addEventListener('resize', layout); document.fonts && document.fonts.ready.then(layout);
+
+  // throttle: scroll position + scroll speed -> rpm
+  const rpmEl = document.getElementById('rpm'), arc = document.getElementById('tachArc');
+  let rpm = 650, lastY = scrollY, vel = 0, yaw = 0, yawV = 0, ang = 0, drag = null, tiltX = 0, tiltY = 0;
+  addEventListener('scroll', () => { vel = Math.min(1, vel + Math.abs(scrollY - lastY) / 600); lastY = scrollY; }, { passive: true });
+  hero.addEventListener('pointerdown', e => { if (e.target.closest('a,button')) return; drag = e.clientX; });
+  hero.addEventListener('pointermove', e => {
+    if (drag !== null) { yawV += (e.clientX - drag) * .004; drag = e.clientX; }
+    else if (e.pointerType === 'mouse') { const r = hero.getBoundingClientRect(); tiltX = ((e.clientY - r.top) / r.height - .5) * .25; tiltY = ((e.clientX - r.left) / r.width - .5) * .4; }
+  });
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach(t => hero.addEventListener(t, () => drag = null));
+
+  let running = false, inView = true, t0 = performance.now(), last = t0;
+  const frame = now => {
+    if (!running) return;
+    const dt = Math.min(.05, (now - last) / 1000); last = now;
+    const frac = Math.min(1, scrollY / Math.max(1, hero.offsetHeight * .8));
+    const target = 650 + frac * 4600 + vel * 1400;
+    vel *= Math.pow(.2, dt);
+    rpm += (target - rpm) * Math.min(1, dt * 2.6);
+    ang += (.5 + rpm / 6000 * 15) * dt;
+    spin.rotation.z = -ang;
+    yaw += yawV; yawV *= Math.pow(.04, dt); yaw *= Math.pow(.5, dt);
+    prop.rotation.y += ((.55 + yaw + tiltY + Math.sin(now / 2600) * .06) - prop.rotation.y) * Math.min(1, dt * 6);
+    prop.rotation.x += ((-.32 + tiltX + Math.sin(now / 3100) * .04) - prop.rotation.x) * Math.min(1, dt * 6);
+    bgU.uT.value = (now - t0) / 1000 * .42 + 23;
+    rpmEl.textContent = String(Math.round(rpm / 10) * 10).padStart(4, '0');
+    arc.setAttribute('stroke-dashoffset', (100 - Math.min(100, rpm / 60)).toFixed(1));
+    renderer.clear(); renderer.render(bgScene, bgCam); renderer.render(scene, cam);
+    requestAnimationFrame(frame);
+  };
+  const go = () => { const want = inView && !document.hidden; if (want && !running) { running = true; last = performance.now(); requestAnimationFrame(frame); } else if (!want) running = false; };
+  new IntersectionObserver(([e]) => { inView = e.isIntersecting; go(); }).observe(hero);
+  document.addEventListener('visibilitychange', go);
+  canvas.addEventListener('webglcontextlost', e => { e.preventDefault(); running = false; hero.classList.remove('gl'); });
+  go();
+  requestAnimationFrame(() => hero.classList.add('gl'));
+}
+</script>
+</body>
+</html>
