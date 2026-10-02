@@ -120,8 +120,8 @@ html.ready h1 .ch{transform:none}
 .tq-head{position:relative;padding:4.5rem 1.25rem 0;pointer-events:none}
 .tq-head h2{font-size:clamp(2.8rem,12.5vw,5.6rem);text-shadow:0 4px 24px rgba(8,9,10,.85)}
 .tq-step blockquote,.tq-step .n{text-shadow:0 2px 16px rgba(8,9,10,.9)}
-.tq-steps{position:relative;margin-top:auto;padding:0 1.25rem 2.2rem;min-height:11rem;pointer-events:none}
-.tq-step{position:absolute;left:1.25rem;right:1.25rem;bottom:2.2rem;opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease;max-width:34rem}
+.tq-steps{position:relative;margin-top:auto;padding:0 1.25rem 2.2rem;min-height:14.5rem;pointer-events:none}
+.tq-step{position:absolute;left:1.25rem;right:1.25rem;bottom:calc(5.6rem + env(safe-area-inset-bottom));opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease;max-width:34rem}
 .tq-step.on{opacity:1;transform:none}
 .tq-step blockquote{margin:0 0 .5rem;font:700 italic 1.35rem/1.25 var(--body);color:var(--bone)}
 .tq-step .n{font:900 1rem/1 var(--display);color:var(--yellow);letter-spacing:.14em;display:block;margin-bottom:.5rem}
@@ -342,14 +342,14 @@ footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.9rem;background:var(-
 <section class="sec" id="work" aria-labelledby="work-h" style="padding-bottom:3.5rem">
   <div class="wrap">
     <p class="eyebrow">From the shop floor</p>
-    <h2 id="work-h" class="reveal">Hoods up,<br>every bay.</h2>
+    <h2 id="work-h" class="reveal">Hoods up<br>in the bay.</h2>
     <p style="margin-top:1.2rem;color:var(--steel)">Photos Danny's Garage posted to its Google listing.</p>
   </div>
   <div class="gal" tabindex="0" aria-label="Shop photos, swipe sideways">
     <figure><img src="/preview/dannys-garage/img/vette-800.webp" srcset="/preview/dannys-garage/img/vette-800.webp 800w, /preview/dannys-garage/img/vette-1600.webp 1600w" sizes="(min-width:760px) 22rem, 78vw" width="1600" height="1200" loading="lazy" alt="A yellow Corvette Stingray with the door open and the hood up inside the shop"><figcaption>Yellow Stingray, door open, hood up.</figcaption></figure>
     <figure><img src="/preview/dannys-garage/img/truck-800.webp" srcset="/preview/dannys-garage/img/truck-800.webp 800w, /preview/dannys-garage/img/truck-1600.webp 1600w" sizes="(min-width:760px) 22rem, 78vw" width="1600" height="2133" loading="lazy" alt="A vintage teal pickup with its hood raised, shop signs on the wall behind it"><figcaption>Vintage teal pickup with the hood raised.</figcaption></figure>
-    <figure><img src="/preview/dannys-garage/img/v8-800.webp" srcset="/preview/dannys-garage/img/v8-800.webp 800w, /preview/dannys-garage/img/v8-1600.webp 1600w" sizes="(min-width:760px) 22rem, 78vw" width="1600" height="1600" loading="lazy" alt="A V8 engine with red valve covers sitting in an open engine bay"><figcaption>A V8 with red valve covers in an open bay.</figcaption></figure>
-    <figure><span class="tapelbl">Needs oil in motor</span><img src="/preview/dannys-garage/img/bay-800.webp" srcset="/preview/dannys-garage/img/bay-800.webp 800w, /preview/dannys-garage/img/bay-1600.webp 1600w" sizes="(min-width:760px) 22rem, 78vw" width="1600" height="1200" loading="lazy" alt="An engine bay under fender covers with handwritten notes on green tape across the engine"><figcaption>Shop notes on green tape, right across the engine.</figcaption></figure>
+    <figure><img src="/preview/dannys-garage/img/v8-800.webp" srcset="/preview/dannys-garage/img/v8-800.webp 800w, /preview/dannys-garage/img/v8-1600.webp 1600w" sizes="(min-width:760px) 22rem, 78vw" width="1600" height="1600" loading="lazy" alt="A V8 with red cylinder heads in an open engine bay, intake and valve covers off, rocker arms showing and shop rags stuffed in the valley"><figcaption>A V8 mid-job: intake off, rockers showing, rags in the valley.</figcaption></figure>
+    <figure><span class="tapelbl">Needs oil in motor</span><img src="/preview/dannys-garage/img/bay-800.webp" srcset="/preview/dannys-garage/img/bay-800.webp 800w, /preview/dannys-garage/img/bay-1600.webp 1600w" sizes="(min-width:760px) 22rem, 78vw" width="1600" height="1200" loading="lazy" alt="An engine bay under fender covers, with handwritten shop notes on green tape across the front: does not have antifreeze, needs oil in motor, put distributor boots back in"><figcaption>Shop notes on green tape across the front of the bay.</figcaption></figure>
   </div>
   <p class="gal-hint">Swipe for more</p>
 </section>
@@ -360,11 +360,11 @@ footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.9rem;background:var(-
     <h2 id="svc-h" class="reveal">From the<br>reviews.</h2>
     <div class="svc">
       <article class="reveal"><h3>AC quit on the drive down</h3><p>One family's AC died halfway through a 12-hour drive to Destin. It turned out to be low Freon, and they were back on vacation in about an hour.</p><span class="src">Google review</span></article>
-      <article class="reveal"><h3>Misfires and rough running</h3><p>A car started misfiring 30 minutes from Destin. New plugs and coil packs went in while the family waited.</p><span class="src">Google review</span></article>
+      <article class="reveal"><h3>Misfires and rough running</h3><p>A car started misfiring 30 minutes from Destin. New plugs and coil packs went in while the driver watched.</p><span class="src">Google review</span></article>
       <article class="reveal"><h3>Clunks from the back end</h3><p>A broken shock mount, diagnosed fast and fixed to hold for a 1,000-mile trip home.</p><span class="src">Google review</span></article>
       <article class="reveal"><h3>Brakes and alternators</h3><p>Both show up as topics people mention in the shop's Google reviews.</p><span class="src">Google review topics</span></article>
       <article class="reveal"><h3>Keeping old cars going</h3><p>“He has saved me more than a few times with getting my ol’beater back on the road and reliable.”</p><span class="src">Google review</span></article>
-      <article class="reveal"><h3>Classic iron</h3><p>Corvettes, vintage pickups and V8s with the hood up fill the shop's own photos.</p><span class="src">Shop photos on Google</span></article>
+      <article class="reveal"><h3>Classic iron</h3><p>A Corvette Stingray, a vintage Chevrolet pickup and a V8 opened up mid-job, all from the shop's own photos.</p><span class="src">Shop photos on Google</span></article>
     </div>
   </div>
 </section>
@@ -397,7 +397,7 @@ footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.9rem;background:var(-
     <p class="eyebrow">Come by the shop</p>
     <h2 id="visit-h" class="reveal">Mountain<br>Drive.</h2>
     <div class="visit-grid">
-      <div class="visit-ph reveal"><img src="/preview/dannys-garage/img/storefront-800.webp" srcset="/preview/dannys-garage/img/storefront-800.webp 800w, /preview/dannys-garage/img/storefront-1600.webp 1600w" sizes="(min-width:760px) 34rem, 100vw" width="1600" height="2133" loading="lazy" alt="The Danny's Garage sign over the open bay doors, with cars parked out front"></div>
+      <div class="visit-ph reveal"><img src="/preview/dannys-garage/img/storefront-800.webp" srcset="/preview/dannys-garage/img/storefront-800.webp 800w, /preview/dannys-garage/img/storefront-1600.webp 1600w" sizes="(min-width:760px) 34rem, 100vw" width="1600" height="2133" loading="lazy" alt="The DANNYS GARAGE sign on the front of the shop, an open bay door and cars parked out front"></div>
       <div>
         <p class="addr">343 Mountain Dr<br>Suite B</p>
         <p>Destin, FL 32541</p>
@@ -509,12 +509,12 @@ const SYM = {
   brakes: v => `the brakes on my ${v} are squealing`,
   cel: v => `my ${v} has the check engine light on`,
   hot: v => `my ${v} is running hot`,
-  other: v => `my ${v} needs someone to take a look at it`
+  other: v => `something's not right with my ${v}`
 };
 let sym = "clunk", who = "local";
 const msgEl = document.getElementById("msg"), veh = document.getElementById("veh");
 function compose() {
-  const v = (veh.value || "").trim().replace(/\s+/g, " ") || "car";
+  const v = (veh.value || "").trim().replace(/\s+/g, " ").replace(/^(my|a|an|the)\s+/i, "") || "car";
   const when = ST.open ? "today" : ST.when;
   const s = SYM[sym](v);
   const m = who === "trip"
