@@ -123,7 +123,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /home/angsec/Projects/saltwater-studio && npm run lint --silent 2>&1 | head -20"
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && [ -d node_modules ] && npm run lint --silent 2>&1 | head -20; exit 0"
           }
         ]
       }
