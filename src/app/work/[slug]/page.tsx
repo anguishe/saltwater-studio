@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
   }
   return buildMetadata({
-    title: `${project.title} Case Study — ${project.category}`,
+    title: project.seoTitle ?? `${project.title} Case Study — ${project.category}`,
     description:
       project.metaDescription ??
       `Case study: ${project.result} — a Saltwater Studio web design project.`,
@@ -88,7 +88,7 @@ export default async function WorkSlugPage({ params }: Props) {
 
           {!isLive && (
             <Reveal delay={0.1}>
-              <p className="mt-4 font-mono text-xs text-shoal/60">
+              <p className="mt-4 font-mono text-xs text-shoal-muted">
                 Concept project — a sample site built by Saltwater Studio to demonstrate this kind of business. Not a real company or client.
               </p>
             </Reveal>

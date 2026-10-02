@@ -22,7 +22,7 @@ export default function CalEmbed({ calcomUrl }: CalEmbedProps) {
   if (calcomUrl.startsWith("{{")) {
     return (
       <div className="rounded-lg border border-marine/30 p-8 text-center bg-marine/10">
-        <p className="font-mono text-xs tracking-widest text-foam/30 uppercase">
+        <p className="font-mono text-xs tracking-widest text-foam-subtle uppercase">
           Cal.com embed — configure CALCOM_URL in site.ts
         </p>
       </div>

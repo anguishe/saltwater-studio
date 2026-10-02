@@ -15,6 +15,14 @@
   /* Bioluminescence */
   --color-glow: #5FF2E0;
 
+  /* Muted text (AA-safe, 2026-10-02 site-gate). Solid hexes, NOT opacity modifiers:
+     text-foam/20..50 and text-shoal/50..70 failed 4.5:1 on abyss/ink. Ratios are vs
+     the lightest dark surface used (marine/20 over ink, #061D23) and abyss (#02090C).
+     See CLAUDE.md "AA-safe text tokens" before adding a new muted pairing. */
+  --color-foam-muted: #909593;  /* secondary copy (was foam/50)       5.72 .. 6.60 */
+  --color-foam-subtle: #7F8685; /* labels, meta, legal (was foam/20-40) 4.68 .. 5.40 */
+  --color-shoal-muted: #239389; /* teal eyebrow labels (was shoal/50-70) 4.64 .. 5.35 */
+
   /* Molten chrome */
   --color-chrome-hi: #DCE3E8;
   --color-chrome-mid: #8A949B;
@@ -38,6 +46,9 @@
   --shoal:       #2FC6B6;
   --sun:         #E8B04B;
   --glow:        #5FF2E0;
+  --foam-muted:  #909593;
+  --foam-subtle: #7F8685;
+  --shoal-muted: #239389;
   --chrome-hi:   #DCE3E8;
   --chrome-mid:  #8A949B;
   --chrome-warm: #C9A227;

@@ -25,7 +25,8 @@ If no type is given, infer from the name or ask.
 ## Brand Tokens (Tailwind classes)
 
 **Backgrounds:** `bg-ink` · `bg-abyss` · `bg-marine/10` · `bg-marine/20`
-**Text:** `text-foam` · `text-foam/60` · `text-foam/40` · `text-foam/20` · `text-shoal` · `text-sun`
+**Text:** `text-foam` · `text-foam/60`+ · `text-foam-muted` · `text-foam-subtle` · `text-shoal` · `text-shoal-muted` · `text-sun`
+(Never `text-foam/20`–`/50` or `text-shoal/50`–`/70` for text: they fail 4.5:1. See CLAUDE.md "AA-safe text tokens".)
 **Borders:** `border-marine/40` · `border-shoal/40` · `border-marine/30`
 **Accent fill:** `bg-shoal` · `bg-glow`
 

@@ -23,7 +23,7 @@ export default function Trust() {
         <ul className="flex flex-wrap justify-center gap-6 md:gap-10" aria-label="Studio facts">
           {proofs.map((p, i) => (
             <Reveal key={p.label} delay={i * 0.05}>
-              <li className="font-mono text-xs tracking-[0.2em] text-foam/40 uppercase">
+              <li className="font-mono text-xs tracking-[0.2em] text-foam-subtle uppercase">
                 {p.label}
               </li>
             </Reveal>

@@ -15,7 +15,7 @@ import { getFaqsByPage } from "@/data/faqs";
 
 // Home: brand-first title (Saltwater Studio | …) — formatTitle inverts for path "/"
 export const metadata: Metadata = buildMetadata({
-  title: "Web Design & Google Business Profiles — Destin, FL",
+  title: "Web Design & Google Profiles — Destin, FL",
   description:
     `Custom websites, Google Business Profile management, and AI that answers missed calls for local businesses. Start with a $${site.auditOffer.price} visibility audit.`,
   path: "/",

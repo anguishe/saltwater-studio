@@ -58,3 +58,17 @@ future-proof, AI-first. No emoji in copy.
   - JSON-LD parses, and its `@id` references resolve.
   - Text contrast ≥ 4.5:1 (3:1 only for ≥ 24px or bold ≥ 18.66px). Check every new color/opacity pairing, especially muted grays and brand accents on dark or brand backgrounds.
 - **Business-state changes** (parked/reopened, prices, phone, address, photo permissions): update schema, default metadata/OG copy, and this file in the same change.
+- **AA-safe text tokens (2026-10-02).** Text sits on four dark surfaces: abyss `#02090C`, ink `#05161B`, `bg-marine/10` over ink (`#061A1F`), `bg-marine/20` over ink (`#061D23`, the lightest). Use these and nothing dimmer for readable text:
+
+  | Text class | Hex | Lowest ratio (marine/20 over ink) | abyss |
+  |---|---|---|---|
+  | `text-foam` | `#F4F1EA` | 15.4 | 17.8 |
+  | `text-foam/70` | alpha | 8.0 | 8.7 |
+  | `text-foam/60` | alpha | 6.2 | 6.6 |
+  | `text-foam-muted` (secondary copy) | `#909593` | 5.72 | 6.60 |
+  | `text-foam-subtle` (labels, meta, legal, placeholders) | `#7F8685` | 4.68 | 5.40 |
+  | `text-shoal` | `#2FC6B6` | 8.18 | 9.43 |
+  | `text-shoal-muted` (teal eyebrows) | `#239389` | 4.64 | 5.35 |
+
+  Banned for text: `text-foam/20`–`/50` (1.7–4.8:1) and `text-shoal/50`–`/70` (2.6–4.97:1); they're what the 2026-10-02 gate flagged. Muted tokens are solid hexes in `src/app/globals.css` `@theme`, not opacity modifiers. Never put them on `bg-marine` solid or lighter. A purely decorative word (ghost/outline text) may go dimmer only with `aria-hidden="true"` and no information in it.
+- **Build-time meta check.** `npm run build` runs `scripts/check-meta.mjs` as `postbuild`. It fails the build on a missing title or description, title > 65, description > 160, or a duplicate title across indexable pages. Titles are generated as `<body> | Saltwater Studio` (19-char suffix), so keep the body ≤ 41 chars (≤ 46 hard max). Home is `Saltwater Studio | <body>`. Service titles live in `src/data/services.ts` `seoTitle`, case-study titles in `src/data/projects.ts` `seoTitle`. /preview/* is static in `public/` and not scanned; it has its own landing-page-audit gate.

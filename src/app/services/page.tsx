@@ -17,7 +17,7 @@ import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: `Services — Websites, Google Care & AI, $${site.auditOffer.price} Audit`,
+  title: `Websites, Google Care & AI — $${site.auditOffer.price} Audit`,
   description:
     `Custom websites, Google Business Profile management, local and AI search, and AI receptionists. Start with the $${site.auditOffer.price} audit, delivered in 72 hours.`,
   path: "/services",
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                 {engagementProof.map((item) => (
                   <div key={item.label} className="rounded border border-marine/30 p-5">
                     <p className="font-semibold text-foam">{item.label}</p>
-                    <p className="mt-2 text-sm text-foam/50">{item.detail}</p>
+                    <p className="mt-2 text-sm text-foam-muted">{item.detail}</p>
                   </div>
                 ))}
               </div>
@@ -112,7 +112,7 @@ export default function ServicesPage() {
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 0.08}>
                 <div className="group grid gap-6 py-12 md:grid-cols-[5rem_1fr_auto] md:items-start hover:bg-marine/10 transition-colors px-2 rounded">
-                  <span className="font-mono text-xs tracking-widest text-shoal/50 uppercase mt-1">
+                  <span className="font-mono text-xs tracking-widest text-shoal-muted uppercase mt-1">
                     {service.index}
                   </span>
                   <div>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     <p className="mt-3 text-foam/60 max-w-xl">{service.oneLiner}</p>
                     <ul className="mt-4 space-y-1">
                       {service.included.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-sm text-foam/50">
+                        <li key={item} className="flex items-start gap-2 text-sm text-foam-muted">
                           <span className="text-shoal mt-0.5" aria-hidden="true">—</span>
                           {item}
                         </li>

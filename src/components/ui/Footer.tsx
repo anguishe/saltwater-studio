@@ -23,19 +23,19 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
             <p className="font-display text-lg text-foam font-semibold">
               Saltwater Studio
             </p>
-            <p className="mt-1 text-sm text-foam/50">
+            <p className="mt-1 text-sm text-foam-muted">
               Destin, FL &middot; serving nationwide
             </p>
-            <p className="mt-4 font-mono text-xs text-foam/30 tracking-widest uppercase">
+            <p className="mt-4 font-mono text-xs text-foam-subtle tracking-widest uppercase">
               {site.mnemonic}
             </p>
-            <p className="mt-2 font-mono text-xs text-foam/20">
+            <p className="mt-2 font-mono text-xs text-foam-subtle">
               Est.&nbsp;{site.founded}
             </p>
           </div>
 
           <nav aria-label="Footer navigation" className="flex flex-col gap-2">
-            <p className="font-mono text-xs text-foam/30 tracking-widest uppercase mb-2">
+            <p className="font-mono text-xs text-foam-subtle tracking-widest uppercase mb-2">
               Navigate
             </p>
             {footerNav.map((item) => (
@@ -51,7 +51,7 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
 
           {/* Sitewide links to every service page — the only internal links most of them get outside /services. */}
           <nav aria-label="Services" className="flex flex-col gap-2">
-            <p className="font-mono text-xs text-foam/30 tracking-widest uppercase mb-2">
+            <p className="font-mono text-xs text-foam-subtle tracking-widest uppercase mb-2">
               Services
             </p>
             {serviceLinks.map((s) => (
@@ -66,7 +66,7 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
           </nav>
 
           <div>
-            <p className="font-mono text-xs text-foam/30 tracking-widest uppercase mb-2">
+            <p className="font-mono text-xs text-foam-subtle tracking-widest uppercase mb-2">
               Contact
             </p>
             <a
@@ -94,7 +94,7 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-mono text-xs text-foam/40 hover:text-shoal transition-colors"
+                      className="font-mono text-xs text-foam-subtle hover:text-shoal transition-colors"
                     >
                       {label}
                     </a>
@@ -106,11 +106,11 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
         </div>
 
         <div className="mt-10 border-t border-marine/30 pt-6 flex flex-col gap-2 md:flex-row md:justify-between">
-          <p className="text-xs text-foam/30">
+          <p className="text-xs text-foam-subtle">
             &copy; {new Date().getFullYear()} Saltwater Studio &middot;
             Est.&nbsp;{site.founded}
           </p>
-          <p className="text-xs text-foam/30">
+          <p className="text-xs text-foam-subtle">
             Remote studio &mdash; {site.heartland}
           </p>
         </div>

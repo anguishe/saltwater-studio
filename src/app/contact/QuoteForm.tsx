@@ -103,7 +103,7 @@ export default function QuoteForm() {
   }
 
   const inputClass =
-    "w-full rounded border border-marine/50 bg-marine/10 px-4 py-3 text-foam placeholder:text-foam/30 focus:border-shoal focus:outline-none focus:ring-1 focus:ring-shoal transition-colors";
+    "w-full rounded border border-marine/50 bg-marine/10 px-4 py-3 text-foam placeholder:text-foam-subtle focus:border-shoal focus:outline-none focus:ring-1 focus:ring-shoal transition-colors";
   const labelClass = "block text-sm text-foam/70 mb-1.5";
   // Native select. Right rung of the ladder: it is keyboard accessible, screen-reader
   // correct, and mobile-native for free. A custom listbox would be more code and worse.
@@ -277,7 +277,7 @@ export default function QuoteForm() {
               </option>
             ))}
           </select>
-          <p className="mt-1.5 text-xs text-foam/40">
+          <p className="mt-1.5 text-xs text-foam-subtle">
             A call is never required — everything can run over email.
           </p>
         </div>
@@ -286,7 +286,7 @@ export default function QuoteForm() {
           <label htmlFor="message" className={labelClass}>
             Walk me through it <span aria-hidden="true">*</span>
           </label>
-          <p className="mb-1.5 text-xs text-foam/40">
+          <p className="mb-1.5 text-xs text-foam-subtle">
             What happens today, step by step, and where it falls apart. Specifics
             beat summaries — that is what makes the quote real.
           </p>
@@ -327,7 +327,7 @@ export default function QuoteForm() {
           >
             {state.status === "loading" ? "Sending…" : "Send it"}
           </Button>
-          <p className="mt-3 text-center text-xs text-foam/40">
+          <p className="mt-3 text-center text-xs text-foam-subtle">
             Rather just talk?{" "}
             <a
               href={`tel:${site.phone}`}

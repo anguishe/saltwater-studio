@@ -33,7 +33,7 @@ export default function NotFound() {
       </div>
       <Link
         href="/work"
-        className="mt-6 text-sm text-foam/40 hover:text-shoal transition-colors"
+        className="mt-6 text-sm text-foam-subtle hover:text-shoal transition-colors"
       >
         Or see the work →
       </Link>
