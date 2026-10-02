@@ -284,7 +284,7 @@ footer.site{background:var(--ink);color:#9FAAA4;font-size:.85rem;text-align:cent
   <div class="wrap">
     <p class="kick rv">The name is the plan</p>
     <h2 class="rv">Nobody books a <em>relax day</em> to be rushed.</h2>
-    <p class="lede rv">Read the Google reviews and the same words keep coming back: clean, relaxing, thorough. Vacationers, snowbirds, couples who both wanted pedicures, a mom and her three-year-old on a girls' day. It all happens in suite 212 of Fountain Plaza.</p>
+    <p class="lede rv">Read the Google reviews and two words keep coming back: clean and relaxing. Vacationers, snowbirds, couples who both wanted pedicures, a mom and her three-year-old on a girls' day. It all happens in suite 212 of Fountain Plaza.</p>
     <div class="beats">
       <div class="beat rv"><span class="n">1</span><div><h3>Walk in, or call ahead</h3><p>One reviewer walked in and was seen within a few minutes. A whole family walked in for pedicures together.</p></div></div>
       <div class="beat rv"><span class="n">2</span><div><h3>Sit back</h3><p>Manicures, pedicures, gel pedicures, dip and SNS, pink &amp; white, French, and waxing.</p></div></div>
@@ -295,7 +295,7 @@ footer.site{background:var(--ink);color:#9FAAA4;font-size:.85rem;text-align:cent
 
 <section class="proof" aria-labelledby="proof-h">
   <div class="wrap">
-    <p class="kick rv">What 265 reviews say</p>
+    <p class="kick rv">By the numbers</p>
     <h2 id="proof-h" class="rv">The numbers are <em>calm</em> too.</h2>
     <div class="bento">
       <div class="tile hero-t rv"><div><span class="stars" aria-hidden="true">★★★★★</span><div class="big">4.9</div></div><p>out of 5 on Google, from 265 reviews.</p></div>
@@ -316,7 +316,7 @@ footer.site{background:var(--ink);color:#9FAAA4;font-size:.85rem;text-align:cent
       <figure class="card wide"><div class="ph"><img src="/preview/relax-day-nails/img/copper-800.webp" srcset="/preview/relax-day-nails/img/copper-800.webp 800w, /preview/relax-day-nails/img/copper-1600.webp 1600w" sizes="(min-width:900px) 420px, 86vw" width="800" height="600" loading="lazy" alt="Long copper-orange nails with gold glitter accent nails, next to two powder jars"></div><figcaption><b>Copper and gold</b>Long and tapered, glitter on the accent nails.</figcaption></figure>
       <figure class="card"><div class="ph"><img src="/preview/relax-day-nails/img/pink-white-800.webp" srcset="/preview/relax-day-nails/img/pink-white-800.webp 800w, /preview/relax-day-nails/img/pink-white-1600.webp 1600w" sizes="(min-width:900px) 300px, 72vw" width="800" height="1067" loading="lazy" alt="Square pink and white nails, labeled Pink and white"></div><figcaption><b>Pink &amp; white</b>Squared off, clean white tips.</figcaption></figure>
       <figure class="card"><div class="ph"><img src="/preview/relax-day-nails/img/sage-800.webp" srcset="/preview/relax-day-nails/img/sage-800.webp 800w, /preview/relax-day-nails/img/sage-1600.webp 1600w" sizes="(min-width:900px) 300px, 72vw" width="800" height="1067" loading="lazy" alt="Long sage green nails resting on a dip powder jar, labeled Dip"></div><figcaption><b>Sage dip</b>Long, soft green, one jar.</figcaption></figure>
-      <figure class="card"><div class="ph"><img src="/preview/relax-day-nails/img/red-glitter-800.webp" srcset="/preview/relax-day-nails/img/red-glitter-800.webp 800w, /preview/relax-day-nails/img/red-glitter-1600.webp 1600w" sizes="(min-width:900px) 300px, 72vw" width="800" height="1067" loading="lazy" alt="Short red glitter nails on hands wearing two gold rings"></div><figcaption><b>Red glitter</b>Short, rounded, all sparkle.</figcaption></figure>
+      <figure class="card"><div class="ph"><img src="/preview/relax-day-nails/img/red-glitter-800.webp" srcset="/preview/relax-day-nails/img/red-glitter-800.webp 800w, /preview/relax-day-nails/img/red-glitter-1600.webp 1600w" sizes="(min-width:900px) 300px, 72vw" width="800" height="1067" loading="lazy" alt="Short soft-square red glitter nails on hands wearing two gold rings, labeled Dip"></div><figcaption><b>Red glitter dip</b>Short, soft square, all sparkle.</figcaption></figure>
     </div>
     <p class="swipe">Swipe for more</p>
   </div>
@@ -339,7 +339,7 @@ footer.site{background:var(--ink);color:#9FAAA4;font-size:.85rem;text-align:cent
       </div>
     </div>
     <div class="breath" aria-hidden="true"><span>Breathe in</span><span>Breathe out</span></div>
-    <p class="hint">Illustration. Your basin will be at suite 212.</p>
+    <p class="hint">An illustration, not a photo of the salon. The real basins are in suite 212.</p>
   </div>
 </section>
 
@@ -490,7 +490,7 @@ for(var i=0;i<7;i++){
   b.innerHTML=lab+'<small>'+fh(t[0]).replace(' ','')+'–'+fh(t[1]).replace(' ','')+'</small>';
   var late=i===0&&N.h>=t[1]-1;
   if(late){b.disabled=true;b.querySelector('small').textContent='done for today'}
-  b.setAttribute('aria-pressed','false');dbox.appendChild(b);dayList.push({spoken:spoken,lab:lab,wd:wd,dis:late});
+  b.setAttribute('aria-pressed','false');dbox.appendChild(b);dayList.push({spoken:spoken,i:i,nm:DAYS[wd],lab:lab,wd:wd,dis:late});
 }
 S.day=dayList[0].dis?'1':'0';
 
@@ -507,8 +507,9 @@ function sync(){
   var mani=(pl?'manicures':'a manicure')+' with '+hand;
   svc=S.what==='mani'?mani:S.what==='pedi'?pedi:mani+' and '+pedi;
   var ex=[];if(S.extra.french)ex.push(S.what==='pedi'?'French on the toes':'French tips');if(S.extra.wax)ex.push('waxing');
-  var lead=w===1?"Hi! I'd like to come in ":(w===2?"Hi! There are two of us, and we'd like to come in ":"Hi! There are three or more of us, and we'd like to come in ");
-  var line=lead+dd.spoken+' '+times[S.time]+' for '+svc+(ex.length?', plus '+ex.join(' and '):'')+'. Do you have room?';
+  var lead=w===1?"Hi! I'd like to come in ":(w===2?"Hi! There are two of us, and we'd like to come in ":"Hi! We're a group of three or more, and we'd like to come in ");
+  var when=dd.i===0?{morning:'this morning',midday:'today around midday',afternoon:'this afternoon'}[S.time]:dd.i===1?{morning:'tomorrow morning',midday:'tomorrow around midday',afternoon:'tomorrow afternoon'}[S.time]:{morning:dd.nm+' morning',midday:dd.nm+' around midday',afternoon:dd.nm+' afternoon'}[S.time];
+  var line=lead+when+' for '+svc+(ex.length?', plus '+ex.join(' and '):'')+'. Do you have room?';
   document.getElementById('script').textContent=line;
   var rows=[['Day',dd.lab+', '+times[S.time].replace('in the ','').replace('around ','')],['For',w===1?'Just me':w===2?'Two of us':'Three or more'],
     ['Booking',S.what==='mani'?'Manicure':S.what==='pedi'?'Pedicure':'Mani + pedi']];

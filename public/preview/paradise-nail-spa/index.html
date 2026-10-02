@@ -51,7 +51,7 @@ html.ready #loader{opacity:0;visibility:hidden}
 .hero{position:relative;padding:14px 0 30px;overflow:clip}
 .hero::before{content:"";position:absolute;width:150vw;height:120vw;max-width:1400px;max-height:1100px;left:50%;top:-30vw;translate:-50% 0;background:radial-gradient(closest-side,rgba(255,106,85,.22),transparent 70%),radial-gradient(closest-side at 70% 80%,rgba(15,158,155,.18),transparent 70%);pointer-events:none}
 .hgrid{position:relative;display:grid;gap:16px}
-.arch{position:relative;border-radius:999px 999px var(--r) var(--r);overflow:hidden;height:clamp(280px,40svh,400px);background:var(--plum);box-shadow:0 30px 60px -30px rgba(34,21,46,.55)}
+.arch{position:relative;border-radius:999px 999px var(--r) var(--r);overflow:hidden;height:clamp(260px,36svh,380px);background:var(--plum);box-shadow:0 30px 60px -30px rgba(34,21,46,.55)}
 .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;transform:scale(1.08);transition:transform 1.6s var(--ease)}
 html.ready .arch img{transform:none}
 .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(34,21,46,.25) 62%,rgba(34,21,46,.82) 100%)}
@@ -153,7 +153,7 @@ html.ready .mega .ch{transform:none}
 .q{margin:22px 0 0}
 .q b{display:block;font:800 .75rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#c9b8c8;margin-bottom:10px}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
-.opt{min-height:44px;padding:9px 15px;border-radius:999px;border:1.5px solid rgba(251,243,234,.3);background:transparent;color:var(--sand);font:700 .95rem/1.1 var(--body);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.opt{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;min-height:44px;padding:9px 15px;border-radius:999px;border:1.5px solid rgba(251,243,234,.3);background:transparent;color:var(--sand);font:700 .95rem/1.1 var(--body);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
 .opt[aria-pressed=true]{background:var(--sand);color:var(--ink);border-color:var(--sand)}
 .script{margin:26px 0 0;padding:20px;border-radius:20px;background:rgba(251,243,234,.07);border:1px solid rgba(251,243,234,.16)}
 .script small{display:block;font:800 .72rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#7fe3dc;margin-bottom:10px}
@@ -271,7 +271,7 @@ footer{padding:26px 16px calc(110px + env(safe-area-inset-bottom));text-align:ce
     <p class="lead rv" style="margin-top:14px">&ldquo;A clean, friendly and relaxing nail salon experience,&rdquo; in one Google reviewer&rsquo;s words.</p>
     <div class="bento">
       <div class="tile t-rate rv"><div><span class="big">4.8</span><p>average across 407 Google reviews</p></div><span class="stars" aria-label="4.8 out of 5 stars">★★★★★<i style="width:96%">★★★★★</i></span></div>
-      <div class="tile t-photo rv"><img src="/preview/paradise-nail-spa/img/relax-800.webp" srcset="/preview/paradise-nail-spa/img/relax-800.webp 800w, /preview/paradise-nail-spa/img/relax-1600.webp 1600w" sizes="(max-width: 760px) 46vw, 260px" width="800" height="1067" loading="lazy" alt="Pink neon sign reading Time to Relax on a green leaf wall, with a hand showing pink nails below it"></div>
+      <div class="tile t-photo rv"><img src="/preview/paradise-nail-spa/img/relax-800.webp" srcset="/preview/paradise-nail-spa/img/relax-800.webp 800w, /preview/paradise-nail-spa/img/relax-1600.webp 1600w" sizes="(max-width: 760px) 46vw, 260px" width="800" height="1067" loading="lazy" alt="Pink neon sign reading Time to Relax on a green leaf wall, with two hands showing pink nails below it"></div>
       <div class="tile t-friend rv"><span class="big">&ldquo;friendly owners&rdquo;</span><p>a review topic Google pulls from 9 reviews</p></div>
       <div class="tile t-coral rv"><span class="big">7</span><p>days a week. Sundays 11 to 5.</p></div>
       <div class="tile t-fam rv"><q>Really enjoyed the atmosphere and the very kind family that took care of me.</q><p>Google review</p></div>
@@ -285,14 +285,14 @@ footer{padding:26px 16px calc(110px + env(safe-area-inset-bottom));text-align:ce
     <h2 id="svcH" class="rv">Pedicures first.<br>Then the fun part.</h2>
     <div class="svcs">
       <article class="svc rv"><div class="ic"><svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#6d2443" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 30c6 6 26 6 32 0"/><path d="M6 30h36"/><path d="M14 20c2-3 2-6 0-9M24 20c2-3 2-6 0-9M34 20c2-3 2-6 0-9"/></svg></div><div><h3>Pedicures</h3><p>Deluxe or tropical. Reviews of both mention the massage.</p></div></article>
-      <article class="svc rv"><img src="/preview/paradise-nail-spa/img/pink-800.webp" width="800" height="1067" loading="lazy" alt="Hot pink almond-shaped nails resting on white fur"><div><h3>Manicures</h3><p>A classic mani or builder gel. One reviewer called their builder gel manicure one of the best they&rsquo;ve gotten.</p></div></article>
-      <article class="svc rv"><img src="/preview/paradise-nail-spa/img/dots-800.webp" width="800" height="746" loading="lazy" alt="Pink nails with red polka-dot tips"><div><h3>Nail art</h3><p>Polka-dot tips, stars and stripes, a clean solid hot pink.</p></div></article>
-      <article class="svc rv"><div class="ic" style="background:linear-gradient(160deg,#c9f1ec,#5fcfc8)"><svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#07454f" stroke-width="2.4" aria-hidden="true"><circle cx="16" cy="18" r="6"/><circle cx="32" cy="18" r="6"/><circle cx="24" cy="31" r="6"/></svg></div><div><h3>Help picking the color</h3><p>One guest came in after an exact peachy shade and got help finding it. Ask for a hand choosing.</p></div></article>
+      <article class="svc rv"><img src="/preview/paradise-nail-spa/img/pink-800.webp" width="800" height="1067" loading="lazy" alt="Hot pink almond-shaped nails resting on white fur"><div><h3>Manicures</h3><p>A classic mani or builder gel. From a Google review: &ldquo;My builder gel manicure is one of the best I&rsquo;ve ever gotten.&rdquo;</p></div></article>
+      <article class="svc rv"><img src="/preview/paradise-nail-spa/img/dots-800.webp" width="800" height="746" loading="lazy" alt="Sheer pink nails with red tips covered in white polka dots"><div><h3>Nail art</h3><p>Red tips with white polka dots, red-white-and-blue stripes and checks, a solid hot pink.</p></div></article>
+      <article class="svc rv"><div class="ic" style="background:linear-gradient(160deg,#c9f1ec,#5fcfc8)"><svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="#07454f" stroke-width="2.4" aria-hidden="true"><circle cx="16" cy="18" r="6"/><circle cx="32" cy="18" r="6"/><circle cx="24" cy="31" r="6"/></svg></div><div><h3>Help picking the color</h3><p>One reviewer got help picking out &ldquo;the exact peachy color I was looking for.&rdquo; Ask for a hand choosing.</p></div></article>
     </div>
   </div>
   <div class="gal" tabindex="0" aria-label="Nail photos from Paradise Nail &amp; Spa">
-    <figure><img src="/preview/paradise-nail-spa/img/stars-800.webp" srcset="/preview/paradise-nail-spa/img/stars-800.webp 800w, /preview/paradise-nail-spa/img/stars-1600.webp 1600w" sizes="(max-width: 760px) 74vw, 300px" width="800" height="1172" loading="lazy" alt="Red, white and blue nail art with stars and stripes, held over a Paradise Nails and Spa brochure"><figcaption>Stars and stripes, over their own brochure</figcaption></figure>
-    <figure><img src="/preview/paradise-nail-spa/img/dots-800.webp" srcset="/preview/paradise-nail-spa/img/dots-800.webp 800w, /preview/paradise-nail-spa/img/dots-1600.webp 1600w" sizes="(max-width: 760px) 74vw, 300px" width="800" height="746" loading="lazy" alt="Pink nails with red polka-dot tips"><figcaption>Pink with red polka-dot tips</figcaption></figure>
+    <figure><img src="/preview/paradise-nail-spa/img/stars-800.webp" srcset="/preview/paradise-nail-spa/img/stars-800.webp 800w, /preview/paradise-nail-spa/img/stars-1600.webp 1600w" sizes="(max-width: 760px) 74vw, 300px" width="800" height="1172" loading="lazy" alt="Red, white and blue nail art with stripes, checks and white dots, held over a Paradise Nails and Spa brochure"><figcaption>Red, white and blue, over their own brochure</figcaption></figure>
+    <figure><img src="/preview/paradise-nail-spa/img/dots-800.webp" srcset="/preview/paradise-nail-spa/img/dots-800.webp 800w, /preview/paradise-nail-spa/img/dots-1600.webp 1600w" sizes="(max-width: 760px) 74vw, 300px" width="800" height="746" loading="lazy" alt="Sheer pink nails with red tips covered in white polka dots"><figcaption>Red tips, white polka dots</figcaption></figure>
     <figure><img src="/preview/paradise-nail-spa/img/pink-800.webp" srcset="/preview/paradise-nail-spa/img/pink-800.webp 800w, /preview/paradise-nail-spa/img/pink-1600.webp 1600w" sizes="(max-width: 760px) 74vw, 300px" width="800" height="1067" loading="lazy" alt="Hot pink almond-shaped nails resting on white fur"><figcaption>Hot pink, almond shape</figcaption></figure>
     <figure><img src="/preview/paradise-nail-spa/img/relax-800.webp" srcset="/preview/paradise-nail-spa/img/relax-800.webp 800w, /preview/paradise-nail-spa/img/relax-1600.webp 1600w" sizes="(max-width: 760px) 74vw, 300px" width="800" height="1067" loading="lazy" alt="Pink neon sign reading Time to Relax on a green leaf wall"><figcaption>The Time to Relax sign</figcaption></figure>
   </div>
@@ -336,7 +336,7 @@ footer{padding:26px 16px calc(110px + env(safe-area-inset-bottom));text-align:ce
       <button class="opt" type="button" data-v="wk" aria-pressed="false">This weekend</button>
     </div></div>
     <div class="script" aria-live="polite"><small>What to say when they pick up</small><p id="script">Hi! Do you have room for a deluxe pedicure later today?</p><p class="stat" id="stat"></p></div>
-    <a class="bigcall" href="tel:+18504608777" id="bigcall">Call and ask<span class="nw">(850) 460-8777</span></a>
+    <a class="bigcall" href="tel:+18504608777" id="bigcall">Call Paradise and ask<span class="nw">(850) 460-8777</span></a>
     <button class="copy" type="button" id="copy">Copy what to say</button>
   </div>
 </section>
@@ -362,7 +362,7 @@ footer{padding:26px 16px calc(110px + env(safe-area-inset-bottom));text-align:ce
 <section class="close wrap" aria-labelledby="closeH">
   <p class="kick rv" style="justify-content:center">Miramar Beach</p>
   <h2 id="closeH" class="rv">Put your feet up on US-98.</h2>
-  <p class="lead rv" style="margin:0 auto">Seven days a week in Miramar Plaza. Call ahead and ask what they have open.</p>
+  <p class="lead rv" style="margin:0 auto">Seven days a week in Miramar Plaza. Call and ask when they can fit you in.</p>
   <div class="ctas rv">
     <a class="btn call" href="tel:+18504608777"><span class="nw">(850) 460-8777</span></a>
     <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Paradise%20Nail%20%26%20Spa%2C%2012889%20US-98%20%23106A%2C%20Miramar%20Beach%2C%20FL%2032550" target="_blank" rel="noopener">Directions</a>
@@ -447,10 +447,11 @@ window.bloomP = 0;
 })();
 /* service picker -> phone script -> tel: */
 (() => {
+  const grp = (n, x) => n === 'four or more' ? x + ' for four or more of us' : n + ' ' + x;
   const S = {
-    dp: [n => 'a deluxe pedicure', n => n + ' deluxe pedicures'],
-    tp: [n => 'a tropical pedicure', n => n + ' tropical pedicures'],
-    bg: [n => 'a builder gel manicure', n => n + ' builder gel manicures'],
+    dp: [n => 'a deluxe pedicure', n => grp(n, 'deluxe pedicures')],
+    tp: [n => 'a tropical pedicure', n => grp(n, 'tropical pedicures')],
+    bg: [n => 'a builder gel manicure', n => grp(n, 'builder gel manicures')],
     mp: [n => 'a manicure and pedicure', n => 'manicures and pedicures for ' + n + ' of us'],
     na: [n => 'nail art', n => 'nail art for ' + n + ' of us']
   };
