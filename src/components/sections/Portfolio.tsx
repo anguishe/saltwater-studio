@@ -35,18 +35,18 @@ export default function Portfolio() {
                   />
                   {project.permission === "preview" && (
                     <div className="absolute inset-0 flex items-center justify-center bg-abyss/60">
-                      <span className="font-mono text-xs tracking-widest text-foam/50 uppercase">
+                      <span className="font-mono text-xs tracking-widest text-foam-muted uppercase">
                         Concept
                       </span>
                     </div>
                   )}
                 </div>
                 <div className="p-5">
-                  <p className="font-mono text-xs tracking-widest text-shoal/60 uppercase">
+                  <p className="font-mono text-xs tracking-widest text-shoal-muted uppercase">
                     {project.category}
                   </p>
                   <h3 className="mt-1 font-display text-lg text-foam">{project.title}</h3>
-                  <p className="mt-2 text-sm text-foam/50">{project.result}</p>
+                  <p className="mt-2 text-sm text-foam-muted">{project.result}</p>
                   {project.permission === "live" && project.url && (
                     <Link
                       href={`/work/${project.slug}`}
@@ -58,7 +58,7 @@ export default function Portfolio() {
                   {project.permission === "preview" && (
                     <Link
                       href={`/work/${project.slug}`}
-                      className="mt-4 inline-block text-sm text-shoal/60 hover:text-shoal transition-colors"
+                      className="mt-4 inline-block text-sm text-shoal-muted hover:text-shoal transition-colors"
                     >
                       View concept →
                     </Link>

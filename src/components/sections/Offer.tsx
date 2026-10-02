@@ -58,7 +58,7 @@ export default function Offer() {
                 className="relative group grid gap-6 py-10 md:grid-cols-[5rem_1fr_auto] md:items-center px-2 rounded hover:bg-marine/10 transition-colors"
                 data-offer-card
               >
-                <span className="font-mono text-xs tracking-widest text-shoal/50 uppercase">
+                <span className="font-mono text-xs tracking-widest text-shoal-muted uppercase">
                   {card.index}
                 </span>
 

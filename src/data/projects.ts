@@ -3,6 +3,8 @@ export type Permission = "live" | "preview";
 export interface Project {
   slug: string;
   title: string;
+  /** Search-facing <title> body for live case studies (the " | Saltwater Studio" suffix is added). Falls back to "<title> Case Study — <category>". Keep the full title ≤ 60 chars; scripts/check-meta.mjs fails the build over 65. */
+  seoTitle?: string;
   category: string;
   result: string;
   image: string;
@@ -25,6 +27,7 @@ export const projects: Project[] = [
   {
     slug: "beach-house-moving",
     title: "Beach House Moving",
+    seoTitle: "Beach House Moving: Local SEO Case Study",
     category: "Web Design · Local SEO · Google Care",
     result:
       "A county-level site plus monthly Google profile care — the homepage climbed onto page one in its home market, and calls from Google climbed with it.",
@@ -76,6 +79,7 @@ export const projects: Project[] = [
   {
     slug: "kais-run",
     title: "Kai's Run",
+    seoTitle: "Kai's Run Case Study — Dog Conditioning",
     category: "Mobile Dog Conditioning",
     result:
       "A new mobile service with no direct competitor in AI search — entity-first, with four free tools building the audience before opening day.",
@@ -120,6 +124,7 @@ export const projects: Project[] = [
   {
     slug: "heat-safety-tool",
     title: "The Heat-Safety Tool",
+    seoTitle: "Heat-Safety Tool Case Study — Live Data",
     category: "Live Data · Decision Tool",
     result:
       "A question people ask every afternoon in July, answered in under a second from live local weather.",
@@ -197,6 +202,7 @@ export const projects: Project[] = [
   {
     slug: "watervue-event-rentals",
     title: "WaterVue Event Rentals",
+    seoTitle: "WaterVue Event Rentals Case Study",
     category: "Rental Catalog · Local SEO",
     result:
       "A 51-item event-rental catalog for the Emerald Coast with every piece listed — built to answer renters' questions before the directories do.",

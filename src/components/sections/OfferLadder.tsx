@@ -37,7 +37,7 @@ export default function OfferLadder() {
               }`}
             >
               <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
-                <span className="font-mono text-xs tracking-widest text-shoal/70 uppercase">
+                <span className="font-mono text-xs tracking-widest text-shoal-muted uppercase">
                   {tier.index}
                 </span>
                 <h3 className="font-display text-2xl text-foam">{tier.name}</h3>
@@ -46,7 +46,7 @@ export default function OfferLadder() {
                     {tier.price.display} {tier.price.note}
                   </span>
                 ) : (
-                  <span className="font-mono text-xs text-foam/40 uppercase tracking-widest">
+                  <span className="font-mono text-xs text-foam-subtle uppercase tracking-widest">
                     Quote-based
                   </span>
                 )}
@@ -70,7 +70,7 @@ export default function OfferLadder() {
                 {tier.includes.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-sm text-foam/50"
+                    className="flex items-start gap-2 text-sm text-foam-muted"
                   >
                     <span className="text-shoal mt-0.5" aria-hidden="true">
                       —
@@ -86,7 +86,7 @@ export default function OfferLadder() {
                 </p>
               )}
               {tier.followUp && (
-                <p className="mt-3 text-sm text-foam/40 max-w-2xl">
+                <p className="mt-3 text-sm text-foam-subtle max-w-2xl">
                   {tier.followUp}
                 </p>
               )}

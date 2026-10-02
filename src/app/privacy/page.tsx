@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <div className="mx-auto max-w-3xl">
         <Reveal>
           <h1 className="font-display text-4xl text-foam">Privacy Policy</h1>
-          <p className="mt-2 text-sm text-foam/40">Last updated: August 2026</p>
+          <p className="mt-2 text-sm text-foam-subtle">Last updated: August 2026</p>
         </Reveal>
 
         <Reveal delay={0.08}>

@@ -162,7 +162,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
           e.stopPropagation();
           setLifting(true);
         }}
-        className="absolute bottom-6 right-6 z-20 font-mono text-[10px] uppercase tracking-[0.25em] text-foam/50 transition-colors hover:text-shoal focus-visible:text-shoal"
+        className="absolute bottom-6 right-6 z-20 font-mono text-[10px] uppercase tracking-[0.25em] text-foam-muted transition-colors hover:text-shoal focus-visible:text-shoal"
       >
         Skip
       </button>

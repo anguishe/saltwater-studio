@@ -29,7 +29,7 @@ export interface Service {
 export const services: Service[] = [
   {
     slug: "web-design",
-    seoTitle: "Web Design in Destin, FL — Custom Sites Built to Rank",
+    seoTitle: "Web Design in Destin, FL — Built to Rank",
     metaDescription:
       "Custom web design from Destin, FL for local businesses nationwide: fast Next.js sites with schema, tracking, and Search Console set up before launch.",
     index: "01",
@@ -76,7 +76,7 @@ export const services: Service[] = [
   },
   {
     slug: "google-presence",
-    seoTitle: "Google Business Profile Management — Google Care",
+    seoTitle: "Google Business Profile Management",
     metaDescription:
       "Google Business Profile management for local businesses: weekly posts from your own photos, every review answered, and a monthly report on calls.",
     index: "02",
@@ -117,7 +117,7 @@ export const services: Service[] = [
   },
   {
     slug: "seo-aeo-geo",
-    seoTitle: "Local SEO & AI Search Optimization (AEO / GEO)",
+    seoTitle: "Local SEO & AI Search Optimization",
     metaDescription:
       "Local SEO plus AI search optimization: rank in Google, get quoted by ChatGPT, Perplexity, and Copilot, and keep one consistent fact set everywhere.",
     index: "03",
@@ -138,6 +138,8 @@ export const services: Service[] = [
     slug: "social-content",
     index: "04",
     title: "Social & Content",
+    metaDescription:
+      "Social and content from Saltwater Studio: the weekly engine that keeps your Google profile alive, with answer-first posts that build the entity.",
     oneLiner:
       "The weekly engine that keeps the profile alive — content that builds the entity, not just fills the feed.",
     included: [
@@ -150,7 +152,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-receptionist",
-    seoTitle: "AI Receptionist & Missed-Call Text-Back for Small Business",
+    seoTitle: "AI Receptionist & Missed-Call Text-Back",
     metaDescription:
       "An AI receptionist for trades and local businesses: every missed call gets a text back in seconds, after-hours calls answered, job details sent to you.",
     index: "05",
@@ -196,7 +198,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-automation",
-    seoTitle: "AI Automation & Workflows for Small Business",
+    seoTitle: "AI Workflow Automation for Small Business",
     metaDescription:
       "AI automation for small businesses: intake, follow-up, quoting, scheduling, and reporting handled end to end, with a person in the loop where it matters.",
     index: "06",
@@ -239,7 +241,7 @@ export const services: Service[] = [
   },
   {
     slug: "ai-agents",
-    seoTitle: "AI Agents for Local Business — Chat, Text & Voice",
+    seoTitle: "AI Chat & Voice Agents for Local Business",
     metaDescription:
       "AI agents for local businesses: chat that answers with your real policies, inbox triage, and booking into your calendar, scoped to hand off, not guess.",
     index: "07",

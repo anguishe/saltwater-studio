@@ -11,7 +11,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = buildMetadata({
   title: "Our Work — Systems, Tools & Sites",
   description:
-    "The systems and sites Saltwater Studio has built — a live heat-safety tool, a library structured for AI citation, and custom sites for local businesses. Browse the work.",
+    "The systems and sites Saltwater Studio has built: a live heat-safety tool, a library structured for AI citation, and custom sites for local businesses.",
   path: "/work",
 });
 
@@ -56,18 +56,18 @@ export default function WorkPage() {
                     />
                     {project.permission === "preview" && (
                       <div className="absolute inset-0 flex items-center justify-center bg-abyss/60">
-                        <span className="font-mono text-xs tracking-widest text-foam/50 uppercase">
+                        <span className="font-mono text-xs tracking-widest text-foam-muted uppercase">
                           Concept
                         </span>
                       </div>
                     )}
                   </div>
                   <div className="p-5">
-                    <p className="font-mono text-xs tracking-widest text-shoal/60 uppercase">
+                    <p className="font-mono text-xs tracking-widest text-shoal-muted uppercase">
                       {project.category}
                     </p>
                     <h2 className="mt-1 font-display text-lg text-foam">{project.title}</h2>
-                    <p className="mt-2 text-sm text-foam/50">{project.result}</p>
+                    <p className="mt-2 text-sm text-foam-muted">{project.result}</p>
                     {project.permission === "live" && (
                       <Link
                         href={`/work/${project.slug}`}

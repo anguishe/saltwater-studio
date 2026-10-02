@@ -113,7 +113,7 @@ export default function AboutPage() {
                     Start the conversation
                   </ButtonLink>
                 </div>
-                <p className="mt-6 text-sm text-foam/50">
+                <p className="mt-6 text-sm text-foam-muted">
                   Prefer a quote?{" "}
                   <Link
                     href="/contact"
