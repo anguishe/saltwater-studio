@@ -48,7 +48,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
 .pbar a{color:#ffc2dc;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 
 /* hero */
-.hero{position:relative;background:var(--dk);color:#fff;min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;overflow:hidden}
+.hero{position:relative;background:var(--dk);color:#fff;min-height:min(calc(100svh - 64px),600px);display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;overflow:hidden}
 .hero-img{position:absolute;inset:0;width:100%;height:100%!important;object-fit:cover;object-position:50% 22%;z-index:-2;top:-17%;height:117%!important;transform:scale(1.06);transition:transform 1.6s var(--ease)}
 .ready .hero-img{transform:none}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(22,13,25,.05) 25%,rgba(22,13,25,.55) 52%,rgba(22,13,25,.94) 78%,var(--dk))}
@@ -239,7 +239,7 @@ footer img{width:84px;height:84px!important;border-radius:50%;margin:0 auto 12px
   <div class="hero-in">
     <div class="brand"><i></i>Posh Pups Grooming Salon</div>
     <h1 id="h1" aria-label="You had me at woof.">You had me at woof.</h1>
-    <p class="sub">Pink velvet chairs, a neon sign and groomers reviewers call gentle. Mack Bayou Rd, Santa Rosa Beach.</p>
+    <p class="sub">A pink velvet chair, a neon sign and groomers reviewers call gentle. Mack Bayou Rd, Santa Rosa Beach.</p>
     <div class="chips">
       <span class="chip"><span class="st" aria-hidden="true">★★★★★</span>5.0 · 132 Google reviews</span>
       <span class="chip js-status"><span class="dot"></span><span class="js-status-text">Mon–Fri 8 AM – 4 PM</span></span>
@@ -275,7 +275,7 @@ footer img{width:84px;height:84px!important;border-radius:50%;margin:0 auto 12px
       <div class="card c-half c-blush rv">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
         <h3>Text reminders</h3>
-        <p>&ldquo;You get text message reminders and you can confirm your appointment on a convenient link.&rdquo;</p>
+        <p>&ldquo;I love how you get text message reminders and you can confirm your appointment on a convenient link.&rdquo; <span class="nw">Google review</span></p>
       </div>
       <div class="card c-half rv">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
@@ -362,8 +362,8 @@ footer img{width:84px;height:84px!important;border-radius:50%;margin:0 auto 12px
     <div class="gal" tabindex="0" aria-label="Photos from the salon">
       <figure><img src="/preview/posh-pups-grooming/img/poodle-800.webp" srcset="/preview/posh-pups-grooming/img/poodle-800.webp 800w, /preview/posh-pups-grooming/img/poodle-1600.webp 960w" sizes="(min-width:700px) 340px, 78vw" width="960" height="640" loading="lazy" style="object-position:26% 50%" alt="A smiling woman kneels beside a big white poodle under a pink neon sign that reads You had me at woof."><figcaption>A big white poodle and a bigger smile.</figcaption></figure>
       <figure><img src="/preview/posh-pups-grooming/img/hero-800.webp" srcset="/preview/posh-pups-grooming/img/hero-800.webp 800w, /preview/posh-pups-grooming/img/hero-1600.webp 1440w" sizes="(min-width:700px) 340px, 78vw" width="1440" height="1800" loading="lazy" alt="A dalmatian in a tie sitting on a pink velvet chair."><figcaption>A dalmatian, a tie, and the pink chair.</figcaption></figure>
-      <figure><img src="/preview/posh-pups-grooming/img/bows-800.webp" srcset="/preview/posh-pups-grooming/img/bows-800.webp 800w, /preview/posh-pups-grooming/img/bows-1600.webp 1440w" sizes="(min-width:700px) 340px, 78vw" width="1440" height="1555" loading="lazy" alt="A small dog with a pink bow and pink paws on a pink velvet chair."><figcaption>Bow on, ready for pickup.</figcaption></figure>
-      <figure><img src="/preview/posh-pups-grooming/img/plaque-800.webp" srcset="/preview/posh-pups-grooming/img/plaque-800.webp 800w, /preview/posh-pups-grooming/img/plaque-1600.webp 1440w" sizes="(min-width:700px) 340px, 78vw" width="1440" height="1080" loading="lazy" alt="A wood and blue resin plaque on a shelf, framed by plants and pink flowers."><figcaption>On the shelf at the salon.</figcaption></figure>
+      <figure><img src="/preview/posh-pups-grooming/img/bows-800.webp" srcset="/preview/posh-pups-grooming/img/bows-800.webp 800w, /preview/posh-pups-grooming/img/bows-1600.webp 1440w" sizes="(min-width:700px) 340px, 78vw" width="1440" height="1555" loading="lazy" alt="A small dog with a pink bow and pink paws on a pink velvet chair."><figcaption>Bow on, ears and paws to match.</figcaption></figure>
+      <figure><img src="/preview/posh-pups-grooming/img/plaque-800.webp" srcset="/preview/posh-pups-grooming/img/plaque-800.webp 800w, /preview/posh-pups-grooming/img/plaque-1600.webp 1440w" sizes="(min-width:700px) 340px, 78vw" width="1440" height="1080" loading="lazy" alt="A wood and blue resin plaque on a shelf, framed by plants and pink flowers."><figcaption>On the shelf, between the plants.</figcaption></figure>
     </div>
     <p class="hint">Swipe for more</p>
   </div>
@@ -479,8 +479,8 @@ $$('.rv').forEach(el => io.observe(el));
   function write() {
     const name = clean(dn.value), breed = clean(br.value).toLowerCase();
     const who = name ? `my dog ${name}` : 'my dog';
-    const what = breed ? `a ${st.size} ${breed}` : `${st.size === 'extra large' ? 'an' : 'a'} ${st.size} pup`;
-    const need = { groom: 'is due for a full groom', doodle: 'is due for a doodle groom', unsure: 'needs some grooming and I would love your advice on what to book' }[st.svc];
+    const art = st.size === 'extra large' ? 'an' : 'a', what = `${art} ${st.size} ${breed || 'pup'}`;
+    const need = { groom: 'is due for a full groom', doodle: 'is due for a doodle groom', unsure: 'needs a groom, but I am not sure which one to book' }[st.svc];
     const day = st.day === 'any' ? 'Do you have anything open in the next week or two?' : `Do you have anything open on a ${st.day}?`;
     const rep = { once: '', '2wk': ' If it goes well, we would like to come back every two weeks.', month: ' If it goes well, we would like to come in once a month.' }[st.rep];
     const bow = bw.checked ? ' A bow or bandana on the way out would be perfect.' : '';
