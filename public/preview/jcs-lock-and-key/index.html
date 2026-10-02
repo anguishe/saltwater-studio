@@ -122,7 +122,8 @@ section{position:relative}
 .lists{color:var(--muted);font-size:.95rem;margin:0}
 .qt{margin:0;color:#e6e0d4;font-style:italic;font-size:.98rem}.qt cite{display:block;font-style:normal;color:var(--dim);font-size:.66rem;margin-top:.3rem}
 .card .btn{width:100%;font-size:1.05rem;min-height:58px}
-.card .btn span{opacity:.75;font-weight:500}
+.card .btn span{opacity:.75;font-weight:500;white-space:nowrap}
+.card .btn{flex-wrap:wrap;row-gap:.15rem}
 
 /* bento */
 .bento{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:2rem}
@@ -169,12 +170,12 @@ html.nogl .prog{display:none}
 .gal{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 1rem;margin-top:2rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .gal::-webkit-scrollbar{display:none}
 .gal figure{flex:0 0 72%;margin:0;scroll-snap-align:center}
-.gal img{width:100%;aspect-ratio:3/4.4;object-fit:cover;border-radius:18px;background:var(--ink-3)}
+.gal img{width:100%;height:auto;aspect-ratio:3/4.4;object-fit:cover;border-radius:18px;background:var(--ink-3)}
 .gal figcaption{font-size:.88rem;color:var(--muted);margin-top:.55rem}
 
 /* owner */
 .own{display:grid;gap:1.6rem;align-items:center}
-.own .pic img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;border-radius:24px}
+.own .pic img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;border-radius:24px}
 .own blockquote{margin:1.2rem 0;font-size:clamp(1.25rem,4.6vw,1.75rem);line-height:1.3;font-weight:500;letter-spacing:-.01em}
 .own blockquote::before{content:"\201C";display:block;font-family:var(--disp);font-size:4.5rem;line-height:.6;color:var(--brass)}
 .own .src{color:var(--dim);font-size:.66rem}
@@ -266,17 +267,17 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
 <section class="hero" id="hero">
   <div class="wrap in">
     <figure class="ph" style="margin:0">
-      <img src="/preview/jcs-lock-and-key/img/programmer-800.webp" srcset="/preview/jcs-lock-and-key/img/programmer-800.webp 800w, /preview/jcs-lock-and-key/img/programmer-1600.webp 1080w" sizes="(min-width:900px) 44vw, 100vw" width="1080" height="2400" alt="A key-programming tablet plugged in under a car's dashboard, gauges lit, while a new key is set up" fetchpriority="high">
-      <figcaption class="tag mono">On the job: programming a car key</figcaption>
+      <img src="/preview/jcs-lock-and-key/img/programmer-800.webp" srcset="/preview/jcs-lock-and-key/img/programmer-800.webp 800w, /preview/jcs-lock-and-key/img/programmer-1600.webp 1080w" sizes="(min-width:900px) 44vw, 100vw" width="1080" height="2400" alt="A key-programming tablet open to its immobilizer menu, cabled up under a dashboard, with a key in the ignition and the gauges lit" fetchpriority="high">
+      <figcaption class="tag mono">On the job: immobilizer menu, key in the ignition</figcaption>
     </figure>
     <div>
-      <div class="eyebrow mono">Gulf Breeze, FL · Mobile locksmith</div>
+      <div class="eyebrow mono">JC's Lock &amp; Key · Gulf Breeze, FL</div>
       <h1 class="mega" id="mega"><span class="ln">Locked</span><span class="ln"><span class="o">out?</span></span><span class="sr"> JC's Lock &amp; Key, a 24-hour locksmith in Gulf Breeze, Florida.</span>
         <span class="swap" aria-live="off"><b>Call John. Any hour.</b><span class="w" id="swapw">Lost the car key?</span></span></h1>
-      <p class="lede">Cars, homes and businesses from Pensacola Beach to Navarre. Lockouts, lost car keys, key fobs, rekeys and new locks. You call, John comes to you.</p>
+      <p class="lede">Cars, homes and businesses across Gulf Breeze, Pensacola, the beaches and Navarre. Lockouts, lost car keys, key fobs, rekeys and new locks. You call, John comes to you.</p>
       <ul class="chips">
         <li class="chip js-status"><span class="dot"></span><span class="js-status-text">Open 24 hours</span></li>
-        <li class="chip"><span class="st">★★★★★</span>4.7 · 107 Google reviews</li>
+        <li class="chip"><span class="st">★ 4.7</span>107 Google reviews</li>
         <li class="chip">Veteran-owned</li>
       </ul>
       <div class="ctas">
@@ -301,6 +302,7 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
         <li><button class="opt" type="button" data-k="home" aria-pressed="false">Locked out of my house</button></li>
         <li><button class="opt" type="button" data-k="rekey" aria-pressed="false">Rekey after moving</button></li>
         <li><button class="opt" type="button" data-k="smart" aria-pressed="false">New smart lock or keypad</button></li>
+        <li><button class="opt" type="button" data-k="biz" aria-pressed="false">A door at my business</button></li>
       </ul>
     </div>
     <div class="card rv" id="card" aria-live="polite">
@@ -327,8 +329,8 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
       <div class="tile br-bg rv"><b>24/7</b><p>Open 24 hours, every day of the week.</p></div>
       <div class="tile rv"><b>USMC</b><p>Veteran-owned. John served four years in the Marine Corps.</p></div>
       <div class="tile rv"><b>2014</b><p>John started JC's in 2014 and brought it to Florida in 2017.</p></div>
-      <div class="tile rv"><b>40<em>mi</em></b><p>Service radius around Gulf Breeze.</p></div>
-      <div class="tile wide rv"><b>3<em>+3</em></b><p>Google reviews that bring up key fob programming, and three more that bring up veteran-owned.</p></div>
+      <div class="tile rv"><b>14</b><p>Towns on JC's own service list, Perdido Key to DeFuniak Springs.</p></div>
+      <div class="tile wide rv"><b>2<em>×</em></b><p>Google reviews from people who lost their keys on Pensacola Beach, called JC's, and got a fast response.</p></div>
     </div>
   </div>
 </section>
@@ -360,7 +362,7 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
   <div class="wrap">
     <div class="eyebrow mono">Services</div>
     <h2 class="h split" id="svc-h">Cars, homes <span class="br">&amp; shops.</span></h2>
-    <p class="sub">From JC's own service lists. If it has a key or a lock, ask.</p>
+    <p class="sub">From JC's own service lists. If it has a key or a lock, ask. Photos below are from JC's own Google listing.</p>
     <div class="svc">
       <article class="rv"><h3>Cars &amp; trucks</h3><p class="k mono">Automotive</p><ul><li>Lockouts</li><li>Trunk lockouts</li><li>All keys lost</li><li>Spare keys</li><li>Key programming</li><li>Key fobs &amp; remotes</li><li>Push-button start</li><li>Flip &amp; smart keys</li><li>Ignition repair &amp; replacement</li><li>Car lock repair</li></ul></article>
       <article class="rv"><h3>Homes</h3><p class="k mono">Residential</p><ul><li>Home lockouts</li><li>Rekeys</li><li>New lock installs</li><li>Keypad locks</li><li>Wifi locks</li><li>Fresh installs, new holes drilled</li><li>Door &amp; jamb repair</li><li>Sliding glass doors</li><li>Storm &amp; hurricane doors</li><li>Garage remotes</li></ul></article>
@@ -368,18 +370,18 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
       <article class="rv"><h3>Everything else</h3><p class="k mono">Odd jobs</p><ul><li>RV keys &amp; lockouts</li><li>Boat keys</li><li>File cabinets</li><li>Mailboxes</li><li>Tool boxes</li><li>Sheds &amp; storage</li><li>Airplane keys</li><li>Lock boxes</li></ul></article>
     </div>
   </div>
-  <div class="gal" tabindex="0" aria-label="Photos from JC's jobs, scroll sideways">
-    <figure><img src="/preview/jcs-lock-and-key/img/door-a-800.webp" srcset="/preview/jcs-lock-and-key/img/door-a-800.webp 800w, /preview/jcs-lock-and-key/img/door-a-1600.webp 1200w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1600" loading="lazy" alt="Wood front door with a new keypad deadbolt and handleset installed"><figcaption>Keypad deadbolt and handleset, front door</figcaption></figure>
-    <figure><img src="/preview/jcs-lock-and-key/img/door-b-800.webp" srcset="/preview/jcs-lock-and-key/img/door-b-800.webp 800w, /preview/jcs-lock-and-key/img/door-b-1600.webp 920w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1781" loading="lazy" alt="Matte black deadbolt and handleset on a wood door, close up"><figcaption>Matte black deadbolt and handle</figcaption></figure>
-    <figure><img src="/preview/jcs-lock-and-key/img/machine-800.webp" srcset="/preview/jcs-lock-and-key/img/machine-800.webp 800w, /preview/jcs-lock-and-key/img/machine-1600.webp 1080w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1778" loading="lazy" alt="The clamp of a red key-cutting machine, close up"><figcaption>Key machine, clamped and ready</figcaption></figure>
-    <figure><img src="/preview/jcs-lock-and-key/img/door-c-800.webp" srcset="/preview/jcs-lock-and-key/img/door-c-800.webp 800w, /preview/jcs-lock-and-key/img/door-c-1600.webp 1036w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1581" loading="lazy" alt="Dark stained front door with a black deadbolt and handleset"><figcaption>New hardware on a stained door</figcaption></figure>
-    <figure><img src="/preview/jcs-lock-and-key/img/ignition-800.webp" srcset="/preview/jcs-lock-and-key/img/ignition-800.webp 800w, /preview/jcs-lock-and-key/img/ignition-1600.webp 1457w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1318" loading="lazy" alt="A lock cylinder opened up on the bench with its wafers showing, key in hand"><figcaption>A cylinder opened up on the bench</figcaption></figure>
+  <div class="gal" tabindex="0" aria-label="Photos from JC's Google listing, scroll sideways">
+    <figure><img src="/preview/jcs-lock-and-key/img/door-a-800.webp" srcset="/preview/jcs-lock-and-key/img/door-a-800.webp 800w, /preview/jcs-lock-and-key/img/door-a-1600.webp 1200w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1600" loading="lazy" alt="Brown paneled front door with a keypad deadbolt and a matching black handleset"><figcaption>Keypad deadbolt and handleset, front door</figcaption></figure>
+    <figure><img src="/preview/jcs-lock-and-key/img/door-b-800.webp" srcset="/preview/jcs-lock-and-key/img/door-b-800.webp 800w, /preview/jcs-lock-and-key/img/door-b-1600.webp 920w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1781" loading="lazy" alt="Matte black deadbolt and handleset on a stained door, close up"><figcaption>Matte black deadbolt and handleset</figcaption></figure>
+    <figure><img src="/preview/jcs-lock-and-key/img/machine-800.webp" srcset="/preview/jcs-lock-and-key/img/machine-800.webp 800w, /preview/jcs-lock-and-key/img/machine-1600.webp 1080w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1778" loading="lazy" alt="Latch hardware from a First Choice exit device, the panic-bar kind, mounted on a red commercial door"><figcaption>Panic-bar latch on a commercial door</figcaption></figure>
+    <figure><img src="/preview/jcs-lock-and-key/img/door-c-800.webp" srcset="/preview/jcs-lock-and-key/img/door-c-800.webp 800w, /preview/jcs-lock-and-key/img/door-c-1600.webp 1036w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1581" loading="lazy" alt="Dark stained front door with a black deadbolt and handleset"><figcaption>Black deadbolt and handleset, stained front door</figcaption></figure>
+    <figure><img src="/preview/jcs-lock-and-key/img/ignition-800.webp" srcset="/preview/jcs-lock-and-key/img/ignition-800.webp 800w, /preview/jcs-lock-and-key/img/ignition-1600.webp 1457w" sizes="(min-width:900px) 23vw, 72vw" width="800" height="1318" loading="lazy" alt="A lock cylinder taken apart in hand, its wafers showing"><figcaption>A lock cylinder opened up, wafers showing</figcaption></figure>
   </div>
 </section>
 
 <section class="sec" id="john" aria-labelledby="john-h" style="padding-top:0">
   <div class="wrap own">
-    <div class="pic rv"><img src="/preview/jcs-lock-and-key/img/machine-800.webp" srcset="/preview/jcs-lock-and-key/img/machine-800.webp 800w, /preview/jcs-lock-and-key/img/machine-1600.webp 1080w" sizes="(min-width:900px) 34vw, 100vw" width="800" height="1778" loading="lazy" alt="The clamp of a red key-cutting machine, close up"></div>
+    <figure class="pic rv" style="margin:0"><img src="/preview/jcs-lock-and-key/img/ignition-800.webp" srcset="/preview/jcs-lock-and-key/img/ignition-800.webp 800w, /preview/jcs-lock-and-key/img/ignition-1600.webp 1457w" sizes="(min-width:900px) 34vw, 100vw" width="800" height="1318" loading="lazy" alt="A lock cylinder taken apart in hand, its wafers showing"><figcaption class="src mono" style="margin-top:.6rem">From JC's Google listing</figcaption></figure>
     <div>
       <div class="eyebrow mono">Meet John</div>
       <h2 class="h split" id="john-h">Marine. <span class="br">Locksmith.</span></h2>
@@ -388,7 +390,7 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
       <ul class="facts rv">
         <li><span>AL</span><span>Grew up on a small farm in Alabama.</span></li>
         <li><span>USMC</span><span>Joined the Marine Corps after high school and spent four years in Hawaii.</span></li>
-        <li><span>GM</span><span>Trained one-on-one by a working locksmith, then ran the shop as his general manager.</span></li>
+        <li><span>GM</span><span>Personally trained by a locksmith, then became his general manager.</span></li>
         <li><span>2014</span><span>Started JC's Lock &amp; Key. Moved it to Florida in 2017 and has served Pensacola and the towns around it since.</span></li>
       </ul>
     </div>
@@ -419,7 +421,7 @@ footer.ft .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space
     <div>
       <div class="eyebrow mono">Where JC's goes</div>
       <h2 class="h split" id="area-h">We come <span class="br">to you.</span></h2>
-      <p class="sub">Based in Gulf Breeze, working about 40 miles around it. Towns from JC's own service list:</p>
+      <p class="sub">Based in Gulf Breeze. JC's comes to you. Towns from JC's own service list:</p>
       <ul class="towns rv"><li class="home">Gulf Breeze</li><li>Pensacola Beach</li><li>Pensacola</li><li>Navarre</li><li>Navarre Beach</li><li>Milton</li><li>Perdido Key</li><li>Perdido</li><li>Cantonment</li><li>Jay</li><li>Mary Esther</li><li>Fort Walton Beach</li><li>Crestview</li><li>DeFuniak Springs</li></ul>
     </div>
     <div class="box rv">
@@ -473,33 +475,38 @@ $$('.js-tel').forEach(a => a.href = 'tel:' + SHOP.tel);
 })();
 
 /* chooser: picks rewrite the card + the call button label */
-const BIG = { ignition: 1457, machine: 1080, 'door-a': 1200, 'door-b': 920, 'door-c': 1036 };
+const BIG = { ignition: 1457, machine: 1080, programmer: 1080, 'door-a': 1200, 'door-b': 920, 'door-c': 1036 };
 const NEED = {
-  car: { tag: 'Car lockout', t: 'Locked out of my car', btn: 'Call about my car', img: 'ignition', w: 1318, alt: 'A lock cylinder opened up on the bench, key in hand',
+  car: { tag: 'Car lockout', t: 'Locked out of my car', btn: 'Call about my car', img: 'ignition', w: 1318, alt: 'A lock cylinder taken apart in hand, its wafers showing',
     say: '"I\'m locked out of my car. It\'s a [year, make, model] at [where you are]."',
     ready: ['Where the car is, with a cross street or a landmark', 'Year, make and model', 'Where the keys are, if you can see them'],
     lists: 'JC\'s lists auto lockouts and trunk lockouts, any hour.',
     q: ['"The owner, John, answered my call right away and was super easy to communicate with."', 'Google review'] },
-  key: { tag: 'Lost car key', t: 'Lost my car key', btn: 'Call about a new car key', img: 'machine', w: 1778, alt: 'The clamp of a key-cutting machine',
+  key: { tag: 'Lost car key', t: 'Lost my car key', btn: 'Call about a new car key', img: 'programmer', w: 1778, alt: 'A key-programming tablet open to its immobilizer menu, cabled up under a dashboard',
     say: '"I lost the only key to my [year, make, model]. I need a new one cut and programmed."',
     ready: ['Year, make and model', 'Push-button start, flip key or a regular key', 'Where the car is parked right now'],
     lists: 'JC\'s lists car key replacement with all keys lost, key programming, key fobs, remotes and push-button start.',
-    q: ['"I lost my car keys on Pensacola Beach and he came fast."', 'Google review'] },
+    q: ['"I lost my keys on Pensacola Beach. I called them and they were quick to respond."', 'Google review'] },
   home: { tag: 'Home lockout', t: 'Locked out of my house', btn: 'Call about my house', img: 'door-c', w: 1581, alt: 'Dark stained front door with a black deadbolt and handleset',
     say: '"I\'m locked out of my house at [street], [town]."',
     ready: ['Your address and which door is easiest to reach', 'What kind of lock it is: deadbolt, keypad, knob', 'Anything urgent, like a pet inside'],
     lists: 'JC\'s lists home lockouts, lock repair and lock replacement.',
     q: ['"He got me into my home quickly and even replaced my battery for me!"', 'Google review'] },
-  rekey: { tag: 'Rekey', t: 'Rekey after moving', btn: 'Call about a rekey', img: 'door-b', w: 1781, alt: 'Matte black deadbolt and handleset on a wood door',
+  rekey: { tag: 'Rekey', t: 'Rekey after moving', btn: 'Call about a rekey', img: 'door-b', w: 1781, alt: 'Matte black deadbolt and handleset on a stained door',
     say: '"We just moved in. I want the locks rekeyed so the old keys stop working."',
     ready: ['How many outside doors, garage included', 'Whether you want one key for all of them', 'The keys you have now'],
-    lists: 'JC\'s lists rekeys, lock changes and garage door remote programming.',
+    lists: 'JC\'s lists lock rekeys, lock replacements and garage door remote programming.',
     q: ['"I was in a jam and needed help getting a lock replaced right away."', 'Google review'] },
-  smart: { tag: 'Smart lock or keypad', t: 'New smart lock or keypad', btn: 'Call about a keypad', img: 'door-a', w: 1600, alt: 'Wood front door with a keypad deadbolt and handleset installed',
+  smart: { tag: 'Smart lock or keypad', t: 'New smart lock or keypad', btn: 'Call about a keypad', img: 'door-a', w: 1600, alt: 'Brown paneled front door with a keypad deadbolt and a matching black handleset',
     say: '"I\'d like a keypad or smart lock put on my [front door]."',
     ready: ['Which door it goes on', 'Whether you already bought the lock', 'Keypad only, or wifi too'],
     lists: 'JC\'s lists keypad locks, wifi locks and fresh installs, new holes drilled if the door needs them.',
-    q: ['"I needed a new outdoor keypad and doorknob installed and they were able to come out the same day."', 'Google review'] }
+    q: ['"I needed a new outdoor keypad and doorknob installed and they were able to come out the same day."', 'Google review'] },
+  biz: { tag: 'Business', t: 'A door at my business', btn: 'Call about my business', img: 'machine', w: 1778, alt: 'Latch hardware from a panic-bar exit device on a red commercial door',
+    say: '"I need a locksmith at my business, [address]. It\'s a [lockout / rekey / panic bar / door closer]."',
+    ready: ['The business address and which door', 'What is on the door: panic bar, storefront lock, keypad', 'Whether staff need new keys, or one master key for every door'],
+    lists: 'JC\'s lists commercial lockouts, rekeys, lock changes, panic and push bars, door closers, storefront locks and master key systems.',
+    q: ['"The service was fast, professional, and courteous from start to finish."', 'Google review'] }
 };
 function pick(k) {
   const d = NEED[k]; if (!d) return;
@@ -518,7 +525,7 @@ pick('car');
 
 /* rotating hero line */
 {
-  const W = ['Lost the car key?', 'New house, old locks?', 'Key fob quit?', 'Want a keypad?', 'Locked out?'], el = $('#swapw'); let i = 0;
+  const W = ['Lost the car key?', 'New house, old locks?', 'Key fob quit?', 'Want a keypad?', 'Trunk locked?'], el = $('#swapw'); let i = 0;
   if (!reduce) setInterval(() => { el.classList.add('out'); setTimeout(() => { i = (i + 1) % W.length; el.textContent = W[i]; el.classList.remove('out'); }, 380); }, 2600);
 }
 

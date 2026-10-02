@@ -42,7 +42,7 @@ p{margin:0}
 body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* loader: two headlights click on */
-#loader{position:fixed;inset:0;z-index:90;background:var(--ink);display:grid;place-items:center;animation:ldOut .6s 2.4s var(--ease) forwards}
+#loader{position:fixed;inset:0;z-index:90;background:var(--ink);display:grid;place-items:center;animation:ldOut .5s 1.5s var(--ease) forwards}
 #loader .hl{display:flex;gap:clamp(70px,22vw,170px)}
 #loader .hl i{width:clamp(34px,9vw,58px);aspect-ratio:1;border-radius:50%;background:#2a2d35;animation:on .25s .35s steps(1) forwards}
 #loader .hl i:last-child{animation-delay:.55s}
@@ -53,13 +53,13 @@ body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opa
 html.ready #loader{animation:ldOut .6s var(--ease) forwards}
 
 /* preview bar + nav */
-.pbar{position:relative;z-index:40;background:#14171e;border-bottom:1px solid var(--line);color:#cfd1d6;font-size:.86rem;line-height:1.4;padding:.6rem var(--pad);text-align:center}
+.pbar{position:relative;z-index:40;background:#14171e;border-bottom:1px solid var(--line);color:#cfd1d6;font-size:.8rem;line-height:1.35;padding:.5rem var(--pad);text-align:center}
 .pbar a{color:var(--bone);font-weight:700;text-decoration-color:var(--yel);white-space:nowrap}
 .nav{position:sticky;top:0;z-index:45;height:64px;margin-bottom:-64px;display:flex;align-items:center;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
 .nav.solid{background:rgba(10,12,16,.8);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;min-height:44px}
-.brand img{width:44px;height:37px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.brand img{width:48px;height:41px;object-fit:contain;background:#fdfdfd;border-radius:10px;padding:2px 3px;box-shadow:0 2px 10px rgba(0,0,0,.45)}
 .brand span{font-family:var(--disp);font-weight:900;font-size:1.45rem;letter-spacing:.04em;text-transform:uppercase;line-height:.9}
 .brand small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.2em;color:var(--muted)}
 .nav-call{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;padding:0 1rem;border-radius:999px;background:var(--yel);color:var(--ink);font-weight:700;font-size:.95rem;text-decoration:none}
@@ -75,7 +75,7 @@ html.ready #loader{animation:ldOut .6s var(--ease) forwards}
 
 /* hero */
 .hero{position:relative;padding-top:64px}
-.hero-media{position:relative;aspect-ratio:5/4;overflow:hidden;background:#05060a}
+.hero-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#05060a}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:0% 55%}
 .js .hero-media img{filter:brightness(.22) saturate(.7);transition:filter 1.6s .1s var(--ease)}
 html.ready .hero-media img{filter:none}
@@ -83,17 +83,18 @@ html.ready .hero-media img{filter:none}
 .glow{position:absolute;width:30%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(circle,rgba(255,250,225,.95) 0 6%,rgba(255,214,92,.45) 18%,rgba(255,204,26,.12) 40%,transparent 66%);opacity:0}
 html.ready .glow{animation:flare 2.2s .5s var(--ease) forwards}
 @keyframes flare{0%{opacity:0;transform:scale(.4)}35%{opacity:1;transform:scale(1.15)}100%{opacity:.75;transform:scale(1)}}
-.hero-copy{position:relative;z-index:2;margin-top:-4.2rem}
+.hero-copy{position:relative;z-index:2;margin-top:-5.2rem}
 .eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .9rem;font-size:.92rem;font-weight:600;color:#d6d8dd}
 .chip{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .75rem;border-radius:999px;background:rgba(19,22,29,.85);border:1px solid var(--line-2)}
 .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:ping 2s infinite}
 @keyframes ping{70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
-.mega{margin-top:1rem;font-size:clamp(3.5rem,15vw,9.4rem);line-height:.84}
+.mega{margin-top:.9rem;font-size:clamp(3.3rem,14vw,9.4rem);line-height:.84}
 .mega .ln{display:block;overflow:hidden;padding:.04em 0 .02em}
 .mega .w{display:inline-block;white-space:nowrap}
 .mega .ch{display:inline-block}
 .lede{margin-top:1.3rem;max-width:36rem;color:#d3d5da;font-size:1.1rem}
-.ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.hero .rating{margin-top:.6rem}
 .ctas .btn{flex:1 1 220px}
 .rating{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;text-decoration:none;font-weight:600;min-height:44px}
 .stars{color:var(--yel);letter-spacing:.08em}
@@ -176,7 +177,7 @@ section{position:relative}
 .field input:focus{border-color:var(--yel);outline:none}
 .phone{position:relative;border-radius:30px;background:#05070b;border:1px solid var(--line-2);padding:1.2rem 1rem 1.1rem;box-shadow:0 40px 90px -40px rgba(255,204,26,.25)}
 .phone .to{display:flex;align-items:center;gap:.6rem;padding-bottom:.9rem;margin-bottom:1rem;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--muted)}
-.phone .to img{width:38px;height:32px;object-fit:contain}
+.phone .to img{width:42px;height:36px;object-fit:contain;background:#fdfdfd;border-radius:50%;padding:2px}
 .phone .to strong{color:var(--bone);display:block;font-size:1rem}
 .bubble{margin-left:auto;max-width:92%;background:#2f7cf6;color:#fff;padding:.8rem 1rem;border-radius:20px 20px 6px 20px;font-size:1.02rem;line-height:1.45;min-height:3rem;transition:transform .35s var(--ease)}
 .bubble.pop{transform:scale(1.03)}
@@ -220,6 +221,8 @@ section{position:relative}
 .rev{flex:0 0 min(86%,440px);scroll-snap-align:center;border-radius:22px;background:var(--ink-2);border:1px solid var(--line);padding:1.4rem;display:flex;flex-direction:column;gap:1rem}
 .rev p{font-size:1.02rem;color:#dfe1e5}
 .rev small{margin-top:auto;color:var(--muted);font-size:.85rem}
+.rev-owner{background:linear-gradient(160deg,#1d1a0e,var(--ink-2) 70%);border-color:rgba(255,204,26,.35)}
+.rev-owner p{font-family:var(--disp);font-weight:800;font-size:1.7rem;line-height:1.05;text-transform:uppercase;color:var(--bone)}
 .rnav{display:flex;gap:.5rem;justify-content:flex-end;margin-top:.6rem}
 .rnav button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line-2);background:transparent;display:grid;place-items:center}
 .rnav button:hover{border-color:var(--yel);color:var(--yel)}
@@ -248,7 +251,7 @@ section{position:relative}
 footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
 .wm{font-family:var(--disp);font-weight:900;line-height:.8;text-transform:uppercase;white-space:nowrap;color:var(--yel);font-size:20vw;letter-spacing:-.01em}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:1.6rem;color:var(--muted);font-size:.9rem}
-.foot img{width:64px;height:54px;object-fit:contain}
+.foot img{width:68px;height:58px;object-fit:contain;background:#fdfdfd;border-radius:12px;padding:3px 4px}
 
 /* sticky bar */
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(10,12,16,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .5s var(--ease)}
@@ -290,12 +293,12 @@ footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
     <div class="wrap">
       <p class="eyebrow"><span class="chip"><span class="dot" aria-hidden="true"></span><span id="openchip">Open 24 hours</span></span><span>Mobile mechanic · Crestview, FL</span></p>
       <h1 class="mega" id="mega"><span class="ln">Broke down?</span><span class="ln">The shop</span><span class="ln y">drives to you.</span></h1>
-      <p class="lede">Dead battery in the driveway. A starter that quit at work. An alternator that died halfway through a road trip. Call or text, and the yellow van comes to wherever your car is sitting.</p>
       <div class="ctas">
         <a class="btn btn-y mag" href="tel:+18503982275"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call (850) 398-2275</a>
         <a class="btn btn-o mag" href="#picker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Tell us what it's doing</a>
       </div>
       <a class="rating" href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span><span>4.9 from 412 Google reviews</span></a>
+      <p class="lede">A battery that's completely dead. A work vehicle stranded with a bad starter. An alternator that quit on the drive home from south Florida. Call or text, and the yellow van comes to wherever the car is sitting.</p>
     </div>
   </div>
 </section>
@@ -307,7 +310,7 @@ footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
 
 <section class="sec" id="proof">
   <div class="wrap">
-    <div class="head rv"><p class="tag">The numbers on Google</p><h2>412 people<br>already called.</h2></div>
+    <div class="head rv"><p class="tag">The numbers on Google</p><h2>What 412<br>reviews say.</h2></div>
     <div class="bento">
       <div class="tile t-big rv"><span class="stars" aria-hidden="true">★★★★★</span><div><div class="num">4<span class="y">.</span>9</div><p>Average from 412 Google reviews.</p></div></div>
       <figure class="tile t-photo rv" style="margin:0"><img src="/preview/mobilefix-auto-repair/img/van-job-800.webp" srcset="/preview/mobilefix-auto-repair/img/van-job-800.webp 800w, /preview/mobilefix-auto-repair/img/van-job-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1200" loading="lazy" alt="The yellow Mobilefix van parked beside a white minivan with its hood up, tools laid out on a folding table under a red umbrella"><figcaption>On the job: hood up, tools out, the van parked right next to it.</figcaption></figure>
@@ -348,8 +351,8 @@ footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
           <button type="button" class="opt" aria-pressed="false" data-v="just clicks when I turn the key">Clicks, then nothing</button>
           <button type="button" class="opt" aria-pressed="false" data-v="has a dead battery">Battery's dead</button>
           <button type="button" class="opt" aria-pressed="false" data-v="has the check engine light on">Check engine light</button>
-          <button type="button" class="opt" aria-pressed="false" data-v="has brakes that squeal or grind">Brakes squeal or grind</button>
-          <button type="button" class="opt" aria-pressed="false" data-v="has the battery light on and the lights are dimming">Battery light, dim lights</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="squeals or grinds when I brake">Brakes squeal or grind</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="has the battery light on and the headlights are dimming">Battery light, dim lights</button>
           <button type="button" class="opt" aria-pressed="false" data-v="is running rough">Running rough</button>
           <button type="button" class="opt" aria-pressed="false" data-v="has a problem I can't pin down">Something else</button>
         </div>
@@ -358,7 +361,7 @@ footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
           <button type="button" class="opt" aria-pressed="false" data-v="It's at my house">At home</button>
           <button type="button" class="opt" aria-pressed="false" data-v="It's at my work">At work</button>
           <button type="button" class="opt" aria-pressed="false" data-v="I'm stuck on the road">Stuck on the road</button>
-          <button type="button" class="opt" aria-pressed="false" data-v="I'm staying in town and it's parked where I'm staying">Visiting, at a rental</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="I'm visiting and it's parked at the rental where I'm staying">Visiting, at a rental</button>
         </div>
         <div class="field"><label for="car">3. The car (optional)</label><input id="car" type="text" autocomplete="off" placeholder="e.g. 2014 Honda Odyssey" maxlength="40"></div>
         <div class="field"><label for="town">4. Town or nearest road (optional)</label><input id="town" type="text" autocomplete="off" placeholder="e.g. Crestview, off Hwy 85" maxlength="50"></div>
@@ -378,13 +381,13 @@ footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
 
 <section class="sec" id="work" style="padding-top:0">
   <div class="wrap">
-    <div class="head rv"><p class="tag">What gets fixed where it sits</p><h2>Driveway<br>repairs.</h2></div>
+    <div class="head rv"><p class="tag">Photos from the job</p><h2>Fixed where<br>it&#8217;s parked.</h2></div>
     <div class="work">
-      <figure class="wcard rv" style="margin:0"><img src="/preview/mobilefix-auto-repair/img/brakes-800.webp" srcset="/preview/mobilefix-auto-repair/img/brakes-800.webp 800w, /preview/mobilefix-auto-repair/img/brakes-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 100vw" width="1600" height="2133" loading="lazy" alt="An SUV up on a yellow floor jack with the wheel off and the brake rotor and caliper exposed, the Mobilefix van in the background"><figcaption class="cap"><h3>Brakes and rotors</h3><p>Wheel off and the brakes opened up, right where the car is parked.</p></figcaption></figure>
-      <figure class="wcard rv" style="margin:0"><img src="/preview/mobilefix-auto-repair/img/plugs-800.webp" srcset="/preview/mobilefix-auto-repair/img/plugs-800.webp 800w, /preview/mobilefix-auto-repair/img/plugs-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 100vw" width="1600" height="2133" loading="lazy" alt="A row of new spark plugs lined up on top of an engine"><figcaption class="cap"><h3>Spark plugs</h3><p>A fresh set lined up and ready to go in.</p></figcaption></figure>
+      <figure class="wcard rv" style="margin:0"><img src="/preview/mobilefix-auto-repair/img/brakes-800.webp" srcset="/preview/mobilefix-auto-repair/img/brakes-800.webp 800w, /preview/mobilefix-auto-repair/img/brakes-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 100vw" width="1600" height="2133" loading="lazy" alt="A dark car under a metal carport with its front wheel off and the brake rotor and caliper showing, a yellow floor jack and tools on the concrete, the yellow Mobilefix van parked in the background"><figcaption class="cap"><h3>Brakes and rotors</h3><p>Wheel off, rotor and caliper out in the open, the van parked a few feet away.</p></figcaption></figure>
+      <figure class="wcard rv" style="margin:0"><img src="/preview/mobilefix-auto-repair/img/plugs-800.webp" srcset="/preview/mobilefix-auto-repair/img/plugs-800.webp 800w, /preview/mobilefix-auto-repair/img/plugs-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 100vw" width="1600" height="2133" loading="lazy" alt="Eight spark plugs lined up on an engine cover: four used ones with dark, oily threads above four clean new ones"><figcaption class="cap"><h3>Spark plugs</h3><p>Old ones on top, new ones below. The swap, side by side.</p></figcaption></figure>
       <ul class="list rv">
         <li><b>01</b><h3>Batteries</h3><p>Tested on the spot and replaced if it's done.</p></li>
-        <li><b>02</b><h3>Starters</h3><p>Same-day starter swaps when the car leaves you stranded.</p></li>
+        <li><b>02</b><h3>Starters</h3><p>A work vehicle left stranded got a new starter the same day the family called.</p></li>
         <li><b>03</b><h3>Alternators and belts</h3><p>Parts picked up, belts brought along in case they need it too.</p></li>
         <li><b>04</b><h3>Check engine light</h3><p>Run through the light so you know if anything else is going on.</p></li>
         <li><b>05</b><h3>Won't-start diagnosis</h3><p>One customer's truck was diagnosed in under 15 minutes.</p></li>
@@ -415,21 +418,22 @@ footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
   <div class="rtrack" id="rtrack" tabindex="0" aria-label="Google reviews">
     <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Battery was completely dead - called while he was at a job and he came immediately after to test/replace the battery. Also ran thru my check engine light to ensure no other issues. Amazing customer service. Will definitely call again if needing local maintenance."</p><small>Google review</small></article>
     <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Sons work vehicle left him stranded and so we called this morning regarding son's starter. … drove out same day with a new starter and was able to fix it."</p><small>Google review</small></article>
-    <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Had an issue with a truck not starting after doing some at home work. … He was able to diagnose the issue in less than 15 minutes. Had us up and running again in just a few hours and also fixed some extra things he noticed that weren't even part of the initial problem. Prices were very fair …"</p><small>Google review</small></article>
+    <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Had an issue with a truck not starting after doing some at home work. … He was able to diagnose the issue in less than 15 minutes. Had us up and running again in just a few hours and also fixed some extra things he noticed that weren't even part of the initial problem. Prices were very fair and he is just an all around nice guy. Highly recommend!"</p><small>Google review</small></article>
     <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"As soon as he got there, he introduced himself and got right to work. As soon as he diagnosed the problem he helped us get to the store to get the part we needed and then he installed it! … He was very kind, and he did not overcharge."</p><small>Google review</small></article>
+    <article class="rev rev-owner"><span class="tag">Reply from the owner</span><p>"Im glad we were able to get his van going again!"</p><small>Owner&#8217;s response to a Google review</small></article>
   </div>
   <div class="wrap"><div class="rnav"><button type="button" id="rprev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><button type="button" id="rnext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
 </section>
 
 <section class="closer" id="call">
-  <img src="/preview/mobilefix-auto-repair/img/rainbow-1600.webp" srcset="/preview/mobilefix-auto-repair/img/rainbow-800.webp 800w, /preview/mobilefix-auto-repair/img/rainbow-1600.webp 1600w" sizes="100vw" width="1600" height="1200" loading="lazy" alt="A full rainbow over a parking lot, a red hatchback in front and the yellow Mobilefix van behind it">
+  <img src="/preview/mobilefix-auto-repair/img/rainbow-1600.webp" srcset="/preview/mobilefix-auto-repair/img/rainbow-800.webp 800w, /preview/mobilefix-auto-repair/img/rainbow-1600.webp 1600w" sizes="100vw" width="1600" height="1200" loading="lazy" alt="A rainbow over a parking lot, a red hatchback in front and the yellow Mobilefix van behind it">
   <div class="wrap">
     <p class="tag rv">Wherever it quit</p>
     <h2 class="rv">Call the<br>yellow van.</h2>
     <a class="bignum rv" href="tel:+18503982275">(850) 398-2275</a>
     <div class="ctas rv" style="max-width:40rem">
       <a class="btn btn-y mag" href="tel:+18503982275">Call now</a>
-      <a class="btn btn-o mag sms-quick" href="sms:+18503982275&amp;body=Hi%2C%20I%20found%20Mobilefix%20on%20Google.%20My%20car%20needs%20a%20look.%20Can%20you%20come%20out%3F">Send a text</a>
+      <a class="btn btn-o mag sms-quick" href="sms:+18503982275&amp;body=Hi%20Mobilefix%2C%20my%20car%20needs%20a%20look.%20Can%20you%20come%20out%20to%20it%3F">Send a text</a>
     </div>
     <div class="hours rv">
       <div><p class="tag" style="margin-bottom:.6rem">Hours on Google</p><table id="hrs"><tbody></tbody></table></div>
@@ -466,8 +470,8 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 /* ready: lights on */
 let readied = false;
 const ready = () => { if (readied) return; readied = true; document.documentElement.classList.add('ready'); heroIn(); };
-addEventListener('load', () => setTimeout(ready, 650));
-setTimeout(ready, 1800);
+addEventListener('load', () => setTimeout(ready, 350));
+setTimeout(ready, 1100);
 
 /* open chip + hours table */
 (() => {
@@ -536,11 +540,11 @@ onScroll();
 const msg = $('#msg'), smsBtn = $('#smsbtn'), sel = { sym: '', loc: '' };
 function build() {
   const car = $('#car').value.trim(), town = $('#town').value.trim();
-  let t = 'Hi, I found Mobilefix on Google. ';
-  t += (car ? 'My ' + car : 'My car') + ' ' + (sel.sym || 'needs a look') + '. ';
+  let t = 'Hi Mobilefix, ';
+  t += (car ? 'my ' + car : 'my car') + ' ' + (sel.sym || 'needs a look') + '. ';
   if (sel.loc) t += sel.loc + (town ? ' in ' + town : '') + '. ';
   else if (town) t += "It's in " + town + '. ';
-  t += 'Can you come take a look?';
+  t += 'Can you come out to it?';
   msg.textContent = t;
   smsBtn.href = 'sms:' + CFG.phone + '&body=' + encodeURIComponent(t);
   msg.classList.remove('pop'); void msg.offsetWidth; msg.classList.add('pop'); setTimeout(() => msg.classList.remove('pop'), 300);

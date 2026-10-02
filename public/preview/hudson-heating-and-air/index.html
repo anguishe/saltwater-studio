@@ -47,7 +47,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none;
 .pbar a{font-weight:700;white-space:nowrap}
 
 /* loader */
-#loader{position:fixed;inset:0;z-index:80;background:var(--ink);display:grid;place-items:center;transition:opacity .6s var(--ease),visibility .6s}
+#loader{position:fixed;inset:0;z-index:80;background:var(--ink);display:grid;place-items:center;transition:opacity .4s var(--ease),visibility .4s}
 #loader.done{opacity:0;visibility:hidden}
 #loader .lw{display:grid;justify-items:center;gap:1rem}
 #loader svg{width:92px;height:92px;animation:spin .6s linear infinite}
@@ -93,6 +93,14 @@ body::after{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none;
 .lede{max-width:34rem;margin:1.1rem 0 1.4rem;color:#dfe5ea;font-size:1.08rem}
 .ctas{display:flex;flex-wrap:wrap;gap:.65rem}
 .ctas .btn{flex:1 1 auto}
+@media (max-width:899px){
+  /* phones: photo, name, rating, headline AND the number inside the first screen (iPhone Safari ~660px tall) */
+  .hero .ph{height:56svh;min-height:340px}
+  .hero-in{display:flex;flex-direction:column}
+  .h1{font-size:clamp(3rem,15vw,6rem)}
+  .hero-in .ctas{order:3;margin-top:1.15rem}
+  .hero-in .lede{order:4;margin:1.3rem 0 0}
+}
 @media (min-width:900px){
   .hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:end;min-height:100svh}
   .hero .ph{grid-column:2;grid-row:1;height:100%;min-height:100svh;max-height:none}
@@ -159,13 +167,19 @@ body::after{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none;
 .steps-in{position:relative;min-height:15rem}
 .nogl .fan{height:auto}
 .nogl .stage{position:relative;height:auto;padding:5rem 0 3rem}
-.nogl #fanCv{display:none}
+.nogl #fanCv,.nogl .scrl{display:none}
 .nogl .poster{display:block;width:min(70vw,320px);margin:5.5rem auto 1rem}
 .nogl .readout{position:absolute}
 .nogl .steps{position:relative;padding-bottom:1rem}
 .nogl .steps::before,.nogl .bar{display:none}
 .nogl .steps-in{min-height:0;display:grid;gap:2rem}
 .nogl .step{position:relative;left:auto;right:auto;bottom:auto;opacity:1;transform:none}
+@media (max-width:899px){
+  /* keep the fan-stage step text above the fixed Call/Text bar */
+  .steps{padding-bottom:calc(.9rem + 74px + env(safe-area-inset-bottom))}
+  .step{bottom:0}
+  .nogl .steps{padding-bottom:1rem}
+}
 
 /* triage */
 .triage{background:linear-gradient(180deg,var(--ink),var(--ink-2))}
@@ -202,6 +216,7 @@ fieldset{border:0;margin:0;padding:0}
 .wk q+small{color:var(--dim);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 .wk.txt{justify-content:space-between;background:radial-gradient(110% 80% at 100% 0%,rgba(255,122,46,.2),transparent 60%),var(--ink-2)}
 .wk.txt.c{background:radial-gradient(110% 80% at 100% 0%,rgba(92,200,245,.2),transparent 60%),var(--ink-2)}
+.wk-note{margin:.4rem 0 0;max-width:34rem;color:#cfd6dc}
 .wk.txt .big{font-family:var(--disp);font-weight:900;font-size:6rem;line-height:.8;padding:1.2rem 1.25rem 0;opacity:.9}
 .hpin{position:relative}
 @media (min-width:900px){
@@ -265,7 +280,7 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
 </style>
 </head>
 <body>
-<div class="pbar" role="note">This is a private preview Saltwater Studio built for Hudson Heating and Air Repair, LLC. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a></div>
+<div class="pbar" role="note">This is a private preview Saltwater Studio built for Hudson Heating and Air Repair. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs><linearGradient id="hc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff7a2e"/><stop offset="1" stop-color="#5cc8f5"/></linearGradient></defs>
@@ -303,7 +318,7 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
       <span class="chip"><span class="st">&#9733; 4.9</span> 66 Google reviews</span>
       <span class="chip js-status"><span class="dot"></span><span class="js-status-text">Mon to Fri, 24 hours</span></span>
     </div>
-    <h1 class="h1 disp split"><span class="l hot">Hot house?</span><span class="l">Cool it</span><span class="l cool">down.</span></h1>
+    <h1 class="h1 disp split"><span class="l hot">Hot house?</span><span class="l">Cool it <span class="cool">down.</span></span></h1>
     <p class="lede rv">Heating and air repair, new systems and rooftop units from Mike Hudson's crew in Milton, Florida. Call or text, tell them what it's doing, and get a straight answer.</p>
     <div class="ctas rv" id="heroCtas">
       <a class="btn hotb mag js-tel" href="tel:+18503043463"><svg><use href="#iPh"/></svg>Call (850) 304-3463</a>
@@ -321,7 +336,7 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
   <div class="wrap">
     <div class="intro">
       <div><div class="lab rv">The short version</div><h2 class="disp split">Straight answers. <span class="hot">Fair</span> <span class="cool">quotes.</span></h2></div>
-      <p class="rv">Customers keep saying the same three things about Hudson: Mike tells you where your system really stands, the price is fair, and the crew shows up when they said they would.</p>
+      <p class="rv">Read Hudson's Google reviews and the same things come up: Mike by name, a fair price, and a crew that shows up when they said they would.</p>
     </div>
     <div class="bento">
       <div class="tile big rv"><div class="lab">Google rating</div><div><div class="n">4.9</div><div class="stars" aria-label="4.9 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div><p>From 66 Google reviews.</p></div>
@@ -336,13 +351,13 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
   <div class="stage" id="stage">
     <canvas id="fanCv" aria-hidden="true"></canvas>
     <svg class="poster" aria-hidden="true"><use href="#fanS"/></svg>
-    <div class="readout" aria-hidden="true"><div class="temp"><span id="tNum">88</span><sup>&deg;</sup></div><div class="lab">Inside the house. Scroll to cool it down.</div></div>
+    <div class="readout" aria-hidden="true"><div class="temp"><span id="tNum">88</span><sup>&deg;</sup></div><div class="lab">Inside the house.<span class="scrl"> Scroll to cool it down.</span></div></div>
     <div class="steps">
       <div class="bar" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
       <div class="steps-in">
         <div class="step on"><div class="k">01</div><h3>Tell them what it's doing.</h3><p>Call or text (850) 304-3463. Blowing warm, won't start, making a noise: say it plain and say where you are.</p></div>
         <div class="step"><div class="k">02</div><h3>The crew comes <span class="hot">out.</span></h3><p>One reviewer had them out "within just a couple hours." Another got a full replacement the next day.</p></div>
-        <div class="step"><div class="k">03</div><h3>Straight answer. <span class="cool">Cool air.</span></h3><p>Reviewers say Mike tells you where your system stands and doesn't push a new one you don't need.</p></div>
+        <div class="step"><div class="k">03</div><h3>Straight answer. <span class="cool">Cool air.</span></h3><p>One reviewer says Mike was &ldquo;forthcoming about the status&rdquo; of the system and &ldquo;didn't pressure&rdquo; them into buying a new one.</p></div>
       </div>
     </div>
   </div>
@@ -353,7 +368,7 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
     <div>
       <div class="lab rv">Ten-second triage</div>
       <h2 class="disp split">What's going <span class="hot">on?</span></h2>
-      <p class="rv" style="color:#d4dbe1;max-width:32rem;margin:0">Tap what your system is doing. We'll write the text for you, so Hudson knows what's wrong from the first message.</p>
+      <p class="rv" style="color:#d4dbe1;max-width:32rem;margin:0">Tap what your system is doing. We'll write the text for you, so Hudson knows what's going on from the first message.</p>
       <div class="opts rv" role="radiogroup" aria-label="What is your system doing?" id="opts">
         <button class="opt" role="radio" aria-checked="false" data-k="warm">Blowing warm air</button>
         <button class="opt" role="radio" aria-checked="false" data-k="off">Won't turn on</button>
@@ -369,7 +384,7 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
         <div class="whens" role="radiogroup" aria-label="When do you need someone?" id="whens">
           <button class="when" role="radio" aria-checked="true" data-w="Today if you can.">Today if you can</button>
           <button class="when" role="radio" aria-checked="false" data-w="Anytime this week works.">This week</button>
-          <button class="when" role="radio" aria-checked="false" data-w="No rush, just want a price.">No rush</button>
+          <button class="when" role="radio" aria-checked="false" data-w="No rush, whenever works.">No rush</button>
         </div>
       </fieldset>
       <div class="fld"><label for="msg">Your text to Hudson</label><textarea id="msg" rows="4"></textarea></div>
@@ -382,23 +397,27 @@ footer{border-top:1px solid var(--line);padding:1.6rem var(--pad) 2rem;color:var
 </section>
 
 <section class="hpin" id="work" aria-label="The work">
-  <div class="wrap work-head"><div class="lab rv">From their own photos</div><h2 class="disp split">On the roof. <span class="cool">In the yard.</span></h2></div>
+  <div class="wrap work-head"><div class="lab rv">From their own photos</div><h2 class="disp split">On the roof. <span class="cool">In the yard.</span></h2><p class="rv wk-note">Every photo here is from Hudson&rsquo;s own Google listing. That&rsquo;s their flame-and-snowflake logo on the shirts.</p></div>
   <div class="sticky"><div class="track" id="track">
     <article class="wk rv">
       <figure><img src="/preview/hudson-heating-and-air/img/install-800.webp" srcset="/preview/hudson-heating-and-air/img/install-800.webp 800w, /preview/hudson-heating-and-air/img/install-1600.webp 1600w" sizes="(min-width: 900px) 420px, 92vw" width="1600" height="2133" loading="lazy" alt="A Hudson tech kneeling at a new outdoor condenser beside a house, gauge hoses hooked up"></figure>
-      <div class="tx"><h3>AC repair</h3><p>When the AC quits in the middle of a Florida summer.</p><q>Called them cause the AC went out and within just a couple hours was out here and repaired it a fair price.</q><small>Google review</small></div>
+      <div class="tx"><h3>New systems</h3><p>A new outdoor unit on its pad with the gauges hooked up, the Hudson logo on the tech&rsquo;s back.</p><q>Replaced my HVAC at a super affordable price. They were able to come out next day &amp; get the job done super quick.</q><small>Google review</small></div>
     </article>
     <article class="wk rv">
       <figure class="wide"><img src="/preview/hudson-heating-and-air/img/units-800.webp" srcset="/preview/hudson-heating-and-air/img/units-800.webp 800w, /preview/hudson-heating-and-air/img/units-1600.webp 1600w" sizes="(min-width: 900px) 420px, 92vw" width="1600" height="901" loading="lazy" alt="Three new outdoor AC condensers set in a row on fresh pads beside a building under construction"></figure>
-      <div class="tx"><h3>New systems</h3><p>Full replacements and new installs, outside units set on fresh pads.</p><q>Replaced my HVAC at a super affordable price. They were able to come out next day &amp; get the job done super quick.</q><small>Google review</small></div>
+      <div class="tx"><h3>New builds</h3><p>Three new outdoor units on fresh pads, set while the walls were still in house wrap.</p></div>
     </article>
     <article class="wk rv">
       <figure><img src="/preview/hudson-heating-and-air/img/roof-800.webp" srcset="/preview/hudson-heating-and-air/img/roof-800.webp 800w, /preview/hudson-heating-and-air/img/roof-1600.webp 1600w" sizes="(min-width: 900px) 420px, 92vw" width="1600" height="2133" loading="lazy" alt="Two Hudson techs working inside an opened rooftop unit on a flat roof"></figure>
       <div class="tx"><h3>Rooftop units</h3><p>Up on the flat roofs too, with the big package units opened up.</p></div>
     </article>
+    <article class="wk txt c rv">
+      <div class="big cool" aria-hidden="true">AC</div>
+      <div class="tx"><h3>AC repair</h3><p>When the AC quits in the middle of a Florida summer.</p><q>Called them cause the AC went out and within just a couple hours was out here and repaired it a fair price.</q><small>Google review</small></div>
+    </article>
     <article class="wk txt rv">
       <div class="big hot" aria-hidden="true">Heat</div>
-      <div class="tx"><h3>Heating repair</h3><p>Milton gets its cold snaps. When the heat won't come on, same crew, same straight talk.</p><q>my heater wasn't heating and Mike was forthcoming about the status of my system.</q><small>Google review</small></div>
+      <div class="tx"><h3>Heating repair</h3><p>When the heater isn't heating: same crew, same straight talk about what it needs.</p><q>my heater wasn't heating and Mike was forthcoming about the status of my system.</q><small>Google review</small></div>
     </article>
     <article class="wk txt c rv">
       <div class="big cool" aria-hidden="true">Parts</div>
@@ -491,11 +510,11 @@ $$('.js-sms').forEach(a => a.href = smsHref('Hi Hudson, I need help with my AC/h
 (function () {
   const L = $('#loader'), n = $('#ldN');
   if (reduce) { L.classList.add('done'); return; }
-  const t0 = performance.now(), dur = 1000;
+  const t0 = performance.now(), dur = 600;
   (function f(t) { const k = Math.min(1, (t - t0) / dur), v = Math.round(96 - 24 * (1 - Math.pow(1 - k, 3)));
     n.textContent = v + '°'; n.style.color = k > .5 ? '#5cc8f5' : '#ff7a2e';
-    if (k < 1) requestAnimationFrame(f); else setTimeout(() => L.classList.add('done'), 120); })(t0);
-  setTimeout(() => L.classList.add('done'), 2200);
+    if (k < 1) requestAnimationFrame(f); else setTimeout(() => L.classList.add('done'), 60); })(t0);
+  setTimeout(() => L.classList.add('done'), 1400);
 })();
 
 /* open now (America/Chicago) */
@@ -537,7 +556,7 @@ addEventListener('scroll', sbarCheck, { passive: true }); sbarCheck();
   const T = {
     warm: ['Hi Hudson, my AC is running but blowing warm air.', 'Worth a quick look first: thermostat set to Cool and below room temperature, and a filter that isn’t clogged. Still warm? Send the text.'],
     off: ['Hi Hudson, my system won’t turn on.', 'Check the thermostat has power and the breaker hasn’t tripped. If the breaker trips again, leave it off and send the text.'],
-    noise: ['Hi Hudson, my unit is making a noise (rattling / buzzing / grinding).', 'If it’s grinding or squealing, shut it off at the thermostat so a small problem stays small. Say what the noise sounds like.'],
+    noise: ['Hi Hudson, my unit started making a noise.', 'If it’s grinding or squealing, shut it off at the thermostat so a small problem stays small. Say what the noise sounds like.'],
     new: ['Hi Hudson, I’d like a quote on a new system.', 'Reviewers say Mike gives a straight quote without the pressure. One says he honored it four months later.'],
     tune: ['Hi Hudson, do you do tune-ups? I’d like my system checked.', 'Ask before the next hot spell or the first cold snap. Mention how old the system is if you know.']
   };
