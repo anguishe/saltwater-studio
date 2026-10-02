@@ -111,6 +111,10 @@
     {
       "source": "/preview/paradise-nail-spa",
       "destination": "/preview/paradise-nail-spa/index.html"
+    },
+    {
+      "source": "/preview/emerald-coast-piercing",
+      "destination": "/preview/emerald-coast-piercing/index.html"
     }
   ],
   "headers": [
