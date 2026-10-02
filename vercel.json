@@ -29,6 +29,10 @@
       "destination": "/preview/my-nail-spa/index.html"
     },
     {
+      "source": "/preview/cjs-hangout",
+      "destination": "/preview/cjs-hangout/index.html"
+    },
+    {
       "source": "/preview/banana-barts",
       "destination": "/preview/banana-barts/index.html"
     },
