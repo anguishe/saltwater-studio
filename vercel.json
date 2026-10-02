@@ -99,6 +99,18 @@
     {
       "source": "/preview/southern-outdoorz",
       "destination": "/preview/southern-outdoorz/index.html"
+    },
+    {
+      "source": "/preview/edits-nails",
+      "destination": "/preview/edits-nails/index.html"
+    },
+    {
+      "source": "/preview/relax-day-nails",
+      "destination": "/preview/relax-day-nails/index.html"
+    },
+    {
+      "source": "/preview/paradise-nail-spa",
+      "destination": "/preview/paradise-nail-spa/index.html"
     }
   ],
   "headers": [
