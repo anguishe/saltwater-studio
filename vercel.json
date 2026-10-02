@@ -75,6 +75,26 @@
     {
       "source": "/preview/jcs-lock-and-key",
       "destination": "/preview/jcs-lock-and-key/index.html"
+    },
+    {
+      "source": "/preview/hard-core-towing",
+      "destination": "/preview/hard-core-towing/index.html"
+    },
+    {
+      "source": "/preview/posh-pups-grooming",
+      "destination": "/preview/posh-pups-grooming/index.html"
+    },
+    {
+      "source": "/preview/solar-pro-cleaning",
+      "destination": "/preview/solar-pro-cleaning/index.html"
+    },
+    {
+      "source": "/preview/grund-stump-grinding",
+      "destination": "/preview/grund-stump-grinding/index.html"
+    },
+    {
+      "source": "/preview/southern-outdoorz",
+      "destination": "/preview/southern-outdoorz/index.html"
     }
   ],
   "headers": [
