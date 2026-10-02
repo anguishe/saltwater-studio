@@ -115,6 +115,10 @@
     {
       "source": "/preview/emerald-coast-piercing",
       "destination": "/preview/emerald-coast-piercing/index.html"
+    },
+    {
+      "source": "/preview/dannys-garage",
+      "destination": "/preview/dannys-garage/index.html"
     }
   ],
   "headers": [
