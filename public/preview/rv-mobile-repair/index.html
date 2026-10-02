@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1418">
+<title>RV Mobile Repair &amp; Services · Mobile RV repair, Panama City Beach</title>
+<meta name="description" content="Mobile RV repair around Panama City Beach, from Destin to Port St. Joe. Roofs, slide-outs, A/C, appliances, plumbing, floors, doors and steps. 5.0 on Google from 254 reviews.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1418'/%3E%3Cpath d='M10 40V20h30l8 8h6v12z' fill='%23f2ebdd'/%3E%3Crect x='10' y='33' width='44' height='3' fill='%23ff9a2e'/%3E%3Ccircle cx='22' cy='44' r='5' fill='%23ff9a2e'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1418;--ink-2:#13202a;--ink-3:#1b2c38;--sand:#f2ebdd;--sand-2:#e7dcc6;--paper:#faf6ee;
+  --muted:#a3b0b6;--muted-d:#5d5548;--amber:#ff9a2e;--amber-d:#a34f00;--sky:#8fd0f0;
+  --line:rgba(242,235,221,.13);--line-d:rgba(13,20,24,.13);
+  --disp:"Unbounded","Arial Black",system-ui,sans-serif;--body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(1rem,4.5vw,3.5rem);--ease:cubic-bezier(.16,1,.3,1);--pbh:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ink);color:var(--sand);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--ink);font-family:var(--body);font-size:clamp(1.0625rem,1rem + .3vw,1.2rem);line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}img,svg{display:block}button{font:inherit;color:inherit;cursor:pointer}
+::selection{background:var(--amber);color:var(--ink)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.eye{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.disp{font-family:var(--disp);font-weight:900;letter-spacing:-.035em;line-height:.92;text-transform:uppercase}
+h2.disp{font-size:clamp(2rem,7.4vw,5rem);margin:.4rem 0 1rem}
+.amber{color:var(--amber)}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body::after{content:"";position:fixed;inset:-50%;z-index:70;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(4) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(1%,3%)}}
+
+/* loader */
+#loader{position:fixed;inset:0;z-index:90;background:var(--ink);display:grid;place-items:center;transition:opacity .6s var(--ease),visibility .6s}
+html.ready #loader{opacity:0;visibility:hidden}
+#loader .lw{width:min(80vw,420px)}
+#loader svg{width:100%;height:auto}
+#loader .ln{fill:none;stroke:var(--sand);stroke-width:2.4;stroke-linejoin:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.3s .1s cubic-bezier(.65,0,.35,1) forwards}
+#loader .road{height:3px;background:var(--line);margin-top:14px;overflow:hidden;border-radius:3px}
+#loader .road i{display:block;height:100%;background:var(--amber);transform-origin:left;transform:scaleX(0);animation:fill 1.25s .15s var(--ease) forwards}
+#loader p{margin:.9rem 0 0;font-family:var(--disp);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes fill{to{transform:scaleX(1)}}
+
+/* preview bar + nav */
+.pbar{background:var(--amber);color:var(--ink);font-size:.86rem;line-height:1.4;padding:.6rem var(--pad);text-align:center;font-weight:500;position:relative;z-index:50}
+.pbar a{font-weight:700;white-space:nowrap}
+.nav{position:sticky;top:0;z-index:45;height:64px;margin-bottom:-64px;display:flex;align-items:center;transition:background .4s,backdrop-filter .4s}
+.nav.solid{background:rgba(13,20,24,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--disp);font-weight:700;font-size:.8rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.1}
+.brand svg{width:34px;height:34px;flex:none}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:0 1.1rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;border:1px solid var(--line);background:rgba(13,20,24,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);white-space:nowrap}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;padding:0 1.5rem;border-radius:16px;font-weight:700;font-size:1.05rem;text-decoration:none;border:0;transition:transform .35s var(--ease),box-shadow .35s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.a{background:var(--amber);color:var(--ink);box-shadow:0 10px 30px -10px rgba(255,154,46,.7)}
+.btn.g{background:rgba(242,235,221,.1);color:var(--sand);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn.d{background:var(--ink);color:var(--sand)}
+.btn:active{transform:scale(.97)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
+.hero .ph{position:absolute;inset:0;z-index:-2}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.08);transition:transform 2.4s var(--ease)}
+html.ready .hero .ph img{transform:scale(1)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,20,24,.6) 0%,rgba(13,20,24,0) 18%,rgba(13,20,24,.2) 34%,rgba(13,20,24,.86) 52%,var(--ink) 92%)}
+.hero .in{padding-top:120px;padding-bottom:clamp(1.6rem,5vw,3.5rem)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem}
+.chip{display:inline-flex;align-items:center;gap:.45rem;min-height:36px;padding:.3rem .85rem;border-radius:999px;background:rgba(13,20,24,.62);border:1px solid var(--line);font-size:.88rem;font-weight:600;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-decoration:none}
+.chip .st{color:var(--amber);letter-spacing:.06em}
+.dot{width:9px;height:9px;border-radius:50%;background:#7a8a91;flex:none}
+.open .dot{background:#5ee08a;box-shadow:0 0 0 4px rgba(94,224,138,.2)}
+#mega{margin:0 0 1rem;font-size:15vw;white-space:nowrap}
+#mega .ln{display:block;overflow:hidden;padding-bottom:.04em}
+#mega .ch{display:inline-block;will-change:transform}
+#mega .ln:last-child{color:var(--amber)}
+.hero .lede{max-width:34rem;margin:0 0 1.5rem;color:#dfe5e6;font-size:clamp(1.08rem,1rem + .4vw,1.3rem)}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem}
+.ctas .btn{flex:1 1 220px}
+@media(min-width:900px){.ctas .btn{flex:0 0 auto}}
+
+/* marquee */
+.marq{overflow:hidden;border-block:1px solid var(--line);background:var(--ink-2);padding:1rem 0}
+.marq .tr{display:flex;width:max-content;animation:mq 38s linear infinite}
+.marq span{font-family:var(--disp);font-weight:700;font-size:clamp(1.05rem,3.6vw,1.6rem);text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap;padding:0 1.2rem;display:flex;align-items:center;gap:2.4rem}
+.marq span::after{content:"";width:12px;height:12px;border-radius:3px;background:var(--amber);transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sand sections */
+.sand{background:var(--sand);color:var(--ink)}
+.sec{padding:clamp(4.5rem,11vw,8.5rem) 0}
+.sand .eye{color:var(--amber-d)}
+.lead{max-width:38rem;color:var(--muted-d);margin:0 0 2.2rem}
+.ink .lead{color:var(--muted)}
+.bento{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.tile{background:var(--paper);border:1px solid var(--line-d);border-radius:22px;padding:1.3rem;display:flex;flex-direction:column;justify-content:space-between;min-height:170px;overflow:hidden;position:relative}
+.tile b{font-family:var(--disp);font-weight:900;font-size:clamp(2.3rem,9vw,4.4rem);line-height:.9;letter-spacing:-.04em;display:block}
+.tile p{margin:.7rem 0 0;color:var(--muted-d);font-size:.98rem;line-height:1.4}
+.tile.big{grid-column:span 2;background:var(--ink);color:var(--sand);min-height:220px}
+.tile.big b{font-size:clamp(4rem,19vw,8.5rem)}
+.tile.big p{color:var(--muted)}
+.tile.big .stars{color:var(--amber);font-size:1.4rem;letter-spacing:.15em}
+.tile.wide{grid-column:span 2}
+.tile.amb{background:var(--amber);border:0}
+.tile.amb p{color:#3d2400}
+.route{width:100%;height:auto;margin-top:.6rem}
+@media(min-width:900px){.bento{grid-template-columns:repeat(4,1fr)}.tile.big{grid-row:span 2}.tile.wide{grid-column:span 2}}
+.steps3{display:grid;gap:.8rem;margin-top:2.6rem;counter-reset:s}
+.steps3 li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;padding:1.1rem 0;border-top:1px solid var(--line-d)}
+.steps3 li::before{counter-increment:s;content:"0" counter(s);font-family:var(--disp);font-weight:900;font-size:1.4rem;color:var(--amber-d)}
+.steps3 h3{margin:0 0 .25rem;font-size:1.15rem}.steps3 p{margin:0;color:var(--muted-d)}
+.steps3{padding:0}
+@media(min-width:900px){.steps3{grid-template-columns:repeat(3,1fr);gap:2rem}}
+
+/* 3D stage */
+.rig{position:relative;height:340svh;background:radial-gradient(120% 60% at 50% 30%,#18303d 0%,var(--ink) 70%)}
+.stick{position:sticky;top:0;height:100svh;display:grid;grid-template-rows:auto 1fr auto;overflow:hidden;padding:calc(64px + .4rem) 0 calc(.9rem + env(safe-area-inset-bottom))}
+.cap{position:relative;min-height:6.6rem}
+.cap .c{position:absolute;inset:0 var(--pad);opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.cap .c.on{opacity:1;transform:none}
+.cap .k{font-family:var(--disp);font-weight:900;color:var(--amber);font-size:.9rem}
+.cap h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(1.35rem,5.6vw,2.6rem);line-height:1;margin:.25rem 0 .35rem}
+.cap p{margin:0;color:var(--muted);font-size:1rem;line-height:1.4;max-width:30rem}
+.cvw{position:relative;min-height:0}
+#rvc{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+#rvsvg{display:none;position:absolute;inset:0;width:100%;height:100%;padding:0 var(--pad)}
+.no3d #rvc{display:none}.no3d #rvsvg{display:block}
+#rvsvg [data-part]{cursor:pointer}#rvsvg [data-part] *{transition:fill .3s}
+#rvsvg .on *{fill:var(--amber)!important}
+.hint{position:absolute;left:50%;bottom:.4rem;translate:-50% 0;font-size:.8rem;color:var(--muted);white-space:nowrap;pointer-events:none}
+.pick{padding:0 var(--pad)}
+.pick .q{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.55rem}
+.pick .q b{font-family:var(--disp);font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+.pick .q span{color:var(--muted);font-size:.85rem}
+.pchips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.7rem}
+.pc{min-height:44px;padding:0 .9rem;border-radius:12px;border:1px solid var(--line);background:rgba(242,235,221,.06);font-weight:600;font-size:.95rem;transition:background .25s,color .25s,border-color .25s}
+.pc[aria-pressed="true"]{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.sand .pc{border-color:var(--line-d);background:var(--paper)}
+.sand .pc[aria-pressed="true"]{background:var(--ink);color:var(--sand);border-color:var(--ink)}
+.pick .btn{width:100%}
+@media(min-width:900px){.stick{grid-template-columns:1.25fr .75fr;grid-template-rows:1fr auto;column-gap:2rem}.cvw{grid-column:1;grid-row:1/3}.cap{grid-column:2;grid-row:1;align-self:end;min-height:12rem}.pick{grid-column:2;grid-row:2;padding-left:0}.cap .c{inset:0 var(--pad) 0 0}}
+
+/* composer */
+.comp{display:grid;gap:2rem}
+.card{background:var(--paper);border:1px solid var(--line-d);border-radius:26px;padding:clamp(1.2rem,4vw,2rem)}
+.grp{margin-bottom:1.2rem}.grp>b{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem;color:var(--muted-d)}
+.bub{position:relative;background:var(--ink);color:var(--sand);border-radius:22px 22px 6px 22px;padding:1.1rem 1.2rem;font-size:1.02rem;line-height:1.45;margin:0 0 1rem}
+.bub small{display:block;color:var(--muted);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem}
+.cbtns{display:grid;gap:.6rem}
+.thumb{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;background:var(--sand-2)}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:opacity .4s}
+.thumb figcaption{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;background:rgba(13,20,24,.78);color:var(--sand);padding:.55rem .8rem;border-radius:12px;font-size:.88rem;line-height:1.35;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.thumb .q{position:absolute;inset:0;display:none;place-items:center;padding:1.6rem;background:var(--ink);color:var(--sand);font-family:var(--disp);font-weight:700;font-size:clamp(1.1rem,4.4vw,1.5rem);line-height:1.25;text-transform:none;letter-spacing:-.01em}
+.thumb.noimg .q{display:grid}.thumb.noimg img,.thumb.noimg figcaption{display:none}
+@media(min-width:900px){.comp{grid-template-columns:1.2fr .8fr;align-items:start}}
+
+/* gallery */
+.gal{position:relative}
+.gal .head{padding-top:clamp(4.5rem,11vw,8rem)}
+.track{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 2.5rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.gc{flex:0 0 min(78vw,400px);scroll-snap-align:center;margin:0}
+.gc .im{border-radius:22px;overflow:hidden;aspect-ratio:3/4;background:var(--ink-3)}
+.gc img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gc:hover img{transform:scale(1.04)}
+.gc figcaption{display:flex;gap:.7rem;padding:.8rem .2rem 0;font-size:.98rem}
+.gc figcaption i{font-style:normal;font-family:var(--disp);font-weight:900;color:var(--amber);font-size:.85rem;padding-top:.15rem}
+.gal.h .stk{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.gal.h .track{overflow:visible;scroll-snap-type:none;will-change:transform;padding-bottom:0}
+.gal.h .gc{flex-basis:min(340px,calc((100svh - 340px)*.75))}
+.gal.h .head{padding-top:5.5rem}
+.swipe{color:var(--muted);font-size:.85rem;padding:0 var(--pad) 1rem}
+@media(min-width:900px){.swipe{display:none}}
+
+/* case files */
+.cases{display:grid;gap:1.2rem}
+.case{background:var(--paper);border:1px solid var(--line-d);border-radius:26px;padding:clamp(1.3rem,4vw,2.4rem);position:relative;overflow:hidden}
+.case .tag{display:inline-flex;gap:.6rem;align-items:center;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-d);margin-bottom:.8rem}
+.case h3{font-family:var(--disp);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(1.5rem,5.4vw,2.5rem);line-height:1;margin:0 0 1.2rem}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line-d)}
+.tl li{position:relative;padding:0 0 1.05rem 2rem;font-size:1.02rem;line-height:1.5}
+.tl li::before{content:"";position:absolute;left:0;top:.38em;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--amber)}
+.tl li:last-child::before{background:var(--amber)}
+.tl em{display:block;font-style:normal;font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-d);margin-bottom:.15rem}
+.case .src{font-size:.82rem;color:var(--muted-d);margin:.4rem 0 0}
+.case .big12{position:absolute;right:-.5rem;top:-1.2rem;font-family:var(--disp);font-weight:900;font-size:clamp(6rem,24vw,12rem);color:var(--sand-2);line-height:1;pointer-events:none;z-index:0}
+.case>*{position:relative;z-index:1}
+@media(min-width:900px){.cases{grid-template-columns:1.2fr .8fr}}
+
+/* reviews */
+.rvw{overflow:hidden;padding:1rem 0 .4rem}
+.rvw .tr{display:flex;gap:.9rem;width:max-content;animation:mq 90s linear infinite}
+.rvw:hover .tr,.rvw:focus-within .tr{animation-play-state:paused}
+.rc{width:min(80vw,380px);flex:none;background:var(--ink-2);border:1px solid var(--line);border-radius:22px;padding:1.3rem;margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+.rc blockquote{margin:0;font-size:1.06rem;line-height:1.5}
+.rc .s{color:var(--amber);letter-spacing:.14em}
+.rc figcaption{font-size:.84rem;color:var(--muted)}
+
+/* hours */
+.hgrid{display:grid;gap:1.2rem}
+.hours{width:100%;border-collapse:collapse;font-size:1.02rem}
+.hours td{padding:.75rem .2rem;border-top:1px solid var(--line-d)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{font-weight:700;color:var(--amber-d)}
+.stat{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;margin-bottom:1rem}
+.stat .dot{background:#9b8f7c}.stat.open .dot{background:#1f9d50;box-shadow:0 0 0 4px rgba(31,157,80,.18)}
+@media(min-width:900px){.hgrid{grid-template-columns:1fr 1fr;gap:3rem}}
+
+/* closing */
+.close{padding:clamp(5rem,12vw,9rem) 0 2rem;text-align:left}
+.close h2{font-size:clamp(2.2rem,9vw,6.4rem)}
+.wordmark{margin:clamp(3rem,8vw,5rem) 0 0;font-family:var(--disp);font-weight:900;text-transform:uppercase;letter-spacing:-.05em;line-height:.8;white-space:nowrap;color:#26394a;font-size:12vw;overflow:hidden;padding-bottom:.05em}
+footer{padding:1.6rem 0 calc(6rem + env(safe-area-inset-bottom));color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media(min-width:900px){footer{padding-bottom:2rem}}
+
+/* sticky bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.55rem .7rem calc(.55rem + env(safe-area-inset-bottom));background:rgba(13,20,24,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s var(--ease)}
+.mbar.on{transform:none}
+.mbar .btn{min-height:50px;font-size:1rem;border-radius:14px}
+@media(min-width:900px){.mbar{display:none}}
+
+/* reveals */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}#loader{display:none}
+  .hero .ph img{transform:none}.rig{height:auto}.stick{position:relative;height:auto;min-height:100svh}
+  .marq .tr,.rvw .tr{width:auto;flex-wrap:wrap}.rvw .tr{padding:0 var(--pad)}
+}
+</style>
+</head>
+<body>
+<div id="loader" aria-hidden="true"><div class="lw">
+  <svg viewBox="0 0 480 200"><path class="ln" d="M20 150 H318 V92 H404 L440 76 V48 L414 26 H26 L20 32 Z M60 150 a22 22 0 0 0 44 0 M112 150 a22 22 0 0 0 44 0 M80 52 h120 v62 h-120 z M286 150 V72 h26 v78 M404 92 V178"/></svg>
+  <div class="road"><i></i></div><p>RV Mobile Repair &amp; Services</p></div></div>
+
+<div class="pbar" role="note">This is a private preview Saltwater Studio built for RV Mobile Repair &amp; Services. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a></div>
+
+<header class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="RV Mobile Repair and Services, back to top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#ff9a2e"/><path d="M10 40V20h30l8 8h6v12z" fill="#0d1418"/><rect x="14" y="24" width="12" height="7" rx="1" fill="#ff9a2e"/><circle cx="22" cy="44" r="5" fill="#0d1418"/></svg><span>RV Mobile Repair<br>&amp; Services</span></a>
+  <a class="pill" href="tel:+18508664767" data-mag><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+</div></header>
+
+<main id="top">
+<section class="hero" id="hero" aria-label="Introduction">
+  <div class="ph"><img src="img/hero-1600.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" sizes="100vw" width="1600" height="2133" alt="Looking down the length of an RV roof on a sunny day, palms and oak trees beyond" fetchpriority="high"></div>
+  <div class="wrap in">
+    <div class="chips">
+      <a class="chip" href="#reviews"><span class="st">★★★★★</span>5.0 · 254 Google reviews</a>
+      <span class="chip" id="hstat"><i class="dot"></i><span>Mon–Sat hours</span></span>
+    </div>
+    <p class="eye amber" style="margin:0 0 .7rem;text-shadow:0 1px 12px rgba(0,0,0,.6)">Mobile RV repair · Panama City Beach, FL</p>
+    <h1 class="disp" id="mega" aria-label="We come to the RV."><span class="ln" aria-hidden="true">We come</span><span class="ln" aria-hidden="true">to the RV.</span></h1>
+    <p class="lede">Roofs, slide-outs, A/C, appliances, plumbing, floors, doors and steps. Justin Plank works on your RV where it's parked, from Destin to Port St. Joe and everything in between.</p>
+    <div class="ctas">
+      <a class="btn a" data-mag href="tel:+18508664767"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call (850) 866-4767</a>
+      <a class="btn g" data-mag href="#picker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12z"/></svg>Show him what's wrong</a>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="tr">
+  <span>Roofs</span><span>Slide-outs</span><span>A/C</span><span>Refrigerators</span><span>Water heaters</span><span>Faucets &amp; leaks</span><span>Inverters</span><span>Gray tank valves</span><span>Floors</span><span>Entry doors</span><span>Steps</span><span>Pre-season inspections</span>
+  <span>Roofs</span><span>Slide-outs</span><span>A/C</span><span>Refrigerators</span><span>Water heaters</span><span>Faucets &amp; leaks</span><span>Inverters</span><span>Gray tank valves</span><span>Floors</span><span>Entry doors</span><span>Steps</span><span>Pre-season inspections</span>
+</div></div>
+
+<section class="sand sec" aria-labelledby="proof-h">
+  <div class="wrap">
+    <p class="eye rv">The short version</p>
+    <h2 class="disp rv" id="proof-h">The shop comes on wheels.</h2>
+    <p class="lead rv">"We are a mobile RV repair company, conveniently coming to you." That's how they put it. Here's what 254 people on Google have to say about it.</p>
+    <div class="bento">
+      <div class="tile big rv"><span class="stars" aria-hidden="true">★★★★★</span><div><b>5.0</b><p>Average across 254 Google reviews.</p></div></div>
+      <div class="tile amb rv"><b>31</b><p>Google reviews tagged "quick response."</p></div>
+      <div class="tile rv"><b>2016</b><p>Florida LLC filed. Still active.</p></div>
+      <div class="tile wide rv"><div><b style="font-size:clamp(1.6rem,6vw,2.6rem)">Justin Plank</b><p>Runs RV Mobile Repair &amp; Services, and answers his own Google reviews.</p></div></div>
+      <div class="tile wide rv" style="background:var(--ink-2);color:var(--sand)"><div>
+        <svg class="route" viewBox="0 0 400 70" aria-hidden="true"><path d="M20 40 C120 10 160 60 200 36 S330 20 380 44" fill="none" stroke="#ff9a2e" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/><circle cx="20" cy="40" r="7" fill="#f2ebdd"/><circle cx="200" cy="36" r="10" fill="#ff9a2e"/><circle cx="380" cy="44" r="7" fill="#f2ebdd"/></svg>
+        <div style="display:flex;justify-content:space-between;font-weight:700;font-size:.92rem;margin-top:.3rem"><span>Destin</span><span class="amber">Panama City Beach</span><span>Port St. Joe</span></div>
+        <p style="color:var(--muted)">Based in Panama City Beach. In their words: "everything in between."</p></div></div>
+    </div>
+    <ol class="steps3">
+      <li class="rv"><div><h3>Tell him what's wrong</h3><p>Call or text (850) 866-4767. The picker below writes the text for you.</p></div></li>
+      <li class="rv"><div><h3>He comes to the RV</h3><p>Campsite, storage lot, wherever it's parked. One reviewer's camper was even delivered to their campsite when the job was done.</p></div></li>
+      <li class="rv"><div><h3>Fixed, claim handled</h3><p>Reviewers say he works with extended-warranty companies and insurance adjusters, with photos and an estimate.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="rig" id="picker" aria-labelledby="pick-h">
+  <div class="stick">
+    <div class="cap" aria-live="polite">
+      <div class="c on"><span class="k">01 / Roof</span><h3>Up top, all the way to a new roof</h3><p>"We do everything from servicing appliances, to full roof replacements and everything in between."</p></div>
+      <div class="c"><span class="k">02 / Slide-outs</span><h3>A slide that won't come out</h3><p>One reviewer's slide quit on arrival day. He had the replacement motor on hand.</p></div>
+      <div class="c"><span class="k">03 / Systems</span><h3>A/C, fridge, water, power</h3><p>Air conditioners, refrigerators, water heaters, faucets, gray tank valves, inverters.</p></div>
+      <div class="c"><span class="k">04 / Doors, steps, floors</span><h3>What you walk on every day</h3><p>New plank floors, a new entry door, plank-finished stairs. All from photos on their Google listing.</p></div>
+    </div>
+    <div class="cvw">
+      <canvas id="rvc" aria-label="3D model of a fifth-wheel RV. Tap a part to pick it." role="img"></canvas>
+      <svg id="rvsvg" viewBox="0 0 480 220" role="group" aria-label="RV diagram. Tap a part to pick it.">
+        <g data-part="check"><path d="M20 160 H330 V95 H420 L446 80 V48 L420 28 H26 L20 34 Z" fill="#efe7d7"/></g>
+        <g data-part="roof"><rect x="24" y="20" width="394" height="9" rx="2" fill="#cfc9bd"/></g>
+        <g data-part="systems"><rect x="150" y="6" width="50" height="15" rx="3" fill="#f6f3ec"/><rect x="40" y="108" width="24" height="24" fill="#cfc6b4"/></g>
+        <g data-part="slide"><rect x="78" y="56" width="140" height="84" rx="3" fill="#e2d7c2" stroke="#0d1418" stroke-opacity=".25"/><rect x="104" y="72" width="88" height="32" fill="#22303a"/></g>
+        <g data-part="floor"><rect x="24" y="148" width="300" height="9" fill="#9c7a55"/></g>
+        <g data-part="door"><rect x="284" y="86" width="30" height="70" rx="2" fill="#2e353c"/><rect x="291" y="96" width="16" height="24" fill="#8fd0f0"/></g>
+        <g data-part="steps"><rect x="284" y="164" width="34" height="5" fill="#59646c"/><rect x="290" y="176" width="34" height="5" fill="#59646c"/><rect x="296" y="188" width="34" height="5" fill="#59646c"/></g>
+        <circle cx="120" cy="172" r="17" fill="#1d2126"/><circle cx="162" cy="172" r="17" fill="#1d2126"/><rect x="400" y="95" width="6" height="100" fill="#59646c"/><rect x="20" y="138" width="300" height="5" fill="#ff9a2e"/>
+      </svg>
+      <span class="hint" id="hint">Tap the part that needs work</span>
+    </div>
+    <div class="pick">
+      <div class="q"><b id="pick-h">What needs work?</b><span id="plabel">Pick one</span></div>
+      <div class="pchips" data-g="part"></div>
+      <a class="btn a" id="stagebtn" href="#compose" data-mag>Write the text</a>
+    </div>
+  </div>
+</section>
+
+<section class="sand sec" id="compose" aria-labelledby="comp-h">
+  <div class="wrap">
+    <p class="eye rv">Text Justin</p>
+    <h2 class="disp rv" id="comp-h">Your text, already written.</h2>
+    <p class="lead rv">Tap a few answers, then send. It opens your phone's messages with everything filled in. Add a photo of the problem if you can.</p>
+    <div class="comp">
+      <div class="card rv">
+        <div class="grp"><b>What needs work</b><div class="pchips" data-g="part"></div></div>
+        <div class="grp"><b>Where it's parked</b><div class="pchips" data-g="where"></div></div>
+        <div class="grp"><b>How soon</b><div class="pchips" data-g="when"></div></div>
+        <p class="bub" aria-live="polite"><small>Your message</small><span id="msg"></span></p>
+        <div class="cbtns">
+          <a class="btn d" id="sendbtn" href="sms:+18508664767" data-mag><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Send this text</a>
+          <a class="btn a" href="tel:+18508664767">Or call (850) 866-4767</a>
+        </div>
+      </div>
+      <figure class="thumb rv" id="thumb" style="margin:0"><img id="thimg" src="img/hero-800.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" sizes="(min-width:900px) 34vw, 92vw" width="800" height="1067" alt="Looking down the length of an RV roof" loading="lazy"><figcaption id="thcap">Roof work, from their Google listing.</figcaption><div class="q" id="thq"></div></figure>
+    </div>
+  </div>
+</section>
+
+<section class="gal" id="work" aria-labelledby="work-h">
+  <div class="stk">
+    <div class="wrap head"><p class="eye amber">From the listing</p><h2 class="disp" id="work-h">Recent work, their photos.</h2><p class="lead">Every photo here was posted by the business on Google.</p></div>
+    <p class="swipe">Swipe for more →</p>
+    <div class="track" id="track">
+      <figure class="gc"><div class="im"><img src="img/hero-800.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" sizes="(min-width:900px) 340px, 78vw" width="800" height="1067" alt="RV roof seen from the front cap, vents and fixtures in a line under a blue sky" loading="lazy"></div><figcaption><i>01</i>A roof, topside, Panama City Beach sun.</figcaption></figure>
+      <figure class="gc"><div class="im"><img src="img/interior-800.webp" srcset="img/interior-800.webp 800w, img/interior-1600.webp 1600w" sizes="(min-width:900px) 340px, 78vw" width="800" height="1067" alt="RV living area with new wood-look plank flooring running to the entry door" loading="lazy"></div><figcaption><i>02</i>New plank floor through the living area.</figcaption></figure>
+      <figure class="gc"><div class="im"><img src="img/steps-800.webp" srcset="img/steps-800.webp 800w, img/steps-1600.webp 1600w" sizes="(min-width:900px) 340px, 78vw" width="800" height="1067" alt="Interior RV stairs finished in wood-look plank flooring with dark edge trim" loading="lazy"></div><figcaption><i>03</i>Plank flooring carried up the stairs.</figcaption></figure>
+      <figure class="gc"><div class="im"><img src="img/door-800.webp" srcset="img/door-800.webp 800w, img/door-1600.webp 1600w" sizes="(min-width:900px) 340px, 78vw" width="800" height="1067" alt="New dark gray RV entry door with a full glass panel" loading="lazy"></div><figcaption><i>04</i>A new entry door.</figcaption></figure>
+      <figure class="gc"><div class="im"><img src="img/slide-800.webp" srcset="img/slide-800.webp 800w, img/slide-1600.webp 1600w" sizes="(min-width:900px) 340px, 78vw" width="800" height="1067" alt="RV refrigerator opened up from the back, showing coils and cooling fans" loading="lazy"></div><figcaption><i>05</i>An RV refrigerator, opened up.</figcaption></figure>
+      <figure class="gc"><div class="im"><img src="img/rig-800.webp" srcset="img/rig-800.webp 800w, img/rig-1600.webp 1600w" sizes="(min-width:900px) 340px, 78vw" width="800" height="1067" alt="RV refrigerators and appliance parts pulled out and staged outdoors beside a truck" loading="lazy"></div><figcaption><i>06</i>Appliances pulled and staged outside.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sand sec" aria-labelledby="case-h">
+  <div class="wrap">
+    <p class="eye rv">Case files</p>
+    <h2 class="disp rv" id="case-h">Two jobs, in the customers' words.</h2>
+    <div class="cases">
+      <article class="case rv">
+        <span class="big12" aria-hidden="true">12</span>
+        <span class="tag">File 01 · Roof · Google review</span>
+        <h3>The weak spot in the roof</h3>
+        <ol class="tl">
+          <li><em>Before the trip</em>"Prior to our arrival I made arrangements for Justin to check out the leaks and to do a pre season inspection of our camper."</li>
+          <li><em>The find</em>"Justin found a weak spot in my roof. The damage was significant enough that the roof had to be replaced."</li>
+          <li><em>The claim</em>"Justin sent in the pictures, the estimate and talked with the adjuster on the phone. … The claim was approved without question."</li>
+          <li><em>The adjuster</em>"…my claims adjuster said that Justin was the easiest repair he's ever had to work with."</li>
+          <li><em>Done</em>"Justin completed the work as promised and even brought the camper to my campsite. … On a scale of 1-10 we give him a 12."</li>
+        </ol>
+      </article>
+      <article class="case rv">
+        <span class="tag">File 02 · Slide-out · Google review</span>
+        <h3>Arrival day, slide stuck</h3>
+        <ol class="tl">
+          <li><em>The problem</em>"We arrived in Panama City Beach today with our RV, and while setting up, our slide wouldn't extend."</li>
+          <li><em>The call</em>"We called RV Mobile Repair &amp; Service and left a message, and Justin Plank returned our call almost immediately."</li>
+          <li><em>The fix</em>"Justin came directly to our campsite, quickly diagnosed the problem, and, to our surprise, had the replacement motor on hand."</li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" aria-labelledby="rev-h" style="padding-bottom:3rem">
+  <div class="wrap"><p class="eye amber rv">5.0 from 254 Google reviews</p><h2 class="disp rv" id="rev-h">What people say after he leaves.</h2></div>
+  <div class="rvw" tabindex="0" aria-label="Google review quotes, hover or focus to pause"><div class="tr" id="rtr">
+    <figure class="rc"><blockquote>"He quickly figured out what was going on and had our problem completely fixed within 30 minutes."</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+    <figure class="rc"><blockquote>"I trust him completely with all my motorhome repairs. … And he Does it right the first time."</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+    <figure class="rc"><blockquote>"He not only fixed a complex issue I was having but noticed an issue that needed attention…"</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+    <figure class="rc"><blockquote>"He knows RV's, he knows how warranty claims work and how to process them, he knows what the insurance companies need to get things rolling."</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+    <figure class="rc"><blockquote>"He explained the repair process and offered advice on how to stay one step ahead of problems."</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+    <figure class="rc"><blockquote>"…he doesn't smoke, curse or make a mess."</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+    <figure class="rc"><blockquote>"He took the time to explain everything to us and made the whole experience easy and stress-free."</blockquote><figcaption><span class="s">★★★★★</span> Google review</figcaption></figure>
+  </div></div>
+</section>
+
+<section class="sand sec" id="hours" aria-labelledby="hrs-h">
+  <div class="wrap hgrid">
+    <div>
+      <p class="eye rv">Hours &amp; area</p>
+      <h2 class="disp rv" id="hrs-h">Six days a week, on the road.</h2>
+      <p class="stat" id="stat2"><i class="dot"></i><span>Checking hours…</span></p>
+      <p class="lead rv" style="margin-bottom:1.4rem">Based in Panama City Beach. "We travel to Destin, Port St. Joe and everything in between."</p>
+      <div class="ctas"><a class="btn d" href="tel:+18508664767" data-mag>Call (850) 866-4767</a><a class="btn a" href="#compose" data-mag>Text instead</a></div>
+    </div>
+    <table class="hours rv" aria-label="Business hours, Central time"><tbody id="hrows"></tbody></table>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-h">
+  <div class="wrap">
+    <p class="eye amber rv">Panama City Beach · Destin · Port St. Joe</p>
+    <h2 class="disp rv" id="close-h">Something broke on the RV?<br><span class="amber">Tell Justin.</span></h2>
+    <div class="ctas rv" style="margin-top:1.6rem"><a class="btn a" href="tel:+18508664767" data-mag>Call (850) 866-4767</a><a class="btn g" href="#picker" data-mag>Pick the part</a></div>
+    <div class="wordmark" aria-hidden="true">RV Mobile Repair</div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 RV Mobile Repair &amp; Services. Preview design by Saltwater Studio.</div></footer>
+
+<nav class="mbar" id="mbar" aria-label="Quick contact">
+  <a class="btn a" href="tel:+18508664767">Call</a>
+  <a class="btn g" id="mtext" href="sms:+18508664767">Text Justin</a>
+</nav>
+
+<script src="/preview/_lib/gsap/gsap.min.js"></script>
+<script src="/preview/_lib/lenis/lenis.min.js"></script>
+<script>
+const CFG = {
+  name: 'RV Mobile Repair & Services', phone: '+18508664767', tz: 'America/Chicago',
+  hours: { 0: null, 1: [8, 18], 2: [8, 18], 3: [8, 18], 4: [8, 18], 5: [8, 17], 6: [9, 15] }
+};
+const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer:fine)').matches;
+
+/* ---------- hours / open now (Central time) ---------- */
+function nowCT() {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: CFG.tz, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(x => [x.type, x.value]));
+  return { d: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), h: (+p.hour % 24) + (+p.minute) / 60 };
+}
+const fmt = h => ((Math.floor(h) + 11) % 12 + 1) + ' ' + (h >= 12 ? 'PM' : 'AM');
+function status() {
+  const { d, h } = nowCT(), t = CFG.hours[d];
+  if (t && h >= t[0] && h < t[1]) return { open: 1, txt: 'Open now · until ' + fmt(t[1]) };
+  for (let i = 0; i < 8; i++) {
+    const dd = (d + i) % 7, tt = CFG.hours[dd]; if (!tt) continue;
+    if (i === 0 && h < tt[0]) return { open: 0, txt: 'Closed · opens ' + fmt(tt[0]) + ' today' };
+    if (i === 1) return { open: 0, txt: 'Closed · opens tomorrow ' + fmt(tt[0]) };
+    if (i > 1) return { open: 0, txt: 'Closed · opens ' + DAYS[dd].slice(0, 3) + ' ' + fmt(tt[0]) };
+  }
+}
+function paintHours() {
+  const s = status(), { d } = nowCT();
+  [$('#hstat'), $('#stat2')].forEach(el => { el.classList.toggle('open', !!s.open); $('span', el).textContent = s.txt; });
+  $('#hrows').innerHTML = [1, 2, 3, 4, 5, 6, 0].map(i => { const t = CFG.hours[i]; return `<tr class="${i === d ? 'today' : ''}"><td>${DAYS[i]}${i === d ? ' · today' : ''}</td><td>${t ? fmt(t[0]) + ' – ' + fmt(t[1]) : 'Closed'}</td></tr>`; }).join('');
+}
+paintHours(); setInterval(paintHours, 60000);
+
+/* ---------- part picker + text composer ---------- */
+const PARTS = {
+  roof: { l: 'Roof', m: 'the roof', img: 'hero', alt: 'Looking down the length of an RV roof', cap: 'Roof work, from their Google listing.' },
+  slide: { l: 'Slide-out', m: 'a slide-out', q: '"…had the replacement motor on hand." Google review, slide that wouldn\'t extend.' },
+  systems: { l: 'A/C & appliances', m: 'the A/C or an appliance (fridge, water heater, inverter, plumbing)', img: 'slide', alt: 'RV refrigerator opened up from the back', cap: 'An RV refrigerator, opened up. From their Google listing.' },
+  floor: { l: 'Floors', m: 'the floors', img: 'interior', alt: 'RV living area with new plank flooring', cap: 'New plank floor, from their Google listing.' },
+  door: { l: 'Entry door', m: 'the entry door', img: 'door', alt: 'New dark gray RV entry door', cap: 'A new entry door, from their Google listing.' },
+  steps: { l: 'Steps', m: 'the steps', img: 'steps', alt: 'RV stairs finished in plank flooring', cap: 'Stairs in plank flooring, from their Google listing.' },
+  check: { l: 'Full checkup', m: 'a full checkup (before a trip, or before I buy)', q: '"…want a camper checked out before you buy then Justin Plank is the man to use." Google review' }
+};
+const WHERE = { camp: ['At a campground', ' It\'s parked at a campground.'], store: ['In storage', ' It\'s in a storage lot.'], home: ['At my place', ' It\'s parked at my place.'], na: ['Not sure yet', ''] };
+const WHEN = { asap: ['As soon as you can', ' As soon as you can.'], week: ['This week', ' Sometime this week works.'], trip: ['Before a trip', ' I\'d like it done before an upcoming trip.'] };
+const ST = { part: null, where: 'camp', when: 'asap' };
+const SRC = { part: Object.fromEntries(Object.entries(PARTS).map(([k, v]) => [k, v.l])), where: Object.fromEntries(Object.entries(WHERE).map(([k, v]) => [k, v[0]])), when: Object.fromEntries(Object.entries(WHEN).map(([k, v]) => [k, v[0]])) };
+$$('.pchips').forEach(box => { const g = box.dataset.g; box.innerHTML = Object.entries(SRC[g]).map(([k, l]) => `<button type="button" class="pc" data-k="${k}" aria-pressed="false">${l}</button>`).join(''); });
+const sms = body => 'sms:' + CFG.phone + '&body=' + encodeURIComponent(body);
+function message() {
+  const p = ST.part ? PARTS[ST.part].m : 'a repair';
+  return `Hi Justin, I found RV Mobile Repair & Services on Google. My RV needs help with ${p}.${WHERE[ST.where][1]}${WHEN[ST.when][1]} Can you take a look?`;
+}
+function render(from) {
+  $$('.pchips').forEach(box => $$('.pc', box).forEach(b => b.setAttribute('aria-pressed', ST[box.dataset.g] === b.dataset.k)));
+  const msg = message(); $('#msg').textContent = msg;
+  $('#sendbtn').href = sms(msg); $('#mtext').href = sms(msg);
+  const P = ST.part && PARTS[ST.part];
+  $('#plabel').textContent = P ? P.l : 'Pick one';
+  const sb = $('#stagebtn');
+  if (P) { sb.href = sms(msg); sb.textContent = 'Text Justin about the ' + P.l.toLowerCase(); }
+  else { sb.href = '#compose'; sb.textContent = 'Write the text'; }
+  $$('#rvsvg [data-part]').forEach(g => g.classList.toggle('on', g.dataset.part === ST.part));
+  const th = $('#thumb');
+  if (P) {
+    th.classList.toggle('noimg', !P.img);
+    if (P.img) { const im = $('#thimg'); im.src = `img/${P.img}-800.webp`; im.srcset = `img/${P.img}-800.webp 800w, img/${P.img}-1600.webp 1600w`; im.alt = P.alt; $('#thcap').textContent = P.cap; }
+    else $('#thq').textContent = P.q;
+  }
+  if (from !== '3d') window.dispatchEvent(new CustomEvent('rvpart', { detail: ST.part }));
+}
+window.pickPart = (k, from) => { ST.part = k; window.RVSEL = { part: k, y: scrollY }; render(from); $('#hint').style.opacity = 0; onScroll(); };
+document.addEventListener('click', e => {
+  const b = e.target.closest('.pc'); if (!b) return;
+  const g = b.closest('.pchips').dataset.g;
+  if (g === 'part') window.pickPart(b.dataset.k); else { ST[g] = b.dataset.k; render(); }
+});
+$$('#rvsvg [data-part]').forEach(g => g.addEventListener('click', () => window.pickPart(g.dataset.part)));
+render();
+$('#mtext').href = sms(message());
+
+/* ---------- hero headline split + fit ---------- */
+const mega = $('#mega');
+$$('.ln', mega).forEach(l => { l.innerHTML = [...l.textContent].map(c => `<span class="ch">${c === ' ' ? '&nbsp;' : c}</span>`).join(''); });
+function fitMega() {
+  mega.style.fontSize = '100px';
+  const w = Math.max(...$$('.ln', mega).map(l => { const r = document.createRange(); r.selectNodeContents(l); return r.getBoundingClientRect().width; }));
+  const avail = mega.parentElement.clientWidth - parseFloat(getComputedStyle(mega.parentElement).paddingLeft) * 2;
+  mega.style.fontSize = Math.min(150, 100 * avail * .98 / w) + 'px';
+}
+const wm = $('.wordmark');
+function fitWM() { wm.style.fontSize = '100px'; const w = wm.scrollWidth; wm.style.fontSize = Math.min(240, 100 * wm.clientWidth / w * .99) + 'px'; }
+
+/* ---------- scroll: nav, mbar, rig progress, captions, gallery ---------- */
+const nav = $('#nav'), mbar = $('#mbar'), hero = $('#hero'), rig = $('#picker'), caps = $$('.cap .c'), gal = $('#work'), track = $('#track');
+let H = innerHeight, galH = false, rigOn = false;
+window.RVP = 0;
+function sizeAll() {
+  H = innerHeight; fitMega(); fitWM();
+  galH = innerWidth >= 900 && !reduce; gal.classList.toggle('h', galH);
+  if (galH) { const extra = Math.max(0, track.scrollWidth - innerWidth + 40); gal.style.height = (H + extra) + 'px'; gal.dataset.x = extra; }
+  else { gal.style.height = ''; track.style.transform = ''; }
+}
+function onScroll() {
+  const y = scrollY;
+  nav.classList.toggle('solid', y > 40);
+  const r = rig.getBoundingClientRect();
+  rigOn = r.top < H * .6 && r.bottom > H * .4;
+  const foot = $('footer').getBoundingClientRect().top < H;
+  mbar.classList.toggle('on', hero.getBoundingClientRect().bottom < H * .35 && !rigOn && !foot);
+  const p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - H)));
+  window.RVP = p;
+  const SV = window.RVSEL, CM = { roof: 0, slide: 1, systems: 2, floor: 3, door: 3, steps: 3 };
+  const ci = SV && SV.part in CM && Math.abs(y - SV.y) < 160 ? CM[SV.part] : p < .24 ? 0 : p < .5 ? 1 : p < .74 ? 2 : 3;
+  caps.forEach((c, i) => c.classList.toggle('on', i === ci));
+  if (galH) { const g = gal.getBoundingClientRect(), k = Math.min(1, Math.max(0, -g.top / Math.max(1, g.height - H))); track.style.transform = `translate3d(${-k * (+gal.dataset.x || 0)}px,0,0)`; }
+}
+addEventListener('scroll', onScroll, { passive: true });
+addEventListener('resize', () => { sizeAll(); onScroll(); });
+sizeAll(); onScroll();
+document.fonts && Promise.all([document.fonts.load('900 100px Unbounded'), document.fonts.load('500 20px "Instrument Sans"')]).then(() => document.fonts.ready).then(() => { sizeAll(); onScroll(); });
+
+/* ---------- reveals ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+$$('.rv').forEach(el => io.observe(el));
+
+/* review marquee: duplicate for loop */
+const rtr = $('#rtr'); if (!reduce) rtr.innerHTML += rtr.innerHTML.replace(/<figure class="rc">/g, '<figure class="rc" aria-hidden="true">');
+
+/* ---------- loader + intro ---------- */
+const hasG = !!window.gsap;
+if (hasG && !reduce) gsap.set('#mega .ch', { yPercent: 115 });
+let started = false;
+function start() {
+  if (started) return; started = true;
+  document.documentElement.classList.add('ready');
+  if (hasG && !reduce) {
+    gsap.to('#mega .ch', { yPercent: 0, duration: 1.3, ease: 'expo.out', stagger: .035, delay: .15 });
+    gsap.from('.hero .chips, .hero .eye, .hero .lede, .hero .ctas', { y: 28, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: .08, delay: .45 });
+  }
+}
+if (reduce) start(); else { setTimeout(start, 1500); }
+
+/* ---------- smooth scroll (desktop) + magnetic buttons ---------- */
+if (!reduce && hasG && window.Lenis && innerWidth >= 1024) {
+  const lenis = new Lenis({ lerp: .1, syncTouch: false, anchors: true });
+  gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+}
+if (fine && hasG && !reduce) $$('[data-mag]').forEach(b => {
+  b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); gsap.to(b, { x: (e.clientX - r.left - r.width / 2) * .22, y: (e.clientY - r.top - r.height / 2) * .3, duration: .6, ease: 'power3.out' }); });
+  b.addEventListener('pointerleave', () => gsap.to(b, { x: 0, y: 0, duration: .9, ease: 'elastic.out(1,.4)' }));
+});
+</script>
+
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cv = document.getElementById('rvc'), wrapEl = cv.parentElement, rigSec = document.getElementById('picker');
+const no3d = () => document.documentElement.classList.add('no3d');
+if (reduce) no3d(); else { try { init(); } catch (e) { console.warn(e); no3d(); } }
+
+function init() {
+  const R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true, powerPreference: 'high-performance' });
+  let dpr = Math.min(devicePixelRatio || 1, 2); R.setPixelRatio(dpr);
+  R.outputColorSpace = THREE.SRGBColorSpace;
+  const S = new THREE.Scene(), cam = new THREE.PerspectiveCamera(30, 1, .1, 200);
+  S.add(new THREE.HemisphereLight(0xe4f4ff, 0x2a2219, 1.7));
+  const sun = new THREE.DirectionalLight(0xfff0d8, 2.4); sun.position.set(7, 11, 9); S.add(sun);
+  const rim = new THREE.DirectionalLight(0x8fd0f0, 1.3); rim.position.set(-9, 5, -7); S.add(rim);
+  const G = new THREE.Group(); G.position.x = -.12; S.add(G);
+  const pick = [], parts = {}, mats = [];
+  const M = (c, o = {}) => { const m = new THREE.MeshStandardMaterial({ color: c, flatShading: true, roughness: .72, metalness: .05, ...o }); mats.push(m); return m; };
+  const B = (x, y, z) => new THREE.BoxGeometry(x, y, z);
+  function add(geo, mat, part, pos, par = G) {
+    const m = new THREE.Mesh(geo, mat); m.position.set(...pos); par.add(m);
+    if (part) { m.userData.part = part; pick.push(m); (parts[part] = parts[part] || []).push(m); }
+    return m;
+  }
+  // body: fifth-wheel side profile, extruded
+  const sh = new THREE.Shape();
+  [[-4.6, .95], [2.6, .95], [2.6, 2.25], [4.3, 2.25], [4.85, 2.6], [4.85, 3.25], [4.3, 3.75], [-4.5, 3.75], [-4.6, 3.62]].forEach((p, i) => i ? sh.lineTo(...p) : sh.moveTo(...p));
+  const bg = new THREE.ExtrudeGeometry(sh, { depth: 2.5, bevelEnabled: true, bevelSize: .05, bevelThickness: .05, bevelSegments: 1, curveSegments: 1 });
+  bg.translate(0, 0, -1.25);
+  const bodyM = M(0xefe7d7, { transparent: true });
+  add(bg, bodyM, 'check', [0, 0, 0]);
+  // livery bands (wrap both sides)
+  const amb = M(0xff9a2e), sky = M(0x5aa9cf), glass = M(0x1c2a33, { roughness: .25, metalness: .3 }), dark = M(0x1d2126), steel = M(0x59646c);
+  add(B(7.1, .1, 2.62), amb, null, [-1.05, 1.24, 0]); add(B(7.1, .05, 2.62), sky, null, [-1.05, 1.1, 0]);
+  add(B(2.0, .12, 2.62), amb, null, [3.75, 2.62, 0]);
+  add(B(1.1, .45, 2.62), glass, null, [3.55, 3.05, 0]); add(B(.06, .42, 1.7), glass, null, [4.88, 2.95, 0]);
+  add(B(1.0, .6, 2.62), glass, null, [-3.7, 2.65, 0]);
+  // roof + vents (roof), AC + hatches (systems)
+  add(B(8.9, .07, 2.5), M(0xd5d1c8), 'roof', [-.1, 3.83, 0]);
+  [[1.4, .5], [-2.6, -.4], [3.2, 0]].forEach(([x, z]) => add(B(.5, .14, .5), M(0xc9c4b8), 'roof', [x, 3.93, z]));
+  [[-.6], [-3.4]].forEach(([x]) => { add(B(1.1, .42, .85), M(0xf7f4ee), 'systems', [x, 4.07, 0]); add(B(.85, .05, .6), M(0x9aa3a8), 'systems', [x, 4.3, 0]); });
+  add(B(.55, .55, .05), M(0xcfc6b4), 'systems', [-3.7, 1.75, 1.31]);
+  add(B(.42, .9, .05), M(0x2b3238), 'systems', [.75, 2.15, 1.31]);
+  // slide-out
+  const SL = new THREE.Group(); SL.position.set(-1.4, 2.3, .78); G.add(SL);
+  add(B(3.0, 1.85, 1.0), M(0xe6dcc8), 'slide', [0, 0, 0], SL);
+  add(B(1.7, .75, .04), M(0x1c2a33, { roughness: .25, metalness: .3 }), 'slide', [0, .25, .51], SL);
+  add(B(3.06, .08, 1.04), M(0xff9a2e), 'slide', [0, -.86, 0], SL);
+  // door
+  add(B(.8, 1.8, .06), M(0x2e353c), 'door', [1.75, 2.0, 1.3]);
+  add(B(.44, .72, .03), M(0x8fd0f0, { emissive: 0x2a5a70, emissiveIntensity: .4 }), 'door', [1.75, 2.42, 1.34]);
+  // steps
+  const treads = [0, 1, 2].map(() => add(B(.84, .06, .34), M(0x6b767e), 'steps', [1.75, .85, 1.35]));
+  // interior floor (seen in x-ray)
+  const fc = document.createElement('canvas'); fc.width = 256; fc.height = 64; const fx = fc.getContext('2d');
+  for (let i = 0; i < 8; i++) { fx.fillStyle = ['#8a6a49', '#9c7a55', '#7d5f41', '#a3825d'][i % 4]; fx.fillRect(0, i * 8, 256, 8); fx.fillStyle = 'rgba(0,0,0,.25)'; fx.fillRect((i * 67) % 256, i * 8, 2, 8); }
+  const ft = new THREE.CanvasTexture(fc); ft.colorSpace = THREE.SRGBColorSpace;
+  add(B(8.6, .04, 2.3), M(0xffffff, { map: ft }), 'floor', [-.15, 1.02, 0]);
+  // chassis, wheels, legs, hitch
+  add(B(7.0, .18, 1.9), dark, null, [-1.0, .86, 0]);
+  const wg = new THREE.CylinderGeometry(.42, .42, .28, 12); wg.rotateX(Math.PI / 2);
+  const hg = new THREE.CylinderGeometry(.18, .18, .3, 8); hg.rotateX(Math.PI / 2);
+  [-1.6, -2.55].forEach(x => [1.08, -1.08].forEach(z => { add(wg, dark, null, [x, .42, z]); add(hg, steel, null, [x, .42, z * 1.01]); }));
+  [.8, -.8].forEach(z => { add(B(.12, 2.25, .12), steel, null, [4.0, 1.12, z]); add(B(.36, .06, .36), steel, null, [4.0, .03, z]); });
+  add(B(.6, .25, .6), dark, null, [4.3, 2.12, 0]);
+  // ground shadow
+  const sc = document.createElement('canvas'); sc.width = sc.height = 128; const sx = sc.getContext('2d');
+  const gr = sx.createRadialGradient(64, 64, 4, 64, 64, 64); gr.addColorStop(0, 'rgba(0,0,0,.55)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); sx.fillStyle = gr; sx.fillRect(0, 0, 128, 128);
+  const shadow = new THREE.Mesh(new THREE.PlaneGeometry(13, 6), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(sc), transparent: true, depthWrite: false }));
+  shadow.rotation.x = -Math.PI / 2; shadow.position.y = .01; G.add(shadow);
+  const ring = new THREE.Mesh(new THREE.RingGeometry(5.6, 5.64, 96), new THREE.MeshBasicMaterial({ color: 0xff9a2e, transparent: true, opacity: .35 }));
+  ring.rotation.x = -Math.PI / 2; ring.position.y = .02; S.add(ring);
+
+  // camera framing
+  let D = 20;
+  function size() {
+    const w = wrapEl.clientWidth, h = wrapEl.clientHeight; if (!w || !h) return;
+    R.setSize(w, h, false); cam.aspect = w / h;
+    const vf = cam.fov * Math.PI / 180, hf = 2 * Math.atan(Math.tan(vf / 2) * cam.aspect);
+    D = Math.max(5.9 / Math.tan(hf / 2), 3.4 / Math.tan(vf / 2)); cam.updateProjectionMatrix();
+  }
+  new ResizeObserver(size).observe(wrapEl); size();
+
+  // targets per part: rot (group y), el (camera elevation), x-ray
+  const T = { roof: [-.5, .78, 0], slide: [-.22, .2, 0], systems: [-.75, .5, 0], floor: [-.45, .62, 1], door: [.05, .14, 0], steps: [.18, .1, 0], check: [0, .32, 0] };
+  const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  let rot = -.55, el = .7, ext = 0, stp = 0, xr = 0, sel = null, t0 = performance.now(), run = false, raf = 0;
+  addEventListener('rvpart', e => { sel = e.detail; });
+
+  // picking
+  const rc = new THREE.Raycaster(), v = new THREE.Vector2();
+  function hit(e) {
+    const r = cv.getBoundingClientRect(); v.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    rc.setFromCamera(v, cam); const hs = rc.intersectObjects(pick, false);
+    const h = hs.find(x => x.object.userData.part !== 'check') || hs[0];
+    return h && h.object.userData.part;
+  }
+  cv.addEventListener('click', e => { const p = hit(e); if (p) { sel = p; window.pickPart && window.pickPart(p, '3d'); } });
+  if (matchMedia('(pointer:fine)').matches) cv.addEventListener('pointermove', e => { cv.style.cursor = hit(e) ? 'pointer' : 'grab'; });
+
+  const amberC = new THREE.Color(0xff9a2e), blk = new THREE.Color(0);
+  let frames = 0, acc = 0, last = performance.now();
+  function frame(now) {
+    raf = requestAnimationFrame(frame);
+    const dt = Math.min(.05, (now - last) / 1000); last = now; const t = (now - t0) / 1000;
+    if (++frames < 90) acc += dt; else if (frames === 90 && acc / 89 > .024 && dpr > 1.25) { dpr = 1.25; R.setPixelRatio(dpr); size(); }
+    const p = window.RVP || 0, S2 = window.RVSEL;
+    const useSel = sel && S2 && Math.abs(scrollY - S2.y) < 160;
+    let tr, te, tx = 0, te2, ts;
+    if (useSel) {
+      [tr, te, tx] = T[sel];
+      if (sel === 'check') tr = -.55 + t * .5;
+      te2 = sel === 'slide' ? .5 + .5 * Math.sin(t * 2.2) : 1; ts = (sel === 'door' || sel === 'steps') ? 1 : ss(.7, .85, p);
+    } else {
+      tr = -.55 + p * Math.PI * 2 + Math.sin(t * .4) * .06; te = .2 + .5 * (1 - ss(.05, .32, p)) + .12 * ss(.5, .7, p) * (1 - ss(.72, .9, p));
+      te2 = ss(.24, .44, p); ts = ss(.7, .85, p);
+    }
+    const k = 1 - Math.exp(-dt * 4);
+    if (useSel && sel === 'check') rot = tr; else rot += (tr - rot) * k;
+    el += (te - el) * k; ext += (te2 - ext) * Math.min(1, k * 1.6); stp += (ts - stp) * k; xr += (tx - xr) * k;
+    G.rotation.y = rot; SL.position.z = .78 + ext * .85;
+    treads.forEach((m, i) => { m.position.y = .85 - stp * (.08 + i * .27); m.position.z = 1.35 + stp * (.15 + i * .3); });
+    bodyM.opacity = 1 - xr * .78; bodyM.depthWrite = xr < .05;
+    const cx = Math.cos(el) * D, cy = Math.sin(el) * D * .9 + 2.1;
+    cam.position.set(0, cy, cx); cam.lookAt(0, 2.05 - el * .4, 0);
+    ring.scale.setScalar(1 + .03 * Math.sin(t * 1.6));
+    const pulse = .6 + .45 * (.5 + .5 * Math.sin(t * 5));
+    for (const [name, ms] of Object.entries(parts)) {
+      const on = sel === name || (sel === 'check' && name !== 'check');
+      ms.forEach(m => { m.material.emissive.copy(on ? amberC : blk); m.material.emissiveIntensity = on ? (sel === 'check' ? pulse * .5 : pulse) : 0; });
+    }
+    R.render(S, cam);
+  }
+  function setRun(on) { if (on === run) return; run = on; if (on) { last = performance.now(); raf = requestAnimationFrame(frame); } else cancelAnimationFrame(raf); }
+  let vis = false;
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; setRun(vis && !document.hidden); }, { rootMargin: '100px' }).observe(rigSec);
+  document.addEventListener('visibilitychange', () => setRun(vis && !document.hidden));
+  R.render(S, cam);
+}
+</script>
+</body>
+</html>

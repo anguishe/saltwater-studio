@@ -55,6 +55,26 @@
     {
       "source": "/preview/rose-nails-destin",
       "destination": "/preview/rose-nails-destin/index.html"
+    },
+    {
+      "source": "/preview/mobilefix-auto-repair",
+      "destination": "/preview/mobilefix-auto-repair/index.html"
+    },
+    {
+      "source": "/preview/browns-appliance-repair",
+      "destination": "/preview/browns-appliance-repair/index.html"
+    },
+    {
+      "source": "/preview/rv-mobile-repair",
+      "destination": "/preview/rv-mobile-repair/index.html"
+    },
+    {
+      "source": "/preview/hudson-heating-and-air",
+      "destination": "/preview/hudson-heating-and-air/index.html"
+    },
+    {
+      "source": "/preview/jcs-lock-and-key",
+      "destination": "/preview/jcs-lock-and-key/index.html"
     }
   ],
   "headers": [

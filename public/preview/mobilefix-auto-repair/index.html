@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0c10">
+<title>Mobilefix auto repair | Mobile Mechanic, Crestview FL</title>
+<meta name="description" content="Mobile mechanic based in Crestview, FL. Batteries, starters, alternators, brakes and no-start diagnosis done where your car sits. 4.9 on Google from 412 reviews. (850) 398-2275.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0c10'/%3E%3Crect x='5' y='11' width='15' height='11' rx='1.5' fill='%23ffcc1a'/%3E%3Cpath d='M20 14h4l3 4v4h-7z' fill='%23ffcc1a'/%3E%3Ccircle cx='10' cy='23' r='2.6' fill='%230a0c10' stroke='%23ffcc1a' stroke-width='1.4'/%3E%3Ccircle cx='23' cy='23' r='2.6' fill='%230a0c10' stroke='%23ffcc1a' stroke-width='1.4'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" imagesizes="(min-width: 900px) 58vw, 100vw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --ink:#0a0c10; --ink-2:#10131a; --ink-3:#181c25; --line:rgba(243,239,228,.1); --line-2:rgba(243,239,228,.2);
+  --bone:#f3efe4; --muted:#a7aab2; --yel:#ffcc1a; --yel-2:#ffde5c; --red:#e0362c; --blue:#3f7fe0;
+  --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(1rem,4vw,3.5rem); --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ink);color:var(--bone);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--ink);font-family:var(--sans);font-size:clamp(1.0625rem,1rem + .25vw,1.2rem);line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:inherit}
+img,svg,canvas{display:block}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.005em}
+h2{font-size:clamp(2.7rem,10vw,6.4rem)}
+p{margin:0}
+::selection{background:var(--yel);color:var(--ink)}
+:focus-visible{outline:3px solid var(--yel);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1360px;margin:0 auto;padding:0 var(--pad)}
+.tag{font-family:var(--disp);font-weight:800;font-size:.95rem;letter-spacing:.16em;text-transform:uppercase;color:var(--yel)}
+.y{color:var(--yel)}
+.muted{color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* grain */
+body::after{content:"";position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* loader: two headlights click on */
+#loader{position:fixed;inset:0;z-index:90;background:var(--ink);display:grid;place-items:center;animation:ldOut .6s 2.4s var(--ease) forwards}
+#loader .hl{display:flex;gap:clamp(70px,22vw,170px)}
+#loader .hl i{width:clamp(34px,9vw,58px);aspect-ratio:1;border-radius:50%;background:#2a2d35;animation:on .25s .35s steps(1) forwards}
+#loader .hl i:last-child{animation-delay:.55s}
+#loader b{display:block;margin-top:2rem;text-align:center;font-family:var(--disp);font-weight:900;font-size:clamp(1.4rem,6vw,2.2rem);letter-spacing:.32em;opacity:0;animation:fade .5s .7s forwards}
+@keyframes on{to{background:#fff6d6;box-shadow:0 0 30px 10px rgba(255,214,92,.75),0 0 120px 40px rgba(255,204,26,.3)}}
+@keyframes fade{to{opacity:1}}
+@keyframes ldOut{to{opacity:0;visibility:hidden}}
+html.ready #loader{animation:ldOut .6s var(--ease) forwards}
+
+/* preview bar + nav */
+.pbar{position:relative;z-index:40;background:#14171e;border-bottom:1px solid var(--line);color:#cfd1d6;font-size:.86rem;line-height:1.4;padding:.6rem var(--pad);text-align:center}
+.pbar a{color:var(--bone);font-weight:700;text-decoration-color:var(--yel);white-space:nowrap}
+.nav{position:sticky;top:0;z-index:45;height:64px;margin-bottom:-64px;display:flex;align-items:center;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(10,12,16,.8);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;min-height:44px}
+.brand img{width:44px;height:37px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.brand span{font-family:var(--disp);font-weight:900;font-size:1.45rem;letter-spacing:.04em;text-transform:uppercase;line-height:.9}
+.brand small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.2em;color:var(--muted)}
+.nav-call{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;padding:0 1rem;border-radius:999px;background:var(--yel);color:var(--ink);font-weight:700;font-size:.95rem;text-decoration:none}
+.nav-call svg{width:16px;height:16px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:56px;padding:0 1.5rem;border-radius:999px;font-weight:700;font-size:1.05rem;text-decoration:none;border:1.5px solid transparent;transition:background .3s,color .3s,border-color .3s;will-change:transform}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-y{background:var(--yel);color:var(--ink);box-shadow:0 10px 40px -10px rgba(255,204,26,.55)}
+.btn-y:hover{background:var(--yel-2)}
+.btn-o{border-color:var(--line-2);color:var(--bone);background:rgba(10,12,16,.35)}
+.btn-o:hover{border-color:var(--yel);color:var(--yel)}
+
+/* hero */
+.hero{position:relative;padding-top:64px}
+.hero-media{position:relative;aspect-ratio:5/4;overflow:hidden;background:#05060a}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:0% 55%}
+.js .hero-media img{filter:brightness(.22) saturate(.7);transition:filter 1.6s .1s var(--ease)}
+html.ready .hero-media img{filter:none}
+.hero-media::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;background:linear-gradient(180deg,transparent,var(--ink))}
+.glow{position:absolute;width:30%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(circle,rgba(255,250,225,.95) 0 6%,rgba(255,214,92,.45) 18%,rgba(255,204,26,.12) 40%,transparent 66%);opacity:0}
+html.ready .glow{animation:flare 2.2s .5s var(--ease) forwards}
+@keyframes flare{0%{opacity:0;transform:scale(.4)}35%{opacity:1;transform:scale(1.15)}100%{opacity:.75;transform:scale(1)}}
+.hero-copy{position:relative;z-index:2;margin-top:-4.2rem}
+.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .9rem;font-size:.92rem;font-weight:600;color:#d6d8dd}
+.chip{display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .75rem;border-radius:999px;background:rgba(19,22,29,.85);border:1px solid var(--line-2)}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.mega{margin-top:1rem;font-size:clamp(3.5rem,15vw,9.4rem);line-height:.84}
+.mega .ln{display:block;overflow:hidden;padding:.04em 0 .02em}
+.mega .w{display:inline-block;white-space:nowrap}
+.mega .ch{display:inline-block}
+.lede{margin-top:1.3rem;max-width:36rem;color:#d3d5da;font-size:1.1rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.ctas .btn{flex:1 1 220px}
+.rating{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;text-decoration:none;font-weight:600;min-height:44px}
+.stars{color:var(--yel);letter-spacing:.08em}
+@media (min-width:900px){
+  .hero{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);min-height:min(100svh,980px);align-items:center;padding-top:64px}
+  .hero-copy{grid-column:1;grid-row:1;margin:0;padding-right:0;z-index:3}
+  .hero-media{grid-column:1/3;grid-row:1;position:absolute;inset:0 0 0 36%;aspect-ratio:auto}
+  .hero-media img{object-position:22% 60%}
+  .hero-media::after{inset:0;height:auto;background:linear-gradient(90deg,var(--ink) 0%,rgba(10,12,16,.55) 18%,transparent 45%),linear-gradient(0deg,var(--ink) 0%,transparent 30%)}
+  .mega{font-size:clamp(4.4rem,6.6vw,8.6rem)}
+  .hero-copy .wrap{padding-right:0}
+}
+
+/* marquee */
+.strip{position:relative;overflow:hidden;padding:2.2rem 0 1.6rem}
+.band{background:var(--yel);color:var(--ink);transform:rotate(-2deg);margin:0 -4%;padding:.7rem 0;box-shadow:0 18px 50px -20px rgba(255,204,26,.45)}
+.track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.track span{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,4.6vw,2.6rem);text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;padding-right:1.6rem}
+.track span::after{content:"";display:inline-block;width:.45em;height:.45em;margin-left:1.6rem;border-radius:50%;background:var(--ink);vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:clamp(4.5rem,11vw,8.5rem) 0}
+.head{display:grid;gap:1rem;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.head p:not(.tag){color:var(--muted);max-width:40rem;font-size:1.08rem}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+/* bento */
+.bento{display:grid;gap:.8rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.tile{position:relative;border-radius:22px;background:var(--ink-2);border:1px solid var(--line);padding:1.25rem;overflow:hidden;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.tile .num{font-family:var(--disp);font-weight:900;font-size:clamp(3.2rem,12vw,5.4rem);line-height:.85;color:var(--bone)}
+.tile .num .y{color:var(--yel)}
+.tile p{font-size:.98rem;color:#cfd1d6}
+.tile small{display:block;margin-top:.3rem;font-size:.8rem;color:var(--muted)}
+.t-big{grid-column:1/-1;background:linear-gradient(140deg,#1b1f29,#0f1117);min-height:210px}
+.t-big .num{font-size:clamp(5.4rem,26vw,10rem)}
+.t-photo{grid-column:1/-1;padding:0;min-height:0;aspect-ratio:4/3}
+.t-photo img{width:100%;height:100%;object-fit:cover}
+.t-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.1rem 1rem;background:linear-gradient(transparent,rgba(5,6,9,.9));font-size:.95rem}
+.t-quote{grid-column:1/-1;background:var(--yel);color:var(--ink);border:0}
+.t-quote q{font-family:var(--disp);font-weight:800;font-size:clamp(1.7rem,6.4vw,2.6rem);line-height:1;text-transform:uppercase;quotes:"\201C" "\201D"}
+.t-quote small{color:#3a3320;font-weight:600}
+@media (min-width:900px){
+  .bento{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(190px,auto)}
+  .t-big{grid-column:span 2;grid-row:span 2}
+  .t-photo{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .t-quote{grid-column:span 2}
+}
+
+/* drive (3D) */
+.drive{height:270svh;background:radial-gradient(120% 70% at 50% 100%,#141a2b 0%,var(--ink) 60%)}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.stage .wrap{position:relative;z-index:2;padding-top:calc(64px + 1.5rem)}
+.stage h2{font-size:clamp(2.5rem,10vw,6rem)}
+.steps{list-style:none;margin:1.3rem 0 0;padding:0;display:grid;gap:.55rem;max-width:34rem}
+.steps li{display:flex;gap:.8rem;align-items:baseline;color:#6f737c;transition:color .5s}
+.steps b{font-family:var(--disp);font-weight:900;font-size:1.25rem;color:#4a4f5a;transition:color .5s;min-width:1.6rem}
+.steps li.on{color:var(--bone)}
+.steps li.on b{color:var(--yel)}
+#van3d{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%;z-index:1}
+.poster{display:none;position:absolute;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));width:min(88%,560px);translate:-50% 0;z-index:1}
+.drive.nogl #van3d{display:none}
+.drive.nogl .poster{display:block}
+.stage .note{position:absolute;z-index:2;left:0;right:0;bottom:calc(1rem + env(safe-area-inset-bottom));text-align:center;font-size:.8rem;color:var(--muted)}
+@media (min-width:900px){#van3d{height:70%}}
+
+/* picker */
+.picker{display:grid;gap:clamp(1.5rem,4vw,3rem)}
+.qlabel{font-family:var(--disp);font-weight:800;font-size:1.15rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem}
+.opt{min-height:48px;padding:.55rem 1.05rem;border-radius:14px;background:var(--ink-2);border:1.5px solid var(--line-2);font-size:1rem;font-weight:600;text-align:left;transition:background .25s,border-color .25s,color .25s,transform .2s}
+.opt:hover{border-color:rgba(255,204,26,.6)}
+.opt[aria-pressed="true"]{background:var(--yel);border-color:var(--yel);color:var(--ink)}
+.opt:active{transform:scale(.97)}
+.field{display:grid;gap:.4rem;margin-top:1rem}
+.field label{font-size:.9rem;color:var(--muted);font-weight:600}
+.field input{min-height:52px;padding:0 1rem;border-radius:14px;border:1.5px solid var(--line-2);background:var(--ink-2);color:var(--bone);font:inherit;font-size:1.05rem;width:100%}
+.field input:focus{border-color:var(--yel);outline:none}
+.phone{position:relative;border-radius:30px;background:#05070b;border:1px solid var(--line-2);padding:1.2rem 1rem 1.1rem;box-shadow:0 40px 90px -40px rgba(255,204,26,.25)}
+.phone .to{display:flex;align-items:center;gap:.6rem;padding-bottom:.9rem;margin-bottom:1rem;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.phone .to img{width:38px;height:32px;object-fit:contain}
+.phone .to strong{color:var(--bone);display:block;font-size:1rem}
+.bubble{margin-left:auto;max-width:92%;background:#2f7cf6;color:#fff;padding:.8rem 1rem;border-radius:20px 20px 6px 20px;font-size:1.02rem;line-height:1.45;min-height:3rem;transition:transform .35s var(--ease)}
+.bubble.pop{transform:scale(1.03)}
+.phone .send{display:grid;gap:.55rem;margin-top:1.1rem}
+.phone .send .btn{width:100%}
+.hint{font-size:.85rem;color:var(--muted);text-align:center}
+@media (min-width:900px){.picker{grid-template-columns:1.15fr .85fr;align-items:start}.phone{position:sticky;top:96px}}
+
+/* work */
+.work{display:grid;gap:.8rem}
+.wcard{position:relative;border-radius:22px;overflow:hidden;background:var(--ink-2);border:1px solid var(--line)}
+.wcard img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.wcard .cap{position:absolute;inset:auto 0 0 0;padding:3rem 1.2rem 1.2rem;background:linear-gradient(transparent,rgba(5,6,9,.94))}
+.wcard h3{font-size:clamp(2rem,7vw,2.8rem)}
+.wcard p{margin-top:.4rem;color:#d3d5da;font-size:.98rem}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+.list b{grid-row:span 2;font-family:var(--disp);font-weight:900;font-size:1.1rem;color:var(--yel);padding-top:.2rem}
+.list h3{font-size:clamp(1.7rem,6vw,2.3rem);line-height:.95}
+.list p{color:var(--muted);font-size:.98rem}
+@media (min-width:900px){.work{grid-template-columns:1fr 1fr 1.25fr;align-items:start}.list{grid-column:3;grid-row:1}}
+
+/* case file */
+.case{position:relative;border-radius:26px;background:#f1ece0;color:#14161b;padding:clamp(1.3rem,4vw,3rem);overflow:hidden}
+.case::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 33px,rgba(20,22,27,.06) 33px 34px);pointer-events:none}
+.case > *{position:relative}
+.case .top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--disp);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;border-bottom:2px solid #14161b;padding-bottom:.8rem}
+.stamp{display:inline-block;padding:.25rem .7rem;border:2.5px solid #1a7f3c;color:#1a7f3c;border-radius:8px;transform:rotate(-6deg);font-size:1rem}
+.case h3{margin:1.2rem 0 1rem;font-size:clamp(2.3rem,9vw,4.8rem);line-height:.9}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem 1rem;margin:0 0 1.4rem}
+.facts div{border-left:3px solid var(--yel);padding-left:.7rem}
+.facts dt{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5c5f66}
+.facts dd{margin:0;font-weight:700;font-size:1.02rem}
+.case blockquote{margin:0;font-size:clamp(1.08rem,2.4vw,1.35rem);line-height:1.55;max-width:52rem}
+.case cite{display:block;margin-top:.9rem;font-style:normal;font-size:.88rem;font-weight:600;color:#5c5f66}
+@media (min-width:900px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* reviews */
+.rtrack{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rtrack::-webkit-scrollbar{display:none}
+.rev{flex:0 0 min(86%,440px);scroll-snap-align:center;border-radius:22px;background:var(--ink-2);border:1px solid var(--line);padding:1.4rem;display:flex;flex-direction:column;gap:1rem}
+.rev p{font-size:1.02rem;color:#dfe1e5}
+.rev small{margin-top:auto;color:var(--muted);font-size:.85rem}
+.rnav{display:flex;gap:.5rem;justify-content:flex-end;margin-top:.6rem}
+.rnav button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line-2);background:transparent;display:grid;place-items:center}
+.rnav button:hover{border-color:var(--yel);color:var(--yel)}
+.rnav svg{width:18px;height:18px}
+
+/* closer */
+.closer{position:relative;overflow:hidden}
+.closer > img{position:relative;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:60% 40%}
+.closer::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;aspect-ratio:4/3;background:linear-gradient(180deg,var(--ink) 0%,rgba(10,12,16,0) 22%,rgba(10,12,16,0) 55%,var(--ink) 100%)}
+.closer .wrap{position:relative;z-index:2;margin-top:-4.5rem;padding-bottom:clamp(2.5rem,6vw,4rem)}
+@media (min-width:900px){
+  .closer{min-height:min(100svh,940px);display:flex;align-items:flex-end}
+  .closer > img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+  .closer::before{inset:0;aspect-ratio:auto;background:linear-gradient(180deg,var(--ink) 0%,rgba(10,12,16,.1) 25%,rgba(10,12,16,.6) 58%,var(--ink) 90%)}
+  .closer .wrap{margin-top:0}
+}
+.bignum{display:block;margin:.6rem 0 1.4rem;font-family:var(--disp);font-weight:900;font-size:clamp(3.2rem,15vw,9rem);line-height:.9;color:var(--yel);text-decoration:none;white-space:nowrap}
+.hours{margin-top:2rem;display:grid;gap:1.4rem}
+.hours table{border-collapse:collapse;width:100%;max-width:30rem;font-size:.98rem}
+.hours td{padding:.45rem .2rem;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--yel);font-weight:700}
+@media (min-width:900px){.hours{grid-template-columns:1fr 1fr;align-items:end}}
+
+/* footer */
+footer{padding:3rem 0 2rem;border-top:1px solid var(--line)}
+.wm{font-family:var(--disp);font-weight:900;line-height:.8;text-transform:uppercase;white-space:nowrap;color:var(--yel);font-size:20vw;letter-spacing:-.01em}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:1.6rem;color:var(--muted);font-size:.9rem}
+.foot img{width:64px;height:54px;object-fit:contain}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(10,12,16,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .5s var(--ease)}
+.bar.show{transform:none}
+.bar .btn{min-height:52px;font-size:1rem;padding:0 .8rem}
+@media (min-width:900px){.bar{left:auto;right:1.2rem;bottom:1.2rem;border-radius:999px;border:1px solid var(--line-2);padding:.5rem;grid-template-columns:auto auto}body{padding-bottom:0}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  #loader{display:none}
+  .js .hero-media img{filter:none}
+  .glow{opacity:.75}
+  .track{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="pbar" role="note">This is a private preview Saltwater Studio built for Mobilefix auto repair. It isn't public and Google can't see it. Questions go to Travis, a real person in Destin: <a href="tel:+18502185855">(850) 218-5855</a></div>
+
+<div id="loader" aria-hidden="true"><div><div class="hl"><i></i><i></i></div><b>MOBILEFIX</b></div></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mobilefix auto repair, back to top">
+      <img src="img/logo-800.webp" width="800" height="673" alt="The Magic Tool Bus logo: a yellow service van with a rocket on the back">
+      <span>Mobilefix<small>AUTO REPAIR</small></span>
+    </a>
+    <a class="nav-call" href="tel:+18503982275"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero">
+  <div class="hero-media">
+    <img src="img/hero-1600.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" sizes="(min-width: 900px) 70vw, 100vw" width="1600" height="1200" fetchpriority="high" alt="The Mobilefix yellow service van parked at night under street lights, lettered Mobile Auto Repair (850) 398-2275">
+    <span class="glow" id="glow" aria-hidden="true"></span>
+  </div>
+  <div class="hero-copy">
+    <div class="wrap">
+      <p class="eyebrow"><span class="chip"><span class="dot" aria-hidden="true"></span><span id="openchip">Open 24 hours</span></span><span>Mobile mechanic · Crestview, FL</span></p>
+      <h1 class="mega" id="mega"><span class="ln">Broke down?</span><span class="ln">The shop</span><span class="ln y">drives to you.</span></h1>
+      <p class="lede">Dead battery in the driveway. A starter that quit at work. An alternator that died halfway through a road trip. Call or text, and the yellow van comes to wherever your car is sitting.</p>
+      <div class="ctas">
+        <a class="btn btn-y mag" href="tel:+18503982275"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call (850) 398-2275</a>
+        <a class="btn btn-o mag" href="#picker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Tell us what it's doing</a>
+      </div>
+      <a class="rating" href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span><span>4.9 from 412 Google reviews</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="band"><div class="track">
+  <span>Dead batteries</span><span>Starters</span><span>Alternators</span><span>Belts</span><span>Brakes and rotors</span><span>Check engine lights</span><span>Spark plugs</span><span>No-start diagnosis</span>
+  <span>Dead batteries</span><span>Starters</span><span>Alternators</span><span>Belts</span><span>Brakes and rotors</span><span>Check engine lights</span><span>Spark plugs</span><span>No-start diagnosis</span>
+</div></div></div>
+
+<section class="sec" id="proof">
+  <div class="wrap">
+    <div class="head rv"><p class="tag">The numbers on Google</p><h2>412 people<br>already called.</h2></div>
+    <div class="bento">
+      <div class="tile t-big rv"><span class="stars" aria-hidden="true">★★★★★</span><div><div class="num">4<span class="y">.</span>9</div><p>Average from 412 Google reviews.</p></div></div>
+      <figure class="tile t-photo rv" style="margin:0"><img src="img/van-job-800.webp" srcset="img/van-job-800.webp 800w, img/van-job-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="1600" height="1200" loading="lazy" alt="The yellow Mobilefix van parked beside a white minivan with its hood up, tools laid out on a folding table under a red umbrella"><figcaption>On the job: hood up, tools out, the van parked right next to it.</figcaption></figure>
+      <div class="tile rv"><div class="num">67</div><div><p>reviews bring up fair pricing.</p><small>Google review topics</small></div></div>
+      <div class="tile rv"><div class="num">24<span class="y">/</span>7</div><div><p>Listed open 24 hours, every day.</p><small>Google listing hours</small></div></div>
+      <div class="tile t-quote rv"><q>Called while he was at a job and he came immediately after.</q><small>Google review, dead battery call</small></div>
+      <div class="tile rv"><div class="num">26</div><div><p>reviews about alternator replacement.</p><small>Google review topics</small></div></div>
+      <div class="tile rv"><div class="num">A<span class="y">+</span></div><div><p>BBB rating.</p><small>bbb.org profile, Oct 2026</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="drive" id="drive">
+  <div class="stage">
+    <div class="wrap">
+      <p class="tag">How it works</p>
+      <h2>No tow truck.<br>No waiting room.</h2>
+      <ol class="steps" id="steps">
+        <li data-at=".08"><b>01</b><span>Call or text. Say what it's doing.</span></li>
+        <li data-at=".38"><b>02</b><span>If it needs a part, it gets picked up on the way.</span></li>
+        <li data-at=".66"><b>03</b><span>The fix happens where the car sits: your driveway, the work lot, even an Airbnb.</span></li>
+      </ol>
+    </div>
+    <canvas id="van3d" aria-hidden="true"></canvas>
+    <svg class="poster" viewBox="0 0 560 220" aria-hidden="true"><defs><linearGradient id="bm" x1="0" x2="1"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></linearGradient></defs><path d="M392 118 L560 70 L560 196 Z" fill="url(#bm)"/><rect x="40" y="40" width="250" height="132" rx="6" fill="#f6c519"/><path d="M290 82h62l40 40v50H290z" fill="#f6c519"/><path d="M300 92h48l30 32h-78z" fill="#1b2230"/><rect x="40" y="168" width="350" height="14" fill="#23262d"/><circle cx="110" cy="186" r="26" fill="#111"/><circle cx="110" cy="186" r="10" fill="#9aa0a8"/><circle cx="335" cy="186" r="26" fill="#111"/><circle cx="335" cy="186" r="10" fill="#9aa0a8"/><rect x="384" y="124" width="10" height="12" fill="#fff6d6"/><text x="62" y="92" font-family="Big Shoulders Display,Arial Narrow,sans-serif" font-weight="800" font-size="30" fill="#111">Mobile Auto Repair</text><text x="62" y="128" font-family="Big Shoulders Display,Arial Narrow,sans-serif" font-weight="900" font-size="34" fill="#111">(850) 398-2275</text></svg>
+    <p class="note">Scroll to drive. Same yellow van as the photos, built in 3D.</p>
+  </div>
+</section>
+
+<section class="sec" id="picker">
+  <div class="wrap">
+    <div class="head rv"><p class="tag">Text it in 20 seconds</p><h2>What's it<br><span class="y">doing?</span></h2><p>Tap what you're seeing and where the car is. We write the text for you. You hit send.</p></div>
+    <div class="picker">
+      <div class="rv">
+        <p class="qlabel" id="q1">1. The problem</p>
+        <div class="opts" role="group" aria-labelledby="q1" id="sym">
+          <button type="button" class="opt" aria-pressed="false" data-v="won't start">Won't start</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="just clicks when I turn the key">Clicks, then nothing</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="has a dead battery">Battery's dead</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="has the check engine light on">Check engine light</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="has brakes that squeal or grind">Brakes squeal or grind</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="has the battery light on and the lights are dimming">Battery light, dim lights</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="is running rough">Running rough</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="has a problem I can't pin down">Something else</button>
+        </div>
+        <p class="qlabel" id="q2" style="margin-top:1.6rem">2. Where is it?</p>
+        <div class="opts" role="group" aria-labelledby="q2" id="loc">
+          <button type="button" class="opt" aria-pressed="false" data-v="It's at my house">At home</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="It's at my work">At work</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="I'm stuck on the road">Stuck on the road</button>
+          <button type="button" class="opt" aria-pressed="false" data-v="I'm staying in town and it's parked where I'm staying">Visiting, at a rental</button>
+        </div>
+        <div class="field"><label for="car">3. The car (optional)</label><input id="car" type="text" autocomplete="off" placeholder="e.g. 2014 Honda Odyssey" maxlength="40"></div>
+        <div class="field"><label for="town">4. Town or nearest road (optional)</label><input id="town" type="text" autocomplete="off" placeholder="e.g. Crestview, off Hwy 85" maxlength="50"></div>
+      </div>
+      <div class="phone rv" aria-live="polite">
+        <div class="to"><img src="img/logo-800.webp" width="800" height="673" alt=""><div><strong>Mobilefix auto repair</strong>(850) 398-2275</div></div>
+        <p class="bubble" id="msg"></p>
+        <div class="send">
+          <a class="btn btn-y" id="smsbtn" href="sms:+18503982275"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Send this text</a>
+          <a class="btn btn-o" href="tel:+18503982275">Rather talk? Call</a>
+          <p class="hint">Opens your messages app with the text filled in. Add a photo of the dash if you can.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv"><p class="tag">What gets fixed where it sits</p><h2>Driveway<br>repairs.</h2></div>
+    <div class="work">
+      <figure class="wcard rv" style="margin:0"><img src="img/brakes-800.webp" srcset="img/brakes-800.webp 800w, img/brakes-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 100vw" width="1600" height="2133" loading="lazy" alt="An SUV up on a yellow floor jack with the wheel off and the brake rotor and caliper exposed, the Mobilefix van in the background"><figcaption class="cap"><h3>Brakes and rotors</h3><p>Wheel off and the brakes opened up, right where the car is parked.</p></figcaption></figure>
+      <figure class="wcard rv" style="margin:0"><img src="img/plugs-800.webp" srcset="img/plugs-800.webp 800w, img/plugs-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 100vw" width="1600" height="2133" loading="lazy" alt="A row of new spark plugs lined up on top of an engine"><figcaption class="cap"><h3>Spark plugs</h3><p>A fresh set lined up and ready to go in.</p></figcaption></figure>
+      <ul class="list rv">
+        <li><b>01</b><h3>Batteries</h3><p>Tested on the spot and replaced if it's done.</p></li>
+        <li><b>02</b><h3>Starters</h3><p>Same-day starter swaps when the car leaves you stranded.</p></li>
+        <li><b>03</b><h3>Alternators and belts</h3><p>Parts picked up, belts brought along in case they need it too.</p></li>
+        <li><b>04</b><h3>Check engine light</h3><p>Run through the light so you know if anything else is going on.</p></li>
+        <li><b>05</b><h3>Won't-start diagnosis</h3><p>One customer's truck was diagnosed in under 15 minutes.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="case" style="padding-top:0">
+  <div class="wrap">
+    <article class="case rv">
+      <div class="top"><span>Case file · Alternator</span><span class="stamp">Back on the road</span></div>
+      <h3>Broke down far from home. Fixed at the Airbnb.</h3>
+      <dl class="facts">
+        <div><dt>Called</dt><dd>Sunday</dd></div>
+        <div><dt>Parts</dt><dd>Monday morning</dd></div>
+        <div><dt>Where</dt><dd>An Airbnb</dd></div>
+        <div><dt>Rolling</dt><dd>By noon</dd></div>
+      </dl>
+      <blockquote>"Was traveling home from south Florida on Sunday and the alternator went out on my van called … and he answered his phone right away. Picked up the parts on Monday morning and came to the Airbnb also brought belts in case thy needed to be replaced had the work done in a timely manner. We were back on the road by noon."</blockquote>
+      <cite>Google review, 5 stars</cite>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="reviews" style="padding-top:0">
+  <div class="wrap"><div class="head rv"><p class="tag"><span class="stars">★★★★★</span> 4.9 · 412 Google reviews</p><h2>In their<br>words.</h2></div></div>
+  <div class="rtrack" id="rtrack" tabindex="0" aria-label="Google reviews">
+    <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Battery was completely dead - called while he was at a job and he came immediately after to test/replace the battery. Also ran thru my check engine light to ensure no other issues. Amazing customer service. Will definitely call again if needing local maintenance."</p><small>Google review</small></article>
+    <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Sons work vehicle left him stranded and so we called this morning regarding son's starter. … drove out same day with a new starter and was able to fix it."</p><small>Google review</small></article>
+    <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Had an issue with a truck not starting after doing some at home work. … He was able to diagnose the issue in less than 15 minutes. Had us up and running again in just a few hours and also fixed some extra things he noticed that weren't even part of the initial problem. Prices were very fair …"</p><small>Google review</small></article>
+    <article class="rev"><span class="stars" aria-label="5 stars">★★★★★</span><p>"As soon as he got there, he introduced himself and got right to work. As soon as he diagnosed the problem he helped us get to the store to get the part we needed and then he installed it! … He was very kind, and he did not overcharge."</p><small>Google review</small></article>
+  </div>
+  <div class="wrap"><div class="rnav"><button type="button" id="rprev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><button type="button" id="rnext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
+</section>
+
+<section class="closer" id="call">
+  <img src="img/rainbow-1600.webp" srcset="img/rainbow-800.webp 800w, img/rainbow-1600.webp 1600w" sizes="100vw" width="1600" height="1200" loading="lazy" alt="A full rainbow over a parking lot, a red hatchback in front and the yellow Mobilefix van behind it">
+  <div class="wrap">
+    <p class="tag rv">Wherever it quit</p>
+    <h2 class="rv">Call the<br>yellow van.</h2>
+    <a class="bignum rv" href="tel:+18503982275">(850) 398-2275</a>
+    <div class="ctas rv" style="max-width:40rem">
+      <a class="btn btn-y mag" href="tel:+18503982275">Call now</a>
+      <a class="btn btn-o mag sms-quick" href="sms:+18503982275&amp;body=Hi%2C%20I%20found%20Mobilefix%20on%20Google.%20My%20car%20needs%20a%20look.%20Can%20you%20come%20out%3F">Send a text</a>
+    </div>
+    <div class="hours rv">
+      <div><p class="tag" style="margin-bottom:.6rem">Hours on Google</p><table id="hrs"><tbody></tbody></table></div>
+      <p class="muted">Based in Crestview, FL. A mobile mechanic, so there's no lot to drive to: the van comes to you.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="wm" id="wm" aria-hidden="true">Mobilefix</div>
+    <div class="foot"><img src="img/logo-800.webp" width="800" height="673" alt="The Magic Tool Bus logo" loading="lazy"><p>© 2026 Mobilefix auto repair. Preview design by Saltwater Studio.</p><a href="tel:+18503982275">(850) 398-2275</a></div>
+  </div>
+</footer>
+
+<nav class="bar" id="bar" aria-label="Quick contact">
+  <a class="btn btn-y" href="tel:+18503982275">Call</a>
+  <a class="btn btn-o" href="#picker">Text the problem</a>
+</nav>
+
+<script src="/preview/_lib/lenis/lenis.min.js"></script>
+<script src="/preview/_lib/gsap/gsap.min.js"></script>
+<script>
+const CFG = {
+  phone: '+18503982275', tz: 'America/Chicago',
+  // Google listing, 2026-10-01: open 24 hours every day. [open, close] in minutes; null = closed.
+  hours: { Mon:[0,1440], Tue:[0,1440], Wed:[0,1440], Thu:[0,1440], Fri:[0,1440], Sat:[0,1440], Sun:[0,1440] }
+};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+
+/* ready: lights on */
+let readied = false;
+const ready = () => { if (readied) return; readied = true; document.documentElement.classList.add('ready'); heroIn(); };
+addEventListener('load', () => setTimeout(ready, 650));
+setTimeout(ready, 1800);
+
+/* open chip + hours table */
+(() => {
+  const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], full = {Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday',Sun:'Sunday'};
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: CFG.tz, weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+  const g = t => (parts.find(p => p.type === t) || {}).value;
+  const today = g('weekday'), mins = (+g('hour')) * 60 + (+g('minute'));
+  const h = CFG.hours[today], fmt = m => { const hh = Math.floor(m / 60) % 24, ap = hh < 12 ? 'AM' : 'PM'; return ((hh % 12) || 12) + (m % 60 ? ':' + String(m % 60).padStart(2, '0') : '') + ' ' + ap; };
+  let txt;
+  if (h && h[0] === 0 && h[1] === 1440) txt = 'Open now · 24 hours';
+  else if (h && mins >= h[0] && mins < h[1]) txt = 'Open now · until ' + fmt(h[1]);
+  else txt = 'Closed now · call to check';
+  $('#openchip').textContent = txt;
+  const tb = $('#hrs tbody');
+  days.forEach(d => { const r = CFG.hours[d], tr = document.createElement('tr'); if (d === today) tr.className = 'today';
+    tr.innerHTML = '<td>' + full[d] + (d === today ? ' (today)' : '') + '</td><td>' + (!r ? 'Closed' : (r[0] === 0 && r[1] === 1440) ? 'Open 24 hours' : fmt(r[0]) + ' to ' + fmt(r[1])) + '</td>'; tb.appendChild(tr); });
+})();
+
+/* hero headline split */
+const mega = $('#mega');
+mega.querySelectorAll('.ln').forEach(ln => {
+  ln.innerHTML = ln.textContent.split(' ').map(w => '<span class="w">' + [...w].map(c => '<span class="ch">' + c + '</span>').join('') + '</span>').join(' ');
+});
+mega.setAttribute('aria-label', 'Broke down? The shop drives to you.');
+mega.querySelectorAll('.ln').forEach(l => l.setAttribute('aria-hidden', 'true'));
+if (!reduce && window.gsap) gsap.set('#mega .ch', { yPercent: 115 });
+function heroIn() {
+  if (reduce || !window.gsap) return;
+  gsap.to('#mega .ch', { yPercent: 0, duration: 1.25, ease: 'expo.out', stagger: .028 });
+  gsap.from('.hero .eyebrow, .hero .lede, .hero .ctas, .hero .rating', { y: 24, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: .08, delay: .35 });
+}
+
+/* headlight glow placed on the van's headlight in the photo (photo fractions .035, .6) */
+const himg = $('.hero-media img'), glow = $('#glow');
+function placeGlow() {
+  const b = himg.getBoundingClientRect(); if (!b.width) return;
+  const s = Math.max(b.width / 4, b.height / 3), iw = 4 * s, ih = 3 * s;
+  const op = getComputedStyle(himg).objectPosition.split(' ').map(v => parseFloat(v) / 100);
+  const ox = (b.width - iw) * op[0], oy = (b.height - ih) * (op[1] ?? .5);
+  glow.style.left = (ox + iw * .035) + 'px'; glow.style.top = (oy + ih * .6) + 'px'; glow.style.width = (iw * .22) + 'px';
+}
+placeGlow(); addEventListener('resize', placeGlow);
+
+/* reveals */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+$$('.rv').forEach(el => io.observe(el));
+
+/* nav + sticky bar */
+const nav = $('#nav'), bar = $('#bar'), hero = $('#hero'), callSec = $('#call');
+new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting), { rootMargin: '-40% 0px 0px 0px' }).observe(hero);
+
+/* drive progress + steps */
+const drive = $('#drive'), steps = $$('#steps li');
+window.MF_P = 0;
+function onScroll() {
+  nav.classList.toggle('solid', scrollY > 40);
+  const r = drive.getBoundingClientRect(), span = r.height - innerHeight;
+  const p = Math.min(1, Math.max(0, -r.top / span)); window.MF_P = p;
+  steps.forEach(li => li.classList.toggle('on', p >= parseFloat(li.dataset.at)));
+}
+let tick = false;
+addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { onScroll(); tick = false; }); } }, { passive: true });
+onScroll();
+
+/* symptom picker -> prefilled text */
+const msg = $('#msg'), smsBtn = $('#smsbtn'), sel = { sym: '', loc: '' };
+function build() {
+  const car = $('#car').value.trim(), town = $('#town').value.trim();
+  let t = 'Hi, I found Mobilefix on Google. ';
+  t += (car ? 'My ' + car : 'My car') + ' ' + (sel.sym || 'needs a look') + '. ';
+  if (sel.loc) t += sel.loc + (town ? ' in ' + town : '') + '. ';
+  else if (town) t += "It's in " + town + '. ';
+  t += 'Can you come take a look?';
+  msg.textContent = t;
+  smsBtn.href = 'sms:' + CFG.phone + '&body=' + encodeURIComponent(t);
+  msg.classList.remove('pop'); void msg.offsetWidth; msg.classList.add('pop'); setTimeout(() => msg.classList.remove('pop'), 300);
+}
+['sym', 'loc'].forEach(k => $('#' + k).addEventListener('click', e => {
+  const b = e.target.closest('.opt'); if (!b) return;
+  const on = b.getAttribute('aria-pressed') === 'true';
+  $$('#' + k + ' .opt').forEach(x => x.setAttribute('aria-pressed', 'false'));
+  b.setAttribute('aria-pressed', on ? 'false' : 'true'); sel[k] = on ? '' : b.dataset.v; build();
+}));
+['car', 'town'].forEach(id => $('#' + id).addEventListener('input', build));
+build();
+
+/* reviews nav */
+const rt = $('#rtrack');
+$('#rprev').addEventListener('click', () => rt.scrollBy({ left: -rt.clientWidth * .8, behavior: 'smooth' }));
+$('#rnext').addEventListener('click', () => rt.scrollBy({ left: rt.clientWidth * .8, behavior: 'smooth' }));
+
+/* footer wordmark fit */
+const wm = $('#wm');
+function fitWm() { wm.style.fontSize = '100px'; const w = wm.scrollWidth, cw = wm.parentElement.clientWidth - parseFloat(getComputedStyle(wm.parentElement).paddingLeft) * 2; wm.style.fontSize = Math.floor(100 * cw / w * .98) + 'px'; }
+fitWm(); addEventListener('resize', fitWm);
+document.fonts && document.fonts.load('900 100px "Big Shoulders Display"').then(() => document.fonts.ready).then(() => { fitWm(); placeGlow(); });
+
+/* smooth scroll (desktop only) + magnetic buttons */
+if (!reduce && fine && window.Lenis && window.gsap) {
+  const lenis = new Lenis({ lerp: .1, anchors: { offset: -70 }, syncTouch: false });
+  gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+}
+if (!reduce && fine && window.gsap) $$('.mag').forEach(b => {
+  b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); gsap.to(b, { x: (e.clientX - r.left - r.width / 2) * .22, y: (e.clientY - r.top - r.height / 2) * .32, duration: .5, ease: 'power3.out' }); });
+  b.addEventListener('pointerleave', () => gsap.to(b, { x: 0, y: 0, duration: .9, ease: 'elastic.out(1,.4)' }));
+});
+</script>
+<script type="importmap">{"imports":{"three":"/preview/_lib/three/three.module.min.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const sec = document.getElementById('drive'), cv = document.getElementById('van3d');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let R = null;
+if (!reduce) { try { R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true, powerPreference: 'high-performance' }); } catch (e) { R = null; } }
+if (!R) sec.classList.add('nogl');
+else {
+  let dpr = Math.min(devicePixelRatio || 1, 2); R.setPixelRatio(dpr);
+  R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.15;
+  const scene = new THREE.Scene(); scene.fog = new THREE.Fog(0x0a0c10, 16, 42);
+  const cam = new THREE.PerspectiveCamera(32, 1, .1, 100);
+  scene.add(new THREE.HemisphereLight(0x7084b8, 0x0a0b0f, .9));
+  const moon = new THREE.DirectionalLight(0xa9bcff, 1.1); moon.position.set(-4, 9, 7); scene.add(moon);
+  const key = new THREE.DirectionalLight(0xffe2b0, 1.6); key.position.set(3, 5, 10); scene.add(key);
+  const std = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, roughness: .6, metalness: .05, flatShading: true }, o));
+  const box = (w, h, d, m, x, y, z, p = scene) => { const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); b.position.set(x, y, z); p.add(b); return b; };
+
+  /* road */
+  const road = new THREE.Mesh(new THREE.PlaneGeometry(80, 7), std(0x16191f, { roughness: .95 })); road.rotation.x = -Math.PI / 2; scene.add(road);
+  box(80, .18, 1.2, std(0x23272f), 0, .09, -3.9);
+  const dash = new THREE.InstancedMesh(new THREE.BoxGeometry(1, .02, .12), new THREE.MeshBasicMaterial({ color: 0xc9a227 }), 40);
+  const m4 = new THREE.Matrix4(); for (let i = 0; i < 40; i++) { m4.makeTranslation(-40 + i * 2, .011, 1.9); dash.setMatrixAt(i, m4); } scene.add(dash);
+  /* street lamps */
+  const lampM = std(0x2b2f37), headM = new THREE.MeshBasicMaterial({ color: 0xffd9a0 });
+  [-9, 0, 9].forEach(x => { box(.14, 4.6, .14, lampM, x, 2.3, -3.8); box(1.1, .1, .14, lampM, x + .5, 4.55, -3.8); box(.5, .08, .3, headM, x + .9, 4.48, -3.8); });
+  [-9, 9].forEach(x => { const l = new THREE.PointLight(0xffb46b, 38, 14, 2); l.position.set(x + .9, 4.2, -3.2); scene.add(l); });
+
+  /* van (faces +x) */
+  const van = new THREE.Group(), body = new THREE.Group(); van.add(body); scene.add(van);
+  const yel = std(0xf6c519, { roughness: .42, metalness: .12 }), dark = std(0x15171c, { roughness: .8 }), glass = std(0x1b2333, { roughness: .15, metalness: .6 }), chrome = std(0xc9ccd2, { roughness: .3, metalness: .8 });
+  // side decal: canvas texture with the real van lettering
+  const cnv = document.createElement('canvas'); cnv.width = 1024; cnv.height = 672; const cx = cnv.getContext('2d');
+  const tex = new THREE.CanvasTexture(cnv); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+  function paint() {
+    cx.fillStyle = '#f6c519'; cx.fillRect(0, 0, 1024, 672);
+    cx.fillStyle = 'rgba(0,0,0,.28)'; [340, 690].forEach(x => cx.fillRect(x, 300, 5, 372)); cx.fillRect(0, 300, 1024, 4);
+    cx.fillStyle = 'rgba(0,0,0,.55)'; [300, 650, 990].forEach(x => cx.fillRect(x, 470, 12, 46));
+    cx.beginPath(); cx.arc(118, 150, 82, 0, 7); cx.fillStyle = '#fff'; cx.fill(); cx.beginPath(); cx.arc(118, 150, 70, 0, 7); cx.fillStyle = '#d8322a'; cx.fill();
+    cx.strokeStyle = '#fff'; cx.lineWidth = 16; cx.lineCap = 'round'; cx.beginPath(); cx.moveTo(80, 112); cx.lineTo(156, 188); cx.moveTo(156, 112); cx.lineTo(80, 188); cx.stroke();
+    cx.fillStyle = '#121317'; cx.font = '800 104px "Big Shoulders Display", "Arial Narrow", sans-serif'; cx.fillText('Mobile Auto Repair', 228, 140);
+    cx.font = '900 116px "Big Shoulders Display", "Arial Narrow", sans-serif'; cx.fillText('(850) 398-2275', 228, 258);
+    tex.needsUpdate = true;
+  }
+  paint(); document.fonts && document.fonts.load('900 100px "Big Shoulders Display"').then(paint);
+  box(2.9, 1.9, 2.0, yel, -.85, 1.7, 0, body);
+  const side = new THREE.Mesh(new THREE.PlaneGeometry(2.9, 1.9), std(0xffffff, { map: tex, roughness: .45, flatShading: false })); side.position.set(-.85, 1.7, 1.004); body.add(side);
+  box(1.4, 1.45, 1.84, yel, 1.3, 1.52, 0, body);          // cab
+  box(.55, .62, 1.8, yel, 2.24, 1.06, 0, body);           // hood
+  const ws = box(.06, .78, 1.62, glass, 2.06, 1.86, 0, body); ws.rotation.z = -.42; // windshield
+  [1, -1].forEach(s => { box(.95, .55, .04, glass, 1.38, 1.9, .925 * s, body); box(.03, .9, .02, dark, 1.0, 1.35, .93 * s, body); });
+  box(.14, .28, 1.86, chrome, 2.56, .74, 0, body);        // bumper
+  box(.04, .3, 1.0, dark, 2.52, 1.08, 0, body);           // grille
+  box(4.95, .3, 1.7, dark, .1, .62, 0, body);             // chassis
+  [-2.1, -.3].forEach(x => [-.7, .7].forEach(z => box(.06, .36, .06, chrome, x, 2.83, z, body))); [.7, -.7].forEach(z => box(2.4, .06, .06, chrome, -1.2, 3.02, z, body)); // ladder rack
+  const amber = new THREE.MeshBasicMaterial({ color: 0xff9d1a }); const bar = box(.28, .1, 1.1, amber, 1.3, 2.3, 0, body);
+  const tailM = new THREE.MeshBasicMaterial({ color: 0xff2a1f }); [.85, -.85].forEach(z => box(.04, .3, .18, tailM, -2.31, 1.05, z, body));
+  const hlM = new THREE.MeshBasicMaterial({ color: 0xfff3c4 }); [.62, -.62].forEach(z => box(.05, .16, .34, hlM, 2.52, 1.12, z, body));
+  // headlight beams (additive cones)
+  const beamMat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
+    uniforms: { k: { value: 1 } },
+    vertexShader: 'varying float vy; void main(){ vy = position.y; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.); }',
+    fragmentShader: 'uniform float k; varying float vy; void main(){ float a = smoothstep(-3.2, 3.2, vy); gl_FragColor = vec4(1.,.91,.62, a*a*.32*k); }' });
+  [.62, -.62].forEach(z => { const c = new THREE.Mesh(new THREE.ConeGeometry(1.25, 6.4, 20, 1, true), beamMat); c.rotation.z = Math.PI / 2; c.position.set(2.55 + 3.2, 1.0, z); c.scale.set(1, 1, .7); van.add(c); });
+  // light pool on the road
+  const pc = document.createElement('canvas'); pc.width = pc.height = 128; const pg = pc.getContext('2d'); const gr = pg.createRadialGradient(64, 64, 0, 64, 64, 64); gr.addColorStop(0, 'rgba(255,226,150,.85)'); gr.addColorStop(1, 'rgba(255,226,150,0)'); pg.fillStyle = gr; pg.fillRect(0, 0, 128, 128);
+  const pool = new THREE.Mesh(new THREE.PlaneGeometry(6, 3.4), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(pc), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: .55 }));
+  pool.rotation.x = -Math.PI / 2; pool.position.set(6, .02, 0); van.add(pool);
+  // rocket flame (nod to the logo): grows with speed
+  const flameMat = new THREE.MeshBasicMaterial({ color: 0xff7a1a, transparent: true, opacity: .85, blending: THREE.AdditiveBlending, depthWrite: false });
+  const flame = new THREE.Mesh(new THREE.ConeGeometry(.22, 1, 10, 1, true), flameMat); flame.rotation.z = Math.PI / 2; flame.position.set(-2.4, .7, -.5); van.add(flame);
+  // wheels
+  const wheels = []; const wg = new THREE.CylinderGeometry(.43, .43, .32, 14), hg = new THREE.CylinderGeometry(.2, .2, .34, 8);
+  [[1.78, .9], [1.78, -.9], [-1.45, .9], [-1.45, -.9]].forEach(([x, z]) => { const w = new THREE.Group(); const t = new THREE.Mesh(wg, std(0x0d0e11, { roughness: .9 })); t.rotation.x = Math.PI / 2; const h = new THREE.Mesh(hg, chrome); h.rotation.x = Math.PI / 2; const sp = box(.36, .06, .35, std(0x6b7078), 0, 0, 0, w); w.add(t, h); w.position.set(x, .43, z); van.add(w); wheels.push(w); });
+  // ground shadow
+  const sh = new THREE.Mesh(new THREE.PlaneGeometry(5.6, 2.4), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: .45, depthWrite: false })); sh.rotation.x = -Math.PI / 2; sh.position.y = .015; van.add(sh);
+
+  /* sizing */
+  let W = 1, H = 1, X = 9;
+  function size() {
+    W = cv.clientWidth; H = cv.clientHeight; if (!W || !H) return;
+    R.setSize(W, H, false); cam.aspect = W / H;
+    const d = Math.max(9.5, 13 / cam.aspect);
+    cam.position.set(1.2, d * .2 + 1.2, d); cam.lookAt(0, 1.25, 0); cam.updateProjectionMatrix();
+    X = d * Math.tan(THREE.MathUtils.degToRad(16)) * cam.aspect + 3.6;
+  }
+  size(); addEventListener('resize', size);
+
+  /* loop: only while on screen and tab visible */
+  let vis = false, raf = 0, sm = 0, lastX = -X, t0 = performance.now(), frames = 0, slow = 0;
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  function pathX(p) { // enter, slow roll through the middle, exit
+    if (p < .35) return -X + (X - .9) * ease(p / .35) * 1;
+    if (p < .72) return -.9 + 1.8 * ((p - .35) / .37);
+    return .9 + (X - .9) * Math.pow((p - .72) / .28, 2);
+  }
+  function frame(now) {
+    raf = 0; if (!vis || document.hidden) return;
+    const t = now / 1000; sm += ((window.MF_P || 0) - sm) * .12;
+    const x = pathX(sm), v = x - lastX; lastX = x;
+    van.position.x = x; wheels.forEach(w => w.rotation.z = -x / .43);
+    const sp = Math.min(1, Math.abs(v) * 6);
+    body.position.y = Math.sin(t * 13) * .012 * (sp + .15); body.rotation.z = -v * .9;
+    flame.scale.set(1, .25 + sp * 2.2 + Math.sin(t * 40) * .1 * sp, 1); flame.position.x = -2.4 - flame.scale.y * .5; flameMat.opacity = .15 + sp * .75;
+    amber.color.setHex(Math.sin(t * 6) > 0 ? 0xffa21f : 0x5a3006);
+    beamMat.uniforms.k.value = .9 + Math.sin(t * 2.3) * .06;
+    R.render(scene, cam);
+    // adaptive DPR
+    frames++; if (frames % 30 === 0) { const dt = (now - t0) / 30; t0 = now; if (dt > 24 && dpr > 1.25) { if (++slow > 2) { dpr = 1.25; R.setPixelRatio(dpr); size(); } } else slow = 0; }
+    raf = requestAnimationFrame(frame);
+  }
+  const kick = () => { if (!raf && vis && !document.hidden) raf = requestAnimationFrame(frame); };
+  new IntersectionObserver(([e]) => { vis = e.isIntersecting; if (vis) { size(); kick(); } }, { rootMargin: '10% 0px' }).observe(sec);
+  document.addEventListener('visibilitychange', kick);
+  R.domElement.addEventListener('webglcontextlost', e => { e.preventDefault(); sec.classList.add('nogl'); vis = false; });
+}
+</script>
+</body>
+</html>
