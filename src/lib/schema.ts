@@ -63,14 +63,8 @@ export function webSite() {
     url: site.url,
     name: site.name,
     publisher: { "@id": ORG_ID },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${site.url}/?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
+    // No SearchAction: the site has no search. Declaring one is a schema lie
+    // (2026-10 audit) — reinstate only if a working /?q= search ships.
   };
 }
 
