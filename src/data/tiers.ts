@@ -88,6 +88,7 @@ export const tiers: Tier[] = [
     followUp:
       "Your domain, your photos, and your words are yours at all times. The page files become yours after 12 paid months, or any time by paying the Buy It difference.",
     cta: { label: "Start the Page Plan — $149/mo", ...planCta("page-plan") },
+    links: [{ href: "/websites", label: "The plans, in plain language" }],
   },
   {
     id: "buy-it",
@@ -109,6 +110,7 @@ export const tiers: Tier[] = [
       "Cancel hosting any time — the files are handed over",
     ],
     cta: { label: "Buy it outright — $497", ...planCta("buy-it") },
+    links: [{ href: "/websites", label: "The plans, in plain language" }],
   },
   {
     id: "local-growth",
