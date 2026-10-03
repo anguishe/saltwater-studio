@@ -46,7 +46,6 @@ Not affiliated with Studio Saltwater, Saltwater Design Studio, or Saltwatr Studi
 - Why your business doesn't show up in ChatGPT: https://saltwaterstudio.xyz/insights/why-your-business-doesnt-show-up-in-chatgpt
 - What earned a small content site 100+ Copilot citations: https://saltwaterstudio.xyz/insights/what-earned-100-copilot-citations
 - What the Google & AI Visibility Audit covers: https://saltwaterstudio.xyz/insights/what-the-google-ai-visibility-audit-covers
-- A sample audit report, run on our own client: https://saltwaterstudio.xyz/insights/sample-visibility-audit-report
 - Local SEO lessons from a four-person moving company: https://saltwaterstudio.xyz/insights/local-seo-lessons-from-a-moving-company
 - llms.txt and schema, explained in plain English: https://saltwaterstudio.xyz/insights/llms-txt-and-schema-in-plain-english
 
