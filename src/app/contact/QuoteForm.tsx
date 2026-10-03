@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { site } from "@/config/site";
 import { track } from "@/lib/events";
+import { LEAD_SOURCE_KEY } from "@/components/LeadSourceCapture";
 import {
   INTERESTS,
   BOTTLENECKS,
@@ -32,6 +33,15 @@ interface FormState {
 
 // "mybusiness.com" is a valid answer; the server's z.url() check is not the
 // place to punish a missing protocol.
+// First-touch attribution captured by LeadSourceCapture in the layout.
+function readLeadSource(): string | undefined {
+  try {
+    return sessionStorage.getItem(LEAD_SOURCE_KEY) ?? undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 function normalizeUrl(value: FormDataEntryValue | null): string | undefined {
   const raw = String(value ?? "").trim();
   if (!raw) return undefined;
@@ -80,6 +90,7 @@ export default function QuoteForm() {
           message: data.get("message"),
           company: data.get("company") ?? "", // honeypot
           t: startTimeRef.current,
+          leadSource: readLeadSource(),
         }),
       });
 

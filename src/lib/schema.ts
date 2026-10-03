@@ -92,6 +92,8 @@ export function service(opts: {
   url: string;
   /** Only the T1 audit carries a published price (carve-out, 2026-08-09). */
   offers?: { price: number; priceCurrency: "USD"; priceValidUntil?: string };
+  /** City-scoped pages override the nationwide default (e.g. /web-design-destin-fl). */
+  areaServed?: { city: string; region: string };
 }) {
   return {
     "@context": "https://schema.org",
@@ -100,7 +102,16 @@ export function service(opts: {
     description: opts.description,
     url: opts.url,
     provider: { "@id": ORG_ID },
-    areaServed: { "@type": "Country", name: "United States" },
+    areaServed: opts.areaServed
+      ? {
+          "@type": "City",
+          name: opts.areaServed.city,
+          containedInPlace: {
+            "@type": "State",
+            name: opts.areaServed.region,
+          },
+        }
+      : { "@type": "Country", name: "United States" },
     ...(opts.offers
       ? {
           offers: {
@@ -197,6 +208,30 @@ export function webPage(opts: {
     name: opts.name,
     isPartOf: { "@id": WEBSITE_ID },
     speakable: speakable(opts.speakableSelectors),
+  };
+}
+
+export function article(opts: {
+  slug: string;
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  const url = `${site.url}/insights/${opts.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline: opts.headline,
+    description: opts.description,
+    url,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified ?? opts.datePublished,
+    author: { "@id": FOUNDER_ID },
+    publisher: { "@id": ORG_ID },
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntityOfPage: url,
   };
 }
 

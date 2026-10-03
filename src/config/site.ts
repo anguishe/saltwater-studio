@@ -43,7 +43,10 @@ export const site = {
   // calcom: "saltwaterstudio/strategy-call",
   // A URL enters this array only after it returns 200. No speculative entries —
   // one dead node weakens the whole sameAs cluster.
-  sameAs: [] as string[],
+  // Facebook page verified live 2026-10-02 (2 client recommendations on it).
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61590875267901",
+  ] as string[],
   gtmId: "GTM-M3RTZ7C8", // documentation only; runtime reads NEXT_PUBLIC_GTM_ID env var
   // The ONE price on the site (pricing carve-out, 2026-08-09): the T1 AI
   // Visibility Audit, sold via a Stripe Payment Link. Everything else stays

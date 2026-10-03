@@ -36,6 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       project.metaDescription ??
       `Case study: ${project.result} — a Saltwater Studio web design project.`,
     path: `/work/${slug}`,
+    // Real screenshot of the project beats the generic brand card in link previews.
+    ogImage: project.image ? `${site.url}${project.image}` : undefined,
   });
 }
 

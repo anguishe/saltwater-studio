@@ -5,6 +5,8 @@ import "./globals.css";
 import Header from "@/components/ui/Header";
 import { services } from "@/data/services";
 import Footer from "@/components/ui/Footer";
+import { locations } from "@/data/locations";
+import LeadSourceCapture from "@/components/LeadSourceCapture";
 import StickyCTA from "@/components/ui/StickyCTA";
 import JsonLd from "@/components/JsonLd";
 import { buildOrgSchema, buildWebSiteSchema } from "@/lib/schema";
@@ -85,7 +87,11 @@ export default function RootLayout({
           {children}
         </main>
 
-        <Footer serviceLinks={services.map(({ slug, title }) => ({ slug, title }))} />
+        <LeadSourceCapture />
+        <Footer
+          serviceLinks={services.map(({ slug, title }) => ({ slug, title }))}
+          areaLinks={locations.map(({ slug, city }) => ({ slug, city }))}
+        />
         <StickyCTA />
 
         {/* GTM — afterInteractive, zero analytics in this codebase */}

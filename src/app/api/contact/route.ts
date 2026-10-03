@@ -25,6 +25,13 @@ const schema = z.object({
   // Honeypot — must be absent or empty; optional so missing key doesn't hard-fail
   company: z.string().optional().default(""),
   t: z.number(),
+  // First-touch attribution (landing path · referrer · utm). Free text, so it is
+  // length-capped and newline-stripped before entering the notification email.
+  leadSource: z
+    .string()
+    .max(400)
+    .transform((v) => v.replace(/[\r\n]+/g, " "))
+    .optional(),
 });
 
 /*
@@ -66,6 +73,7 @@ export async function POST(req: Request) {
     message,
     company,
     t,
+    leadSource,
   } = parsed.data;
 
   // Honeypot — return ok silently so bots don't learn they were caught
@@ -97,6 +105,7 @@ export async function POST(req: Request) {
       ["Bottleneck", bottleneck],
       ["Team", teamSize],
       ["Timeline", timeline],
+      ["Source", leadSource],
     ]
       .filter(([, value]) => value)
       .map(([label, value]) => `${label}: ${value}`)

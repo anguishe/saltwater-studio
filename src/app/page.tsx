@@ -9,6 +9,7 @@ import Offer from "@/components/sections/Offer";
 import Portfolio from "@/components/sections/Portfolio";
 import Process from "@/components/sections/Process";
 import WhyUs from "@/components/sections/WhyUs";
+import Testimonials from "@/components/sections/Testimonials";
 import About from "@/components/sections/About";
 import CtaClose from "@/components/sections/CtaClose";
 import { getFaqsByPage } from "@/data/faqs";
@@ -34,6 +35,7 @@ export default function HomePage() {
       <Trust />
       <Offer />
       <Portfolio />
+      <Testimonials />
       <Process />
       <WhyUs />
       <About />

@@ -7,17 +7,24 @@ import { track } from "@/lib/events";
 const footerNav = [
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
+  { label: "Insights", href: "/insights" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy", href: "/privacy" },
 ];
 
-// Service links come in as props from the server layout so the service copy stays out of the client bundle.
-export default function Footer({ serviceLinks }: { serviceLinks: { slug: string; title: string }[] }) {
+// Service/area links come in as props from the server layout so the page copy stays out of the client bundle.
+export default function Footer({
+  serviceLinks,
+  areaLinks,
+}: {
+  serviceLinks: { slug: string; title: string }[];
+  areaLinks: { slug: string; city: string }[];
+}) {
   return (
     <footer className="bg-abyss border-t border-marine/30 px-6 py-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
           {/* NAP — no street address (remote studio) */}
           <div>
             <p className="font-display text-lg text-foam font-semibold">
@@ -61,6 +68,22 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
                 className="text-sm text-foam/60 hover:text-shoal transition-colors"
               >
                 {s.title}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Sitewide links to the city pages — same crawl-mesh logic as the services column. */}
+          <nav aria-label="Areas served" className="flex flex-col gap-2">
+            <p className="font-mono text-xs text-foam-subtle tracking-widest uppercase mb-2">
+              Areas
+            </p>
+            {areaLinks.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/${a.slug}`}
+                className="text-sm text-foam/60 hover:text-shoal transition-colors"
+              >
+                {a.city}
               </Link>
             ))}
           </nav>
@@ -120,6 +143,7 @@ export default function Footer({ serviceLinks }: { serviceLinks: { slug: string;
 }
 
 function sameAsLabel(url: string): string {
+  if (url.includes("facebook.com")) return "Facebook";
   if (url.includes("instagram.com")) return "Instagram";
   if (url.includes("linkedin.com")) return "LinkedIn";
   if (url.includes("github.com")) return "GitHub";
