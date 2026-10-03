@@ -63,7 +63,7 @@ export default function WorkPage() {
                     )}
                   </div>
                   <div className="p-5">
-                    <p className="font-mono text-xs tracking-widest text-shoal-muted uppercase">
+                    <p className="font-mono text-xs tracking-widest text-shoal uppercase">
                       {project.category}
                     </p>
                     <h2 className="mt-1 font-display text-lg text-foam">{project.title}</h2>

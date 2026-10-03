@@ -42,7 +42,7 @@ export default function Portfolio() {
                   )}
                 </div>
                 <div className="p-5">
-                  <p className="font-mono text-xs tracking-widest text-shoal-muted uppercase">
+                  <p className="font-mono text-xs tracking-widest text-shoal uppercase">
                     {project.category}
                   </p>
                   <h3 className="mt-1 font-display text-lg text-foam">{project.title}</h3>
