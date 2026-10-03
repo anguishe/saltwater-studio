@@ -5,17 +5,19 @@
  * drift — the server validates against exactly what the form offered, which is
  * what keeps arbitrary strings out of the notification email.
  *
- * Deliberately no budget field. Quote-only pricing is a hard rule (CLAUDE.md,
- * with the single T1 audit carve-out recorded 2026-08-09), and a budget
- * range on the form is a price on the site by another name.
+ * Deliberately no budget field. Plan prices are published on the site
+ * (CLAUDE.md pricing rule, 2026-10-03), so the form preselects a plan via
+ * /contact?plan=<slug> instead of asking the visitor to name a number.
  */
 
-// Mirrors the tier ladder in src/data/tiers.ts; the /contact?interest=<id>
-// prefill in QuoteForm.tsx maps tier ids onto the first four entries by index.
+// Mirrors the tier ladder in src/data/tiers.ts; QuoteForm.tsx maps
+// /contact?plan=<slug> and /contact?interest=<id> onto these entries by index.
 export const INTERESTS = [
   "Google & AI Visibility Audit",
-  "Website & Search Sprint",
-  "Google Care & Monthly Management",
+  "Page Plan — website, $149/mo",
+  "Buy It — website, $497 once",
+  "Local Growth — site + Google care, $297/mo",
+  "Google Profile Fix — $199 flat",
   "Custom AI systems — automation, agents, integrations",
   "Website build or rebuild",
   "Google Care — monthly Google Business Profile management",

@@ -14,6 +14,13 @@ import {
 const schema = z.object({
   name: z.string().min(1).max(200),
   email: z.string().email(),
+  // Optional and deliberately loose — "(850) 555-0199 x2" and "+1 850 555 0199"
+  // are both fine. The field exists so "Call me" leads arrive callable.
+  phone: z
+    .string()
+    .max(40)
+    .regex(/^[0-9()+.\-\s#*xX/]*$/)
+    .optional(),
   business: z.string().max(200).optional(),
   siteUrl: z.string().url().max(300).optional(),
   interest: z.enum(INTERESTS).optional(),
@@ -63,6 +70,7 @@ export async function POST(req: Request) {
   const {
     name,
     email,
+    phone,
     business,
     siteUrl,
     interest,
@@ -98,6 +106,7 @@ export async function POST(req: Request) {
 
   try {
     const details = [
+      ["Phone", phone],
       ["Business", business],
       ["Website", siteUrl],
       ["Wants", interest],

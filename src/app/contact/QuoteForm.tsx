@@ -17,13 +17,23 @@ import {
 // /services tier ids → INTERESTS entries, so ladder CTAs land preselected.
 const INTEREST_PREFILL: Record<string, (typeof INTERESTS)[number]> = {
   audit: INTERESTS[0],
-  sprint: INTERESTS[1],
-  retainer: INTERESTS[2],
-  custom: INTERESTS[3],
+  custom: INTERESTS[5],
   // service-page CTAs (/services/<slug> → /contact?interest=<slug>)
-  "web-design": INTERESTS[4],
-  "google-presence": INTERESTS[5],
-  "ai-receptionist": INTERESTS[6],
+  "web-design": INTERESTS[6],
+  "google-presence": INTERESTS[7],
+  "ai-receptionist": INTERESTS[8],
+  // legacy tier ids — old /contact?interest= links still land somewhere sane
+  sprint: INTERESTS[6],
+  retainer: INTERESTS[7],
+};
+
+// Published plan slugs (src/data/tiers.ts) → INTERESTS entries, so a plan CTA
+// without a payment link (/contact?plan=<slug>) lands preselected.
+const PLAN_PREFILL: Record<string, (typeof INTERESTS)[number]> = {
+  "page-plan": INTERESTS[1],
+  "buy-it": INTERESTS[2],
+  "local-growth": INTERESTS[3],
+  "profile-fix": INTERESTS[4],
 };
 
 interface FormState {
@@ -52,7 +62,9 @@ export default function QuoteForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const prefilledInterest =
-    INTEREST_PREFILL[searchParams.get("interest") ?? ""] ?? "";
+    PLAN_PREFILL[searchParams.get("plan") ?? ""] ??
+    INTEREST_PREFILL[searchParams.get("interest") ?? ""] ??
+    "";
   const [state, setState] = useState<FormState>({ status: "idle" });
   const startTimeRef = useRef<number>(0);
   const hasStartedRef = useRef(false);
@@ -80,6 +92,7 @@ export default function QuoteForm() {
         body: JSON.stringify({
           name: data.get("name"),
           email: data.get("email"),
+          phone: String(data.get("phone") ?? "").trim() || undefined,
           business: data.get("business") || undefined,
           siteUrl: normalizeUrl(data.get("siteUrl")),
           interest: data.get("interest") || undefined,
@@ -139,20 +152,38 @@ export default function QuoteForm() {
           />
         </div>
 
-        <div>
-          <label htmlFor="email" className={labelClass}>
-            Email <span aria-hidden="true">*</span>
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            inputMode="email"
-            className={inputClass}
-            onFocus={handleFirstInteraction}
-          />
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label htmlFor="email" className={labelClass}>
+              Email <span aria-hidden="true">*</span>
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              inputMode="email"
+              className={inputClass}
+              onFocus={handleFirstInteraction}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="phone" className={labelClass}>
+              Phone — if you&apos;d like a call or text back
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              inputMode="tel"
+              maxLength={40}
+              className={inputClass}
+              onFocus={handleFirstInteraction}
+            />
+          </div>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
