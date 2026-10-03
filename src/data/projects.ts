@@ -82,7 +82,7 @@ export const projects: Project[] = [
     seoTitle: "Kai's Run Case Study — Dog Conditioning",
     category: "Mobile Dog Conditioning",
     result:
-      "A new mobile service with no direct competitor in AI search — entity-first, with four free tools building the audience before opening day.",
+      "Our own new mobile service, with no direct competitor in AI search — entity-first, with four free tools building the audience before opening day.",
     image: "/images/portfolio/portfolio-kaisrun-hero.webp",
     alt: "Kai's Run — homepage",
     permission: "live",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     approach:
       "Saltwater built the entity from zero. The site defines the category in plain language — what mobile dog conditioning is, who it's for, where it runs — in answer-first copy structured so an AI assistant can quote it when someone asks whether anyone will come train their dog near Destin. Entity and AEO work tie the business to the service and the place. Ahead of opening, the site earns its audience with free tools instead of an offer nobody can use yet — each one answers a question local dog owners already search, and each one is a reason for a vet, groomer, or rescue to link to the site.",
     outcome:
-      "A live site that names, explains, and claims a service category that didn't exist in search before it shipped — entity-first, answer-first, and built to be the answer when the question finally gets asked. Four free tools run on it: a pavement-heat checker, a dog exercise calculator, a body-condition score, and a puppy exercise planner, plus a field-notes blog on a steady publishing schedule. I took this one because it's the cleanest test of the method: no keyword to copy and no competitor to study, just structure doing the ranking work.",
+      "A live site that names, explains, and claims a service category that didn't exist in search before it shipped — entity-first, answer-first, and built to be the answer when the question finally gets asked. Four free tools run on it: a pavement-heat checker, a dog exercise calculator, a body-condition score, and a puppy exercise planner, plus a field-notes blog on a steady publishing schedule. Full disclosure: Kai's Run is Travis's own venture, not a client engagement — which is exactly why it's the cleanest test of the method: no keyword to copy and no competitor to study, just structure doing the ranking work, proven on our own business before a client pays for it.",
     stack: [
       "Next.js · TypeScript",
       "Tailwind CSS",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     approach:
       "Rather than write another article, we built the answer. The tool takes a city or ZIP, pulls live conditions for that exact location, runs the published heat-index calculation, and estimates what the pavement is actually doing under sun or shade right now. It returns a plain verdict — walk, wait, or don't — with the number behind it, so the answer is checkable rather than a vibe. Eleven local cities are one tap away because those are the ones people actually search from.",
     outcome:
-      "A live tool that turns a genuinely uncertain question into an immediate, specific, defensible answer — and does it in the moment the decision gets made. It runs unattended, costs nothing to operate, and answers a question the rest of the category responds to with a paragraph of hedging. This is the shape of most of the AI work: find the question a business answers by hand fifty times a summer, and build the thing that answers it once, correctly, forever.",
+      "A live tool that turns a genuinely uncertain question into an immediate, specific, defensible answer — and does it in the moment the decision gets made. It runs unattended, costs nothing to operate, and answers a question the rest of the category responds to with a paragraph of hedging. It lives on Kai's Run, Travis's own venture, so this one was built on our own property, not a client's. This is the shape of most of the AI work: find the question a business answers by hand fifty times a summer, and build the thing that answers it once, correctly, forever.",
     stack: [
       "Live weather data by city and ZIP",
       "Published heat-index and pavement-temperature models",
