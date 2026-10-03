@@ -58,7 +58,7 @@ export default function Portfolio() {
                   {project.permission === "preview" && (
                     <Link
                       href={`/work/${project.slug}`}
-                      className="mt-4 inline-block text-sm text-shoal-muted hover:text-shoal transition-colors"
+                      className="mt-4 inline-block text-sm text-shoal hover:text-glow transition-colors"
                     >
                       View concept →
                     </Link>
