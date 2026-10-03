@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import { storeLead } from "@/lib/leads";
 import {
   INTERESTS,
   BOTTLENECKS,
@@ -46,6 +47,9 @@ const schema = z.object({
  * RESEND_API_KEY      — Resend API key (re_...)
  * RESEND_FROM_EMAIL   — Verified sender: hello@saltwaterstudio.xyz
  * RESEND_TO_EMAIL     — Notification recipient: anguisheh1@gmail.com
+ * Optional:
+ * BLOB_READ_WRITE_TOKEN (or BLOB_STORE_ID via OIDC) — private Blob store the
+ * lead archive writes to (src/lib/leads.ts). Absent = log + continue.
  *
  * Domain saltwaterstudio.xyz must be verified in Resend (DKIM record is set).
  * replyTo is set to the lead's email so Reply goes to them, not back to the sender.
@@ -94,6 +98,25 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Slow down" }, { status: 400 });
   }
 
+  // Archive the lead FIRST — before any email can fail. A Resend outage, a
+  // revoked API key, or a bounce now leaves the lead in the Blob store instead
+  // of only in a function log line. No-ops (with a log) when no store is set.
+  const isPostPayment = leadSource?.startsWith("post-payment") ?? false;
+  await storeLead(isPostPayment ? "post-payment" : "contact", {
+    name,
+    email,
+    phone,
+    business,
+    siteUrl,
+    interest,
+    preferredContact,
+    bottleneck,
+    teamSize,
+    timeline,
+    message,
+    leadSource,
+  });
+
   if (!process.env.RESEND_API_KEY) {
     console.error("[contact] RESEND_API_KEY not set — add it to Vercel env vars");
     return NextResponse.json(
@@ -128,22 +151,29 @@ export async function POST(req: Request) {
       subject: interest ? `New lead — ${name} · ${interest}` : `New lead — ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n${details}\n\n${message}`,
     });
+  } catch (err) {
+    // Notification failed — the lead is archived above, but Travis doesn't
+    // know it exists yet, so the visitor should still retry or call.
+    console.error("[contact] Resend error (lead archived to Blob):", err);
+    return NextResponse.json(
+      { error: "Something hiccuped on our end — please try again or call us directly." },
+      { status: 500 }
+    );
+  }
 
-    // Autoresponder to lead (CONTENT.md thanks copy)
+  // Autoresponder to lead (CONTENT.md thanks copy). Best-effort: the lead is
+  // stored and Travis is notified, so a failure here must not show the visitor
+  // an error for a submission that actually arrived.
+  try {
     await resend.emails.send({
       from: `Saltwater Studio <${FROM_EMAIL}>`,
       to: email,
       subject: "Got it — talk soon",
       text: `Hi ${name},\n\nGot it. Expect a reply within one business day.\n\nIf anything changes before then, just reply to this email.\n\nTravis\nSaltwater Studio`,
     });
-
-    return NextResponse.json({ ok: true });
   } catch (err) {
-    // Never lose the lead silently — log to function logs
-    console.error("[contact] Resend error:", err);
-    return NextResponse.json(
-      { error: "Something hiccuped on our end — please try again or call us directly." },
-      { status: 500 }
-    );
+    console.error("[contact] autoresponder failed (lead delivered):", err);
   }
+
+  return NextResponse.json({ ok: true });
 }
