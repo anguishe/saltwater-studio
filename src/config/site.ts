@@ -71,10 +71,12 @@ export const site = {
   // dashboard. An empty string makes that plan's CTA fall back to the quote
   // form, preselected: /contact?plan=<slug>.
   planPaymentUrls: {
-    "page-plan": "",
-    "buy-it": "",
-    "local-growth": "",
-    "profile-fix": "",
+    // Stripe payment links, live 2026-10-03. Buy It charges the $497 only;
+    // its $29/mo hosting & care is invoiced by hand until a product exists.
+    "page-plan": "https://buy.stripe.com/7sYaEW9uP4z1g3I9sieUU02",
+    "buy-it": "https://buy.stripe.com/fZu3cudL5d5x3gWfQGeUU03",
+    "local-growth": "https://buy.stripe.com/eVqcN4dL51mP7xc5c2eUU04",
+    "profile-fix": "https://buy.stripe.com/fZudR8bCX8Ph7xcdIyeUU05",
   },
   auditOffer: {
     price: AUDIT_PROMO_ACTIVE ? 50 : 150,
