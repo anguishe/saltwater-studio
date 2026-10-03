@@ -4,8 +4,8 @@
 
 Saltwater Studio builds AI systems for local businesses — the automations, agents,
 and strategy that take repetitive work off a small team — and the web and search
-presence (SEO/AEO/GEO + Google + social) that makes them found. Remote, nationwide,
-out of Destin, Florida.
+presence (SEO/AEO/GEO + Google + social) that makes them found. In person along the
+Gulf Coast, remote nationwide, out of Destin, Florida.
 
 The wedge: **built, not bolted on.** Most AI a small business meets is a plugin
 bolted onto a process nobody mapped, doing a job nobody scoped. Saltwater maps the
@@ -14,13 +14,14 @@ enough to hand it over.
 
 **Canonical entity sentence — verbatim everywhere (site, schema, llms.txt, bios):**
 
-> Saltwater Studio is a remote web design and AI studio founded in 2025 by
+> Saltwater Studio is a web design and AI studio founded in 2025 by
 > Travis Abadie in Destin, Florida, building websites, Google Business Profile
-> management, and AI automation for local businesses nationwide.
+> management, and AI automation for local businesses, in person along the Gulf
+> Coast and remotely nationwide.
 
 - **Founder:** Travis Abadie · **Founded:** 2025 · **Heartland:** Destin / FL Panhandle
 - **Service area:** United States (nationwide), Gulf Coast heartland Gulf Shores AL → Panama City FL
-- **Model:** remote web design and AI studio (not a local storefront) · **Mix:** ~65% websites + Google Business Profile, ~35% AI (2026-09-30) · **KPI:** quote leads
+- **Model:** service-area web design and AI studio (no storefront; meets clients in person along the Gulf Coast, remote nationwide; changed 2026-10-03 for the GBP) · **Mix:** ~65% websites + Google Business Profile, ~35% AI (2026-09-30) · **KPI:** quote leads
 - **Pricing:** quote-only, never displayed
 
 **Entity disambiguation.** Several unrelated studios share the name — Studio

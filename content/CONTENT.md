@@ -7,9 +7,10 @@ what the data layer holds. Answer-first throughout. No banned words.
 
 ## GEO entity sentence (the canonical fact set — verbatim everywhere)
 
-> **Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis
+> **Saltwater Studio is a web design and AI studio founded in 2025 by Travis
 > Abadie in Destin, Florida, building websites, Google Business Profile management,
-> and AI automation for local businesses nationwide.**
+> and AI automation for local businesses, in person along the Gulf Coast and
+> remotely nationwide.**
 
 Single-sourced from `site.entitySentence`. Change it there, not here — schema, the
 About page, and the About section all read that one constant. Never write

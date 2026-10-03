@@ -41,7 +41,7 @@ export default function About() {
               documented well enough to hand over.
             </p>
             <p>
-              Remote, nationwide, out of Destin. Every engagement is personal — no account
+              In person along the Gulf Coast, remote nationwide, out of Destin. Every engagement is personal — no account
               managers, no handoffs.
             </p>
           </div>

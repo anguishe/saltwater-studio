@@ -1,4 +1,5 @@
-// NAP/facts exist HERE and nowhere else (GEO rule). No street address (remote).
+// NAP/facts exist HERE and nowhere else (GEO rule). No street address (service-area business:
+// meets clients in person along the Gulf Coast, works remotely nationwide).
 
 // $50 audit promo window: through the end of 2026-10-31, US Central (CDT).
 // Evaluated once per build (see the static-render caveat on stripeAuditUrl).
@@ -27,7 +28,7 @@ export const site = {
   // llms.txt, and every social bio. Never write "all businesses" — vague entity
   // classes are harder for answer engines to match than concrete ones.
   entitySentence:
-    "Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide.",
+    "Saltwater Studio is a web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses, in person along the Gulf Coast and remotely nationwide.",
   // Topics the entity claims. Feeds Organization.knowsAbout — a disambiguation
   // lever against the unrelated "Saltwater" studios that share the name.
   knowsAbout: [
