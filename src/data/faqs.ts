@@ -32,7 +32,7 @@ export const faqs: FAQ[] = [
   {
     question: "How much does this cost?",
     answer:
-      `The Google & AI Visibility Audit is $${site.auditOffer.price} flat through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice}), delivered within 72 hours. Everything else is quote-based, because a five-page website, a monthly Google profile, and an AI receptionist are not the same job. Tell us what the day actually looks like on the quote form, and most projects are scoped within a day.`,
+      `The prices are published. A website is $149 a month with no setup fee (Page Plan), or $497 once plus $29 a month hosting (Buy It). Local Growth — the site plus monthly Google Business Profile care — is $297 a month. The Google Profile Fix is $199 flat, and the Google & AI Visibility Audit is $${site.auditOffer.price}, delivered within 72 hours. Custom AI systems are the one quote-based engagement, scoped within a day.`,
     page: "home",
   },
   {
@@ -57,7 +57,7 @@ export const faqs: FAQ[] = [
   {
     question: "What services does Saltwater Studio offer?",
     answer:
-      `Custom websites, monthly Google Business Profile management (Google Care), SEO and AI search, social content, and AI services — a receptionist, automation, and agents. They come together as four engagements: a Google & AI Visibility Audit ($${site.auditOffer.price} through ${site.auditOffer.endsLabel}), a website and search sprint that implements it, Google Care and monthly management, and custom AI systems. The audit has a flat price; everything else is quoted to the business.`,
+      `Custom websites, monthly Google Business Profile management (Google Care), SEO and AI search, social content, and AI services — a receptionist, automation, and agents. They come together as published plans: the Google & AI Visibility Audit ($${site.auditOffer.price}), the Page Plan website at $149 a month, Buy It at $497 once plus $29 a month hosting, Local Growth at $297 a month, and the $199 Google Profile Fix. Custom AI systems are quoted to the business.`,
     page: "services",
   },
   {
@@ -81,7 +81,7 @@ export const faqs: FAQ[] = [
   {
     question: "What happens after the audit?",
     answer:
-      "The report stands alone. Fix the items yourself, hand the report to your developer, or have Saltwater Studio implement it as a scoped sprint — your call, no obligation either way.",
+      "The report stands alone. Fix the items yourself, hand the report to your developer, or have Saltwater Studio implement it — the audit price is credited in full against the Google Profile Fix. Your call, no obligation either way.",
     page: "services",
   },
   {

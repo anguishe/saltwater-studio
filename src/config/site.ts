@@ -57,6 +57,16 @@ export const site = {
   // $50 link (price_1ULcMf…, created 2026-10-01). Regular $150 link, to restore
   // after the promo: https://buy.stripe.com/eVqcN49uP3uX3gW0VMeUU00
   stripeAuditUrl: "https://buy.stripe.com/9B614m5ezghJ8Bg5c2eUU01",
+  // Stripe payment links per published plan (prices live in src/data/tiers.ts).
+  // paste Stripe payment link here when each link is created in the Stripe
+  // dashboard. An empty string makes that plan's CTA fall back to the quote
+  // form, preselected: /contact?plan=<slug>.
+  planPaymentUrls: {
+    "page-plan": "",
+    "buy-it": "",
+    "local-growth": "",
+    "profile-fix": "",
+  },
   auditOffer: {
     price: 50,
     regularPrice: 150,
