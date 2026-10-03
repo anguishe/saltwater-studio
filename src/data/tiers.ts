@@ -69,6 +69,12 @@ export const tiers: Tier[] = [
       href: site.stripeAuditUrl,
       external: true,
     },
+    links: [
+      {
+        href: "/insights/sample-visibility-audit-report",
+        label: "See a sample report",
+      },
+    ],
   },
   {
     id: "page-plan",

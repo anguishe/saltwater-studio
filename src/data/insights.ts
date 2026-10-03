@@ -168,7 +168,7 @@ export const insights: Insight[] = [
         heading: "What do I get back?",
         body: [
           "A written report you can act on with or without us: what's broken, what it costs you, and the fix list in priority order. The findings are specific — the actual missing categories, the actual pages that aren't indexed, the actual schema errors — not a score out of 100 with a sales pitch under it.",
-          "It runs fully async. No call required, nothing to install, nothing to grant access to. You send your business name and website; the report comes back within 72 hours.",
+          "It runs fully async. No call required, nothing to install, nothing to grant access to. You send your business name and website; the report comes back within 72 hours. And you don't have to take the format on faith: a complete sample, run on our own client's site with real findings, is published on this site — linked below.",
         ],
       },
       {
@@ -186,8 +186,73 @@ export const insights: Insight[] = [
     ],
     linksLead: "Ready when you are — see",
     links: [
+      { href: "/insights/sample-visibility-audit-report", label: "the sample report" },
       { href: "/services#audit", label: "the audit offer" },
       { href: "/contact", label: "the quote form for everything else" },
+    ],
+  },
+  {
+    slug: "sample-visibility-audit-report",
+    headline: "A sample audit report, run on our own client",
+    seoTitle: "A Sample Visibility Audit Report",
+    metaDescription:
+      "What the Google & AI Visibility Audit deliverable looks like: a real sample run on Beach House Moving, our own client — specific findings, ranked, no scores.",
+    datePublished: "2026-10-03",
+    summary:
+      "Buyers of a fixed-price audit should see the deliverable before paying for it. This is a sample report, shown with the client's own site: Beach House Moving, the Santa Rosa Beach mover we build and manage search for. Every number below is real, pulled from Search Console, Analytics, and PageSpeed on October 3, 2026.",
+    sections: [
+      {
+        heading: "Why publish a sample on a real business?",
+        body: [
+          "Because a mocked-up report proves nothing. Beach House Moving is our client and the case study on our portfolio, so we can show the real format with real findings instead of a fictional plumber with invented problems. What follows is condensed for the web — a buyer's report arrives as a written document about their business — but the shape, the evidence, and the ranking by impact are exactly what you get. This public sample covers the website and search layers; the profile-level findings belong to the client.",
+          "One thing you won't find anywhere in it: a score out of 100. A score flatters or alarms; it doesn't tell you what to fix Monday morning. The report is specific findings, ranked by impact, each with its evidence and its fix.",
+        ],
+      },
+      {
+        heading: "Finding 1: page-one rankings that earn zero clicks",
+        body: [
+          "The highest-impact finding came straight from Search Console. Over the last 90 days the site averaged position 1.5 for \"storage santa rosa beach\" (386 impressions), 1.3 for \"storage facilities santa rosa beach\" (243), and 1.8 for \"storage near me\" (152) — and those searches produced zero clicks.",
+          "The evidence says why. The page ranking for storage is the homepage, whose title leads with movers; storage is a trailing word. The dedicated storage service page — the one built to win that click — sits in Google's \"Discovered, currently not indexed\" pile. The ranking exists; the page meant to convert it is invisible. The fix: retitle the storage page for the storage searcher and request indexing on it, so the query lands on a page about storage.",
+        ],
+      },
+      {
+        heading: "Finding 2: sixteen queries within striking distance",
+        body: [
+          "Sixteen queries sit at average positions 5–20 with 20 or more impressions each — close enough that on-page work and internal links can move them, far enough that they earn little today. The largest: \"movers santa rosa beach fl\" at position 12.8 on 511 impressions, and \"santa rosa beach movers\" at 16.3 on 448. \"Moving companies santa rosa beach\" already averages 8.7.",
+          "These are the money searches — a mover query, typed in the service area. The report ranks them by impressions so the owner knows which page to strengthen first and what each query is worth relative to the rest.",
+        ],
+      },
+      {
+        heading: "Finding 3: Google has indexed 32 of 65 pages",
+        body: [
+          "The sitemap carries 65 URLs; inspecting every one of them shows 32 indexed. Another 25 sit at \"Discovered, currently not indexed\" — Google knows they exist and hasn't crawled them — including core service pages for residential and local moving. Eight more are unknown to Google entirely.",
+          "That's not a penalty and not a technical error: the sitemap is clean and every URL resolves. It's a crawl-priority problem, and the fix list treats it as one — indexing requests for the pages that sell, internal links from the pages that already rank, and no new pages until the existing ones are in.",
+        ],
+      },
+      {
+        heading: "Finding 4: mobile speed is serviceable, not fast",
+        body: [
+          "Mobile PageSpeed scores 80 for performance, with the largest contentful paint at 3.7 seconds and zero layout shift. Not an emergency — but the main element of the page takes almost four seconds to show up on a phone, and tightening it is roughly an hour of work. The report says so, with the hour attached, so the owner can weigh it against everything else on the list.",
+        ],
+      },
+      {
+        heading: "What's already right — so nobody pays to fix it",
+        body: [
+          "An honest report also lists what not to spend money on. Here that list is substantial: accessibility scores 100 and SEO 100 on PageSpeed. The homepage structured data is valid and carries the business's 5.0 rating from 14 reviews, so search results can show stars. And the analytics recorded visits arriving from ChatGPT in the window — two sessions, both engaged — which means the AI assistants can already find the business and send people to it.",
+        ],
+      },
+      {
+        heading: "What your report looks like",
+        body: [
+          "Same shape, your business: every finding with its evidence, ranked by impact, each with a fix and a rough effort estimate, and a closing list of what's already healthy. It covers the five layers the audit page describes — Google Business Profile, website, technical SEO, structured data, and AI presence — and it's written to act on with or without us.",
+        ],
+      },
+    ],
+    linksLead: "If you want this run on your business — see",
+    links: [
+      { href: "/services#audit", label: "the audit offer" },
+      { href: "/insights/what-the-google-ai-visibility-audit-covers", label: "what the audit covers" },
+      { href: "/work/beach-house-moving", label: "the Beach House Moving case study" },
     ],
   },
   {
