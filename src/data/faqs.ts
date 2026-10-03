@@ -63,7 +63,7 @@ export const faqs: FAQ[] = [
   {
     question: "What does the visibility audit include?",
     answer:
-      "Five checks: your Google Business Profile; your website's speed, mobile experience, and key pages; a technical SEO baseline; schema and entity consistency; and how your business shows up in ChatGPT, Claude, Perplexity, and Google's AI results. It arrives as a written report — scored by category, issues ranked by impact, fixes in order — within 72 hours.",
+      "Five checks: your Google Business Profile; your website's speed, mobile experience, and key pages; a technical SEO baseline; schema and entity consistency; and how your business shows up in ChatGPT, Claude, Perplexity, and Google's AI results. It arrives as a written report within 72 hours — specific findings ranked by impact and the fixes in order, not a score out of 100.",
     page: "services",
   },
   {

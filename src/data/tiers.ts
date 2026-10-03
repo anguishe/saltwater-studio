@@ -44,9 +44,13 @@ export const tiers: Tier[] = [
       amount: site.auditOffer.price,
       currency: "USD",
       display: `$${site.auditOffer.price}`,
-      note: `flat, one-time — limited-time rate through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice})`,
+      note: site.auditOffer.promoActive
+        ? `flat, one-time — limited-time rate through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice})`
+        : "flat, one-time",
     },
-    priceValidUntil: site.auditOffer.endsISO,
+    ...(site.auditOffer.promoActive
+      ? { priceValidUntil: site.auditOffer.endsISO }
+      : {}),
     turnaround: "Delivered within 72 hours, fully async",
     oneLiner:
       "A written audit of how your business shows up when local customers search — your Google Business Profile, your website, your local rankings, and the AI answers that now sit on top of all three.",
@@ -58,7 +62,7 @@ export const tiers: Tier[] = [
       "AI-assistant check across ChatGPT, Claude, Perplexity, and Google's AI results",
     ],
     deliverable:
-      "You get a written report: a scored breakdown by category, the issues ranked by impact, and a sequenced fix list — the same format we run on client engagements.",
+      "You get a written report: specific findings — the actual missing categories, the actual pages that aren't indexed, the actual schema errors — ranked by impact, with the fix list in priority order. Not a score out of 100 with a sales pitch under it.",
     followUp: `The report stands alone. Fix it yourself, hand it to your developer, or put the $${site.auditOffer.price} toward the Google Profile Fix — it's credited in full.`,
     cta: {
       label: `Get the audit — $${site.auditOffer.price}`,
