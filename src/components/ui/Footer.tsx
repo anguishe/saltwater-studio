@@ -26,13 +26,13 @@ export default function Footer({
     <footer className="bg-abyss border-t border-marine/30 px-6 py-12">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-5">
-          {/* NAP — no street address (remote studio) */}
+          {/* NAP — no street address (service-area business) */}
           <div>
             <p className="font-display text-lg text-foam font-semibold">
               Saltwater Studio
             </p>
             <p className="mt-1 text-sm text-foam-muted">
-              Destin, FL &middot; serving nationwide
+              Destin, FL &middot; in person on the Gulf Coast, remote nationwide
             </p>
             <p className="mt-4 font-mono text-xs text-foam-subtle tracking-widest uppercase">
               {site.mnemonic}
@@ -135,7 +135,7 @@ export default function Footer({
             Est.&nbsp;{site.founded}
           </p>
           <p className="text-xs text-foam-subtle">
-            Remote studio &mdash; {site.heartland}
+            In person &mdash; {site.heartland}
           </p>
         </div>
       </div>

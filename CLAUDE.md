@@ -1,6 +1,8 @@
 # CLAUDE.md — Saltwater Studio (saltwaterstudio.xyz)
-Flagship site for Saltwater Studio — a remote web design and AI studio (founder Travis
-Abadie, est. 2025, Destin, Florida, serving the US nationwide).
+Flagship site for Saltwater Studio — a web design and AI studio (founder Travis
+Abadie, est. 2025, Destin, Florida), a service-area business: in person along the
+Gulf Coast, remote nationwide. Not "remote studio" (2026-10-03: it contradicts the
+Google Business Profile, which requires in-person customer contact).
 ## Stack
 Next.js 16 App Router · TypeScript strict · Tailwind · framer-motion · gsap +
 ScrollTrigger · @react-three/fiber + drei (hero only, lazy, ssr:false) · lenis

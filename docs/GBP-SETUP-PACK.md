@@ -28,9 +28,9 @@ HIDE it (no storefront). Service area: see list below.
 
 (Don't add "Advertising agency" — we don't sell ads, and category bloat dilutes.)
 
-## Description (750-char limit; this is 717)
+## Description (750-char limit; this is 659)
 
-> Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide. Custom Next.js websites built to rank in Google, Bing, and AI search — schema, analytics, and Search Console set up before launch, never bolted on after. Monthly Google Care keeps your Business Profile active: posts from real job photos, review replies, hours and services kept current. AI services cover receptionists, automation, and agents for owners who want the phone answered and the follow-up handled. Based on the Emerald Coast, working in person from Navarre to 30A and remotely everywhere else.
+> Saltwater Studio is a web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses, in person along the Gulf Coast and remotely nationwide. Custom Next.js websites built to rank in Google, Bing, and AI search — schema, analytics, and Search Console set up before launch, never bolted on after. Monthly Google Care keeps your Business Profile active: posts from real job photos, review replies, hours and services kept current. AI services cover receptionists, automation, and agents for owners who want the phone answered and the follow-up handled.
 
 (First sentence is the canonical entity sentence, verbatim — GEO rule.)
 

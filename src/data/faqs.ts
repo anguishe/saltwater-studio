@@ -20,7 +20,7 @@ export const faqs: FAQ[] = [
   {
     question: "What does Saltwater Studio do?",
     answer:
-      "Saltwater Studio is a remote web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses nationwide. That covers custom websites, monthly Google Business Profile management, local and AI search, and AI tools like a receptionist that texts back every missed call.",
+      "Saltwater Studio is a web design and AI studio founded in 2025 by Travis Abadie in Destin, Florida, building websites, Google Business Profile management, and AI automation for local businesses, in person along the Gulf Coast and remotely nationwide. That covers custom websites, monthly Google Business Profile management, local and AI search, and AI tools like a receptionist that texts back every missed call.",
     page: "home",
   },
   {
