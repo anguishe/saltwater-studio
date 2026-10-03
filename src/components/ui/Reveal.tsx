@@ -1,35 +1,28 @@
-"use client";
-
-import { motion, useInView, useReducedMotion } from "framer-motion";
-import { useRef, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface RevealProps {
   children: ReactNode;
+  /**
+   * Kept so existing call sites compile. Unused: the reveal is tied to scroll
+   * position now, not to a timer, so there is nothing to delay.
+   */
   delay?: number;
   className?: string;
 }
 
-export default function Reveal({ children, delay = 0, className }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-  const prefersReduced = useReducedMotion();
-
-  // Always render the motion.div: the server HTML carries inline opacity:0, and
-  // swapping to a plain <div> on hydration leaves that style stuck (blank page
-  // for reduced-motion users). Reduced motion = jump straight to visible.
+/**
+ * Scroll reveal with no JavaScript (styles: `.reveal` in globals.css).
+ *
+ * The old version was a framer-motion wrapper that server-rendered every block
+ * with inline `opacity:0`, so nothing painted until the bundle hydrated — the
+ * H1 on inner pages included (mobile LCP 6.4 s, 2026-10 audit). This one is a
+ * plain <div>: the HTML is visible as soon as it arrives, with or without JS.
+ * Browsers that support scroll-driven animations fade blocks in as they enter
+ * the viewport; anything already on screen at load is at full opacity on the
+ * first frame. Everything else (and prefers-reduced-motion) gets static content.
+ */
+export default function Reveal({ children, className }: RevealProps) {
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView || prefersReduced ? { opacity: 1, y: 0 } : {}}
-      transition={
-        prefersReduced
-          ? { duration: 0 }
-          : { duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }
-      }
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <div className={className ? `reveal ${className}` : "reveal"}>{children}</div>
   );
 }

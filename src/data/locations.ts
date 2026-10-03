@@ -58,7 +58,7 @@ export const locations: Location[] = [
       {
         heading: "Local work, built from here",
         body: [
-          "Kai's Run — a Destin business — is on our portfolio: an entity-building job for a brand-new service category, with four free dog-owner tools that earn the site links and AI citations. The same approach scales to any Destin business that needs machines to understand what it does.",
+          "Kai's Run — our own Destin venture, built and run by the studio — is on the portfolio: an entity-building job for a brand-new service category, with four free dog-owner tools that earn the site links and AI citations. The same approach scales to any Destin business that needs machines to understand what it does.",
         ],
       },
     ],
@@ -190,7 +190,7 @@ export const locations: Location[] = [
       {
         heading: "Do you actually work out here?",
         body: [
-          "Yes — this corridor is already in our day-to-day. Kai's Run, the Destin mobile dog gym on our portfolio, carries Navarre in its service area, and we drive 98 west past the Navarre bridge regularly enough to know the summer backup at the beach light. Navarre is a thirty-five-minute run from our base in Destin; close enough to meet at a job site, not just on a screen.",
+          "Yes — this corridor is already in our day-to-day. Kai's Run, our own Destin mobile dog gym, carries Navarre in its service area, and we drive 98 west past the Navarre bridge regularly enough to know the summer backup at the beach light. Navarre is a thirty-five-minute run from our base in Destin; close enough to meet at a job site, not just on a screen.",
           "Most Navarre owners start with the audit — a written report on how your business currently looks to Google, Bing, and the AI assistants — then decide whether to run the fix list themselves or hand it back to us.",
         ],
       },
@@ -235,7 +235,7 @@ export const locations: Location[] = [
       {
         heading: "Do you know this side of the bay?",
         body: [
-          "We work it already. Beach House Moving — the moving company whose site and Google profile we run — covers Okaloosa County with a dedicated Bluewater Bay service-area page we wrote, and Kai's Run, the Destin mobile dog gym on our portfolio, carries Niceville in its service area. Destin to Niceville is twenty minutes over the Mid-Bay Bridge; in-person meetings anywhere from Valparaiso to Bluewater Bay are routine.",
+          "We work it already. Beach House Moving — the moving company whose site and Google profile we run — covers Okaloosa County with a dedicated Bluewater Bay service-area page we wrote, and Kai's Run, our own Destin mobile dog gym, carries Niceville in its service area. Destin to Niceville is twenty minutes over the Mid-Bay Bridge; in-person meetings anywhere from Valparaiso to Bluewater Bay are routine.",
           "Bluewater Bay and Valparaiso also count on their own: people there search their own place names, and machines treat them as distinct localities. We build pages for the places you actually serve, written from what you know about working there — because that's what ranks, and that's what an AI assistant can quote.",
         ],
       },

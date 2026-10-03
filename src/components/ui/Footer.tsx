@@ -7,6 +7,7 @@ import { track } from "@/lib/events";
 const footerNav = [
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
+  { label: "Websites & pricing", href: "/websites" },
   { label: "Insights", href: "/insights" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

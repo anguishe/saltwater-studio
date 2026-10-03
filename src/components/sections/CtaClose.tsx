@@ -12,7 +12,7 @@ const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: fa
 export default function CtaClose() {
   return (
     <section
-      className="relative py-32 px-6 bg-abyss text-center overflow-hidden"
+      className="relative py-32 px-6 bg-abyss text-center overflow-clip"
       aria-labelledby="cta-heading"
     >
       {/* Subtle deep glow */}

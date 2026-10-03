@@ -27,11 +27,15 @@ future-proof, AI-first. No emoji in copy.
   management (Google Care) + local search, ~35% AI (receptionist, automation,
   agents, strategy). Web/GBP leads the hero, titles, entity sentence, offer
   cards, and catalog order; AI is the add-on. Don't let AI copy retake the lead.
-- Quote-only pricing with ONE carve-out (recorded 2026-08-09): the T1 AI
-  Visibility Audit is flat-priced via a Stripe Payment Link (site.stripeAuditUrl);
-  price lives in site.auditOffer ($50 limited-time through 2026-10-31, regular $150).
-  No other price appears anywhere on the site. CTAs route to the quote form at
-  /contact (Resend); Cal.com is retired — /book redirects to /contact.
+- Published pricing (2026-10-03, revenue audit — supersedes the 2026-08-09
+  quote-only rule): the website plans and the Google Profile Fix carry published
+  prices in src/data/tiers.ts (Page Plan $149/mo, Buy It $497 once + $29/mo
+  hosting & care, Local Growth $297/mo, Google Profile Fix $199 flat; the T1
+  audit price lives in site.auditOffer and sells via site.stripeAuditUrl).
+  Custom AI Systems stay quote-based. Plan payment links live in
+  site.planPaymentUrls; an empty entry falls back to /contact?plan=<slug>.
+  Other CTAs route to the quote form at /contact (Resend); Cal.com is
+  retired — /book redirects to /contact.
 - Portfolio permission gate (PORTFOLIO §0): LIVE = Beach House Moving, Kai's Run,
   BashSnippets, WaterVue Event Rentals (may link). PREVIEW = Aquamarine, Alexander Hines (NO
   link, NO client endorsement, "Private preview" label). The component must refuse

@@ -2,18 +2,20 @@ import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import BuyAuditButton from "@/components/ui/BuyAuditButton";
+import PlanCtaButton from "@/components/ui/PlanCtaButton";
 import { tiers } from "@/data/tiers";
 
 /**
- * The four-tier engagement ladder. T1 is the only tier that shows a price
- * (pricing carve-out, 2026-08-09) — everything else routes to the quote form.
+ * The engagement ladder. Published prices (2026-10-03) on everything except
+ * Custom AI Systems, which stays quote-based. Priced tiers pay through their
+ * Stripe link when one is configured, else land on the quote form preselected.
  */
 export default function OfferLadder() {
   return (
     <section aria-labelledby="ladder-heading" className="mt-20">
       <Reveal>
         <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
-          Engagements
+          Plans &amp; pricing
         </p>
       </Reveal>
       <Reveal delay={0.05}>
@@ -21,7 +23,7 @@ export default function OfferLadder() {
           id="ladder-heading"
           className="font-display text-3xl text-foam md:text-4xl"
         >
-          Start with the audit. Scale when it earns it.
+          The prices, published.
         </h2>
       </Reveal>
 
@@ -94,6 +96,13 @@ export default function OfferLadder() {
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 {tier.id === "audit" ? (
                   <BuyAuditButton />
+                ) : tier.price ? (
+                  <PlanCtaButton
+                    href={tier.cta.href}
+                    external={tier.cta.external}
+                  >
+                    {tier.cta.label}
+                  </PlanCtaButton>
                 ) : (
                   <ButtonLink href={tier.cta.href} variant="ghost">
                     {tier.cta.label}

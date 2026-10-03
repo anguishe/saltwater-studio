@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Vendored third-party minified libs (gsap, three) served to static /preview pages.
     "public/preview/_lib/**",
+    // Working docs, audits, and local prospect scripts (CommonJS). Not app code.
+    "docs/**",
   ]),
 ]);
 

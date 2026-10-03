@@ -48,7 +48,10 @@ export default function ServicesPage() {
                   offers: {
                     price: tier.price.amount,
                     priceCurrency: tier.price.currency,
-                    priceValidUntil: site.auditOffer.endsISO,
+                    // Promo end date applies to the audit only.
+                    ...(tier.priceValidUntil
+                      ? { priceValidUntil: tier.priceValidUntil }
+                      : {}),
                   },
                 }
               : {}),
@@ -72,9 +75,10 @@ export default function ServicesPage() {
             </p>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">
               Saltwater Studio builds the websites and runs the Google profiles local
-              customers find you through, then adds AI where it saves you hours. Start
-              with a ${site.auditOffer.price} audit; everything past it is scoped to your business and
-              quoted within a day.
+              customers find you through, then adds AI where it saves you hours. The
+              prices are below — a ${site.auditOffer.price} audit, website plans from
+              $149 a month, and a $199 Google Profile Fix. Custom AI work is scoped
+              to your business and quoted within a day.
             </p>
           </Reveal>
 
