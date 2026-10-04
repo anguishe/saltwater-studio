@@ -33,6 +33,11 @@ const permissionsPolicy = [
 ].join(", ");
 
 const nextConfig: NextConfig = {
+  // Perf PR 1.3: the Tailwind CSS is small (~9KB gz), so inline it into the HTML
+  // instead of a render-blocking stylesheet round trip before first paint.
+  experimental: {
+    inlineCss: true,
+  },
   async headers() {
     return [
       {

@@ -2,10 +2,9 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Suspense, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
-import Preloader from "@/components/motion/Preloader";
+import { useFirstInput } from "@/components/motion/useFirstInput";
 import { track } from "@/lib/events";
 import { site } from "@/config/site";
 
@@ -13,13 +12,30 @@ const DeepScene = dynamic(() => import("@/components/three/DeepScene"), {
   ssr: false,
 });
 
+// Same gate as the wrapper's `hidden md:block motion-reduce:hidden`, checked in JS
+// BEFORE the import so phones and reduced-motion visitors never fetch the 3D chunk.
+const SCENE_QUERY = "(min-width: 768px) and (prefers-reduced-motion: no-preference)";
+
 export default function Hero() {
-  // The canvas mounts only once the hero is in view AND the preloader has lifted,
-  // so the R3F loop never spins under the preloader. `inView` then drives the
-  // frameloop so it pauses when the hero scrolls off-screen.
+  // The poster is the LCP and the whole first paint. The R3F scene is fetched and
+  // mounted only on a desktop-width, motion-allowed screen, and only after the
+  // visitor's first input, so it never competes with load. `inView` then drives
+  // the frameloop so it pauses when the hero scrolls off-screen.
   const canvasRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(canvasRef, { margin: "-10%" });
-  const [preloadComplete, setPreloadComplete] = useState(false);
+  const [inView, setInView] = useState(true);
+  const load3D = useFirstInput(SCENE_QUERY);
+  const [sceneReady, setSceneReady] = useState(false);
+
+  useEffect(() => {
+    const el = canvasRef.current;
+    if (!load3D || !el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "-10% 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [load3D]);
 
   return (
     <section
@@ -39,11 +55,13 @@ export default function Hero() {
       {/* R3F canvas — desktop + motion-allowed only, lazy, ssr:false */}
       <div
         ref={canvasRef}
-        className="absolute inset-0 hidden md:block motion-reduce:hidden"
+        className={`absolute inset-0 hidden transition-opacity duration-1000 md:block motion-reduce:hidden ${
+          sceneReady ? "opacity-100" : "opacity-0"
+        }`}
       >
-        {preloadComplete && (
+        {load3D && (
           <Suspense fallback={null}>
-            <DeepScene active={inView} />
+            <DeepScene active={inView} onReady={() => setSceneReady(true)} />
           </Suspense>
         )}
       </div>
@@ -98,8 +116,6 @@ export default function Hero() {
       {/* Gradient fade to page background */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink to-transparent" />
 
-      {/* "The dive in" — overlays everything on first visit, lifts ≤1.2s */}
-      <Preloader onComplete={() => setPreloadComplete(true)} />
     </section>
   );
 }
