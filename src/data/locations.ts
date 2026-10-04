@@ -22,6 +22,8 @@ export interface LocationFaq {
 export interface Location {
   /** URL slug at the site root, keyword-first. */
   slug: string;
+  /** ISO date the page content last changed. Drives sitemap lastmod and the visible "Updated" line; bump it with every content edit. */
+  dateModified: string;
   city: string;
   region: "FL";
   /** <title> body; ≤ 41 chars (19-char brand suffix added by buildMetadata). */
@@ -40,6 +42,7 @@ export interface Location {
 
 export const locations: Location[] = [
   {
+    dateModified: "2026-10-03",
     slug: "web-design-destin-fl",
     city: "Destin",
     region: "FL",
@@ -84,6 +87,7 @@ export const locations: Location[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "web-design-fort-walton-beach",
     city: "Fort Walton Beach",
     region: "FL",
@@ -128,6 +132,7 @@ export const locations: Location[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "web-design-santa-rosa-beach",
     city: "Santa Rosa Beach",
     region: "FL",
@@ -172,6 +177,7 @@ export const locations: Location[] = [
     ],
   },
   {
+    dateModified: "2026-10-03",
     slug: "web-design-navarre-fl",
     city: "Navarre",
     region: "FL",
@@ -217,6 +223,7 @@ export const locations: Location[] = [
     ],
   },
   {
+    dateModified: "2026-10-03",
     slug: "web-design-niceville-fl",
     city: "Niceville",
     region: "FL",
@@ -262,6 +269,7 @@ export const locations: Location[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "web-design-crestview-fl",
     city: "Crestview",
     region: "FL",

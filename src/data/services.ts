@@ -11,6 +11,8 @@ export interface ServiceSection {
 
 export interface Service {
   slug: string;
+  /** ISO date the page content last changed. Drives sitemap lastmod and the visible "Updated" line; bump it with every content edit. */
+  dateModified: string;
   index: string;
   /** Brand label ("Google Care"). Rendered as the eyebrow, not the H1. */
   title: string;
@@ -44,6 +46,7 @@ const audit = tierPrice("audit");
 
 export const services: Service[] = [
   {
+    dateModified: "2026-10-02",
     slug: "web-design",
     seoTitle: "Custom Web Design for Local Business",
     metaDescription:
@@ -98,6 +101,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "google-presence",
     seoTitle: "Google Business Profile Management",
     metaDescription:
@@ -146,6 +150,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "seo-aeo-geo",
     seoTitle: "Local SEO & AI Search Optimization",
     metaDescription:
@@ -166,6 +171,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "social-content",
     index: "04",
     title: "Social & Content",
@@ -182,6 +188,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "ai-receptionist",
     seoTitle: "AI Receptionist & Missed-Call Text-Back",
     metaDescription:
@@ -229,6 +236,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "ai-automation",
     seoTitle: "AI Workflow Automation for Small Business",
     metaDescription:
@@ -273,6 +281,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "ai-agents",
     seoTitle: "AI Chat & Voice Agents for Local Business",
     metaDescription:
@@ -310,6 +319,7 @@ export const services: Service[] = [
     ],
   },
   {
+    dateModified: "2026-10-01",
     slug: "ai-strategy",
     seoTitle: "AI Strategy Consulting for Small Business",
     metaDescription:

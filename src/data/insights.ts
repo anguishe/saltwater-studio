@@ -22,6 +22,7 @@ export interface Insight {
   metaDescription: string;
   /** ISO date — real publish date, drives sitemap lastModified and Article schema. */
   datePublished: string;
+  /** ISO date of the last content change; falls back to datePublished. Drives sitemap lastmod and the visible "Updated" line. */
   dateModified?: string;
   /** Answer-first standfirst under the H1. Also the list-page summary. */
   summary: string;

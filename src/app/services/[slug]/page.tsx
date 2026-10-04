@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { buildBreadcrumbSchema, buildFaqSchema, pageService, pageServiceId, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
+import UpdatedLine from "@/components/ui/UpdatedLine";
 import { ButtonLink } from "@/components/ui/Button";
 import { services, getServiceBySlug } from "@/data/services";
 import { getFaqsByPage, type FAQ } from "@/data/faqs";
@@ -74,6 +75,7 @@ export default async function ServiceSlugPage({ params }: Props) {
 
           <Reveal delay={0.08}>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">{service.oneLiner}</p>
+            <UpdatedLine date={service.dateModified} className="mt-4" />
           </Reveal>
 
           {service.cost && (

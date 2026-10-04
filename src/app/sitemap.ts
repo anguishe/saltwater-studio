@@ -5,51 +5,60 @@ import { getLiveProjects } from "@/data/projects";
 import { insights } from "@/data/insights";
 import { locations } from "@/data/locations";
 
-// One date for the evergreen routes; bump it when content ships.
-// Insights carry their own real dates (the site grew a blog — the upgrade the old note promised).
-const LAST_UPDATED = "2026-10-02";
+// lastmod is per page and honest (SW-060): each record carries its own `dateModified`
+// (initial values = the git last-commit date of that record). Standalone pages carry the
+// git last-commit date of their page file; bump the date here when that page's copy
+// changes. Hubs take the newest of their own date and their children's.
+// priority/changefreq are left out: Google ignores both.
+const PAGE_DATES = {
+  home: "2026-10-03",
+  work: "2026-10-03",
+  insights: "2026-10-02",
+  services: "2026-10-03",
+  websites: "2026-10-03",
+  about: "2026-10-02",
+  contact: "2026-10-01",
+  privacy: "2026-10-02",
+};
+
+const newest = (...dates: string[]) => dates.reduce((a, b) => (b > a ? b : a));
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: site.url, lastModified: LAST_UPDATED, changeFrequency: "weekly", priority: 1 },
-    { url: `${site.url}/work`, lastModified: LAST_UPDATED, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${site.url}/insights`, lastModified: LAST_UPDATED, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${site.url}/services`, lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${site.url}/websites`, lastModified: "2026-10-03", changeFrequency: "monthly", priority: 0.9 },
-    { url: `${site.url}/about`, lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${site.url}/contact`, lastModified: LAST_UPDATED, changeFrequency: "yearly", priority: 0.8 },
-    { url: `${site.url}/privacy`, lastModified: LAST_UPDATED, changeFrequency: "yearly", priority: 0.2 },
-    // /thanks is noIndex — excluded from sitemap
-  ];
+  const liveProjects = getLiveProjects();
+  const insightDate = (i: (typeof insights)[number]) => i.dateModified ?? i.datePublished;
 
   const serviceRoutes: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${site.url}/services/${s.slug}`,
-    lastModified: LAST_UPDATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
+    lastModified: s.dateModified,
   }));
 
-  // Live case studies only — the permission gate keeps preview projects out.
-  const workRoutes: MetadataRoute.Sitemap = getLiveProjects().map((p) => ({
+  // Live case studies only: the permission gate keeps preview projects out.
+  const workRoutes: MetadataRoute.Sitemap = liveProjects.map((p) => ({
     url: `${site.url}/work/${p.slug}`,
-    lastModified: LAST_UPDATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+    lastModified: p.dateModified,
   }));
 
   const insightRoutes: MetadataRoute.Sitemap = insights.map((i) => ({
     url: `${site.url}/insights/${i.slug}`,
-    lastModified: i.dateModified ?? i.datePublished,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+    lastModified: insightDate(i),
   }));
 
   const locationRoutes: MetadataRoute.Sitemap = locations.map((l) => ({
     url: `${site.url}/${l.slug}`,
-    lastModified: LAST_UPDATED,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
+    lastModified: l.dateModified,
   }));
+
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { url: site.url, lastModified: PAGE_DATES.home },
+    { url: `${site.url}/work`, lastModified: newest(PAGE_DATES.work, ...liveProjects.map((p) => p.dateModified)) },
+    { url: `${site.url}/insights`, lastModified: newest(PAGE_DATES.insights, ...insights.map(insightDate)) },
+    { url: `${site.url}/services`, lastModified: newest(PAGE_DATES.services, ...services.map((s) => s.dateModified)) },
+    { url: `${site.url}/websites`, lastModified: PAGE_DATES.websites },
+    { url: `${site.url}/about`, lastModified: PAGE_DATES.about },
+    { url: `${site.url}/contact`, lastModified: PAGE_DATES.contact },
+    { url: `${site.url}/privacy`, lastModified: PAGE_DATES.privacy },
+    // /thanks is noIndex: excluded from sitemap
+  ];
 
   return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...insightRoutes, ...locationRoutes];
 }

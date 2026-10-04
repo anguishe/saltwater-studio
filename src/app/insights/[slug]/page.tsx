@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { buildBreadcrumbSchema, article, articleId, defaultImage, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
+import UpdatedLine from "@/components/ui/UpdatedLine";
 import { ButtonLink } from "@/components/ui/Button";
 import { insights, getInsightBySlug } from "@/data/insights";
 import { site } from "@/config/site";
@@ -88,6 +89,7 @@ export default async function InsightSlugPage({ params }: Props) {
 
           <Reveal delay={0.08}>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">{insight.summary}</p>
+            <UpdatedLine date={insight.dateModified ?? insight.datePublished} className="mt-4" />
           </Reveal>
 
           {insight.sections.map((section, i) => (
