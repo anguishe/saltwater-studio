@@ -34,7 +34,10 @@ Anything not listed here needs Travis first.
 | Google & AI Visibility Audit | $50 through Oct 31, 2026, then $150; written report within 72 hours | site.ts `auditOffer`, tiers.ts |
 | Refund | First 14 days after go-live: refund of the first payment on request, site taken down | `/websites` terms |
 | Custom AI systems | Quote-based (receptionist / missed-call text-back, automation, agents, strategy) | tiers.ts |
-| New offers | Website redesign and migration (off Wix, Squarespace, GoDaddy); Logo & brand kit (quote-based); White-label for agencies (quote-based). Not video or reels | Travis 2026-10-03 |
+| New offers | Website redesign and migration (off Wix, Squarespace, GoDaddy), quote-based; Logo & brand kit (quote-based); White-label for agencies (quote-based). Not video or reels | Travis 2026-10-03 |
+| Hosting & care | $29/mo, also sold on its own to sites the studio didn't build (same price and terms) | Travis 2026-10-03; tiers.ts |
+| Social posting | Offered as a secondary line inside Google Care, not sold as its own service | Travis 2026-10-03 |
+| Service area (GBP + schema) | No Alabama areas in the Google Business Profile or `areaServed`. No GBP edits of any kind without Travis confirming that edit | Travis 2026-10-03 |
 | Live portfolio | Beach House Moving (Santa Rosa Beach), Kai's Run (Destin, the studio's own venture), WaterVue Event Rentals (Fort Walton Beach), BashSnippets (the studio's own) | CLAUDE.md portfolio gate; locations.ts |
 | Proven verticals | Movers (Beach House Moving), event and party rentals (WaterVue), dog and pet businesses (Kai's Run) | Travis 2026-10-03 |
 | Founder photo | A real headshot is approved for /about, article bylines and the Person schema (file to come from Travis) | Travis 2026-10-03 |
@@ -51,8 +54,7 @@ number behind.
 - **Review counts or star ratings** as on-page badges or schema; keep reviews on the Google profile until there are
   enough to show, and then only numbers that match it.
 - **Bio facts** (background, years, credentials, personal profiles) until the bio interview at the start of Wave 3.
-- **Prices for redesign/migration and standalone hosting & care** until Travis confirms how they're sold. Logo & brand
-  kit, white-label and custom AI never carry a price.
+- **A price for redesign/migration, Logo & brand kit, white-label or custom AI.** They are quote-based.
 - **Local facts without a source** (population, growth rates, "longest", "biggest", commute counts) and drive times
   Travis hasn't measured.
 - **Turnaround promises** beyond what `tiers.ts` states. Larger custom builds get a timeline in the quote.

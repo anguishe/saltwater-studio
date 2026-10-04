@@ -51,10 +51,9 @@ Travis and Claude in the browser, one item per sitting. No new URLs.
   fire after a client-side form submit. Mark `phone_click`, `form_submit` and `booking_click` as key events.
   Fire-test every event before publishing (SW-002). Confirm each plan's checkout returns to `/thanks/audit` (SW-006).
 - **Lead archive:** attach the private Blob store in production and run one real end-to-end form test (SW-007).
-- **Google Business Profile:** read the live service area and decide on expanding it to the five counties (Okaloosa,
-  Walton, Santa Rosa, Bay, Escambia) plus the towns with measured demand. Editing the service area soon after
-  verification can trigger a re-review, so it needs Travis's OK and one batched edit (SW-008). Post the two review
-  replies.
+- **Google Business Profile:** read the live service area and *propose* any change, but **make no GBP edit of any
+  kind unless Travis confirms that specific edit**. No Alabama areas. Editing the service area soon after verification
+  can trigger a re-review (SW-008). Review replies go out only once Travis approves them.
 - **Reviews:** a review link and a plain ask routine Travis runs by text after each delivery, with one reminder. Real
   customers only, no incentives, no gating, and no reviews from businesses Travis owns (SW-009).
 - **Listings, one at a time:** Bing Places, Apple Business Connect, LinkedIn company page, Yelp, Nextdoor, then a
@@ -89,8 +88,8 @@ Pages blocked on an open question move behind the unblocked ones.
 
 | # | New URL | Target (Keyword Planner, US, monthly) |
 |---|---|---|
-| 1 | `/services/website-redesign` | website redesign 1K–10K; website migration 100–1K |
-| 2 | `/services/hosting-and-care` | website maintenance services 1K–10K; website hosting and maintenance 100–1K |
+| 1 | `/services/website-redesign` (quote-based) | website redesign 1K–10K; website migration 100–1K |
+| 2 | `/services/hosting-and-care` ($29/mo, sold standalone too) | website maintenance services 1K–10K; website hosting and maintenance 100–1K |
 | 3 | `/services/google-profile-fix` | google business profile optimization 1K–10K |
 | 4 | `/services/local-growth` | gbp management 100–1K (supporting) |
 | 5 | `/services/visibility-audit` | not measured (entry offer) |
@@ -99,8 +98,8 @@ Pages blocked on an open question move behind the unblocked ones.
 
 Expanded in place (no new URL): `/services/seo-aeo-geo` (local SEO, answer and generative engine optimization; each
 1K–10K), `/services/ai-receptionist` (ai receptionist 10K–100K; missed-call text-back 100–1K), `/services/ai-agents`
-(de-overlapped from the receptionist), `/services/social-content` (with real posting examples, or merged into Google
-Care if there are none), `/services/web-design` (pillar, 1,000+ words), `/services/google-presence` (do-it-yourself vs
+(de-overlapped from the receptionist), `/services/social-content` (folded into Google Care as a secondary line, with a 308 to
+`/services/google-presence`; social is still offered but not pushed), `/services/web-design` (pillar, 1,000+ words), `/services/google-presence` (do-it-yourself vs
 managed, checklist), and `/websites` (becomes the "which plan fits" comparison hub that points to each product page).
 The audit explainer insight is retitled so it doesn't compete with the audit product page. Per-page OG images arrive
 with the product template. After each product page is indexed, the matching Google Business Profile product link moves
