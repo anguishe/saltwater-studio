@@ -14,6 +14,8 @@ import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { locations, getLocationBySlug } from "@/data/locations";
 import { site } from "@/config/site";
+import RelatedLinks from "@/components/ui/RelatedLinks";
+import { getLocationRelated } from "@/data/related";
 
 interface Props {
   params: Promise<{ location: string }>;
@@ -145,6 +147,13 @@ export default async function LocationPage({ params }: Props) {
               ))}
             </div>
           </Reveal>
+
+          {/* Plans, services and reading for this town (SW-062); data in src/data/related.ts. */}
+          <RelatedLinks
+            id="plans-and-services"
+            title="Plans and services"
+            groups={getLocationRelated(loc.slug)}
+          />
 
           {/* Every city page links its siblings — the mesh is what keeps these pages crawled. */}
           <Reveal delay={0.2}>

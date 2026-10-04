@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { getServiceBySlug } from "@/data/services";
@@ -87,6 +88,20 @@ export default function Offer() {
             </Reveal>
           ))}
         </div>
+
+        {/* /websites carries the published plans; link it from the offer (SW-062). */}
+        <Reveal>
+          <p className="mt-10 text-foam/70">
+            Want the numbers first?{" "}
+            <Link
+              href="/websites"
+              className="text-shoal underline underline-offset-4 hover:text-glow"
+            >
+              See the website plans and what each one costs
+            </Link>
+            .
+          </p>
+        </Reveal>
       </div>
     </section>
   );

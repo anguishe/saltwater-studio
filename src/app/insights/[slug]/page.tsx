@@ -8,6 +8,8 @@ import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { insights, getInsightBySlug } from "@/data/insights";
 import { site } from "@/config/site";
+import RelatedLinks from "@/components/ui/RelatedLinks";
+import { getInsightPeers } from "@/data/related";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -133,6 +135,8 @@ export default async function InsightSlugPage({ params }: Props) {
               ))}
             </p>
           </Reveal>
+
+          <RelatedLinks id="keep-reading" title="Keep reading" groups={getInsightPeers(slug)} />
 
           <Reveal delay={0.24}>
             <div className="mt-16 flex flex-col gap-4 sm:flex-row">
