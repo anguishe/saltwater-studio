@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
 import Preloader from "@/components/motion/Preloader";
+import { useFirstInput } from "@/components/motion/useFirstInput";
 import { track } from "@/lib/events";
 import { site } from "@/config/site";
 
@@ -15,7 +16,6 @@ const DeepScene = dynamic(() => import("@/components/three/DeepScene"), {
 // Same gate as the wrapper's `hidden md:block motion-reduce:hidden`, checked in JS
 // BEFORE the import so phones and reduced-motion visitors never fetch the 3D chunk.
 const SCENE_QUERY = "(min-width: 768px) and (prefers-reduced-motion: no-preference)";
-const FIRST_INPUT = ["pointermove", "pointerdown", "keydown", "wheel", "touchstart", "scroll"] as const;
 
 export default function Hero() {
   // The poster is the LCP and the whole first paint. The R3F scene is fetched and
@@ -24,22 +24,8 @@ export default function Hero() {
   // the frameloop so it pauses when the hero scrolls off-screen.
   const canvasRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(true);
-  const [load3D, setLoad3D] = useState(false);
+  const load3D = useFirstInput(SCENE_QUERY);
   const [sceneReady, setSceneReady] = useState(false);
-
-  useEffect(() => {
-    if (!window.matchMedia(SCENE_QUERY).matches) return;
-    const start = () => {
-      stop();
-      setLoad3D(true);
-    };
-    const stop = () =>
-      FIRST_INPUT.forEach((e) => window.removeEventListener(e, start));
-    FIRST_INPUT.forEach((e) =>
-      window.addEventListener(e, start, { passive: true })
-    );
-    return stop;
-  }, []);
 
   useEffect(() => {
     const el = canvasRef.current;

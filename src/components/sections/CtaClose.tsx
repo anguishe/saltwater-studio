@@ -1,13 +1,12 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { site } from "@/config/site";
 import { track } from "@/lib/events";
-
-const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: false });
+// GSAP chunk loads on first input (perf PR 1.3)
+import ScrollFX from "@/components/motion/LazyScrollFX";
 
 export default function CtaClose() {
   return (

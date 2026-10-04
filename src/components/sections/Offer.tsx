@@ -1,12 +1,11 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { getServiceBySlug } from "@/data/services";
-
-const ScrollFX = dynamic(() => import("@/components/motion/ScrollFX"), { ssr: false });
+// GSAP chunk loads on first input (perf PR 1.3)
+import ScrollFX from "@/components/motion/LazyScrollFX";
 
 /**
  * Five service cards, web + Google first, AI second — the ~65/35 positioning
