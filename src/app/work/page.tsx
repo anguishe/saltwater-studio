@@ -71,7 +71,7 @@ export default function WorkPage() {
                     {project.permission === "live" && (
                       <Link
                         href={`/work/${project.slug}`}
-                        className="mt-4 inline-block text-sm text-shoal hover:text-glow transition-colors"
+                        className="mt-1 inline-block py-3 text-sm text-shoal hover:text-glow transition-colors"
                       >
                         View case study →
                       </Link>

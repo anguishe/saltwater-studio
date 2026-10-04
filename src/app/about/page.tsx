@@ -35,11 +35,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">
 
-            {/* Left column: kicker + about-column plate */}
-            <Reveal>
-              <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
-                The Studio
-              </p>
+            {/* Left column: the photo slot. Desktop only for now: on phones the
+                brand plate was ~430px of empty gradient above the H1. Wave 3
+                puts Travis's real headshot here (and may show it on mobile,
+                below the H1). Never a stock or generated face. The 16px
+                mobile `sizes` keeps the priority preload from fetching a
+                full-width plate that phones never show. */}
+            <Reveal className="hidden md:block">
               <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
                 <Image
                   src="/images/saltwater-studio-about-column.webp"
@@ -47,23 +49,39 @@ export default function AboutPage() {
                   fill
                   priority
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(min-width: 768px) 33vw, 16px"
                 />
               </div>
             </Reveal>
 
-            {/* Right column: H1, entity paragraph, why, CTAs */}
+            {/* Right column: H1, entity paragraph, CTAs, then the why */}
             <div>
               <Reveal>
+                <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
+                  About Saltwater Studio
+                </p>
                 <h1 className="font-display text-4xl text-foam md:text-5xl">
-                  Saltwater Studio
+                  Travis Abadie, web design and AI in Destin, FL
                 </h1>
               </Reveal>
 
               <Reveal delay={0.08}>
-                <div className="mt-6 space-y-5 text-foam/70 max-w-2xl">
-                  {/* Third-person entity paragraph — GEO asset, verbatim per CONTENT.md and SEO.md §5 */}
-                  <p id="about-entity">{site.entitySentence}</p>
+                {/* Third-person entity paragraph — GEO asset, verbatim per CONTENT.md and SEO.md §5 */}
+                <p id="about-entity" className="mt-6 text-foam/70 max-w-2xl">
+                  {site.entitySentence}
+                </p>
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <ButtonLink href="/contact" variant="primary">
+                    Start the conversation
+                  </ButtonLink>
+                  <ButtonLink href="/work" variant="ghost">
+                    See the work
+                  </ButtonLink>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <div className="mt-10 space-y-5 text-foam/70 max-w-2xl">
                   <p>
                     It works with local businesses across the United States, with a
                     heartland on the Gulf Coast from Gulf Shores, Alabama to Panama
@@ -109,15 +127,7 @@ export default function AboutPage() {
               </Reveal>
 
               <Reveal delay={0.14}>
-                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                  <ButtonLink href="/work" variant="primary">
-                    See the work
-                  </ButtonLink>
-                  <ButtonLink href="/contact" variant="ghost">
-                    Start the conversation
-                  </ButtonLink>
-                </div>
-                <p className="mt-6 text-sm text-foam-muted">
+                <p className="mt-10 text-sm text-foam-muted">
                   Prefer a quote?{" "}
                   <Link
                     href="/contact"

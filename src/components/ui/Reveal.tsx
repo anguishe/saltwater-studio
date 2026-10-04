@@ -8,6 +8,8 @@ interface RevealProps {
    */
   delay?: number;
   className?: string;
+  /** Render as an `li` when the reveal sits directly inside a `ul`/`ol`. */
+  as?: "div" | "li";
 }
 
 /**
@@ -21,8 +23,8 @@ interface RevealProps {
  * the viewport; anything already on screen at load is at full opacity on the
  * first frame. Everything else (and prefers-reduced-motion) gets static content.
  */
-export default function Reveal({ children, className }: RevealProps) {
+export default function Reveal({ children, className, as: Tag = "div" }: RevealProps) {
   return (
-    <div className={className ? `reveal ${className}` : "reveal"}>{children}</div>
+    <Tag className={className ? `reveal ${className}` : "reveal"}>{children}</Tag>
   );
 }

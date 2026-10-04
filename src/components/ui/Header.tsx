@@ -32,9 +32,12 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" aria-label="Saltwater Studio — home">
+        {/* -my/py: a 44px tap target without changing the 64px header height.
+            The header always sits on a dark surface (hero, bg-ink), so it takes
+            the foam wordmark; "-light" is the dark-ink version for light grounds. */}
+        <Link href="/" aria-label="Saltwater Studio — home" className="-my-1.5 block py-1.5">
           <Image
-            src="/saltwater-studio-logo-light.svg"
+            src="/saltwater-studio-logo.svg"
             alt="Saltwater Studio"
             width={160}
             height={36}
@@ -71,7 +74,7 @@ export default function Header() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-foam"
+          className="-m-[11px] p-[11px] md:hidden text-foam"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen(!open)}
         >
@@ -81,12 +84,12 @@ export default function Header() {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="md:hidden bg-ink border-t border-marine/50 px-6 py-6 flex flex-col gap-4">
+        <div className="md:hidden bg-ink border-t border-marine/50 px-6 py-6 flex flex-col gap-1">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-foam/80 hover:text-shoal transition-colors"
+              className="py-2.5 text-foam/80 hover:text-shoal transition-colors"
               onClick={() => setOpen(false)}
             >
               {item.label}
@@ -94,12 +97,12 @@ export default function Header() {
           ))}
           <a
             href={`tel:${site.phone}`}
-            className="text-foam/80 hover:text-shoal transition-colors"
+            className="py-2.5 text-foam/80 hover:text-shoal transition-colors"
             onClick={() => { track.phoneClick(); setOpen(false); }}
           >
             {site.phoneDisplay}
           </a>
-          <ButtonLink href="/contact" onClick={() => { track.quoteStart(); setOpen(false); }} className="w-full justify-center">
+          <ButtonLink href="/contact" onClick={() => { track.quoteStart(); setOpen(false); }} className="mt-3 w-full justify-center">
             Start the conversation
           </ButtonLink>
         </div>

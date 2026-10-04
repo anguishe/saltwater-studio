@@ -12,6 +12,7 @@ import {
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import CallQuoteCtas from "@/components/ui/CallQuoteCtas";
 import { locations, getLocationBySlug } from "@/data/locations";
 import { site } from "@/config/site";
 import RelatedLinks from "@/components/ui/RelatedLinks";
@@ -84,6 +85,7 @@ export default async function LocationPage({ params }: Props) {
 
           <Reveal delay={0.08}>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">{loc.intro}</p>
+            <CallQuoteCtas quoteHref="/contact?interest=web-design" className="mt-8" />
           </Reveal>
 
           {loc.sections.map((section, i) => (
@@ -160,14 +162,14 @@ export default async function LocationPage({ params }: Props) {
             <p className="mt-16 font-mono text-xs tracking-[0.2em] text-shoal uppercase">
               Also serving
             </p>
-            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+            <ul className="mt-1 flex flex-wrap gap-x-6">
               {locations
                 .filter((l) => l.slug !== loc.slug)
                 .map((l) => (
                   <li key={l.slug}>
                     <Link
                       href={`/${l.slug}`}
-                      className="text-sm text-foam/60 hover:text-shoal transition-colors"
+                      className="inline-block py-3 text-sm text-foam/60 hover:text-shoal transition-colors"
                     >
                       {l.city}
                     </Link>

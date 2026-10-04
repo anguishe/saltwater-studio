@@ -108,24 +108,22 @@ export default function Footer({
               {site.phoneDisplay}
             </a>
 
-            {site.sameAs.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-3">
-                {site.sameAs.map((url) => {
-                  const label = sameAsLabel(url);
-                  return (
-                    <a
-                      key={url}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-xs text-foam-subtle hover:text-shoal transition-colors"
-                    >
-                      {label}
-                    </a>
-                  );
-                })}
-              </div>
-            )}
+            <div className="mt-4 flex flex-wrap gap-3">
+              {[site.gbp.mapsUrl, ...site.sameAs].map((url) => {
+                const label = sameAsLabel(url);
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs text-foam-subtle hover:text-shoal transition-colors"
+                  >
+                    {label}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -149,7 +147,7 @@ function sameAsLabel(url: string): string {
   if (url.includes("linkedin.com")) return "LinkedIn";
   if (url.includes("github.com")) return "GitHub";
   if (url.includes("dribbble.com")) return "Dribbble";
-  if (url.includes("google.com/maps") || url.includes("g.page")) return "Google";
+  if (url.includes("google.com/maps") || url.includes("maps.google.com") || url.includes("g.page")) return "Find us on Google";
   try {
     return new URL(url).hostname.replace(/^www\./, "");
   } catch {
