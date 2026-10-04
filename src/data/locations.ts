@@ -6,6 +6,8 @@
 // (Kai's Run — Destin · WaterVue Event Rentals — Fort Walton Beach ·
 // Beach House Moving — Santa Rosa Beach).
 
+import { tierPrice } from "@/data/tiers";
+
 export interface LocationSection {
   heading: string;
   body: string[];
@@ -77,7 +79,7 @@ export const locations: Location[] = [
       {
         question: "How long does a Destin business website take to build?",
         answer:
-          "Most builds ship in two to four weeks depending on scope. The quote comes with a real timeline up front, and the site launches with schema, analytics, and Google and Bing submission already done — launch day is when search engines start learning about you, so none of that waits until after.",
+          "On the Page Plan or Buy It, the site is live on your own domain within 3 business days of payment. Larger custom builds get a real timeline in the quote. Either way the site launches with schema, analytics, and Google and Bing submission already done — launch day is when search engines start learning about you, so none of that waits until after.",
       },
     ],
   },
@@ -90,12 +92,12 @@ export const locations: Location[] = [
       "Custom websites and Google Business Profile care for Fort Walton Beach businesses — built by Saltwater Studio, the Destin studio behind WaterVue Event Rentals.",
     h1: "Web design in Fort Walton Beach, Florida",
     intro:
-      "Fort Walton Beach runs on year-round local business, not just the summer wave — and its websites should be built that way. Saltwater Studio builds custom sites and runs Google Business Profiles for FWB businesses from fifteen minutes up the road in Destin.",
+      "Fort Walton Beach runs on year-round local business, not just the summer wave — and its websites should be built that way. Saltwater Studio builds custom sites and runs Google Business Profiles for FWB businesses from just up the road in Destin.",
     sections: [
       {
         heading: "What's different about ranking in Fort Walton Beach?",
         body: [
-          "FWB is a locals' market with a tourist season on top. Eglin and Hurlburt bring steady relocation searches all year — people arriving on orders who need movers, cleaners, mechanics, dentists, and gyms, and who pick from Google's map results and AI answers because they don't know anyone here yet. Add the split geography — downtown and the mainland neighborhoods on one side, Okaloosa Island's beach strip on the other — and the businesses that win are the ones whose pages say plainly which side of the bridge they serve. It takes a real page for each service, a Google Business Profile that's visibly alive, and structured data that lets the machines state your facts with confidence.",
+          "FWB is a locals' market with a tourist season on top. Eglin and Hurlburt bring people in on orders all year, and they need movers, cleaners, mechanics, dentists, and gyms, picked from Google's map results and AI answers because they don't know anyone here yet. Add the split geography — downtown and the mainland neighborhoods on one side, Okaloosa Island's beach strip on the other — and the businesses that win are the ones whose pages say plainly which side of the bridge they serve. It takes a real page for each service, a Google Business Profile that's visibly alive, and structured data that lets the machines state your facts with confidence.",
           "The businesses that win FWB search aren't the biggest — they're the ones whose site and profile agree with each other and answer plainly. That's structural work, and it's exactly what we build in from the first commit.",
         ],
       },
@@ -160,7 +162,7 @@ export const locations: Location[] = [
       {
         question: "Do you serve all of 30A and Walton County?",
         answer:
-          "Yes. We're based in Destin, twenty minutes from Santa Rosa Beach, and already run a monthly Google Business Profile for a company based here. In-person meetings anywhere along 30A are easy to arrange.",
+          "Yes. We're based in Destin, a short drive west of Santa Rosa Beach, and already run a monthly Google Business Profile for a company based here. In-person meetings anywhere along 30A are easy to arrange.",
       },
       {
         question: "What results has Saltwater Studio gotten for a Santa Rosa Beach business?",
@@ -175,22 +177,22 @@ export const locations: Location[] = [
     region: "FL",
     seoTitle: "Web Design in Navarre, FL",
     metaDescription:
-      "Custom websites and Google Business Profile care for Navarre, FL businesses — local search done right for one of Florida's fastest-growing beach communities.",
+      "Custom websites and Google Business Profile care for Navarre, FL businesses — local search done right for the beach town between Gulf Breeze and Hurlburt Field.",
     h1: "Web design in Navarre, Florida",
     intro:
-      "Navarre is growing faster than its search results have caught up — which is an opening. Thousands of new households a year arrive knowing nobody, and they pick their contractor, cleaner, groomer, and dentist from Google's map results and AI answers. Saltwater Studio builds the sites and runs the Google profiles that win those picks, from just down the coast in Destin.",
+      "Navarre's search results haven't caught up with the town — which is an opening. Newcomers, military families on orders among them, arrive knowing nobody, and they pick their contractor, cleaner, groomer, and dentist from Google's map results and AI answers. Saltwater Studio builds the sites and runs the Google profiles that win those picks, from just down the coast in Destin.",
     sections: [
       {
         heading: "Why is Navarre a local-search opportunity right now?",
         body: [
-          "Because the town is growing faster than its search results. Navarre runs the stretch of US-98 between Gulf Breeze and Hurlburt Field — Holley by the bay, the neighborhoods stacked north of 98, and Navarre Beach across the sound with the longest fishing pier in Florida at the end of it. Santa Rosa County keeps posting some of the strongest growth numbers in the state, and every arriving household picks its contractor, groomer, dentist, and lawn service from Google's map results and, increasingly, from AI-assistant answers.",
+          "Because new arrivals search before they ask anyone. Navarre runs the stretch of US-98 between Gulf Breeze and Hurlburt Field — Holley by the bay, the neighborhoods stacked north of 98, and Navarre Beach across the sound with the Navarre Beach Fishing Pier at the end of it. Every household that moves in picks its contractor, groomer, dentist, and lawn service from Google's map results and, increasingly, from AI-assistant answers.",
           "Meanwhile, many established Navarre businesses still run on a Facebook page or a template site that names the town once and stops. The searches those new residents make — and the ones Hurlburt and Whiting families make when orders drop — mostly go unanswered by anyone local with a real site. The first business in a category to put up real structure tends to take the position and hold it.",
         ],
       },
       {
         heading: "Do you actually work out here?",
         body: [
-          "Yes — this corridor is already in our day-to-day. Kai's Run, our own Destin mobile dog gym, carries Navarre in its service area, and we drive 98 west past the Navarre bridge regularly enough to know the summer backup at the beach light. Navarre is a thirty-five-minute run from our base in Destin; close enough to meet at a job site, not just on a screen.",
+          "Yes — this corridor is already in our day-to-day. Kai's Run, our own Destin mobile dog gym, carries Navarre in its service area, and we drive 98 west past the Navarre bridge regularly enough to know the summer backup at the beach light. Navarre is a straight run west on 98 from our base in Destin; close enough to meet at a job site, not just on a screen.",
           "Most Navarre owners start with the audit — a written report on how your business currently looks to Google, Bing, and the AI assistants — then decide whether to run the fix list themselves or hand it back to us.",
         ],
       },
@@ -205,7 +207,7 @@ export const locations: Location[] = [
       {
         question: "Do you come out to Navarre?",
         answer:
-          "Yes — Navarre is inside our regular radius. We're based in Destin and meet owners along the coast from Navarre to 30A in person; everything can also run over email end to end.",
+          "Yes — Navarre is inside our regular radius. We're based in Destin and meet owners in person anywhere along the coast from Gulf Shores to Panama City; everything can also run over email end to end.",
       },
       {
         question: "My Navarre business runs on a Facebook page. Is a website worth it?",
@@ -229,13 +231,13 @@ export const locations: Location[] = [
         heading: "What should a Niceville business expect from local search?",
         body: [
           "Steadier demand than the beach towns, from a more local crowd. Niceville sits on Boggy Bayou off Choctawhatchee Bay — the Twin Cities with Valparaiso, Eglin's main gate down the road, Northwest Florida State College on the hill, and Bluewater Bay's marina and golf neighborhoods east on 20. Its searches skew residential: home services, health, auto, food, kids' activities. They're decided in the Google map results and, increasingly, in AI-assistant answers, and both are won the same way — a complete, active Google Business Profile, a site with a page for each service, and structured data underneath so the machines can repeat your facts confidently.",
-          "The bar in Niceville is winnable. Most local categories here have nobody doing all three of those things — which means the first one to do them properly gets recommended by default.",
+          "The bar in Niceville is winnable. A business that does all three properly stands apart from competitors running on reputation alone — and the first one in its category to do it tends to get recommended by default.",
         ],
       },
       {
         heading: "Do you know this side of the bay?",
         body: [
-          "We work it already. Beach House Moving — the moving company whose site and Google profile we run — covers Okaloosa County with a dedicated Bluewater Bay service-area page we wrote, and Kai's Run, our own Destin mobile dog gym, carries Niceville in its service area. Destin to Niceville is twenty minutes over the Mid-Bay Bridge; in-person meetings anywhere from Valparaiso to Bluewater Bay are routine.",
+          "We work it already. Beach House Moving — the moving company whose site and Google profile we run — covers Okaloosa County with a dedicated Bluewater Bay service-area page we wrote, and Kai's Run, our own Destin mobile dog gym, carries Niceville in its service area. Destin to Niceville is a short hop over the Mid-Bay Bridge; in-person meetings anywhere from Valparaiso to Bluewater Bay are routine.",
           "Bluewater Bay and Valparaiso also count on their own: people there search their own place names, and machines treat them as distinct localities. We build pages for the places you actually serve, written from what you know about working there — because that's what ranks, and that's what an AI assistant can quote.",
         ],
       },
@@ -255,7 +257,7 @@ export const locations: Location[] = [
       {
         question: "What does it cost to get started?",
         answer:
-          "Builds and monthly care are quoted per project — the quote form takes two minutes and the reply comes within one business day. The one flat-priced item is the Google & AI Visibility Audit, a written report on how your business currently looks to Google, Bing, and the AI assistants.",
+          `The prices are published. A website is ${tierPrice("page-plan").display} on the Page Plan or ${tierPrice("buy-it").display} to buy it outright (plus hosting & care), and Local Growth adds monthly Google Business Profile care for ${tierPrice("local-growth").display}. The cheapest start is the ${tierPrice("audit").display} Google & AI Visibility Audit, a written report on how your business currently looks to Google, Bing, and the AI assistants. Larger custom builds get a quote within one business day.`,
       },
     ],
   },
@@ -265,15 +267,15 @@ export const locations: Location[] = [
     region: "FL",
     seoTitle: "Web Design in Crestview, FL",
     metaDescription:
-      "Custom websites and Google Business Profile management for Crestview, FL — the county's biggest city deserves better than template sites. Built in Destin.",
+      "Custom websites and Google Business Profile management for Crestview, FL — the Okaloosa County seat deserves better than template sites. Built in Destin.",
     h1: "Web design in Crestview, Florida",
     intro:
-      "Crestview is the biggest city in Okaloosa County and the least served by good web work. It's a trades-and-services town — HVAC, auto, fencing, lawn care, childcare, churches — where most businesses run on word of mouth and a Facebook page. The ones that add a real search presence stand out immediately, because so few have.",
+      "Crestview is the Okaloosa County seat and a trades-and-services town — HVAC, auto, fencing, lawn care, childcare, churches — where plenty of businesses run on word of mouth and a Facebook page. The ones that add a real search presence stand out, because a referral alone doesn't show up in a search.",
     sections: [
       {
         heading: "Why does local search matter in a word-of-mouth town?",
         body: [
-          "Because word of mouth moved. Crestview is the Hub City — the county seat, sitting on the I-10 and SR-85 crossroads, with thousands of households that commute down 85 to Eglin, Duke Field, and Hurlburt and do their buying back home. The recommendation that used to happen over a fence now happens in a Google search, a maps result, or a question typed into ChatGPT — especially for the steady stream of military families relocating here on orders who have no fence neighbors to ask yet. When they search a service and your competitor has a real site and an active Google profile and you don't, the referral goes to them before you knew it existed.",
+          "Because word of mouth moved. Crestview is the Hub City — the county seat, sitting on the I-10 and SR-85 crossroads, home to families who commute down 85 to Eglin, Duke Field, and Hurlburt and do their buying back home. The recommendation that used to happen over a fence now happens in a Google search, a maps result, or a question typed into ChatGPT — especially for military families relocating here on orders who have no fence neighbors to ask yet. When they search a service and your competitor has a real site and an active Google profile and you don't, the referral goes to them before you knew it existed.",
           "The fix is structural, not promotional: a fast site with a page per service, a Google Business Profile treated as a monthly operation, schema the machines can read, and indexing in both Google and Bing. No ad spend required — this is the part of search you own. We already write for this market: Beach House Moving, the moving company whose site and Google profile we run, covers Okaloosa County with a Crestview service-area page we built, and its month-to-month search reporting is how we know what north-county customers actually type.",
         ],
       },

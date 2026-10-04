@@ -71,6 +71,12 @@ export default function AboutPage() {
                     heartland on the Gulf Coast from Gulf Shores, Alabama to Panama
                     City, Florida.
                   </p>
+                  {/* Name disambiguation (SW-043): several unrelated studios share the name. */}
+                  <p className="text-sm text-foam-muted">
+                    Not to be confused with the other design and creative studios that
+                    share the Saltwater name. This Saltwater Studio is the one at
+                    saltwaterstudio.xyz, founded by Travis Abadie in Destin, Florida.
+                  </p>
                   {/* First-person why — verbatim from CONTENT.md */}
                   <p>
                     I started Saltwater Studio because I kept watching good local

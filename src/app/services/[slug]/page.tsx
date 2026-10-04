@@ -66,13 +66,24 @@ export default async function ServiceSlugPage({ params }: Props) {
               {service.index} / {service.title}
             </p>
             <h1 className="font-display text-4xl text-foam md:text-5xl">
-              {service.title}
+              {service.h1 ?? service.title}
             </h1>
           </Reveal>
 
           <Reveal delay={0.08}>
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">{service.oneLiner}</p>
           </Reveal>
+
+          {service.cost && (
+            <Reveal delay={0.1}>
+              <h2 className="mt-16 font-display text-2xl text-foam">{service.cost.heading}</h2>
+              {service.cost.body.map((para) => (
+                <p key={para} className="mt-5 text-foam/70 max-w-2xl">
+                  {para}
+                </p>
+              ))}
+            </Reveal>
+          )}
 
           <Reveal delay={0.12}>
             <h2 className="mt-16 font-display text-2xl text-foam">What&apos;s included</h2>

@@ -1,3 +1,5 @@
+import { getTierById, tierPrice } from "@/data/tiers";
+
 export interface ServiceSection {
   /** Rendered as an H2. Doubles as the page's secondary keyword cluster. */
   heading: string;
@@ -10,7 +12,10 @@ export interface ServiceSection {
 export interface Service {
   slug: string;
   index: string;
+  /** Brand label ("Google Care"). Rendered as the eyebrow, not the H1. */
   title: string;
+  /** Keyword H1 carrying the search phrase. Falls back to `title`. */
+  h1?: string;
   /** Search-facing <title>, keyword-first. Falls back to `title`. */
   seoTitle?: string;
   /** 150–160 chars. Falls back to the oneLiner + agency suffix. */
@@ -24,16 +29,34 @@ export interface Service {
    * and the same buyer. Two pages would split their own signal.
    */
   sections?: ServiceSection[];
+  /**
+   * Answer-first "what does it cost?" block, rendered right under the standfirst.
+   * Prices come from tiers.ts (never typed), so a price change can't go stale here.
+   */
+  cost?: ServiceSection;
 }
+
+const pagePlan = tierPrice("page-plan");
+const buyIt = tierPrice("buy-it");
+const localGrowth = tierPrice("local-growth");
+const profileFix = tierPrice("profile-fix");
+const audit = tierPrice("audit");
 
 export const services: Service[] = [
   {
     slug: "web-design",
-    seoTitle: "Web Design in Destin, FL — Built to Rank",
+    seoTitle: "Custom Web Design for Local Business",
     metaDescription:
-      "Custom web design from Destin, FL for local businesses nationwide: fast Next.js sites with schema, tracking, and Search Console set up before launch.",
+      "Custom web design for local businesses: fast Next.js sites with schema, tracking, and Search Console set up before launch. Published plans, no setup fee.",
     index: "01",
     title: "Websites, Built Right",
+    h1: "Custom web design for local businesses",
+    cost: {
+      heading: "How much does a website cost?",
+      body: [
+        `A finished custom website is ${pagePlan.display} on the Page Plan (${pagePlan.note}), or ${buyIt.display} with Buy It (${buyIt.note}). ${getTierById("page-plan")?.turnaround}. Local Growth adds monthly Google Business Profile care and up to 4 service or area pages for ${localGrowth.display}. Larger custom builds and redesigns get a quote with a timeline.`,
+      ],
+    },
     oneLiner:
       "A custom website that loads fast, shows up in local search, and turns a visitor into a phone call. Built once, built right — the version you don't rebuild in two years.",
     included: [
@@ -81,6 +104,13 @@ export const services: Service[] = [
       "Google Business Profile management for local businesses: weekly posts from your own photos, every review answered, and a monthly report on calls.",
     index: "02",
     title: "Google Care",
+    h1: "Google Business Profile management",
+    cost: {
+      heading: "What does Google Business Profile management cost?",
+      body: [
+        `Monthly Google Business Profile management comes in Local Growth at ${localGrowth.display} (${localGrowth.note}), with the Page Plan website and a plain-English monthly report included. A profile that only needs fixing once gets the Google Profile Fix: ${profileFix.display}, ${profileFix.note}. Not sure which? The Google & AI Visibility Audit is ${audit.display}, credited in full against the fix.`,
+      ],
+    },
     oneLiner:
       "We run your Google Business Profile every month — posts from your own job photos, every review answered, hours and services kept right, and a report that shows the calls it brought in.",
     included: [
@@ -122,6 +152,7 @@ export const services: Service[] = [
       "Local SEO plus AI search optimization: rank in Google, get quoted by ChatGPT, Perplexity, and Copilot, and keep one consistent fact set everywhere.",
     index: "03",
     title: "SEO / AEO / GEO",
+    h1: "Local SEO and AI search optimization",
     oneLiner:
       "Ranked in Google, quoted by AI search, named as the entity. The search presence your competitor skipped.",
     included: [
@@ -146,7 +177,7 @@ export const services: Service[] = [
       "Content calendar aligned to service pages and keywords",
       "Platform-native posts (GBP, Instagram, Facebook, LinkedIn)",
       "Answer-first copy — every post a potential AI citation",
-      "Brand voice consistency with BRAND.md standards",
+      "A brand voice guide agreed with you before the first post",
       "Monthly content performance review",
     ],
   },
@@ -157,6 +188,7 @@ export const services: Service[] = [
       "An AI receptionist for trades and local businesses: every missed call gets a text back in seconds, after-hours calls answered, job details sent to you.",
     index: "05",
     title: "AI Receptionist",
+    h1: "AI receptionist and missed-call text-back",
     oneLiner:
       "For the owner who's on a roof, under a sink, or driving between jobs when the phone rings. Every missed call gets a text back in seconds, after-hours calls get answered, and you get the job details, not a voicemail.",
     included: [
@@ -203,6 +235,7 @@ export const services: Service[] = [
       "AI automation for small businesses: intake, follow-up, quoting, scheduling, and reporting handled end to end, with a person in the loop where it matters.",
     index: "06",
     title: "AI Automation",
+    h1: "AI workflow automation for small business",
     oneLiner:
       "The repetitive parts of the day, handled without you. Intake, follow-up, quoting, scheduling, reporting — running on their own and telling you when something needs a human.",
     included: [
@@ -246,6 +279,7 @@ export const services: Service[] = [
       "AI agents for local businesses: chat that answers with your real policies, inbox triage, and booking into your calendar, scoped to hand off, not guess.",
     index: "07",
     title: "AI Agents",
+    h1: "AI chat and voice agents for local business",
     oneLiner:
       "The front desk that never closes. Missed calls answered by text in seconds, questions handled at midnight, bookings taken while you're on a job.",
     included: [
@@ -282,6 +316,7 @@ export const services: Service[] = [
       "AI strategy for small and local businesses: a process map, a build-or-buy call on every task, and a 90-day roadmap you can hand to anyone to follow.",
     index: "08",
     title: "AI Strategy & Logistics",
+    h1: "AI strategy consulting for small business",
     oneLiner:
       "Before anything gets built: which work is worth automating, which isn't, and what order to do it in. The plan you can hand to someone else and have them follow.",
     included: [
