@@ -11,6 +11,7 @@ import Process from "@/components/sections/Process";
 import WhyUs from "@/components/sections/WhyUs";
 import Testimonials from "@/components/sections/Testimonials";
 import About from "@/components/sections/About";
+import LatestInsights from "@/components/sections/LatestInsights";
 import CtaClose from "@/components/sections/CtaClose";
 
 // Home: brand-first title (Saltwater Studio | …) — formatTitle inverts for path "/"
@@ -37,6 +38,7 @@ export default function HomePage() {
       <Process />
       <WhyUs />
       <About />
+      <LatestInsights />
       <CtaClose />
     </>
   );

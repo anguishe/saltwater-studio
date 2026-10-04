@@ -8,6 +8,8 @@ import { ButtonLink } from "@/components/ui/Button";
 import { services, getServiceBySlug } from "@/data/services";
 import { getFaqsByPage, type FAQ } from "@/data/faqs";
 import { site } from "@/config/site";
+import RelatedLinks from "@/components/ui/RelatedLinks";
+import { getServiceRelated } from "@/data/related";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -131,6 +133,8 @@ export default async function ServiceSlugPage({ params }: Props) {
               </div>
             </Reveal>
           )}
+
+          <RelatedLinks id="related" title="Related" groups={getServiceRelated(slug)} />
 
           <Reveal delay={0.2}>
             <div className="mt-16 flex flex-col gap-4 sm:flex-row">
