@@ -61,7 +61,7 @@ export default function ContactPage() {
                 <dt className="font-mono text-xs tracking-[0.2em] text-foam-subtle uppercase">
                   Hours
                 </dt>
-                <dd className="mt-1 text-foam/70">{site.hoursDisplay}</dd>
+                <dd className="mt-1 text-foam/70">{site.hours.display}</dd>
               </div>
               <div>
                 <dt className="font-mono text-xs tracking-[0.2em] text-foam-subtle uppercase">

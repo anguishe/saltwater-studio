@@ -22,8 +22,6 @@ export const site = {
   owner: "Travis Abadie",
   areaServed: "United States", // nationwide
   heartland: "Gulf Coast (Gulf Shores, AL to Panama City, FL)",
-  // Matches the Google Business Profile (Travis, 2026-10-03).
-  hoursDisplay: "7 days a week, 8 AM–6 PM",
   tagline: "Websites and Google profiles for local business — built, not bolted on.",
   taglineSecondary:
     "Systems engineered for Google, AI search, and the people in between.",
@@ -59,8 +57,8 @@ export const site = {
   ] as string[],
   // Google Business Profile. Both URLs verified 2026-10-03: each returns 200
   // after redirects and lands on CID 0x3e3ac8c26ef2edd7 (Maps kgmid
-  // /g/11zy25n8jm). Schema-only: Organization.hasMap + sameAs. Kept out of
-  // `sameAs` above so the footer link row does not change.
+  // /g/11zy25n8jm). Used in Organization.hasMap + sameAs and the footer's
+  // "Find us on Google" link (Travis, 2026-10-03).
   gbp: {
     mapsUrl: "https://maps.google.com/?cid=4484117116411375063",
     shortUrl: "https://g.page/r/Cdft8m7CyDo-EBM",
