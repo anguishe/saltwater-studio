@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
 import {
   buildBreadcrumbSchema,
-  buildServiceSchema,
   buildFaqSchema,
+  cityService,
+  cityServiceId,
   webPage,
 } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -53,11 +54,10 @@ export default async function LocationPage({ params }: Props) {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       <JsonLd
-        schema={buildServiceSchema({
-          name: `Web Design in ${loc.city}, FL`,
+        schema={cityService({
+          slug: loc.slug,
+          city: loc.city,
           description: loc.metaDescription,
-          url: `${site.url}/${loc.slug}`,
-          areaServed: { city: loc.city, region: "Florida" },
         })}
       />
       <JsonLd schema={buildFaqSchema(loc.faqs)} />
@@ -66,6 +66,8 @@ export default async function LocationPage({ params }: Props) {
           path: `/${loc.slug}`,
           name: `${loc.seoTitle} | ${site.name}`,
           speakableSelectors: ["h1"],
+          about: cityServiceId(loc.slug),
+          breadcrumb: true,
         })}
       />
 

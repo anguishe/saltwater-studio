@@ -5,7 +5,6 @@ import { buildMetadata } from "@/lib/seo";
 import {
   buildAboutPageSchema,
   buildBreadcrumbSchema,
-  personFounder,
   webPage,
 } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -29,7 +28,6 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd schema={buildAboutPageSchema()} />
-      <JsonLd schema={personFounder()} />
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       <JsonLd schema={webPage({ path: "/about", name: `About Travis — Web Design & AI, Destin FL | ${site.name}`, speakableSelectors: ["h1", "#about-entity"] })} />
 

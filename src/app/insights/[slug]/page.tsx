@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema, article, webPage } from "@/lib/schema";
+import { buildBreadcrumbSchema, article, articleId, defaultImage, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
@@ -67,6 +67,9 @@ export default async function InsightSlugPage({ params }: Props) {
           path: `/insights/${slug}`,
           name: `${insight.headline} | ${site.name}`,
           speakableSelectors: ["h1", "article > p"],
+          mainEntity: articleId(slug),
+          breadcrumb: true,
+          primaryImage: defaultImage,
         })}
       />
 

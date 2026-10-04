@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
-import { buildBreadcrumbSchema, buildServiceSchema, buildFaqSchema, webPage } from "@/lib/schema";
+import { buildBreadcrumbSchema, buildFaqSchema, pageService, pageServiceId, webPage } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
@@ -50,14 +50,14 @@ export default async function ServiceSlugPage({ params }: Props) {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       <JsonLd
-        schema={buildServiceSchema({
+        schema={pageService({
+          slug,
           name: service.title,
           description: service.metaDescription ?? service.oneLiner,
-          url: `${site.url}/services/${slug}`,
         })}
       />
       {pageFaqs.length > 0 && <JsonLd schema={buildFaqSchema(pageFaqs)} />}
-      <JsonLd schema={webPage({ path: `/services/${slug}`, name: `${service.title} | ${site.name}`, speakableSelectors: ["h1"] })} />
+      <JsonLd schema={webPage({ path: `/services/${slug}`, name: `${service.title} | ${site.name}`, speakableSelectors: ["h1"], mainEntity: pageServiceId(slug), breadcrumb: true })} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
         <div className="mx-auto max-w-4xl">

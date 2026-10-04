@@ -4,7 +4,9 @@ import { buildMetadata } from "@/lib/seo";
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
-  buildServiceSchema,
+  catalogId,
+  tierIdsForPage,
+  tierService,
   webPage,
 } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -12,7 +14,7 @@ import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import OfferLadder from "@/components/sections/OfferLadder";
 import { services } from "@/data/services";
-import { tiers, engagementProof, tierPrice } from "@/data/tiers";
+import { engagementProof, tierPrice } from "@/data/tiers";
 import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
@@ -35,28 +37,10 @@ export default function ServicesPage() {
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
       {serviceFaqs.length > 0 && <JsonLd schema={buildFaqSchema(serviceFaqs)} />}
-      <JsonLd schema={webPage({ path: "/services", name: `Services | ${site.name}`, speakableSelectors: ["h1", ".tier-answer", ".faq-answer"] })} />
-      {tiers.map((tier) => (
-        <JsonLd
-          key={tier.id}
-          schema={buildServiceSchema({
-            name: tier.name,
-            description: tier.oneLiner,
-            url: `${site.url}/services#${tier.id}`,
-            ...(tier.price
-              ? {
-                  offers: {
-                    price: tier.price.amount,
-                    priceCurrency: tier.price.currency,
-                    // Promo end date applies to the audit only.
-                    ...(tier.priceValidUntil
-                      ? { priceValidUntil: tier.priceValidUntil }
-                      : {}),
-                  },
-                }
-              : {}),
-          })}
-        />
+      <JsonLd schema={webPage({ path: "/services", name: `Services | ${site.name}`, speakableSelectors: ["h1", ".tier-answer", ".faq-answer"], mainEntity: catalogId, breadcrumb: true })} />
+      {/* Plans canonical here; Page Plan and Buy It live on /websites. Offers and prices sit in the OfferCatalog on the Organization. */}
+      {tierIdsForPage("/services").map((id) => (
+        <JsonLd key={id} schema={tierService(id)} />
       ))}
 
       <div className="pt-32 pb-24 px-6 bg-ink">

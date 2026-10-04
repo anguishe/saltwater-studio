@@ -9,7 +9,16 @@ export interface Tier {
   index: string;
   name: string;
   /** Published price. Prices went public 2026-10-03 (revenue audit); the T1 audit carve-out dates to 2026-08-09. Custom AI stays quote-based. */
-  price?: { amount: number; currency: "USD"; display: string; note: string };
+  price?: {
+    amount: number;
+    currency: "USD";
+    display: string;
+    note: string;
+    /** Billing period of `amount`. Feeds the Offer's UnitPriceSpecification (monthly = P1M). */
+    billing: "once" | "monthly";
+    /** A recurring charge on top of a one-time price (Buy It's hosting & care). */
+    addOn?: { amount: number; billing: "monthly"; name: string };
+  };
   /** Feeds Offer.priceValidUntil in the Service schema — audit promo only. */
   priceValidUntil?: string;
   turnaround?: string;
@@ -47,6 +56,7 @@ export const tiers: Tier[] = [
       note: site.auditOffer.promoActive
         ? `flat, one-time — limited-time rate through ${site.auditOffer.endsLabel} (regularly $${site.auditOffer.regularPrice})`
         : "flat, one-time",
+      billing: "once",
     },
     ...(site.auditOffer.promoActive
       ? { priceValidUntil: site.auditOffer.endsISO }
@@ -79,6 +89,7 @@ export const tiers: Tier[] = [
       currency: "USD",
       display: "$149/mo",
       note: "no setup fee — 3-month minimum, then month to month",
+      billing: "monthly",
     },
     turnaround: "Live on your own domain within 3 business days of first payment",
     oneLiner:
@@ -103,6 +114,8 @@ export const tiers: Tier[] = [
       currency: "USD",
       display: "$497",
       note: "once, plus $29/mo hosting & care — no setup fee, no minimum",
+      billing: "once",
+      addOn: { amount: 29, billing: "monthly", name: "Hosting & care" },
     },
     turnaround: "Live on your own domain within 3 business days of payment",
     oneLiner:
@@ -125,6 +138,7 @@ export const tiers: Tier[] = [
       currency: "USD",
       display: "$297/mo",
       note: "no setup fee — 3-month minimum, then month to month",
+      billing: "monthly",
     },
     oneLiner:
       "The Page Plan plus the Google work: your Google Business Profile run every month, up to four service or area pages, and a plain-English monthly report of what moved and why.",
@@ -146,6 +160,7 @@ export const tiers: Tier[] = [
       currency: "USD",
       display: "$199",
       note: "flat, one-time — done in 5 business days, no call",
+      billing: "once",
     },
     turnaround: "Done in 5 business days, fully async — no call",
     oneLiner:
