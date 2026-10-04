@@ -99,9 +99,7 @@ const titleKey = (t) =>
     .trim();
 // Known near-duplicates, waived by exact title until the fix lands. An entry stops
 // matching the moment its title changes, and a stale entry is reported as a warning.
-const NEAR_DUP_WAIVERS = new Map([
-  ["Web Design in Destin, FL — Built to Rank | Saltwater Studio", "SW-024, retitled in Wave 1 PR 1.1"],
-]);
+const NEAR_DUP_WAIVERS = new Map([]);
 const indexable = [...titles.entries()].map(([t, routes]) => ({ t, route: routes[0], key: titleKey(t) }));
 for (const w of NEAR_DUP_WAIVERS.keys()) {
   if (!titles.has(w)) warns.push(`stale near-duplicate waiver (title no longer exists): "${w}"`);
