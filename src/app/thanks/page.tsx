@@ -1,17 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import { track } from "@/lib/events";
 import { site } from "@/config/site";
 
 export const dynamic = "force-static";
 
+// form_submit is pushed by QuoteForm when /api/contact succeeds, not here: a
+// refresh, a back-button visit or a direct visit to /thanks is not a lead.
 export default function ThanksPage() {
-  useEffect(() => {
-    track.formSubmit();
-  }, []);
-
   return (
     <div className="min-h-svh flex flex-col items-center justify-center px-6 bg-ink text-center">
       <p className="font-mono text-xs tracking-[0.3em] text-shoal uppercase mb-6">

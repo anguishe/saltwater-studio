@@ -50,15 +50,22 @@ export default function Hero() {
 
       {/* Foreground text — DOM, not in canvas (crisp + indexable) */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-        <p className="mb-6 font-mono text-xs uppercase tracking-[0.25em] text-shoal">
-          Saltwater Studio — Est. 2025 · Destin, FL → Nationwide
+        {/* Brand eyebrow from sm up; on phones the readable place line below
+            does the job and keeps both CTAs in the first screen. */}
+        <p className="mb-6 hidden font-mono text-xs uppercase tracking-[0.25em] text-shoal sm:block">
+          Saltwater Studio — Est. 2025
         </p>
 
         <h1 className="font-display text-4xl font-semibold leading-tight text-foam md:text-6xl lg:text-7xl">
           Websites and Google profiles that make the phone ring.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-foam/70">
+        <p className="mx-auto mt-5 max-w-2xl text-base font-semibold text-foam md:text-xl">
+          Web design and Google Business Profile management in Destin, FL. In
+          person from Gulf Shores to Panama City, remote everywhere else.
+        </p>
+
+        <p className="mx-auto mt-4 max-w-2xl text-base text-foam/70 md:mt-6 md:text-lg">
           Saltwater Studio builds fast, custom websites and runs your Google
           Business Profile every month, so local customers find you first. Then
           we add AI where it saves you time, like a receptionist that texts back
@@ -69,7 +76,7 @@ export default function Hero() {
           , shows exactly where you stand today.
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:mt-10">
           <ButtonLink
             href="/services#audit"
             variant="primary"

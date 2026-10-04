@@ -75,7 +75,7 @@ export default function InsightsPage() {
                   <p className="mt-3 text-foam/70 max-w-2xl">{insight.summary}</p>
                   <Link
                     href={`/insights/${insight.slug}`}
-                    className="mt-4 inline-block text-sm text-shoal underline underline-offset-4 hover:text-glow"
+                    className="mt-1 inline-block py-3 text-sm text-shoal underline underline-offset-4 hover:text-glow"
                   >
                     Read the article
                   </Link>

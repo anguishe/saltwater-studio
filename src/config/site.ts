@@ -22,6 +22,8 @@ export const site = {
   owner: "Travis Abadie",
   areaServed: "United States", // nationwide
   heartland: "Gulf Coast (Gulf Shores, AL to Panama City, FL)",
+  // Matches the Google Business Profile (Travis, 2026-10-03).
+  hoursDisplay: "7 days a week, 8 AM–6 PM",
   tagline: "Websites and Google profiles for local business — built, not bolted on.",
   taglineSecondary:
     "Systems engineered for Google, AI search, and the people in between.",

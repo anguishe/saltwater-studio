@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { buildMetadata } from "@/lib/seo";
 import { buildContactPageSchema, buildBreadcrumbSchema } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -27,7 +26,9 @@ export default function ContactPage() {
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
 
       <div className="pt-32 pb-24 px-6 bg-ink">
-        <div className="mx-auto max-w-4xl grid gap-16 lg:grid-cols-[1fr_1.5fr]">
+        {/* Mobile order = DOM order: intro, form, then hours and area. Desktop
+            puts hours and area under the intro, with the form spanning both rows. */}
+        <div className="mx-auto max-w-4xl grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-10">
           <div>
             <Reveal>
               <p className="font-mono text-xs tracking-[0.2em] text-shoal uppercase mb-4">
@@ -48,12 +49,31 @@ export default function ContactPage() {
 
           </div>
 
-          <Reveal delay={0.06}>
-            {/* Suspense: QuoteForm reads useSearchParams (?interest= prefill) —
-                required for static rendering in Next 16 */}
-            <Suspense fallback={null}>
-              <QuoteForm />
-            </Suspense>
+          {/* Server-rendered: the form is in the static HTML, so it paints with
+              the page and reserves its own height (no late layout shift). */}
+          <Reveal delay={0.06} className="lg:row-span-2">
+            <QuoteForm />
+          </Reveal>
+
+          <Reveal className="lg:col-start-1 lg:row-start-2">
+            <dl className="space-y-4 text-sm">
+              <div>
+                <dt className="font-mono text-xs tracking-[0.2em] text-foam-subtle uppercase">
+                  Hours
+                </dt>
+                <dd className="mt-1 text-foam/70">{site.hoursDisplay}</dd>
+              </div>
+              <div>
+                <dt className="font-mono text-xs tracking-[0.2em] text-foam-subtle uppercase">
+                  Service area
+                </dt>
+                <dd className="mt-1 text-foam/70">
+                  Based in {site.baseCity}, Florida, with no storefront. In person
+                  from Gulf Shores, AL to Panama City, FL; remote anywhere in the
+                  United States.
+                </dd>
+              </div>
+            </dl>
           </Reveal>
         </div>
       </div>

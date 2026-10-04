@@ -24,19 +24,22 @@ export default function Process() {
 
         <ol className="mt-16 space-y-0 divide-y divide-marine/20" aria-label="Our process">
           {processSteps.map((step, i) => (
-            <Reveal key={step.index} delay={i * 0.07}>
-              <li className="grid grid-cols-[3rem_1fr] gap-6 py-8">
-                <span
-                  className="font-mono text-xs tracking-widest text-shoal uppercase mt-1"
-                  aria-hidden="true"
-                >
-                  {step.index}
-                </span>
-                <div>
-                  <h3 className="font-display text-lg text-foam">{step.title}</h3>
-                  <p className="mt-2 text-foam/60">{step.body}</p>
-                </div>
-              </li>
+            <Reveal
+              key={step.index}
+              as="li"
+              delay={i * 0.07}
+              className="grid grid-cols-[3rem_1fr] gap-6 py-8"
+            >
+              <span
+                className="font-mono text-xs tracking-widest text-shoal uppercase mt-1"
+                aria-hidden="true"
+              >
+                {step.index}
+              </span>
+              <div>
+                <h3 className="font-display text-lg text-foam">{step.title}</h3>
+                <p className="mt-2 text-foam/60">{step.body}</p>
+              </div>
             </Reveal>
           ))}
         </ol>
