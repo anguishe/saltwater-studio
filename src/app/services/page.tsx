@@ -12,7 +12,7 @@ import Reveal from "@/components/ui/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import OfferLadder from "@/components/sections/OfferLadder";
 import { services } from "@/data/services";
-import { tiers, engagementProof } from "@/data/tiers";
+import { tiers, engagementProof, tierPrice } from "@/data/tiers";
 import { getFaqsByPage } from "@/data/faqs";
 import { site } from "@/config/site";
 
@@ -76,8 +76,9 @@ export default function ServicesPage() {
             <p className="mt-6 text-lg text-foam/70 max-w-2xl">
               Saltwater Studio builds the websites and runs the Google profiles local
               customers find you through, then adds AI where it saves you hours. The
-              prices are below — a ${site.auditOffer.price} audit, website plans from
-              $149 a month, and a $199 Google Profile Fix. Custom AI work is scoped
+              prices are below — a ${site.auditOffer.price} audit, website plans from{" "}
+              {tierPrice("page-plan").display}, and a {tierPrice("profile-fix").display} Google
+              Profile Fix. Custom AI work is scoped
               to your business and quoted within a day.
             </p>
           </Reveal>

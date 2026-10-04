@@ -1,4 +1,11 @@
 import { site } from "@/config/site";
+import { tierPrice } from "@/data/tiers";
+
+// Prices in answers render from tiers.ts, never typed.
+const pagePlan = tierPrice("page-plan");
+const buyIt = tierPrice("buy-it");
+const localGrowth = tierPrice("local-growth");
+const profileFix = tierPrice("profile-fix");
 
 export interface FAQ {
   question: string;
@@ -32,13 +39,13 @@ export const faqs: FAQ[] = [
   {
     question: "How much does this cost?",
     answer:
-      `The prices are published. A website is $149 a month with no setup fee (Page Plan), or $497 once plus $29 a month hosting (Buy It). Local Growth — the site plus monthly Google Business Profile care — is $297 a month. The Google Profile Fix is $199 flat, and the Google & AI Visibility Audit is $${site.auditOffer.price}, delivered within 72 hours. Custom AI systems are the one quote-based engagement, scoped within a day.`,
+      `The prices are published. A website is ${pagePlan.display} with no setup fee (Page Plan), or ${buyIt.display} with Buy It (${buyIt.note}). Local Growth — the site plus monthly Google Business Profile care — is ${localGrowth.display}. The Google Profile Fix is ${profileFix.display} flat, and the Google & AI Visibility Audit is $${site.auditOffer.price}, delivered within 72 hours. Custom AI systems are the one quote-based engagement, scoped within a day.`,
     page: "home",
   },
   {
     question: "Do you only work with Gulf Coast businesses?",
     answer:
-      "No. Saltwater Studio works with local businesses across the United States; the Gulf Coast, from Gulf Shores, Alabama to Panama City, Florida, is home base and not a limit. The work is remote by design.",
+      "No. Saltwater Studio meets clients in person along the Gulf Coast, from Gulf Shores, Alabama to Panama City, Florida, and works with local businesses anywhere in the United States remotely. The Gulf Coast is home base, not a limit.",
     page: "home",
   },
   {
@@ -57,7 +64,7 @@ export const faqs: FAQ[] = [
   {
     question: "What services does Saltwater Studio offer?",
     answer:
-      `Custom websites, monthly Google Business Profile management (Google Care), SEO and AI search, social content, and AI services — a receptionist, automation, and agents. They come together as published plans: the Google & AI Visibility Audit ($${site.auditOffer.price}), the Page Plan website at $149 a month, Buy It at $497 once plus $29 a month hosting, Local Growth at $297 a month, and the $199 Google Profile Fix. Custom AI systems are quoted to the business.`,
+      `Custom websites, monthly Google Business Profile management (Google Care), SEO and AI search, social content, and AI services — a receptionist, automation, and agents. They come together as published plans: the Google & AI Visibility Audit ($${site.auditOffer.price}), the Page Plan website at ${pagePlan.display}, Buy It at ${buyIt.display} (${buyIt.note}), Local Growth at ${localGrowth.display}, and the ${profileFix.display} Google Profile Fix. Custom AI systems are quoted to the business.`,
     page: "services",
   },
   {
@@ -87,7 +94,7 @@ export const faqs: FAQ[] = [
   {
     question: "What does monthly management cover?",
     answer:
-      "Google Care — your Google Business Profile run every month, with posts, photos, and every review answered — plus the upkeep that keeps the website and rankings current: schema and content signals, a check on what AI assistants say about the business, and a written monthly report of what moved. Quote-based, scoped to the business.",
+      `Google Care — your Google Business Profile run every month, with posts, photos, and every review answered — plus the upkeep that keeps the website and rankings current: schema and content signals, a check on what AI assistants say about the business, and a written monthly report of what moved. It comes in the Local Growth plan at ${localGrowth.display}, website included (${localGrowth.note}).`,
     page: "services",
   },
   {
@@ -225,7 +232,7 @@ export const faqs: FAQ[] = [
   {
     question: "What is Google Business Profile management?",
     answer:
-      "Someone runs your Google listing for you every month: posting updates with your own job photos, answering every review, keeping hours and services correct, and reporting the calls and clicks the profile brought in. Google Care is Saltwater Studio's version of that service, and it is quoted per business.",
+      `Someone runs your Google listing for you every month: posting updates with your own job photos, answering every review, keeping hours and services correct, and reporting the calls and clicks the profile brought in. Google Care is Saltwater Studio's version of that service. Monthly management comes in the Local Growth plan at ${localGrowth.display}, and a one-time cleanup is the Google Profile Fix at ${profileFix.display}.`,
     page: "google-presence",
   },
   {

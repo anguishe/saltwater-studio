@@ -207,3 +207,13 @@ export const engagementProof: { label: string; detail: string }[] = [
 export function getTierById(id: Tier["id"]): Tier | undefined {
   return tiers.find((t) => t.id === id);
 }
+
+/**
+ * The published price of a priced tier, for copy. Copy renders prices from
+ * here (never typed) so a price change can't leave a stale number behind.
+ */
+export function tierPrice(id: "audit" | PlanSlug): NonNullable<Tier["price"]> {
+  const price = getTierById(id)?.price;
+  if (!price) throw new Error(`tiers.ts: tier "${id}" has no published price`);
+  return price;
+}
