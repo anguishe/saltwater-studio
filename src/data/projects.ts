@@ -2,6 +2,8 @@ export type Permission = "live" | "preview";
 
 export interface Project {
   slug: string;
+  /** ISO date the page content last changed. Drives sitemap lastmod and the visible "Updated" line; bump it with every content edit. */
+  dateModified: string;
   title: string;
   /** Search-facing <title> body for live case studies (the " | Saltwater Studio" suffix is added). Falls back to "<title> Case Study — <category>". Keep the full title ≤ 60 chars; scripts/check-meta.mjs fails the build over 65. */
   seoTitle?: string;
@@ -25,6 +27,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    dateModified: "2026-10-02",
     slug: "beach-house-moving",
     title: "Beach House Moving",
     seoTitle: "Beach House Moving: Local SEO Case Study",
@@ -77,6 +80,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    dateModified: "2026-10-03",
     slug: "kais-run",
     title: "Kai's Run",
     seoTitle: "Kai's Run Case Study — Dog Conditioning",
@@ -122,6 +126,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    dateModified: "2026-10-03",
     slug: "heat-safety-tool",
     title: "The Heat-Safety Tool",
     seoTitle: "Heat-Safety Tool Case Study — Live Data",
@@ -156,6 +161,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    dateModified: "2026-10-01",
     slug: "bash-snippets",
     title: "BashSnippets",
     category: "Content Site",
@@ -200,6 +206,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    dateModified: "2026-10-02",
     slug: "watervue-event-rentals",
     title: "WaterVue Event Rentals",
     seoTitle: "WaterVue Event Rentals Case Study",
@@ -246,6 +253,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    dateModified: "2026-06-15",
     slug: "aquamarine",
     title: "Concept — Pool Service",
     category: "Pool Cleaning",
@@ -261,6 +269,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    dateModified: "2026-06-15",
     slug: "alexander-hines",
     title: "Concept — Construction",
     category: "Construction",
