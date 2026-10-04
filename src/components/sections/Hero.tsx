@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/Button";
-import Preloader from "@/components/motion/Preloader";
 import { useFirstInput } from "@/components/motion/useFirstInput";
 import { track } from "@/lib/events";
 import { site } from "@/config/site";
@@ -117,8 +116,6 @@ export default function Hero() {
       {/* Gradient fade to page background */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink to-transparent" />
 
-      {/* "The dive in" — overlays everything on first visit, lifts ≤1.2s */}
-      <Preloader />
     </section>
   );
 }
