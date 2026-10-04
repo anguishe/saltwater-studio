@@ -87,7 +87,14 @@ function Scene() {
   );
 }
 
-export default function DeepScene({ active }: { active: boolean }) {
+export default function DeepScene({
+  active,
+  onReady,
+}: {
+  active: boolean;
+  /** Fires once the GL context exists, so the hero can fade the canvas in over the poster. */
+  onReady?: () => void;
+}) {
   return (
     <div className="absolute inset-0" aria-hidden="true">
       <Canvas
@@ -95,6 +102,7 @@ export default function DeepScene({ active }: { active: boolean }) {
         camera={{ position: [0, 0, 5], fov: 55 }}
         gl={{ antialias: true, alpha: true }}
         frameloop={active ? "always" : "never"}
+        onCreated={() => onReady?.()}
       >
         <Scene />
       </Canvas>

@@ -51,6 +51,8 @@ export default function WorkPage() {
                       src={project.image}
                       alt={project.alt ?? `${project.title} — ${project.result}`}
                       fill
+                      // First card is the /work LCP (above the fold on every width).
+                      priority={i === 0}
                       className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />

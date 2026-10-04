@@ -39,10 +39,10 @@ export default function Header() {
           <Image
             src="/saltwater-studio-logo.svg"
             alt="Saltwater Studio"
-            width={160}
-            height={36}
+            width={250}
+            height={32}
             priority
-            className="h-8 w-auto"
+            className="h-8 w-[250px]"
           />
         </Link>
 

@@ -1,64 +1,64 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import s from "./Preloader.module.css";
 
-const EXPO: [number, number, number, number] = [0.16, 1, 0.3, 1];
+// useLayoutEffect warns during SSR; this runs it on the client only.
+const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
 /**
  * "The dive in" (DESIGN §1). A ≤1.2s, skippable, once-per-session preloader:
  * foam surface → horizon line → cooling descent as the molten-chrome 'S'
  * coalesces → resolves on "Depth, by design." → lifts into the hero.
  *
- * - Transient framer-motion (the sanctioned UI/micro layer) — unmounts after the
- *   lift, so the page keeps its single persistent loop (the R3F useFrame).
- * - `prefers-reduced-motion`: hidden outright via `motion-reduce:hidden` (no
- *   first-paint flash, no animation) and resolved immediately — the hero poster is
- *   the static deep frame with the mark already formed.
- * - Never blocks interaction past 1.2s: the lift sets `pointer-events:none` and the
- *   overlay unmounts on completion.
+ * - CSS keyframes only (Preloader.module.css). The 2026-10 perf PR removed
+ *   framer-motion so it stays out of the home bundle; the timeline plays from the
+ *   first paint and lifts itself even if JS never runs.
+ * - `prefers-reduced-motion`: hidden outright (`motion-reduce:hidden` + the CSS
+ *   module's media query), no first-paint flash, no animation.
+ * - Never blocks interaction past 1.2s: the lift ends with `visibility:hidden` and
+ *   the overlay unmounts when it finishes. Already seen this session → unmounts
+ *   before paint on client renders.
  */
-export default function Preloader({ onComplete }: { onComplete: () => void }) {
+export default function Preloader() {
   const [show, setShow] = useState(true);
   const [lifting, setLifting] = useState(false);
-  const doneRef = useRef(false);
+  const liftStarted = useRef(false);
+  const skip = () => {
+    if (!liftStarted.current) setLifting(true);
+  };
 
-  function finish() {
-    if (doneRef.current) return;
-    doneRef.current = true;
-    try {
-      window.sessionStorage.setItem("sw_preloaded", "1");
-    } catch {
-      /* private mode — fall through */
-    }
-    setShow(false);
-    onComplete();
-  }
-
-  // Decide once, on the client: reduced-motion or already-seen → skip straight to
-  // the hero; otherwise schedule the lift so the whole sequence stays ≤1.2s.
-  useEffect(() => {
+  // Decide once, on the client: reduced-motion or already seen → drop the overlay.
+  useIsoLayoutEffect(() => {
     let reduce = false;
     let seen = false;
     try {
       reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       seen = window.sessionStorage.getItem("sw_preloaded") === "1";
     } catch {
-      /* ignore */
+      /* private mode: fall through */
     }
     if (reduce || seen) {
-      finish();
+      setShow(false);
       return;
     }
-    const t = window.setTimeout(() => setLifting(true), 1200);
+    // Deferred so a dev StrictMode re-mount doesn't read its own write.
+    const t = window.setTimeout(() => {
+      try {
+        window.sessionStorage.setItem("sw_preloaded", "1");
+      } catch {
+        /* ignore */
+      }
+    }, 0);
     return () => window.clearTimeout(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Skippable: any key lifts immediately.
   useEffect(() => {
     if (!show) return;
-    const onKey = () => setLifting(true);
+    const onKey = () => {
+      if (!liftStarted.current) setLifting(true);
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [show]);
@@ -66,66 +66,40 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
   if (!show) return null;
 
   return (
-    <motion.div
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-abyss motion-reduce:hidden"
-      initial={false}
-      animate={{ y: lifting ? "-100%" : "0%" }}
-      transition={{ duration: 0.6, ease: EXPO }}
-      style={{ pointerEvents: lifting ? "none" : "auto" }}
-      onAnimationComplete={() => {
-        if (lifting) finish();
+    <div
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden bg-abyss motion-reduce:hidden ${s.overlay} ${lifting ? s.lifting : ""}`}
+      onAnimationStart={(e) => {
+        if (e.target === e.currentTarget) liftStarted.current = true;
       }}
-      onClick={() => setLifting(true)}
+      onAnimationEnd={(e) => {
+        // Only the overlay's own lift ends the sequence (child animations bubble).
+        if (e.target === e.currentTarget) setShow(false);
+      }}
+      onClick={skip}
     >
       {/* foam surface giving way */}
-      <motion.div
-        aria-hidden="true"
-        className="absolute inset-0 bg-foam"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        transition={{ duration: 0.7, ease: EXPO, delay: 0.15 }}
-      />
+      <div aria-hidden="true" className={`absolute inset-0 bg-foam ${s.foam}`} />
 
       {/* the cooling water column descending past us */}
-      <motion.div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, #F4F1EA 0%, #2FC6B6 28%, #0C3B45 55%, #05161B 78%, #02090C 100%)",
-        }}
-        initial={{ opacity: 0, y: "-18%" }}
-        animate={{ opacity: 1, y: "0%" }}
-        transition={{ duration: 0.9, ease: EXPO, delay: 0.2 }}
-      />
+      <div aria-hidden="true" className={`absolute inset-0 ${s.column}`} />
 
       {/* the deep settling in as we pass the shallows */}
-      <motion.div
+      <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-ink/60 to-abyss"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, ease: EXPO, delay: 0.7 }}
+        className={`absolute inset-0 bg-gradient-to-b from-transparent via-ink/60 to-abyss ${s.deep}`}
       />
 
       {/* the surface horizon line, sinking out of frame */}
-      <motion.div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-1/2 h-px origin-center bg-foam/70"
-        initial={{ scaleX: 0, opacity: 0, y: "0%" }}
-        animate={{ scaleX: 1, opacity: [0, 1, 1, 0], y: ["0%", "0%", "-40%", "-130%"] }}
-        transition={{ duration: 1.0, ease: EXPO, delay: 0.15, times: [0, 0.25, 0.6, 1] }}
-      />
+      <div aria-hidden="true" className={`absolute inset-x-0 top-1/2 h-px ${s.horizon}`}>
+        <div className={`h-px bg-foam/70 ${s.horizonLine}`} />
+      </div>
 
       {/* the mark coalescing + the resolve */}
       <div className="relative z-10 flex flex-col items-center gap-5 px-6 text-center">
-        <motion.svg
+        <svg
           aria-hidden="true"
           viewBox="0 0 100 120"
-          className="h-20 w-auto md:h-24"
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: EXPO, delay: 0.5 }}
+          className={`h-20 w-auto md:h-24 ${s.mark}`}
         >
           <defs>
             <linearGradient id="sw-preload-chrome" x1="0" y1="0" x2="0.35" y2="1">
@@ -143,29 +117,23 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-        </motion.svg>
+        </svg>
 
-        <motion.p
-          aria-hidden="true"
-          className="font-display text-xl text-foam md:text-2xl"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: EXPO, delay: 1.0 }}
-        >
+        <p aria-hidden="true" className={`font-display text-xl text-foam md:text-2xl ${s.resolve}`}>
           Depth, by design.
-        </motion.p>
+        </p>
       </div>
 
       <button
         type="button"
         onClick={(e) => {
           e.stopPropagation();
-          setLifting(true);
+          skip();
         }}
         className="absolute bottom-6 right-6 z-20 font-mono text-[10px] uppercase tracking-[0.25em] text-foam-muted transition-colors hover:text-shoal focus-visible:text-shoal"
       >
         Skip
       </button>
-    </motion.div>
+    </div>
   );
 }
