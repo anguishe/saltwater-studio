@@ -4,7 +4,9 @@ import { buildMetadata } from "@/lib/seo";
 import {
   buildBreadcrumbSchema,
   buildFaqSchema,
-  buildServiceSchema,
+  tierIdsForPage,
+  tierService,
+  tierServiceId,
   webPage,
 } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
@@ -128,21 +130,18 @@ export default function WebsitesPage() {
   return (
     <>
       <JsonLd schema={buildBreadcrumbSchema(breadcrumbs)} />
-      <JsonLd
-        schema={buildServiceSchema({
-          name: "Page Plan — Monthly Website",
-          description:
-            "A finished custom website on the client's own domain for $149 a month: no setup fee, hosting and SSL included, unlimited small changes within 2 business days, live within 3 business days of first payment.",
-          url: `${site.url}/websites`,
-          offers: { price: 149, priceCurrency: "USD" },
-        })}
-      />
+      {/* Page Plan and Buy It are canonical here, built from tiers.ts. */}
+      {tierIdsForPage("/websites").map((id) => (
+        <JsonLd key={id} schema={tierService(id)} />
+      ))}
       <JsonLd schema={buildFaqSchema(websiteFaqs)} />
       <JsonLd
         schema={webPage({
           path: "/websites",
           name: `Websites for Local Business — $149/mo | ${site.name}`,
           speakableSelectors: ["h1"],
+          mainEntity: tierServiceId("page-plan"),
+          breadcrumb: true,
         })}
       />
 

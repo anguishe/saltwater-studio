@@ -15,7 +15,9 @@ export const site = {
   email: "hello@saltwaterstudio.xyz",
   baseCity: "Destin",
   region: "FL", // heartland, shown as "Gulf Coast, FL"
-  geo: { lat: 30.3935, lng: -86.4958 }, // Destin (entity anchor only)
+  // Destin city centre point (Wikidata Q2156427 P625), 5 decimals. Entity
+  // anchor only: never a residence, never a storefront.
+  geo: { lat: 30.39333, lng: -86.47528 },
   founded: "2025",
   owner: "Travis Abadie",
   areaServed: "United States", // nationwide
@@ -53,6 +55,55 @@ export const site = {
   sameAs: [
     "https://www.facebook.com/profile.php?id=61590875267901",
   ] as string[],
+  // Google Business Profile. Both URLs verified 2026-10-03: each returns 200
+  // after redirects and lands on CID 0x3e3ac8c26ef2edd7 (Maps kgmid
+  // /g/11zy25n8jm). Schema-only: Organization.hasMap + sameAs. Kept out of
+  // `sameAs` above so the footer link row does not change.
+  gbp: {
+    mapsUrl: "https://maps.google.com/?cid=4484117116411375063",
+    shortUrl: "https://g.page/r/Cdft8m7CyDo-EBM",
+  },
+  // Schema-only disambiguation (several unrelated studios share the name).
+  alternateName: "Saltwater Studio Destin",
+  disambiguatingDescription:
+    "The web design and Google Business Profile studio in Destin, Florida, founded in 2025 by Travis Abadie. Not an interior design, photography, or kitchen studio of the same name.",
+  // Square brand mark for Organization.logo (public/icon-512.png, 512x512).
+  logo: { path: "/icon-512.png", width: 512, height: 512 },
+  // Hours match the Google Business Profile (Travis, 2026-10-03): 7 days, 8 AM-6 PM.
+  hours: {
+    days: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "08:00",
+    closes: "18:00",
+    display: "7 days, 8 AM–6 PM",
+  },
+  // Schema areaServed: the five Florida counties (DECISIONS 2026-10-03; no
+  // Alabama in schema). Wikipedia URLs and Wikidata QIDs verified 2026-10-03
+  // (each returns 200 and is the county in Florida).
+  serviceCounties: [
+    { name: "Okaloosa County", wikipedia: "https://en.wikipedia.org/wiki/Okaloosa_County,_Florida", wikidata: "Q494476" },
+    { name: "Walton County", wikipedia: "https://en.wikipedia.org/wiki/Walton_County,_Florida", wikidata: "Q503455" },
+    { name: "Santa Rosa County", wikipedia: "https://en.wikipedia.org/wiki/Santa_Rosa_County,_Florida", wikidata: "Q494500" },
+    { name: "Bay County", wikipedia: "https://en.wikipedia.org/wiki/Bay_County,_Florida", wikidata: "Q488865" },
+    { name: "Escambia County", wikipedia: "https://en.wikipedia.org/wiki/Escambia_County,_Florida", wikidata: "Q156643" },
+  ],
+  serviceState: { name: "Florida", wikipedia: "https://en.wikipedia.org/wiki/Florida", wikidata: "Q812" },
+  // City pages: county per Wikidata P131 and Wikipedia URL, verified 2026-10-03.
+  serviceCities: {
+    Destin: { county: "Okaloosa County", wikipedia: "https://en.wikipedia.org/wiki/Destin,_Florida", wikidata: "Q2156427" },
+    "Fort Walton Beach": { county: "Okaloosa County", wikipedia: "https://en.wikipedia.org/wiki/Fort_Walton_Beach,_Florida", wikidata: "Q984368" },
+    Niceville: { county: "Okaloosa County", wikipedia: "https://en.wikipedia.org/wiki/Niceville,_Florida", wikidata: "Q2100064" },
+    Crestview: { county: "Okaloosa County", wikipedia: "https://en.wikipedia.org/wiki/Crestview,_Florida", wikidata: "Q2153124" },
+    "Santa Rosa Beach": { county: "Walton County", wikipedia: "https://en.wikipedia.org/wiki/Santa_Rosa_Beach,_Florida", wikidata: "Q7419873" },
+    Navarre: { county: "Santa Rosa County", wikipedia: "https://en.wikipedia.org/wiki/Navarre,_Florida", wikidata: "Q3470764" },
+  } as Record<string, { county: string; wikipedia: string; wikidata: string }>,
   gtmId: "GTM-M3RTZ7C8", // documentation only; runtime reads NEXT_PUBLIC_GTM_ID env var
   // The T1 Visibility Audit is sold via a Stripe Payment Link (carve-out,
   // 2026-08-09; plan prices went public 2026-10-03 — see planPaymentUrls).

@@ -9,7 +9,7 @@ import { locations } from "@/data/locations";
 import LeadSourceCapture from "@/components/LeadSourceCapture";
 import StickyCTA from "@/components/ui/StickyCTA";
 import JsonLd from "@/components/JsonLd";
-import { buildOrgSchema, buildWebSiteSchema } from "@/lib/schema";
+import { buildOrgSchema, buildWebSiteSchema, personFounder } from "@/lib/schema";
 import { site } from "@/config/site";
 
 const fraunces = Fraunces({
@@ -75,7 +75,7 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <JsonLd schema={[buildOrgSchema(), buildWebSiteSchema()]} />
+        <JsonLd schema={[buildOrgSchema(), buildWebSiteSchema(), personFounder()]} />
 
         <Header />
 
